@@ -36,7 +36,7 @@ extern "C" {
     // Do any additional setup after loading the view, typically from a nib.
     
     [self.button addTarget:self action:@selector(button:) forControlEvents:UIControlEventTouchUpInside];
-    
+    //123
     self.button.selected = YES;
     [self.bgView addSubview:self.label];
     [self.bgView addSubview:self.imageView];
