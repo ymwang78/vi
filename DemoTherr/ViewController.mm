@@ -12,9 +12,8 @@
 #import "FlyVideoFrame.h"
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *button;
-@property (weak, nonatomic) IBOutlet UIView *bgView;
+@property (weak, nonatomic) IBOutlet UIView *bgView;//要呈现的画面所用的 View
 @property (weak, nonatomic) IBOutlet UILabel *label;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -33,14 +32,10 @@ extern "C" {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [self.button addTarget:self action:@selector(button:) forControlEvents:UIControlEventTouchUpInside];
-    
     
 
     self.button.selected = YES;
     [self.bgView addSubview:self.label];
-    [self.bgView addSubview:self.imageView];
-    self.bgView.frame = CGRectMake(100, 200, 0, 0 );
     self.bgView.clipsToBounds=YES;
     
     
@@ -59,25 +54,41 @@ extern "C" {
 //    NSString * dev_channel = @"340200-340200200000401013-0001-0001";
 //    int start = ZDSDK_MonitorStart(zd_t, [dev_channel UTF8String], 0, 0, flyView);
 }
-
-
-
-
-
-- (void)button:(UIButton *)btn {
-    if (btn.selected == YES) {
-        [UIView animateWithDuration:3 animations:^{
-            self.bgView.frame = CGRectMake(100, 200, 200, 200 );
-        }];
-        btn.selected = NO;
-    } else {
-        [UIView animateWithDuration:3 animations:^{
-            self.bgView.frame = CGRectMake(100, 200, 0, 0 );
-        }];
-        btn.selected = YES;
-    }
-    
+//----------------------------------------下边需要操作打印数据---------------------------------------
+//上按钮
+- (IBAction)shangBtn:(UIButton *)sender {
 }
+//下按钮
+- (IBAction)xiaBtn:(UIButton *)sender {
+}
+//左按钮
+- (IBAction)zuoBtn:(UIButton *)sender {
+}
+//右按钮
+- (IBAction)youBtn:(UIButton *)sender {
+}
+//开启按钮
+- (IBAction)kaiqiBtn:(UIButton *)sender {
+}
+//暂停按钮
+- (IBAction)zantingBtn:(UIButton *)sender {
+}
+//拍照按钮
+- (IBAction)paizhaoBtn:(UIButton *)sender {
+}
+//录像按钮
+- (IBAction)luxiangBtn:(UIButton *)sender {
+}
+//翻转按钮
+- (IBAction)fanzhuanBtn:(UIButton *)sender {
+}
+//声音开关
+- (IBAction)shengyinBtn:(UIButton *)sender {
+}
+//拉取列表数据:把通道列表/设备列表数据打印出来即可
+- (IBAction)laquBtn:(UIButton *)sender {
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
