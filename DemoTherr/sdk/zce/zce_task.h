@@ -12,6 +12,7 @@
 
 #include <zce/zce_config.h>
 #include <zce/zce_smartptr.h>
+#include <zce/zce_object.h>
 #include <deque>
 
 typedef struct _JavaVM JavaVM;
@@ -19,12 +20,19 @@ typedef struct _JNIEnv JNIEnv;
 
 class ZCE_API zce_task : virtual public zce_smartptr_mtbase
 {
-public:
+    //ZCE_OBJECT_DECLARE;
+
+protected:
+
     const char* const task_name_;
 
-    zce_task(const char* const name)
-        : task_name_(name) {
-    };
+public:
+
+    zce_task(const char* const name);
+
+    inline const char* const name() const {
+        return task_name_;
+    }
 
     virtual void call() = 0;
 };

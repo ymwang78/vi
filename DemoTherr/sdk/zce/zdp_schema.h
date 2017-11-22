@@ -561,14 +561,14 @@ namespace zdp
     
 };
 
-#define ZDP_PROC_MSG(Y, X) case Y::X::MSG_TYPE : {\
+#define ZDP_PROC_MSG(Y, X, C) case Y::X::MSG_TYPE : {\
     zce_smartptr<Y::X> msgptr(new Y::X());\
     len = zdp::zdp_unpack(*msgptr, buf, size, head.rev());\
     if (len < 0) {\
         ZCE_ERROR((ZLOG_ERROR, "ASSERT! %s::%s ret:%d", #Y, #X, len)); \
         return len;\
     }\
-    proc_##X(head, msgptr);\
+    proc_##X(head, msgptr, C);\
 } break;
 
 #define ZDP_PROC_RES(Y, X) case Y::X::MSG_TYPE : {\

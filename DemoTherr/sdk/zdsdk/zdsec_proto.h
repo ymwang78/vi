@@ -82,14 +82,14 @@ namespace gep
 
     enum SerialType
     {
-        SerialType_Undefined = 0x00000000 /*Î´Öª*/,
+        SerialType_Undefined = 0x00000000 /*æœªçŸ¥*/,
         SerialType_Rs485 = 0x00000001 /*RS485*/,
         SerialType_Rs232 = 0x00000002 /*RS232*/,
     };
 
     enum SerialBaudRate
     {
-        SerialBaudRate_Undefined = 0x00000000 /*ÎŞĞ§*/,
+        SerialBaudRate_Undefined = 0x00000000 /*æ— æ•ˆ*/,
         SerialBaudRate_600 = 0x00000001,
         SerialBaudRate_1200 = 0x00000002,
         SerialBaudRate_2400 = 0x00000003,
@@ -103,7 +103,7 @@ namespace gep
 
     enum SerialDataBit
     {
-        SerialDataBit_Undefined = 0x00000000 /*ÎŞĞ§*/,
+        SerialDataBit_Undefined = 0x00000000 /*æ— æ•ˆ*/,
         SerialDataBit_4 = 0x00000001,
         SerialDataBit_5 = 0x00000002,
         SerialDataBit_6 = 0x00000003,
@@ -113,27 +113,27 @@ namespace gep
 
     enum SerialStopBit
     {
-        SerialStopBit_No = 0x00000000 /*Î´Öª*/,
-        SerialStopBit_1 = 0x00000001 /*1Î»*/,
-        SerialStopBit_2 = 0x00000002 /*2Î»*/,
-        SerialStopBit_15 = 0x00000003 /*1.5Î»*/,
+        SerialStopBit_No = 0x00000000 /*æœªçŸ¥*/,
+        SerialStopBit_1 = 0x00000001 /*1ä½*/,
+        SerialStopBit_2 = 0x00000002 /*2ä½*/,
+        SerialStopBit_15 = 0x00000003 /*1.5ä½*/,
     };
 
     enum SerialParity
     {
-        SerialParity_Undefined = 0x00000000 /*Î´Öª*/,
-        SerialParity_Odd = 0x00000001 /*ÆæĞ£Ñé*/,
-        SerialParity_Even = 0x00000002 /*Å¼Ğ£Ñé*/,
-        SerialParity_No = 0x00000003 /*ÎŞĞ£Ñé*/,
-        SerialParity_Tag = 0x00000004 /*±ê¼ÇÎ»Ğ£Ñé*/,
-        SerialParity_Space = 0x00000005 /*¿Õ¸ñÎ»Ğ£Ñé*/,
+        SerialParity_Undefined = 0x00000000 /*æœªçŸ¥*/,
+        SerialParity_Odd = 0x00000001 /*å¥‡æ ¡éªŒ*/,
+        SerialParity_Even = 0x00000002 /*å¶æ ¡éªŒ*/,
+        SerialParity_No = 0x00000003 /*æ— æ ¡éªŒ*/,
+        SerialParity_Tag = 0x00000004 /*æ ‡è®°ä½æ ¡éªŒ*/,
+        SerialParity_Space = 0x00000005 /*ç©ºæ ¼ä½æ ¡éªŒ*/,
     };
 
     enum SerialFlowControl
     {
-        SerialFlowControl_No = 0x00000000 /*ÎŞÁ÷¿Ø*/,
-        SerialFlowControl_Software = 0x00000001 /*ÈíÁ÷¿Ø*/,
-        SerialFlowControl_HareWare = 0x00000002 /*Ó²Á÷¿Ø*/,
+        SerialFlowControl_No = 0x00000000 /*æ— æµæ§*/,
+        SerialFlowControl_Software = 0x00000001 /*è½¯æµæ§*/,
+        SerialFlowControl_HareWare = 0x00000002 /*ç¡¬æµæ§*/,
     };
 
     enum BitRate
@@ -178,49 +178,49 @@ namespace gep
 
     enum E_LENS_COMMAND
     {
-        E_LENS_UP = 0x00000001 /*ÏòÉÏ×ª*/,
-        E_LENS_LEFT = 0x00000002 /*Ïò×ó×ª*/,
-        E_LENS_ROTATE = 0x00000003 /*Ğı×ª*/,
-        E_LENS_RIGHT = 0x00000004 /*ÏòÓÒ×ª*/,
-        E_LENS_DOWN = 0x00000005 /*ÏòÏÂ×ª*/,
-        E_LENS_FAR = 0x00000006 /*¾µÍ·À­Ô¶*/,
-        E_LENS_FOCUSNEAR = 0x00000007 /*¾Û½¹*/,
-        E_LENS_AUTO = 0x00000008 /*×Ô¶¯*/,
-        E_LENS_FOCUSFAR = 0x00000009 /*É¢½¹*/,
-        E_LENS_NEAR = 0x0000000a /*¾µÍ·À­½ü*/,
-        E_LENS_DIAPHRAGM_LARGE = 0x0000000b /*¹âÈ¦Ôö´ó£¨±äÁÁ£©*/,
-        E_LENS_DIAPHRAGM_SMALL = 0x0000000c /*¹âÈ¦¼õĞ¡£¨±ä°µ£©*/,
-        E_LENS_STOP = 0x0000000d /*Í£Ö¹¶¯×÷*/,
-        E_LENS_SPEAKER_ON = 0x0000000e /*´ò¿ªÀ®°È*/,
-        E_LENS_LIGHT_ON = 0x0000000f /*´ò¿ªµÆ¹â*/,
-        E_LENS_HOTDOG = 0x00000010 /*ÈÈ¹·É¨Ãè*/,
-        E_LENS_SPEAKER_OFF = 0x00000011 /*¹Ø±ÕÀ®°È*/,
-        E_LENS_LIGHT_OFF = 0x00000012 /*¹Ø±ÕµÆ¹â*/,
-        E_LENS_PRESET_GOTO = 0x00000013 /*ÇĞ»»µ½Ô¤ÖÃµã*/,
-        E_LENS_PRESET_SET = 0x00000014 /*ÉèÖÃÔ¤ÖÃµã*/,
-        E_LENS_PRESET_DEL = 0x00000015 /*É¾³ıÔ¤ÖÃµã*/,
-        E_LENS_CAMERA_RESET = 0x00000016 /*ÉãÏñ»ú¸´Î»*/,
-        E_LENS_WIPER_ON = 0x00000017 /*´ò¿ªÓêË¢*/,
-        E_LENS_WIPER_OFF = 0x00000018 /*¹Ø±ÕÓêË¢*/,
-        E_LENS_AUTOCRUISE = 0x0000001d /*×Ô¶¯Ñ²º½*/,
-        E_LENS_PRESET_CLEAR = 0x0000001e /*Çå³ıËùÓĞÔ¤ÖÃµã*/,
-        E_LENS_STARTTRACKING = 0x0000001f /*Æô¶¯¸ú×Ù*/,
-        E_LENS_STOPTRACKING = 0x00000020 /*Í£Ö¹¸ú×Ù*/,
-        E_LENS_LEFTUP = 0x00000021 /*×óÉÏ×ª*/,
-        E_LENS_RIGHTUP = 0x00000022 /*ÓÒÉÏ×ª*/,
-        E_LENS_LEFTDOWN = 0x00000023 /*×óÏÂ×ª*/,
-        E_LENS_RIGHTDOWN = 0x00000024 /*ÓÒÏÂ×ª*/,
-        E_LENS_CAMERAACTIVE = 0x00000028 /*ÉãÏñ»ú¼¤»î*/,
-        E_LENS_SETPANSPEED = 0x00000029 /*ÉèÖÃ×óÓÒ×ª¶¯ËÙ¶È*/,
-        E_LENS_SETTILTSPEED = 0x00000030 /*ÉèÖÃÉÏÏÂ×ª¶¯ËÙ¶È*/,
-        E_LENS_SETZOOMSPEED = 0x00000031 /*ÉèÖÃ¹âÈ¦ËÙ¶È*/,
-        E_LENS_SETFOCUSSPEED = 0x00000032 /*ÉèÖÃ¾Û½¹/É¢½¹ËÙ¶È*/,
-        E_LENS_SPEEDSETTINGGET = 0x00000033 /*»ñÈ¡ÉãÏñ»úËÙ¶ÈÉèÖÃ*/,
-        E_LENS_MATRIXSWITCH = 0x00000040 /*¾ØÕóÇĞ»»*/,
-        E_LENS_BRIGHTNESS = 0x00000050 /*ÁÁ¶È*/,
-        E_LENS_CONTRAST = 0x00000051 /*¶Ô±È¶È*/,
-        E_LENS_SATURATION = 0x00000052 /*±¥ºÍ¶È*/,
-        E_LENS_HUE = 0x00000053 /*É«¶È*/,
+        E_LENS_UP = 0x00000001 /*å‘ä¸Šè½¬*/,
+        E_LENS_LEFT = 0x00000002 /*å‘å·¦è½¬*/,
+        E_LENS_ROTATE = 0x00000003 /*æ—‹è½¬*/,
+        E_LENS_RIGHT = 0x00000004 /*å‘å³è½¬*/,
+        E_LENS_DOWN = 0x00000005 /*å‘ä¸‹è½¬*/,
+        E_LENS_FAR = 0x00000006 /*é•œå¤´æ‹‰è¿œ*/,
+        E_LENS_FOCUSNEAR = 0x00000007 /*èšç„¦*/,
+        E_LENS_AUTO = 0x00000008 /*è‡ªåŠ¨*/,
+        E_LENS_FOCUSFAR = 0x00000009 /*æ•£ç„¦*/,
+        E_LENS_NEAR = 0x0000000a /*é•œå¤´æ‹‰è¿‘*/,
+        E_LENS_DIAPHRAGM_LARGE = 0x0000000b /*å…‰åœˆå¢å¤§ï¼ˆå˜äº®ï¼‰*/,
+        E_LENS_DIAPHRAGM_SMALL = 0x0000000c /*å…‰åœˆå‡å°ï¼ˆå˜æš—ï¼‰*/,
+        E_LENS_STOP = 0x0000000d /*åœæ­¢åŠ¨ä½œ*/,
+        E_LENS_SPEAKER_ON = 0x0000000e /*æ‰“å¼€å–‡å­*/,
+        E_LENS_LIGHT_ON = 0x0000000f /*æ‰“å¼€ç¯å…‰*/,
+        E_LENS_HOTDOG = 0x00000010 /*çƒ­ç‹—æ‰«æ*/,
+        E_LENS_SPEAKER_OFF = 0x00000011 /*å…³é—­å–‡å­*/,
+        E_LENS_LIGHT_OFF = 0x00000012 /*å…³é—­ç¯å…‰*/,
+        E_LENS_PRESET_GOTO = 0x00000013 /*åˆ‡æ¢åˆ°é¢„ç½®ç‚¹*/,
+        E_LENS_PRESET_SET = 0x00000014 /*è®¾ç½®é¢„ç½®ç‚¹*/,
+        E_LENS_PRESET_DEL = 0x00000015 /*åˆ é™¤é¢„ç½®ç‚¹*/,
+        E_LENS_CAMERA_RESET = 0x00000016 /*æ‘„åƒæœºå¤ä½*/,
+        E_LENS_WIPER_ON = 0x00000017 /*æ‰“å¼€é›¨åˆ·*/,
+        E_LENS_WIPER_OFF = 0x00000018 /*å…³é—­é›¨åˆ·*/,
+        E_LENS_AUTOCRUISE = 0x0000001d /*è‡ªåŠ¨å·¡èˆª*/,
+        E_LENS_PRESET_CLEAR = 0x0000001e /*æ¸…é™¤æ‰€æœ‰é¢„ç½®ç‚¹*/,
+        E_LENS_STARTTRACKING = 0x0000001f /*å¯åŠ¨è·Ÿè¸ª*/,
+        E_LENS_STOPTRACKING = 0x00000020 /*åœæ­¢è·Ÿè¸ª*/,
+        E_LENS_LEFTUP = 0x00000021 /*å·¦ä¸Šè½¬*/,
+        E_LENS_RIGHTUP = 0x00000022 /*å³ä¸Šè½¬*/,
+        E_LENS_LEFTDOWN = 0x00000023 /*å·¦ä¸‹è½¬*/,
+        E_LENS_RIGHTDOWN = 0x00000024 /*å³ä¸‹è½¬*/,
+        E_LENS_CAMERAACTIVE = 0x00000028 /*æ‘„åƒæœºæ¿€æ´»*/,
+        E_LENS_SETPANSPEED = 0x00000029 /*è®¾ç½®å·¦å³è½¬åŠ¨é€Ÿåº¦*/,
+        E_LENS_SETTILTSPEED = 0x00000030 /*è®¾ç½®ä¸Šä¸‹è½¬åŠ¨é€Ÿåº¦*/,
+        E_LENS_SETZOOMSPEED = 0x00000031 /*è®¾ç½®å…‰åœˆé€Ÿåº¦*/,
+        E_LENS_SETFOCUSSPEED = 0x00000032 /*è®¾ç½®èšç„¦/æ•£ç„¦é€Ÿåº¦*/,
+        E_LENS_SPEEDSETTINGGET = 0x00000033 /*è·å–æ‘„åƒæœºé€Ÿåº¦è®¾ç½®*/,
+        E_LENS_MATRIXSWITCH = 0x00000040 /*çŸ©é˜µåˆ‡æ¢*/,
+        E_LENS_BRIGHTNESS = 0x00000050 /*äº®åº¦*/,
+        E_LENS_CONTRAST = 0x00000051 /*å¯¹æ¯”åº¦*/,
+        E_LENS_SATURATION = 0x00000052 /*é¥±å’Œåº¦*/,
+        E_LENS_HUE = 0x00000053 /*è‰²åº¦*/,
         E_LENS_LOCK = 0x000000ff,
     };
 
@@ -247,8 +247,8 @@ namespace gep
         MediaTypeH264 = 0x00000040 /*H264*/,
         MediaTypeAvs = 0x00000050 /* AVS*/,
         MediaTypeAudioUnknown = 0x00000060 /*UNKNOWN*/,
-        MediaTypeStdH264 = 0x00000062 /*±ê×¼H264*/,
-        MediaTypeStdMpeg4 = 0x00000064 /*±ê×¼MPEG4*/,
+        MediaTypeStdH264 = 0x00000062 /*æ ‡å‡†H264*/,
+        MediaTypeStdMpeg4 = 0x00000064 /*æ ‡å‡†MPEG4*/,
         MediaTypeG711a = 0x00000070 /*G711A*/,
         MediaTypeG711u = 0x00000071 /*G711U*/,
         MediaTypeG723 = 0x00000072 /*G723*/,
@@ -258,97 +258,97 @@ namespace gep
 
     enum AlarmType
     {
-        AlarmType_Reserved = 0x00000000 /*¸æ¾¯±£Áô*/,
-        AlarmType_SwitchOn_Old = 0x00000001 /*¿ª¹ØÁ¿¸æ¾¯·¢Éú*/,
-        AlarmType_SwitchOff_Old = 0x00000002 /*¿ª¹ØÁ¿¸æ¾¯ÏûÊ§*/,
-        AlarmType_VLostOn_Old = 0x00000003 /*Ç°¶ËÊÓÆµ¶ªÊ§*/,
-        AlarmType_VLostOff_Old = 0x00000004 /*Ç°¶ËÊÓÆµ»Ö¸´*/,
-        AlarmType_VMotionOn_Old = 0x00000005 /*Ç°¶ËÊÓÆµÒÆ¶¯·¢Éú*/,
-        AlarmType_VMotionOff_Old = 0x00000006 /*Ç°¶ËÊÓÆµÒÆ¶¯Í£Ö¹*/,
-        AlarmType_HostOn_Old = 0x00000007 /*¸æ¾¯Ö÷»ú¸æ¾¯·¢Éú*/,
-        AlarmType_HostOff_Old = 0x00000008 /*¸æ¾¯Ö÷»ú¸æ¾¯½â³ı*/,
-        AlarmType_DiskQuota_Old = 0x00000009 /*´ÅÅÌÏŞ¶îÂú*/,
-        AlarmType_Noise_Old = 0x0000000a /*ÔëÉù·Ö±´Öµ³¬ÏŞ¸æ¾¯*/,
-        AlarmType_DiskFailure_Old = 0x0000000b /*×Ô¶¨Òå×éºÏ¸æ¾¯*/,
-        AlarmType_ExternalHost_Old = 0x0000000d /*Íâ½ç¸æ¾¯Ö÷»ú´¥·¢*/,
-        AlarmType_Switch_Old = 0x0000000e /*¿ª¹Ø¸æ¾¯*/,
-        AlarmType_Failure_Old = 0x0000000f /*¹ÊÕÏ¸æ¾¯*/,
-        AlarmType_Fire = 0x00000011 /*»ğ¾¯Ì½²â*/,
-        AlramType_Smoke = 0x00000012 /*ÑÌ¸ĞÌ½²â*/,
-        AlarmType_Infrared = 0x00000013 /*ºìÍâÌ½²â*/,
-        AlarmType_Temperature = 0x00000014 /*ÎÂ¶ÈÌ½²â*/,
-        AlarmType_Gas = 0x00000015 /*ÆøÌåÌ½²â*/,
-        AlarmType_Manual = 0x00000016 /*ÈË¹¤¸æ¾¯*/,
-        AlarmType_Noise = 0x00000017 /*ÔëÉùÌ½²â*/,
-        AlarmType_MenCi = 0x00000018 /*ÃÅ´ÅÌ½²â*/,
-        AlarmType_ShuiJin = 0x00000019 /*Ë®½şÌ½²â*/,
-        AlarmType_VideoQuality = 0x0000001f /*ÊÓÆµÖÊÁ¿¸æ¾¯¡£×ÓÀàĞÍ: 0=ÎŞ×ÓÀàĞÍ(²»È·¶¨µÄÀàĞÍ)£¬1=Ì«°µ£¬2=Ì«ÁÁ£¬3=Ä£ºı*/,
-        AlarmType_Motion = 0x00000020 /*ÒÆ¶¯Õì²â*/,
-        AlarmType_VideoLost = 0x00000021 /*ÊÓÆµ¶ªÊ§*/,
-        AlarmType_VideoEnvelop = 0x00000022 /*ÊÓÆµÕÚ¸Ç*/,
-        AlarmType_RecordFailure = 0x00000023 /*Ç°¶ËÂ¼ÏñÊ§°Ü*/,
-        AlarmType_Brand = 0x00000024 /*³µÅÆ×¥ÅÄ*/,
-        AlarmType_Face = 0x00000025 /*ÈËÏñ×¥ÅÄ*/,
-        AlarmType_CheLiangHeiMingDan = 0x00000026 /*²¼¿Ø³µÁ¾¸æ¾¯£¬³µÁ¾ÔÚºÚÃûµ¥ÖĞ*/,
-        AlarmType_CheLiangShiBie = 0x00000027 /*Æ½Ì¨³µÁ¾Ê¶±ğ£¬³µÅÆÑÕÉ«¡¢ÀàĞÍµÈµÈµÄÊ¶±ğ*/,
-        AlarmType_FeiFaChangRu = 0x00000028 /*°²È«Ïß´³Èë*/,
-        AlarmType_ManualCapture = 0x00000029 /*ÊÖ¶¯×¥ÅÄ*/,
-        AlarmType_RenXiangShiBie = 0x0000002a /*Æ½Ì¨ÈËÏñÊ¶±ğ*/,
-        AlarmType_RenXiangHeiMingDan = 0x0000002b /*²¼¿ØÈËÏñ¸æ¾¯£¬ÈËÏñÔÚºÚÃûµ¥ÖĞ*/,
-        AlarmType_ChePaiBuZhengchang = 0x0000002c /*ÖĞĞÄÊ¶±ğÎŞÅÆ¡¢ÕÚÅÆ³µÁ¾*/,
-        AlarmType_VideoAnalysis = 0x0000002d /*ÊÓÆµ·ÖÎö*/,
-        AlarmType_CameraJitter = 0x0000002e /*Ïà»ú¶¶¶¯*/,
-        AlarmType_DiskQuota = 0x00000031 /*´ÅÅÌÏŞ¶î*/,
-        AlarmType_DiskFailure = 0x00000032 /*Ç°¶Ë´æ´¢¹ÊÕÏ*/,
-        AlarmType_FdLogin = 0x00000033 /*Éè±¸ÉÏÏß(ÓÉFDMS´¥·¢)*/,
-        AlarmType_FdLogout = 0x00000034 /*Éè±¸ÏÂÏß(ÓÉFDMS´¥·¢)*/,
-        AlarmType_FdOffline = 0x00000035 /*Éè±¸ÏÂÏß£¬²¢ÇÒÃ»ÓĞÔÚ1·ÖÖÓÖ®ÄÚµÇÂ½(ÓÉFDMS´¥·¢)*/,
-        AlarmType_FdAuthFail = 0x00000036 /*FdAuthFail, ¼øÈ¨²»³É¹¦±¨¾¯*/,
-        AlarmType_FdLoginFail = 0x00000037 /*FdLoginFail, ÉÏÏß²»³É¹¦±¨¾¯*/,
-        AlarmType_GuardOn = 0x00000041 /*Éè±¸²¼·À*/,
-        AlarmType_GrardOff = 0x00000042 /*Éè±¸³··À*/,
-        AlarmType_PingAnZhong = 0x00000043 /*Æ½°²ÖÓÍ¨Öª*/,
-        AlarmType_GPS = 0x00000044 /*GPSĞÅÏ¢ÉÏ±¨*/,
-        AlarmType_HuanbaoShujuCaiji = 0x00000050 /*»·±£Êı¾İ²É¼¯*/,
-        AlarmType_LiuliangChaobiao = 0x00000051 /*Á÷Á¿³¬±ê*/,
-        AlarmType_YeweiChaobiao = 0x00000052 /*ÒºÎ»³¬±ê*/,
-        AlarmType_PH = 0x00000053 /*PHÖµ³¬±ê*/,
-        AlarmType_CheliangChaoshu = 0x00000060 /*³µÁ¾³¬ËÙ*/,
-        AlarmType_ChelinagNixing = 0x00000061 /*³µÁ¾ÄæĞĞ*/,
-        AlarmType_CheliangDishu = 0x00000062 /*³µÁ¾µÍËÙ*/,
-        AlarmType_CheliangChedao = 0x00000063 /*³µÁ¾²»°´¹æ¶¨³µµÀĞĞÊ»*/,
-        AlarmType_CheliangWeifanJingzhiBiaoxian = 0x00000064 /*³µÁ¾Î¥·´½ûÖ¹±êÏßÖ¸Ê¾*/,
-        AlarmType_CheliangWeifanJinglingBiaozhi = 0x00000065 /*³µÁ¾Î¥·´½ûÁî±êÖ¾Ö¸Ê¾*/,
-        AlarmType_CheliangJiaotongXinghaodeng = 0x00000066 /*²»°´½»Í¨ĞÅºÅµÆ¹æ¶¨Í¨ĞĞ*/,
+        AlarmType_Reserved = 0x00000000 /*å‘Šè­¦ä¿ç•™*/,
+        AlarmType_SwitchOn_Old = 0x00000001 /*å¼€å…³é‡å‘Šè­¦å‘ç”Ÿ*/,
+        AlarmType_SwitchOff_Old = 0x00000002 /*å¼€å…³é‡å‘Šè­¦æ¶ˆå¤±*/,
+        AlarmType_VLostOn_Old = 0x00000003 /*å‰ç«¯è§†é¢‘ä¸¢å¤±*/,
+        AlarmType_VLostOff_Old = 0x00000004 /*å‰ç«¯è§†é¢‘æ¢å¤*/,
+        AlarmType_VMotionOn_Old = 0x00000005 /*å‰ç«¯è§†é¢‘ç§»åŠ¨å‘ç”Ÿ*/,
+        AlarmType_VMotionOff_Old = 0x00000006 /*å‰ç«¯è§†é¢‘ç§»åŠ¨åœæ­¢*/,
+        AlarmType_HostOn_Old = 0x00000007 /*å‘Šè­¦ä¸»æœºå‘Šè­¦å‘ç”Ÿ*/,
+        AlarmType_HostOff_Old = 0x00000008 /*å‘Šè­¦ä¸»æœºå‘Šè­¦è§£é™¤*/,
+        AlarmType_DiskQuota_Old = 0x00000009 /*ç£ç›˜é™é¢æ»¡*/,
+        AlarmType_Noise_Old = 0x0000000a /*å™ªå£°åˆ†è´å€¼è¶…é™å‘Šè­¦*/,
+        AlarmType_DiskFailure_Old = 0x0000000b /*è‡ªå®šä¹‰ç»„åˆå‘Šè­¦*/,
+        AlarmType_ExternalHost_Old = 0x0000000d /*å¤–ç•Œå‘Šè­¦ä¸»æœºè§¦å‘*/,
+        AlarmType_Switch_Old = 0x0000000e /*å¼€å…³å‘Šè­¦*/,
+        AlarmType_Failure_Old = 0x0000000f /*æ•…éšœå‘Šè­¦*/,
+        AlarmType_Fire = 0x00000011 /*ç«è­¦æ¢æµ‹*/,
+        AlramType_Smoke = 0x00000012 /*çƒŸæ„Ÿæ¢æµ‹*/,
+        AlarmType_Infrared = 0x00000013 /*çº¢å¤–æ¢æµ‹*/,
+        AlarmType_Temperature = 0x00000014 /*æ¸©åº¦æ¢æµ‹*/,
+        AlarmType_Gas = 0x00000015 /*æ°”ä½“æ¢æµ‹*/,
+        AlarmType_Manual = 0x00000016 /*äººå·¥å‘Šè­¦*/,
+        AlarmType_Noise = 0x00000017 /*å™ªå£°æ¢æµ‹*/,
+        AlarmType_MenCi = 0x00000018 /*é—¨ç£æ¢æµ‹*/,
+        AlarmType_ShuiJin = 0x00000019 /*æ°´æµ¸æ¢æµ‹*/,
+        AlarmType_VideoQuality = 0x0000001f /*è§†é¢‘è´¨é‡å‘Šè­¦ã€‚å­ç±»å‹: 0=æ— å­ç±»å‹(ä¸ç¡®å®šçš„ç±»å‹)ï¼Œ1=å¤ªæš—ï¼Œ2=å¤ªäº®ï¼Œ3=æ¨¡ç³Š*/,
+        AlarmType_Motion = 0x00000020 /*ç§»åŠ¨ä¾¦æµ‹*/,
+        AlarmType_VideoLost = 0x00000021 /*è§†é¢‘ä¸¢å¤±*/,
+        AlarmType_VideoEnvelop = 0x00000022 /*è§†é¢‘é®ç›–*/,
+        AlarmType_RecordFailure = 0x00000023 /*å‰ç«¯å½•åƒå¤±è´¥*/,
+        AlarmType_Brand = 0x00000024 /*è½¦ç‰ŒæŠ“æ‹*/,
+        AlarmType_Face = 0x00000025 /*äººåƒæŠ“æ‹*/,
+        AlarmType_CheLiangHeiMingDan = 0x00000026 /*å¸ƒæ§è½¦è¾†å‘Šè­¦ï¼Œè½¦è¾†åœ¨é»‘åå•ä¸­*/,
+        AlarmType_CheLiangShiBie = 0x00000027 /*å¹³å°è½¦è¾†è¯†åˆ«ï¼Œè½¦ç‰Œé¢œè‰²ã€ç±»å‹ç­‰ç­‰çš„è¯†åˆ«*/,
+        AlarmType_FeiFaChangRu = 0x00000028 /*å®‰å…¨çº¿é—¯å…¥*/,
+        AlarmType_ManualCapture = 0x00000029 /*æ‰‹åŠ¨æŠ“æ‹*/,
+        AlarmType_RenXiangShiBie = 0x0000002a /*å¹³å°äººåƒè¯†åˆ«*/,
+        AlarmType_RenXiangHeiMingDan = 0x0000002b /*å¸ƒæ§äººåƒå‘Šè­¦ï¼Œäººåƒåœ¨é»‘åå•ä¸­*/,
+        AlarmType_ChePaiBuZhengchang = 0x0000002c /*ä¸­å¿ƒè¯†åˆ«æ— ç‰Œã€é®ç‰Œè½¦è¾†*/,
+        AlarmType_VideoAnalysis = 0x0000002d /*è§†é¢‘åˆ†æ*/,
+        AlarmType_CameraJitter = 0x0000002e /*ç›¸æœºæŠ–åŠ¨*/,
+        AlarmType_DiskQuota = 0x00000031 /*ç£ç›˜é™é¢*/,
+        AlarmType_DiskFailure = 0x00000032 /*å‰ç«¯å­˜å‚¨æ•…éšœ*/,
+        AlarmType_FdLogin = 0x00000033 /*è®¾å¤‡ä¸Šçº¿(ç”±FDMSè§¦å‘)*/,
+        AlarmType_FdLogout = 0x00000034 /*è®¾å¤‡ä¸‹çº¿(ç”±FDMSè§¦å‘)*/,
+        AlarmType_FdOffline = 0x00000035 /*è®¾å¤‡ä¸‹çº¿ï¼Œå¹¶ä¸”æ²¡æœ‰åœ¨1åˆ†é’Ÿä¹‹å†…ç™»é™†(ç”±FDMSè§¦å‘)*/,
+        AlarmType_FdAuthFail = 0x00000036 /*FdAuthFail, é‰´æƒä¸æˆåŠŸæŠ¥è­¦*/,
+        AlarmType_FdLoginFail = 0x00000037 /*FdLoginFail, ä¸Šçº¿ä¸æˆåŠŸæŠ¥è­¦*/,
+        AlarmType_GuardOn = 0x00000041 /*è®¾å¤‡å¸ƒé˜²*/,
+        AlarmType_GrardOff = 0x00000042 /*è®¾å¤‡æ’¤é˜²*/,
+        AlarmType_PingAnZhong = 0x00000043 /*å¹³å®‰é’Ÿé€šçŸ¥*/,
+        AlarmType_GPS = 0x00000044 /*GPSä¿¡æ¯ä¸ŠæŠ¥*/,
+        AlarmType_HuanbaoShujuCaiji = 0x00000050 /*ç¯ä¿æ•°æ®é‡‡é›†*/,
+        AlarmType_LiuliangChaobiao = 0x00000051 /*æµé‡è¶…æ ‡*/,
+        AlarmType_YeweiChaobiao = 0x00000052 /*æ¶²ä½è¶…æ ‡*/,
+        AlarmType_PH = 0x00000053 /*PHå€¼è¶…æ ‡*/,
+        AlarmType_CheliangChaoshu = 0x00000060 /*è½¦è¾†è¶…é€Ÿ*/,
+        AlarmType_ChelinagNixing = 0x00000061 /*è½¦è¾†é€†è¡Œ*/,
+        AlarmType_CheliangDishu = 0x00000062 /*è½¦è¾†ä½é€Ÿ*/,
+        AlarmType_CheliangChedao = 0x00000063 /*è½¦è¾†ä¸æŒ‰è§„å®šè½¦é“è¡Œé©¶*/,
+        AlarmType_CheliangWeifanJingzhiBiaoxian = 0x00000064 /*è½¦è¾†è¿åç¦æ­¢æ ‡çº¿æŒ‡ç¤º*/,
+        AlarmType_CheliangWeifanJinglingBiaozhi = 0x00000065 /*è½¦è¾†è¿åç¦ä»¤æ ‡å¿—æŒ‡ç¤º*/,
+        AlarmType_CheliangJiaotongXinghaodeng = 0x00000066 /*ä¸æŒ‰äº¤é€šä¿¡å·ç¯è§„å®šé€šè¡Œ*/,
     };
 
     enum ECameraControlType
     {
-        E_CAMERA_SHUTTER = 0x00000001 /* ¿ìÃÅ*/,
-        E_CAMERA_GAIN = 0x00000002 /* ÔöÒæ */,
-        E_CAMERA_EXPOSURE = 0x00000003 /* ÆØ¹â²ÎÊı*/,
-        E_CAMERA_CONTRAST = 0x00000004 /* ¶Ô±È¶È*/,
-        E_CAMERA_BRIGHT = 0x00000005 /* ÁÁ¶È*/,
+        E_CAMERA_SHUTTER = 0x00000001 /* å¿«é—¨*/,
+        E_CAMERA_GAIN = 0x00000002 /* å¢ç›Š */,
+        E_CAMERA_EXPOSURE = 0x00000003 /* æ›å…‰å‚æ•°*/,
+        E_CAMERA_CONTRAST = 0x00000004 /* å¯¹æ¯”åº¦*/,
+        E_CAMERA_BRIGHT = 0x00000005 /* äº®åº¦*/,
         E_CAMERA_GAMMA = 0x00000006 /* GAMMA*/,
-        E_CAMERA_APERTURE = 0x00000007 /* ¹âÈ¦*/,
-        E_CAMERA_MAXNIGHTEV = 0x00000008 /*ÈÕÒ¹×ª»»EV*/,
-        E_CAMERA_POLARISCOPEEV = 0x00000009 /*Æ«Õñ¾µË¥¼õEV*/,
-        E_CAMERA_WDR = 0x0000000a /* ¿í¶¯Ì¬*/,
-        E_CAMERA_MAX_CP = 0x0000000b /* ×î´óµÄÉãÏñ»úÊôĞÔ*/,
-        E_CAMERA_DIGITAL_GAIN = 0x0000000c /*Êı×ÖÔöÒæ*/,
-        E_CAMERA_FLASH_SHUTTER = 0x0000000d /* ×¥ÅÄ¿ìÃÅ*/,
-        E_CAMERA_FLASH_GAIN = 0x0000000e /* ×¥ÅÄÔöÒæ */,
-        E_CAMERA_SHARP = 0x0000000f /*Í¼ÏñÈñ¶È*/,
+        E_CAMERA_APERTURE = 0x00000007 /* å…‰åœˆ*/,
+        E_CAMERA_MAXNIGHTEV = 0x00000008 /*æ—¥å¤œè½¬æ¢EV*/,
+        E_CAMERA_POLARISCOPEEV = 0x00000009 /*åæŒ¯é•œè¡°å‡EV*/,
+        E_CAMERA_WDR = 0x0000000a /* å®½åŠ¨æ€*/,
+        E_CAMERA_MAX_CP = 0x0000000b /* æœ€å¤§çš„æ‘„åƒæœºå±æ€§*/,
+        E_CAMERA_DIGITAL_GAIN = 0x0000000c /*æ•°å­—å¢ç›Š*/,
+        E_CAMERA_FLASH_SHUTTER = 0x0000000d /* æŠ“æ‹å¿«é—¨*/,
+        E_CAMERA_FLASH_GAIN = 0x0000000e /* æŠ“æ‹å¢ç›Š */,
+        E_CAMERA_SHARP = 0x0000000f /*å›¾åƒé”åº¦*/,
     };
 
     enum ECameraControlManner
     {
-        E_CAMERA_AUTO = 0x00000001 /* ×Ô¶¯ */,
-        E_CAMERA_FIX = 0x00000002 /* ¹Ì¶¨ */,
-        E_CAMERA_RANGE = 0x00000004 /* ·¶Î§ÄÚ×Ô¶¯ */,
-        E_CAMERA_RANGE2 = 0x00000008 /* Á½¶Î·¶Î§ÄÚ×Ô¶¯ */,
-        E_CAMERA_MODE_ENABLE = 0x00000010 /* ÆôÓÃ */,
-        E_CAMERA_MODE_DISABLE = 0x00000020 /* ½ûÓÃ */,
+        E_CAMERA_AUTO = 0x00000001 /* è‡ªåŠ¨ */,
+        E_CAMERA_FIX = 0x00000002 /* å›ºå®š */,
+        E_CAMERA_RANGE = 0x00000004 /* èŒƒå›´å†…è‡ªåŠ¨ */,
+        E_CAMERA_RANGE2 = 0x00000008 /* ä¸¤æ®µèŒƒå›´å†…è‡ªåŠ¨ */,
+        E_CAMERA_MODE_ENABLE = 0x00000010 /* å¯ç”¨ */,
+        E_CAMERA_MODE_DISABLE = 0x00000020 /* ç¦ç”¨ */,
     };
 
     enum EOsdType
@@ -390,44 +390,44 @@ namespace gep
 
     enum EPicMergeType
     {
-        E_PicMerge_None = 0x00000000 /*²»ºÏ³É*/,
-        E_PicMerge_1_T_UPDOWN = 0x00000010 /*1ÕÅ ÌØĞ´ÔÚÉÏ*/,
-        E_PicMerge_1_T_LEFTRIGHT = 0x00000011 /*1ÕÅ ÌØĞ´ÔÚ×ó*/,
-        E_PicMerge_1_P_UPDOWN = 0x00000012 /*1ÕÅ ÌØĞ´ÔÚÏÂ*/,
-        E_PicMerge_1_P_LEFTRIGHT = 0x00000013 /*1ÕÅ ÌØĞ´ÔÚÓÒ*/,
-        E_PicMerge_2_UPDOWN = 0x00000020 /*2ÕÅ ÉÏÏÂºÏ³É*/,
-        E_PicMerge_2_LEFTRIGHT = 0x00000021 /*2ÕÅ ×óÓÒºÏ³É*/,
-        E_PicMerge_3_UPDOWN = 0x00000030 /*3ÕÅ ÉÏÏÂºÏ³É*/,
-        E_PicMerge_3_LEFTRIGHT = 0x00000031 /*3ÕÅ ×óÓÒºÏ³É*/,
-        E_PicMerge_3_UP = 0x00000032 /*3ÕÅ Æ·×ÖºÏ³É*/,
-        E_PicMerge_3_DOWN = 0x00000033 /*3ÕÅ µ¹Æ·×ÖºÏ³É*/,
-        E_PicMerge_3_T_Big = 0x00000034 /*ÌØĞ´+3ÕÅ Ìï×ÖºÏ³É ËÄ±¶´óĞ¡*/,
-        E_PicMerge_3_T_Normal = 0x00000035 /*ÌØĞ´+3ÕÅ Ìï×ÖºÏ³É Ò»±¶´óĞ¡*/,
-        E_PicMerge_3_BIG_T = 0x00000036 /*3ÕÅ+ÌØĞ´ Ìï×ÖºÏ³É ËÄ±¶´óĞ¡*/,
-        E_PicMerge_3_Normal_T = 0x00000037 /*3ÕÅ+ÌØĞ´ Ìï×ÖºÏ³É Ò»±¶´óĞ¡*/,
+        E_PicMerge_None = 0x00000000 /*ä¸åˆæˆ*/,
+        E_PicMerge_1_T_UPDOWN = 0x00000010 /*1å¼  ç‰¹å†™åœ¨ä¸Š*/,
+        E_PicMerge_1_T_LEFTRIGHT = 0x00000011 /*1å¼  ç‰¹å†™åœ¨å·¦*/,
+        E_PicMerge_1_P_UPDOWN = 0x00000012 /*1å¼  ç‰¹å†™åœ¨ä¸‹*/,
+        E_PicMerge_1_P_LEFTRIGHT = 0x00000013 /*1å¼  ç‰¹å†™åœ¨å³*/,
+        E_PicMerge_2_UPDOWN = 0x00000020 /*2å¼  ä¸Šä¸‹åˆæˆ*/,
+        E_PicMerge_2_LEFTRIGHT = 0x00000021 /*2å¼  å·¦å³åˆæˆ*/,
+        E_PicMerge_3_UPDOWN = 0x00000030 /*3å¼  ä¸Šä¸‹åˆæˆ*/,
+        E_PicMerge_3_LEFTRIGHT = 0x00000031 /*3å¼  å·¦å³åˆæˆ*/,
+        E_PicMerge_3_UP = 0x00000032 /*3å¼  å“å­—åˆæˆ*/,
+        E_PicMerge_3_DOWN = 0x00000033 /*3å¼  å€’å“å­—åˆæˆ*/,
+        E_PicMerge_3_T_Big = 0x00000034 /*ç‰¹å†™+3å¼  ç”°å­—åˆæˆ å››å€å¤§å°*/,
+        E_PicMerge_3_T_Normal = 0x00000035 /*ç‰¹å†™+3å¼  ç”°å­—åˆæˆ ä¸€å€å¤§å°*/,
+        E_PicMerge_3_BIG_T = 0x00000036 /*3å¼ +ç‰¹å†™ ç”°å­—åˆæˆ å››å€å¤§å°*/,
+        E_PicMerge_3_Normal_T = 0x00000037 /*3å¼ +ç‰¹å†™ ç”°å­—åˆæˆ ä¸€å€å¤§å°*/,
     };
 
     enum EConfigMask
     {
-        E_ConfigMask_SnapOSD = 0x00000001 /*OSD ÅäÖÃ*/,
-        E_ConfigMask_Smart = 0x00000002 /*ÖÇÄÜËã·¨ ÅäÖÃ*/,
-        E_ConfigMask_PicMerge = 0x00000004 /*Í¼Æ¬ºÏ³ÉÅäÖÃ*/,
-        E_ConfigMask_Codec = 0x00000008 /*±àÂëÅäÖÃ*/,
-        E_ConfigMask_FlashLight = 0x00000010 /*ÉÁ¹âµÆÅäÖÃ*/,
-        E_ConfigMask_Capture = 0x00000020 /*×¥ÅÄ³µµÀ²ÎÊı*/,
+        E_ConfigMask_SnapOSD = 0x00000001 /*OSD é…ç½®*/,
+        E_ConfigMask_Smart = 0x00000002 /*æ™ºèƒ½ç®—æ³• é…ç½®*/,
+        E_ConfigMask_PicMerge = 0x00000004 /*å›¾ç‰‡åˆæˆé…ç½®*/,
+        E_ConfigMask_Codec = 0x00000008 /*ç¼–ç é…ç½®*/,
+        E_ConfigMask_FlashLight = 0x00000010 /*é—ªå…‰ç¯é…ç½®*/,
+        E_ConfigMask_Capture = 0x00000020 /*æŠ“æ‹è½¦é“å‚æ•°*/,
     };
 
     enum EConfigMajorType
     {
-        E_CfgMajorType_ConfigImport = 0x00000001 /*ÅäÖÃµ¼Èë*/,
-        E_CfgMajorType_ConfigExport = 0x00000002 /*ÅäÖÃµ¼³ö*/,
-        E_CfgMajorType_ResetModel = 0x00000003 /*ÖØÖÃËã·¨Ä£ĞÍ*/,
+        E_CfgMajorType_ConfigImport = 0x00000001 /*é…ç½®å¯¼å…¥*/,
+        E_CfgMajorType_ConfigExport = 0x00000002 /*é…ç½®å¯¼å‡º*/,
+        E_CfgMajorType_ResetModel = 0x00000003 /*é‡ç½®ç®—æ³•æ¨¡å‹*/,
     };
 
     enum EConfigMinorType
     {
-        E_CfgMinorType_ConfigImport_All = 0x00000001 /*ÅäÖÃÈ«²¿µ¼Èë*/,
-        E_CfgMinorType_ConfigImport_Part = 0x00000002 /*²¿·Öµ¼Èë*/,
+        E_CfgMinorType_ConfigImport_All = 0x00000001 /*é…ç½®å…¨éƒ¨å¯¼å…¥*/,
+        E_CfgMinorType_ConfigImport_Part = 0x00000002 /*éƒ¨åˆ†å¯¼å…¥*/,
     };
 
     enum PROTOCOL_ERRORCODE
@@ -466,18 +466,18 @@ namespace gep
         PTL_ERROR_COMMON_DOWNLOAD_NOT_IN_PROCESS = 0x80010013,
         PTL_ERROR_COMMON_PLAYBACK_IN_PROCESS = 0x80010014,
         PTL_ERROR_COMMON_PLAYBACK_NOT_IN_PROCESS = 0x80010015,
-        PTL_ERROR_COMMON_USER_CANCELED = 0x80010016 /*²Ù×÷ÒÑ±»ÓÃ»§È¡Ïû£¬ÀıÈç·¢ËÍSTOP*/,
-        PTL_ERROR_COMMON_NOTSUPPORT = 0x80010017 /*¹¦ÄÜ²»Ö§³Ö*/,
+        PTL_ERROR_COMMON_USER_CANCELED = 0x80010016 /*æ“ä½œå·²è¢«ç”¨æˆ·å–æ¶ˆï¼Œä¾‹å¦‚å‘é€STOP*/,
+        PTL_ERROR_COMMON_NOTSUPPORT = 0x80010017 /*åŠŸèƒ½ä¸æ”¯æŒ*/,
         PTL_ERROR_COMMON_RECORD_TIME = 0x80010018,
         PTL_ERROR_COMMON_REACH_MAX = 0x80010019,
-        PTL_ERROR_COMMON_INVALID_PARAM = 0x8001001b /*²ÎÊı´íÎó*/,
+        PTL_ERROR_COMMON_INVALID_PARAM = 0x8001001b /*å‚æ•°é”™è¯¯*/,
         PTL_ERROR_COMMON_REACH_CUSTOMERMAX = 0x8001001c,
-        PTL_ERROR_COMMON_TIME = 0x8001001d /*Ê±¼ä´íÎó£¬ÔÚ×¥ÅÄ¡¢Â¼ÏñµÈĞèÒªÖ¸¶¨Ê±¼äµÄÖ¸ÁîÖĞ£¬Ê±¼äÎŞĞ§*/,
-        PTL_ERROR_COMMON_LOCKED = 0x8001001e /*Éè±¸±»Ëø×¡£¬ÔÚÔÆÌ¨¿ØÖÆÃüÁîÖĞ£¬ÔÆÌ¨±»ÆäËûÓÃ»§Ëø×¡*/,
-        PTL_ERROR_COMMON_REMOTE_DOMAIN_OFFLINE = 0x8001001f /*¿çÓò·şÎñÆ÷Î´ÔÚÏß*/,
-        PTL_ERROR_COMMON_VERSION_TOOLD = 0x80010020 /*°æ±¾Ì«¾É*/,
-        PTL_ERROR_COMMON_BUSY = 0x80010021 /*Ì«Ã¦*/,
-        PTL_ERROR_COMMON_ONLY_LOCAL = 0x80010022 /*·Ç±¾Æ½Ì¨Éè±¸²»Ö§³Ö*/,
+        PTL_ERROR_COMMON_TIME = 0x8001001d /*æ—¶é—´é”™è¯¯ï¼Œåœ¨æŠ“æ‹ã€å½•åƒç­‰éœ€è¦æŒ‡å®šæ—¶é—´çš„æŒ‡ä»¤ä¸­ï¼Œæ—¶é—´æ— æ•ˆ*/,
+        PTL_ERROR_COMMON_LOCKED = 0x8001001e /*è®¾å¤‡è¢«é”ä½ï¼Œåœ¨äº‘å°æ§åˆ¶å‘½ä»¤ä¸­ï¼Œäº‘å°è¢«å…¶ä»–ç”¨æˆ·é”ä½*/,
+        PTL_ERROR_COMMON_REMOTE_DOMAIN_OFFLINE = 0x8001001f /*è·¨åŸŸæœåŠ¡å™¨æœªåœ¨çº¿*/,
+        PTL_ERROR_COMMON_VERSION_TOOLD = 0x80010020 /*ç‰ˆæœ¬å¤ªæ—§*/,
+        PTL_ERROR_COMMON_BUSY = 0x80010021 /*å¤ªå¿™*/,
+        PTL_ERROR_COMMON_ONLY_LOCAL = 0x80010022 /*éæœ¬å¹³å°è®¾å¤‡ä¸æ”¯æŒ*/,
         PTL_ERROR_UA_BASE = 0x80020000,
         PTL_ERROR_UA_NOTEXIST = 0x80020001,
         PTL_ERROR_UA_OUTOFDATE = 0x80020002,
@@ -491,78 +491,78 @@ namespace gep
         PTL_ERROR_UA_CLIENTCANCELED = 0x8002000a,
         PTL_ERROR_FD_BASE = 0x80030000,
         PTL_ERROR_AAA_BASE = 0x80040000,
-        PTL_ERROR_AAA_UNKNOWN = 0x80040001 /*Î´ÖªÔ­Òò´íÎó*/,
-        PTL_ERROR_AAA_INVALIDPACKET = 0x80040002 /*Radius°ü²»ºÏ·¨*/,
-        PTL_ERROR_AAA_MISSATTRIBUTE = 0x80040003 /*Radius°üÈ±ÉÙ±ØÒªµÄÊôĞÔ*/,
-        PTL_ERROR_AAA_INTERNAL = 0x80040004 /*AAA·şÎñÆ÷·¢ÉúÄÚ²¿´íÎó*/,
-        PTL_ERROR_AAA_DBMS = 0x80040005 /*AAA·şÎñÆ÷²Ù×÷Êı¾İ¿âÊ§°Ü*/,
-        PTL_ERROR_AAA_STOPPED = 0x80040006 /*AAA·şÎñÆ÷Í£Ö¹·şÎñ*/,
-        PTL_ERROR_AAA_PASSWORD = 0x80040007 /*ÃÜÂë´íÎó*/,
-        PTL_ERROR_AAA_BADUSERID = 0x80040008 /*ÓÃ»§ID²»´æÔÚ*/,
-        PTL_ERROR_AAA_BADDEVID = 0x80040009 /*Éè±¸ID²»´æÔÚ*/,
-        PTL_ERROR_AAA_BADCHANNEL = 0x8004000a /*Éè±¸Í¨µÀºÅ²»´æÔÚ*/,
-        PTL_ERROR_AAA_FORBIDDEN = 0x8004000b /*Ã»ÓĞÈ¨ÏŞÖ´ĞĞËùÇëÇóµÄ²Ù×÷*/,
-        PTL_ERROR_AAA_NOMONEY = 0x8004000c /*·ÑÓÃ²»×ã*/,
-        PTL_ERROR_AAA_NODISK = 0x8004000d /*´ÅÅÌÅä¶î²»×ã*/,
-        PTL_ERROR_AAA_CUSTOMERSTATUS = 0x8004000e /*¿Í»§×´Ì¬²»Õı³£*/,
-        PTL_ERROR_AAA_USERSTATUS = 0x8004000f /*ÓÃ»§×´Ì¬²»Õı³£*/,
-        PTL_ERROR_AAA_USERIPDENIED = 0x80040010 /*ÓÃ»§IPµØÖ·¾Ü¾ø*/,
-        PTL_ERROR_AAA_SMSCODEFAIL = 0x80040011 /*¶ÌĞÅµÇÂ¼´ÎÊı³¬³ö*/,
-        PTL_ERROR_AAA_SMSBAD = 0x80040012 /*¶ÌĞÅÑéÖ¤Âë´íÎó*/,
-        PTL_ERROR_AAA_SMSSENDFAILED = 0x80040013 /*¶ÌĞÅÑéÖ¤Âë·¢ËÍÊ§°Ü*/,
-        PTL_ERROR_AAA_MACDENIED = 0x80040014 /*MACµØÖ·¾Ü¾ø*/,
+        PTL_ERROR_AAA_UNKNOWN = 0x80040001 /*æœªçŸ¥åŸå› é”™è¯¯*/,
+        PTL_ERROR_AAA_INVALIDPACKET = 0x80040002 /*RadiusåŒ…ä¸åˆæ³•*/,
+        PTL_ERROR_AAA_MISSATTRIBUTE = 0x80040003 /*RadiusåŒ…ç¼ºå°‘å¿…è¦çš„å±æ€§*/,
+        PTL_ERROR_AAA_INTERNAL = 0x80040004 /*AAAæœåŠ¡å™¨å‘ç”Ÿå†…éƒ¨é”™è¯¯*/,
+        PTL_ERROR_AAA_DBMS = 0x80040005 /*AAAæœåŠ¡å™¨æ“ä½œæ•°æ®åº“å¤±è´¥*/,
+        PTL_ERROR_AAA_STOPPED = 0x80040006 /*AAAæœåŠ¡å™¨åœæ­¢æœåŠ¡*/,
+        PTL_ERROR_AAA_PASSWORD = 0x80040007 /*å¯†ç é”™è¯¯*/,
+        PTL_ERROR_AAA_BADUSERID = 0x80040008 /*ç”¨æˆ·IDä¸å­˜åœ¨*/,
+        PTL_ERROR_AAA_BADDEVID = 0x80040009 /*è®¾å¤‡IDä¸å­˜åœ¨*/,
+        PTL_ERROR_AAA_BADCHANNEL = 0x8004000a /*è®¾å¤‡é€šé“å·ä¸å­˜åœ¨*/,
+        PTL_ERROR_AAA_FORBIDDEN = 0x8004000b /*æ²¡æœ‰æƒé™æ‰§è¡Œæ‰€è¯·æ±‚çš„æ“ä½œ*/,
+        PTL_ERROR_AAA_NOMONEY = 0x8004000c /*è´¹ç”¨ä¸è¶³*/,
+        PTL_ERROR_AAA_NODISK = 0x8004000d /*ç£ç›˜é…é¢ä¸è¶³*/,
+        PTL_ERROR_AAA_CUSTOMERSTATUS = 0x8004000e /*å®¢æˆ·çŠ¶æ€ä¸æ­£å¸¸*/,
+        PTL_ERROR_AAA_USERSTATUS = 0x8004000f /*ç”¨æˆ·çŠ¶æ€ä¸æ­£å¸¸*/,
+        PTL_ERROR_AAA_USERIPDENIED = 0x80040010 /*ç”¨æˆ·IPåœ°å€æ‹’ç»*/,
+        PTL_ERROR_AAA_SMSCODEFAIL = 0x80040011 /*çŸ­ä¿¡ç™»å½•æ¬¡æ•°è¶…å‡º*/,
+        PTL_ERROR_AAA_SMSBAD = 0x80040012 /*çŸ­ä¿¡éªŒè¯ç é”™è¯¯*/,
+        PTL_ERROR_AAA_SMSSENDFAILED = 0x80040013 /*çŸ­ä¿¡éªŒè¯ç å‘é€å¤±è´¥*/,
+        PTL_ERROR_AAA_MACDENIED = 0x80040014 /*MACåœ°å€æ‹’ç»*/,
         PTL_ERROR_MSS_BASE = 0x80050000,
-        PTL_ERROR_MSS_BUSY = 0x80050100 /*MSS·şÎñÃ¦*/,
-        PTL_ERROR_MSS_SCHEDULE_FD = 0x80050101 /*MSSµ÷¶ÈFDÊ§°Ü*/,
-        PTL_ERROR_MSS_SCHEDULE_RTMDS = 0x80050102 /*MSSµ÷¶ÈRTMDSÊ§°Ü*/,
-        PTL_ERROR_MSS_SCHEDULE_SMS = 0x80050103 /*MSSµ÷¶ÈSMSÊ§°Ü*/,
-        PTL_ERROR_MSS_SCHEDULE_FTS = 0x80050104 /*MSSµ÷¶ÈFTSÊ§°Ü*/,
-        PTL_ERROR_MSS_SCHEDULE_CSS = 0x80050105 /*MSSµ÷¶ÈCSSÊ§°Ü*/,
-        PTL_ERROR_MSS_SCHEDULE_CANCELLED = 0x80050106 /*MSSµ÷¶È±»È¡Ïû*/,
-        PTL_ERROR_MSS_FD_OFFLINE = 0x80050200 /*FDÎ´ÔÚÏß, »òÔÚVPNÄÚ*/,
-        PTL_ERROR_MSS_FD_CHANNEL_INVALID = 0x80050201 /*FDÎ´ÔÚÏß*/,
-        PTL_ERROR_MSS_FD_BUSY = 0x80050202 /*FDÃ¦*/,
-        PTL_ERROR_MSS_FD_NO_RIGHT = 0x80050203 /*FD·ÃÎÊÎ´±»ÊÚÈ¨*/,
-        PTL_ERROR_MSS_FD_FAILTURE = 0x80050204 /*FD²Ù×÷Ê§°Ü*/,
-        PTL_ERROR_MSS_FD_RETURN_ERROR = 0x80050205 /*FD·µ»Ø´íÎó*/,
-        PTL_ERROR_MSS_FD_PACKAGE_ERROR = 0x80050206 /*FD´ò°ü´íÎó*/,
-        PTL_ERROR_MSS_FDMS_OFFLINE = 0x80050300 /*FDMS·şÎñÎ´ÔÚÏß 0x300*/,
-        PTL_ERROR_MSS_FDMS_TIMEOUT = 0x80050301 /*FDMS·şÎñÏìÓ¦³¬Ê±*/,
-        PTL_ERROR_MSS_FDMS_FAILTURE = 0x80050302 /*FDMS·şÎñÏìÓ¦Ê§°Ü*/,
-        PTL_ERROR_MSS_RTMDS_OFFLINE = 0x80050400 /*RTMDS·şÎñÎ´ÔÚÏß 0x400*/,
-        PTL_ERROR_MSS_RTMDS_TIMEOUT = 0x80050401 /*RTMDS·şÎñÏìÓ¦³¬Ê±*/,
-        PTL_ERROR_MSS_RTMDS_FAILTURE = 0x80050402 /*RTMDS·şÎñÏìÓ¦Ê§°Ü*/,
-        PTL_ERROR_MSS_SMS_OFFLINE = 0x80050500 /*SMS·şÎñÎ´ÔÚÏß  0x500*/,
-        PTL_ERROR_MSS_SMS_TIMEOUT = 0x80050501 /*SMS·şÎñÏìÓ¦³¬Ê±*/,
-        PTL_ERROR_MSS_SMS_FAILTURE = 0x80050502 /*SMS·şÎñÏìÓ¦Ê§°Ü*/,
-        PTL_ERROR_MSS_SMS_NO_FILE = 0x80050503 /*SMS·şÎñÏìÓ¦ÎÄ¼ş²»´æÔÚ*/,
-        PTL_ERROR_MSS_FTS_OFFLINE = 0x80050600 /*FTS·şÎñÎ´ÔÚÏß 0x600*/,
-        PTL_ERROR_MSS_FTS_TIMEOUT = 0x80050601 /*FTS·şÎñÏìÓ¦³¬Ê±*/,
-        PTL_ERROR_MSS_FTS_FAILTURE = 0x80050602 /*FTS·şÎñÏìÓ¦Ê§°Ü*/,
-        PTL_ERROR_MSS_FTS_NO_FILE = 0x80050603 /*FTS·şÎñÏìÓ¦ÎÄ¼ş²»´æÔÚ*/,
-        PTL_ERROR_MSS_CSS_OFFLINE = 0x80050700 /*CSS·şÎñÎ´ÔÚÏß 0x700*/,
-        PTL_ERROR_MSS_CSS_TIMEOUT = 0x80050701 /*CSS·şÎñÏìÓ¦³¬Ê±*/,
-        PTL_ERROR_MSS_CSS_FAILTURE = 0x80050702 /*CSS·şÎñÏìÓ¦Ê§°Ü*/,
-        PTL_ERROR_MSS_CSS_NO_FILE = 0x80050703 /*CSS·şÎñÏìÓ¦ÎÄ¼ş²»´æÔÚ*/,
-        PTL_ERROR_MSS_CSS_RECORDING = 0x80050704 /*CSS·şÎñÏìÓ¦ÕıÔÚÂ¼Ïñ*/,
-        PTL_ERROR_MSS_CSS_BUSY = 0x80050705 /*CSS·şÎñÏìÓ¦Ã¦*/,
-        PTL_ERROR_MSS_CSS_DISK_FULL = 0x80050706 /*CSS·şÎñÏìÓ¦´ÅÅÌÒÑÂú*/,
-        PTL_ERROR_MSS_CSS_DISK_QUOTA = 0x80050707 /*CSS·şÎñÏìÓ¦´ÅÅÌÏŞ¶î*/,
-        PTL_ERROR_MSS_CSS_RECORD_STOP = 0x80050708 /*CSS·şÎñ±¨¸æÂ¼ÏñÍ£Ö¹*/,
-        PTL_ERROR_MSS_CSS_RECORD_EXPIRE = 0x80050709 /*CSS·şÎñ±¨¸æÂ¼ÏñÊ±¼äµ½´ï*/,
-        PTL_ERROR_MSS_CSS_RECORD_QUOTA = 0x8005070a /*CSS·şÎñ±¨¸æÂ¼Ïñ´ÅÅÌÏŞ¶îÂú*/,
-        PTL_ERROR_MSS_CSS_RECORD_NETWORKIO = 0x8005070b /*CSS·şÎñ±¨¸æÂ¼ÏñÍøÂçIO´íÎó*/,
-        PTL_ERROR_MSS_CSS_RECORD_FILEIO = 0x8005070c /*CSS·şÎñ±¨¸æÂ¼ÏñÎÄ¼şIO´íÎó*/,
-        PTL_ERROR_MSS_CSS_RECORD_STOPBYCMS = 0x8005070d /*CSS·şÎñ±¨¸æÂ¼Ïñ±»ÏµÍ³¹ÜÀíÔ±Í£Ö¹*/,
-        PTL_ERROR_MSS_CSS_RECORD_NOPACKET = 0x8005070e /*CSS·şÎñ±¨¸æÂ¼ÏñÔÚÒ»¶¨µÄÃëÄÚ½ÓÊÕµ½µÄÊı¾İ°üÌ«ÉÙ*/,
-        PTL_ERROR_MSS_CSS_RECORD_NOFRAME = 0x8005070f /*CSS·şÎñ±¨¸æÂ¼ÏñÔÚÒ»¶¨µÄÃëÄÚ½ÓÊÕµ½µÄÊı¾İ°üËù×é³ÉµÄÖ¡ÊıÎª0*/,
+        PTL_ERROR_MSS_BUSY = 0x80050100 /*MSSæœåŠ¡å¿™*/,
+        PTL_ERROR_MSS_SCHEDULE_FD = 0x80050101 /*MSSè°ƒåº¦FDå¤±è´¥*/,
+        PTL_ERROR_MSS_SCHEDULE_RTMDS = 0x80050102 /*MSSè°ƒåº¦RTMDSå¤±è´¥*/,
+        PTL_ERROR_MSS_SCHEDULE_SMS = 0x80050103 /*MSSè°ƒåº¦SMSå¤±è´¥*/,
+        PTL_ERROR_MSS_SCHEDULE_FTS = 0x80050104 /*MSSè°ƒåº¦FTSå¤±è´¥*/,
+        PTL_ERROR_MSS_SCHEDULE_CSS = 0x80050105 /*MSSè°ƒåº¦CSSå¤±è´¥*/,
+        PTL_ERROR_MSS_SCHEDULE_CANCELLED = 0x80050106 /*MSSè°ƒåº¦è¢«å–æ¶ˆ*/,
+        PTL_ERROR_MSS_FD_OFFLINE = 0x80050200 /*FDæœªåœ¨çº¿, æˆ–åœ¨VPNå†…*/,
+        PTL_ERROR_MSS_FD_CHANNEL_INVALID = 0x80050201 /*FDæœªåœ¨çº¿*/,
+        PTL_ERROR_MSS_FD_BUSY = 0x80050202 /*FDå¿™*/,
+        PTL_ERROR_MSS_FD_NO_RIGHT = 0x80050203 /*FDè®¿é—®æœªè¢«æˆæƒ*/,
+        PTL_ERROR_MSS_FD_FAILTURE = 0x80050204 /*FDæ“ä½œå¤±è´¥*/,
+        PTL_ERROR_MSS_FD_RETURN_ERROR = 0x80050205 /*FDè¿”å›é”™è¯¯*/,
+        PTL_ERROR_MSS_FD_PACKAGE_ERROR = 0x80050206 /*FDæ‰“åŒ…é”™è¯¯*/,
+        PTL_ERROR_MSS_FDMS_OFFLINE = 0x80050300 /*FDMSæœåŠ¡æœªåœ¨çº¿ 0x300*/,
+        PTL_ERROR_MSS_FDMS_TIMEOUT = 0x80050301 /*FDMSæœåŠ¡å“åº”è¶…æ—¶*/,
+        PTL_ERROR_MSS_FDMS_FAILTURE = 0x80050302 /*FDMSæœåŠ¡å“åº”å¤±è´¥*/,
+        PTL_ERROR_MSS_RTMDS_OFFLINE = 0x80050400 /*RTMDSæœåŠ¡æœªåœ¨çº¿ 0x400*/,
+        PTL_ERROR_MSS_RTMDS_TIMEOUT = 0x80050401 /*RTMDSæœåŠ¡å“åº”è¶…æ—¶*/,
+        PTL_ERROR_MSS_RTMDS_FAILTURE = 0x80050402 /*RTMDSæœåŠ¡å“åº”å¤±è´¥*/,
+        PTL_ERROR_MSS_SMS_OFFLINE = 0x80050500 /*SMSæœåŠ¡æœªåœ¨çº¿  0x500*/,
+        PTL_ERROR_MSS_SMS_TIMEOUT = 0x80050501 /*SMSæœåŠ¡å“åº”è¶…æ—¶*/,
+        PTL_ERROR_MSS_SMS_FAILTURE = 0x80050502 /*SMSæœåŠ¡å“åº”å¤±è´¥*/,
+        PTL_ERROR_MSS_SMS_NO_FILE = 0x80050503 /*SMSæœåŠ¡å“åº”æ–‡ä»¶ä¸å­˜åœ¨*/,
+        PTL_ERROR_MSS_FTS_OFFLINE = 0x80050600 /*FTSæœåŠ¡æœªåœ¨çº¿ 0x600*/,
+        PTL_ERROR_MSS_FTS_TIMEOUT = 0x80050601 /*FTSæœåŠ¡å“åº”è¶…æ—¶*/,
+        PTL_ERROR_MSS_FTS_FAILTURE = 0x80050602 /*FTSæœåŠ¡å“åº”å¤±è´¥*/,
+        PTL_ERROR_MSS_FTS_NO_FILE = 0x80050603 /*FTSæœåŠ¡å“åº”æ–‡ä»¶ä¸å­˜åœ¨*/,
+        PTL_ERROR_MSS_CSS_OFFLINE = 0x80050700 /*CSSæœåŠ¡æœªåœ¨çº¿ 0x700*/,
+        PTL_ERROR_MSS_CSS_TIMEOUT = 0x80050701 /*CSSæœåŠ¡å“åº”è¶…æ—¶*/,
+        PTL_ERROR_MSS_CSS_FAILTURE = 0x80050702 /*CSSæœåŠ¡å“åº”å¤±è´¥*/,
+        PTL_ERROR_MSS_CSS_NO_FILE = 0x80050703 /*CSSæœåŠ¡å“åº”æ–‡ä»¶ä¸å­˜åœ¨*/,
+        PTL_ERROR_MSS_CSS_RECORDING = 0x80050704 /*CSSæœåŠ¡å“åº”æ­£åœ¨å½•åƒ*/,
+        PTL_ERROR_MSS_CSS_BUSY = 0x80050705 /*CSSæœåŠ¡å“åº”å¿™*/,
+        PTL_ERROR_MSS_CSS_DISK_FULL = 0x80050706 /*CSSæœåŠ¡å“åº”ç£ç›˜å·²æ»¡*/,
+        PTL_ERROR_MSS_CSS_DISK_QUOTA = 0x80050707 /*CSSæœåŠ¡å“åº”ç£ç›˜é™é¢*/,
+        PTL_ERROR_MSS_CSS_RECORD_STOP = 0x80050708 /*CSSæœåŠ¡æŠ¥å‘Šå½•åƒåœæ­¢*/,
+        PTL_ERROR_MSS_CSS_RECORD_EXPIRE = 0x80050709 /*CSSæœåŠ¡æŠ¥å‘Šå½•åƒæ—¶é—´åˆ°è¾¾*/,
+        PTL_ERROR_MSS_CSS_RECORD_QUOTA = 0x8005070a /*CSSæœåŠ¡æŠ¥å‘Šå½•åƒç£ç›˜é™é¢æ»¡*/,
+        PTL_ERROR_MSS_CSS_RECORD_NETWORKIO = 0x8005070b /*CSSæœåŠ¡æŠ¥å‘Šå½•åƒç½‘ç»œIOé”™è¯¯*/,
+        PTL_ERROR_MSS_CSS_RECORD_FILEIO = 0x8005070c /*CSSæœåŠ¡æŠ¥å‘Šå½•åƒæ–‡ä»¶IOé”™è¯¯*/,
+        PTL_ERROR_MSS_CSS_RECORD_STOPBYCMS = 0x8005070d /*CSSæœåŠ¡æŠ¥å‘Šå½•åƒè¢«ç³»ç»Ÿç®¡ç†å‘˜åœæ­¢*/,
+        PTL_ERROR_MSS_CSS_RECORD_NOPACKET = 0x8005070e /*CSSæœåŠ¡æŠ¥å‘Šå½•åƒåœ¨ä¸€å®šçš„ç§’å†…æ¥æ”¶åˆ°çš„æ•°æ®åŒ…å¤ªå°‘*/,
+        PTL_ERROR_MSS_CSS_RECORD_NOFRAME = 0x8005070f /*CSSæœåŠ¡æŠ¥å‘Šå½•åƒåœ¨ä¸€å®šçš„ç§’å†…æ¥æ”¶åˆ°çš„æ•°æ®åŒ…æ‰€ç»„æˆçš„å¸§æ•°ä¸º0*/,
         PTL_ERROR_MSS_SSU_OFFLINE = 0x80050d00,
         PTL_ERROR_MSS_SSU_TIMEOUT = 0x80050d01,
         PTL_ERROR_MSS_SSU_FAILTURE = 0x80050d02,
-        PTL_ERROR_MSS_SID_MISMATCH = 0x80059000 /*·µ»ØÀ´µÄsessionid²»Æ¥Åä*/,
+        PTL_ERROR_MSS_SID_MISMATCH = 0x80059000 /*è¿”å›æ¥çš„sessionidä¸åŒ¹é…*/,
         PTL_ERROR_DBMS_BASE = 0x80060000,
         PTL_ERROR_DBMS_QUERY_FD_DOMAIN = 0x80060001,
-        PTL_ERROR_DBMS_CUSTOM_NOTEXISTS = 0x80060002 /*DBMS²éÑ¯¿Í»§²»´æÔÚ*/,
+        PTL_ERROR_DBMS_CUSTOM_NOTEXISTS = 0x80060002 /*DBMSæŸ¥è¯¢å®¢æˆ·ä¸å­˜åœ¨*/,
         PTL_ERROR_FDMS_BASE = 0x80070000 /*generic error*/,
         PTL_ERROR_FDMS_DBMS = 0x80075000 /*fdms-dbms error*/,
         PTL_ERROR_FDMS_FD_BASE = 0x80077000 /*fd generic error*/,
@@ -586,12 +586,12 @@ namespace gep
         PTL_ERROR_FDMS_AAA_PARAM = 0x80078001 /*fd login failed because of bad parameter*/,
         PTL_ERROR_FDMS_AAA_AUTH = 0x80078002 /*fd login failed because of bad password*/,
         PTL_ERROR_CMS_BASE = 0x80080000,
-        PTL_ERROR_CMS_NAMEID_INDEX_OVERFLOW = 0x80080001 /*ÏÂ±ê²ã´ÎÔ½½ç*/,
-        PTL_ERROR_CMS_ID_NOTEXIST = 0x80080002 /*¶ÔÏó²»´æÔÚ*/,
-        PTL_ERROR_CMS_TRAP_NOTSETABLE = 0x80080003 /*¶ÔÏó²»¿ÉÉèÖÃ*/,
-        PTL_ERROR_CMS_CLASS_NOTEXIST = 0x80080004 /*Àà²»´æÔÚ*/,
-        PTL_ERROR_CMS_METHOD_NOTEXIST = 0x80080005 /*·½·¨²»´æÔÚ*/,
-        PTL_ERROR_CMS_MEMBER_NOTEXIST = 0x80080006 /*³ÉÔ±²»´æÔÚ*/,
+        PTL_ERROR_CMS_NAMEID_INDEX_OVERFLOW = 0x80080001 /*ä¸‹æ ‡å±‚æ¬¡è¶Šç•Œ*/,
+        PTL_ERROR_CMS_ID_NOTEXIST = 0x80080002 /*å¯¹è±¡ä¸å­˜åœ¨*/,
+        PTL_ERROR_CMS_TRAP_NOTSETABLE = 0x80080003 /*å¯¹è±¡ä¸å¯è®¾ç½®*/,
+        PTL_ERROR_CMS_CLASS_NOTEXIST = 0x80080004 /*ç±»ä¸å­˜åœ¨*/,
+        PTL_ERROR_CMS_METHOD_NOTEXIST = 0x80080005 /*æ–¹æ³•ä¸å­˜åœ¨*/,
+        PTL_ERROR_CMS_MEMBER_NOTEXIST = 0x80080006 /*æˆå‘˜ä¸å­˜åœ¨*/,
         PTL_ERROR_PARALLEL_INTERVAL = 0x10000000,
         PTL_ERROR_PARALLEL_BASE = 0x90090000,
         PTL_ERROR_PARALLEL_TIMEOUT = 0x90090001,
@@ -618,26 +618,26 @@ namespace gep
         {
         }
 
-        zce_uint16    magic/*±¾Ğ­ÒéµÄÌØÊâ±ê¼Ç£¬ÖµÊ¼ÖÕÎªGEµÄASCII£¨0x47,0x45£©*/;
-        zce_uint16    version/*Ğ­Òé°æ±¾ºÅ: 0x0002±íÊ¾V2; 0x0003±íÊ¾V3£¨¸Ã°æ±¾½«MessageLength×Ö¶ÎÉèÎª0£¬¶øÆôÓÃReserved×Ö¶Î±íÊ¾Õû¸öÏûÏ¢°ü³¤¶È£¬Í¬Ê±ËùÓĞIEµÄLength×Ö¶ÎÓĞ2×Ö½Ú¸ÄÎª4×Ö½Ú£©*/;
-        zce_uint16    compress_flag/*ÊÇ·ñÑ¹Ëõ: 0±íÊ¾Î´Ñ¹Ëõ; 1: BZIP2; ÆäËû·Ç¸ºÊı±íÊ¾¶ÔÓ¦µÄÑ¹ËõËã·¨*/;
-        zce_uint16    msg_type/*ÏûÏ¢ÀàĞÍ*/;
-        zce_uint16    msg_len/*Õû¸öÏûÏ¢°ü³¤¶È£¬²»°üº¬ÏûÏ¢Í·*/;
-        zce_uint16    ie_num/*Êı¾İ°üÖĞ°üº¬IEµÄ¸öÊı£¬²»°üº¬ÏûÏ¢Í·*/;
-        zce_uint32    seq_num/*°üĞòºÅ£¨´ÓÆô¶¯¿ªÊ¼ÒÀ´ÎµİÔö£¬Ó¦´ğÏûÏ¢Ó¦ÓëÏàÓ¦ÇëÇóÏûÏ¢ÖĞ±£³ÖÒ»ÖÂ£©*/;
-        zce_uint32    session_id/*»á»°ID£¨Ã¿´ÎÁ¬½Ó¸Ã×Ö¶Î¾ù²»Í¬£¬Í¬Ò»´ÎÁ¬½ÓËùÓĞÊı¾İ°ü±£³ÖÒ»ÖÂ£©*/;
+        zce_uint16    magic/*æœ¬åè®®çš„ç‰¹æ®Šæ ‡è®°ï¼Œå€¼å§‹ç»ˆä¸ºGEçš„ASCIIï¼ˆ0x47,0x45ï¼‰*/;
+        zce_uint16    version/*åè®®ç‰ˆæœ¬å·: 0x0002è¡¨ç¤ºV2; 0x0003è¡¨ç¤ºV3ï¼ˆè¯¥ç‰ˆæœ¬å°†MessageLengthå­—æ®µè®¾ä¸º0ï¼Œè€Œå¯ç”¨Reservedå­—æ®µè¡¨ç¤ºæ•´ä¸ªæ¶ˆæ¯åŒ…é•¿åº¦ï¼ŒåŒæ—¶æ‰€æœ‰IEçš„Lengthå­—æ®µæœ‰2å­—èŠ‚æ”¹ä¸º4å­—èŠ‚ï¼‰*/;
+        zce_uint16    compress_flag/*æ˜¯å¦å‹ç¼©: 0è¡¨ç¤ºæœªå‹ç¼©; 1: BZIP2; å…¶ä»–éè´Ÿæ•°è¡¨ç¤ºå¯¹åº”çš„å‹ç¼©ç®—æ³•*/;
+        zce_uint16    msg_type/*æ¶ˆæ¯ç±»å‹*/;
+        zce_uint16    msg_len/*æ•´ä¸ªæ¶ˆæ¯åŒ…é•¿åº¦ï¼Œä¸åŒ…å«æ¶ˆæ¯å¤´*/;
+        zce_uint16    ie_num/*æ•°æ®åŒ…ä¸­åŒ…å«IEçš„ä¸ªæ•°ï¼Œä¸åŒ…å«æ¶ˆæ¯å¤´*/;
+        zce_uint32    seq_num/*åŒ…åºå·ï¼ˆä»å¯åŠ¨å¼€å§‹ä¾æ¬¡é€’å¢ï¼Œåº”ç­”æ¶ˆæ¯åº”ä¸ç›¸åº”è¯·æ±‚æ¶ˆæ¯ä¸­ä¿æŒä¸€è‡´ï¼‰*/;
+        zce_uint32    session_id/*ä¼šè¯IDï¼ˆæ¯æ¬¡è¿æ¥è¯¥å­—æ®µå‡ä¸åŒï¼ŒåŒä¸€æ¬¡è¿æ¥æ‰€æœ‰æ•°æ®åŒ…ä¿æŒä¸€è‡´ï¼‰*/;
         zce_astring src_dmn;
         zce_astring src_id;
         zce_astring dst_dmn;
         zce_astring dst_id;
-        zce_uint32    reserve/*±£Áô×Ö¶Î£¨ÔÚV3°æ±¾ÖĞ£¬ÓÃÀ´±íÊ¾Õû¸öÏûÏ¢°ü³¤¶È£¬²»°üº¬ÏûÏ¢Í·£©*/;
-        zce_uint32    check_sum/*¶ÔÕû¸öÊı¾İ°üµÄÍêÕûĞÔĞ£ÑéÖµ£¬²ÉÓÃCRCËã·¨À´¼ÆËã£¬Îª¼ÆËãCRCÖµÊ±£¬Çë½«ÆäÉèÎª0*/;
+        zce_uint32    reserve/*ä¿ç•™å­—æ®µï¼ˆåœ¨V3ç‰ˆæœ¬ä¸­ï¼Œç”¨æ¥è¡¨ç¤ºæ•´ä¸ªæ¶ˆæ¯åŒ…é•¿åº¦ï¼Œä¸åŒ…å«æ¶ˆæ¯å¤´ï¼‰*/;
+        zce_uint32    check_sum/*å¯¹æ•´ä¸ªæ•°æ®åŒ…çš„å®Œæ•´æ€§æ ¡éªŒå€¼ï¼Œé‡‡ç”¨CRCç®—æ³•æ¥è®¡ç®—ï¼Œä¸ºè®¡ç®—CRCå€¼æ—¶ï¼Œè¯·å°†å…¶è®¾ä¸º0*/;
     };
     struct GENERAL_INFO
     {
         GENERAL_INFO() { };
-        zce_astring name/*Ãû³Æ*/;
-        zce_astring desc/*ÏêÏ¸ÃèÊö*/;
+        zce_astring name/*åç§°*/;
+        zce_astring desc/*è¯¦ç»†æè¿°*/;
     };
     struct GENERAL_POINT
     {
@@ -682,8 +682,8 @@ namespace gep
         {
         }
 
-        zce_uint16    type/*Í¨µÀÀàĞÍ*/;
-        zce_uint16    no/*Í¨µÀºÅ*/;
+        zce_uint16    type/*é€šé“ç±»å‹*/;
+        zce_uint16    no/*é€šé“å·*/;
     };
     struct CHANNEL_INFO
     {
@@ -700,14 +700,14 @@ namespace gep
         {
         }
 
-        zce_byte    direction/*Í¨µÀ·½Ïò: 0x01 FD->UA; 0x02 UA->FD; 0x03 Ë«¹¤*/;
-        zce_byte    qos/*QoS¼¶±ğ: 0Î´¶¨Òå; 1ÓÃÓÚ»¥ÁªÍøÍ¨ÓÃÖÕ¶Ë; 2ÓÃÓÚ3GÍøÂçÍ¨ÓÃÊÖ»úÖÕ¶Ë; 3ÓÃÓÚ3GÍøÂçWINCEÊÖ»úÖÕ¶Ë; 4ÓÃÓÚEVDOÍøÂç; 5ÓÃÓÚWiFiÍøÂç; 6ÓÃÓÚ½âÂëÉÏÇ½(Ê¹ÓÃMGS)*/;
-        zce_byte    payload/*±àÂë¸ñÊ½H.264/MPEG4/G.711/G.7231µÈ*/;
-        zce_byte    resolution/*ÊÓÆµ´óĞ¡¸ñÊ½QCIF/CIF/4CIFµÈ*/;
-        zce_uint16    frame/*ÊÓÆµÖ¡ÂÊ*/;
-        zce_uint16    frame_interval/*ÊÓÆµIÖ¡¼ä¸ô*/;
-        zce_uint32    time/*ÒôÆµµ¥Ö¡Ê±³¤ */;
-        zce_uint32    max_bitrate/*×î´óÂëÂÊ£¬µ¥Î»Kbps*/;
+        zce_byte    direction/*é€šé“æ–¹å‘: 0x01 FD->UA; 0x02 UA->FD; 0x03 åŒå·¥*/;
+        zce_byte    qos/*QoSçº§åˆ«: 0æœªå®šä¹‰; 1ç”¨äºäº’è”ç½‘é€šç”¨ç»ˆç«¯; 2ç”¨äº3Gç½‘ç»œé€šç”¨æ‰‹æœºç»ˆç«¯; 3ç”¨äº3Gç½‘ç»œWINCEæ‰‹æœºç»ˆç«¯; 4ç”¨äºEVDOç½‘ç»œ; 5ç”¨äºWiFiç½‘ç»œ; 6ç”¨äºè§£ç ä¸Šå¢™(ä½¿ç”¨MGS)*/;
+        zce_byte    payload/*ç¼–ç æ ¼å¼H.264/MPEG4/G.711/G.7231ç­‰*/;
+        zce_byte    resolution/*è§†é¢‘å¤§å°æ ¼å¼QCIF/CIF/4CIFç­‰*/;
+        zce_uint16    frame/*è§†é¢‘å¸§ç‡*/;
+        zce_uint16    frame_interval/*è§†é¢‘Iå¸§é—´éš”*/;
+        zce_uint32    time/*éŸ³é¢‘å•å¸§æ—¶é•¿ */;
+        zce_uint32    max_bitrate/*æœ€å¤§ç ç‡ï¼Œå•ä½Kbps*/;
     };
     struct CHANNEL_STATUS
     {
@@ -727,17 +727,17 @@ namespace gep
         {
         }
 
-        zce_uint16    channel_type/*Í¨µÀÀàĞÍ*/;
-        zce_uint16    channel_no/*Í¨µÀ±àºÅ£¨Éè±¸ÄÚÎ¨Ò»£©*/;
-        zce_byte    record_status/*ÊÇ·ñÕıÔÚ±¾µØÂ¼Ïñ0x00:·ñ0x01:ÊÇ*/;
-        zce_byte    monitor_status/*ÊÇ·ñÕıÔÚ¼à¿Ø,0x00:·ñ0x01:ÊÇ*/;
-        zce_byte    replay_status/*ÊÇ·ñÕıÔÚ»Ø·Å0x00:·ñ0x01:ÊÇ*/;
-        zce_byte    download_status/*ÊÇ·ñÕıÔÚÏÂÔØ0x00:·ñ0x01:ÊÇ*/;
-        zce_uint16    video_format/*µ±Ç°ÊÓÆµ±àÂë¸ñÊ½ ,²Î¼ûÊÓÆµ±àÂë¸ñÊ½±í*/;
-        zce_uint16    video_resolution/*µ±Ç°ÊÓÆµÏÔÊ¾¸ñÊ½, ,²Î¼ûÊÓÆµÏÔÊ¾¸ñÊ½±í*/;
-        zce_uint32    store_totalcapacity/*´æ´¢×ÜÈİÁ¿£¬µ¥Î»£ºMB*/;
-        zce_uint32    store_sparecapacity/*´æ´¢Ê£ÓàÈİÁ¿£¬µ¥Î»£ºMB*/;
-        zce_uint32    bit_rate/*µ±Ç°·¢ËÍÂëÁ÷,£¬µ¥Î»£ºkbps*/;
+        zce_uint16    channel_type/*é€šé“ç±»å‹*/;
+        zce_uint16    channel_no/*é€šé“ç¼–å·ï¼ˆè®¾å¤‡å†…å”¯ä¸€ï¼‰*/;
+        zce_byte    record_status/*æ˜¯å¦æ­£åœ¨æœ¬åœ°å½•åƒ0x00:å¦0x01:æ˜¯*/;
+        zce_byte    monitor_status/*æ˜¯å¦æ­£åœ¨ç›‘æ§,0x00:å¦0x01:æ˜¯*/;
+        zce_byte    replay_status/*æ˜¯å¦æ­£åœ¨å›æ”¾0x00:å¦0x01:æ˜¯*/;
+        zce_byte    download_status/*æ˜¯å¦æ­£åœ¨ä¸‹è½½0x00:å¦0x01:æ˜¯*/;
+        zce_uint16    video_format/*å½“å‰è§†é¢‘ç¼–ç æ ¼å¼ ,å‚è§è§†é¢‘ç¼–ç æ ¼å¼è¡¨*/;
+        zce_uint16    video_resolution/*å½“å‰è§†é¢‘æ˜¾ç¤ºæ ¼å¼, ,å‚è§è§†é¢‘æ˜¾ç¤ºæ ¼å¼è¡¨*/;
+        zce_uint32    store_totalcapacity/*å­˜å‚¨æ€»å®¹é‡ï¼Œå•ä½ï¼šMB*/;
+        zce_uint32    store_sparecapacity/*å­˜å‚¨å‰©ä½™å®¹é‡ï¼Œå•ä½ï¼šMB*/;
+        zce_uint32    bit_rate/*å½“å‰å‘é€ç æµ,ï¼Œå•ä½ï¼škbps*/;
     };
     struct CHANNEL_STATUS_SIMPLE
     {
@@ -750,10 +750,10 @@ namespace gep
         {
         }
 
-        zce_uint16    channel_type/*Í¨µÀÀàĞÍ*/;
-        zce_uint16    channel_no/*Í¨µÀ±àºÅ£¨Éè±¸ÄÚÎ¨Ò»£©*/;
-        zce_uint32    channel_status/*Í¨µÀ×´Ì¬£¬²Î¿¼ºóÃæÃ¶¾Ù¶¨Òå*/;
-        zce_uint32    channel_status_mask/*±¾´ÎĞŞ¸ÄµÄÎ»ºÅÑÚÂë*/;
+        zce_uint16    channel_type/*é€šé“ç±»å‹*/;
+        zce_uint16    channel_no/*é€šé“ç¼–å·ï¼ˆè®¾å¤‡å†…å”¯ä¸€ï¼‰*/;
+        zce_uint32    channel_status/*é€šé“çŠ¶æ€ï¼Œå‚è€ƒåé¢æšä¸¾å®šä¹‰*/;
+        zce_uint32    channel_status_mask/*æœ¬æ¬¡ä¿®æ”¹çš„ä½å·æ©ç */;
     };
     struct PRESET_PLAN
     {
@@ -795,25 +795,25 @@ namespace gep
         {
         }
 
-        CHANNEL_ID    channel_id/*ÊÓÆµÍ¨µÀºÅ*/;
-        zce_astring channel_name/*Í¨µÀÃû³Æ*/;
-        zce_uint16    format/*ÊÓÆµ±àÂë¸ñÊ½,²Î¼ûÊÓÆµ±àÂë¸ñÊ½±í*/;
-        zce_byte    resolution/*Ö§³ÖµÄÊÓÆµÏÔÊ¾¸ñÊ½,²Î¼ûÊÓÆµÏÔÊ¾±í*/;
-        zce_byte    frame_rates/*Ö¡ÂÊ1¡«25*/;
-        zce_uint16    iframe_interval/*¹Ø¼üÖ¡¼ä¸ô2-2500*/;
-        zce_uint16    bit_rates/*ÂëÂÊ£¬µ¥Î»£ºKbps*/;
-        zce_byte    lost_detect/*ÊÇ·ñ½øĞĞÊÓÆµ¶ªÊ§¼ì²â*/;
-        zce_byte    lost_percent/*ÊÓÆµ¶ª°üÂÊ 0% ~ 100%*/;
-        zce_byte    priority/*ÊÓÆµÂëÂÊÓÅÏÈ¸ñÊ½(ËÙ¶ÈÓÅÏÈ»òÕßÊÇÖÊÁ¿ÓÅÏÈ)0 - ËÙ¶ÈÓÅÏÈ  1 - ÖÊÁ¿ÓÅÏÈ*/;
-        zce_byte    alarm_min_region_num/*²úÉú¸æ¾¯µÄ×îĞ¡¿éÊı*/;
-        zce_byte    alarm_max_region_num/*»Ö¸´¸æ¾¯µÄ×î´ó¿éÊı*/;
-        zce_byte    status/*ÊÇ·ñ¿É¿Ø*/;
-        zce_byte    store_type/*´æ´¢·½Ê½0x01£ºÖĞĞÄ´æ´¢  0x02£ºÇ°¶Ë´æ´¢*/;
-        zce_byte    record_type/*Â¼ÏñÀàĞÍ£º0x01£ºÖ¸ÁîÂ¼Ïñ£¨·Ç¶¨Ê±£©0x02£º¶¨Ê±Â¼Ïñ*/;
-        zce_uint32    total_capacity/*ÖĞĞÄ´æ´¢×ÜÈİÁ¿£¬»ù±¾µ¥Î»£ºM*/;
-        zce_uint32    spare_capacity/*ÖĞĞÄ´æ´¢Ê£ÓàÈİÁ¿£¬»ù±¾µ¥Î»£ºM*/;
-        zce_astring location/*Î»ÖÃ*/;
-        zce_astring desc/*±¸×¢*/;
+        CHANNEL_ID    channel_id/*è§†é¢‘é€šé“å·*/;
+        zce_astring channel_name/*é€šé“åç§°*/;
+        zce_uint16    format/*è§†é¢‘ç¼–ç æ ¼å¼,å‚è§è§†é¢‘ç¼–ç æ ¼å¼è¡¨*/;
+        zce_byte    resolution/*æ”¯æŒçš„è§†é¢‘æ˜¾ç¤ºæ ¼å¼,å‚è§è§†é¢‘æ˜¾ç¤ºè¡¨*/;
+        zce_byte    frame_rates/*å¸§ç‡1ï½25*/;
+        zce_uint16    iframe_interval/*å…³é”®å¸§é—´éš”2-2500*/;
+        zce_uint16    bit_rates/*ç ç‡ï¼Œå•ä½ï¼šKbps*/;
+        zce_byte    lost_detect/*æ˜¯å¦è¿›è¡Œè§†é¢‘ä¸¢å¤±æ£€æµ‹*/;
+        zce_byte    lost_percent/*è§†é¢‘ä¸¢åŒ…ç‡ 0% ~ 100%*/;
+        zce_byte    priority/*è§†é¢‘ç ç‡ä¼˜å…ˆæ ¼å¼(é€Ÿåº¦ä¼˜å…ˆæˆ–è€…æ˜¯è´¨é‡ä¼˜å…ˆ)0 - é€Ÿåº¦ä¼˜å…ˆ  1 - è´¨é‡ä¼˜å…ˆ*/;
+        zce_byte    alarm_min_region_num/*äº§ç”Ÿå‘Šè­¦çš„æœ€å°å—æ•°*/;
+        zce_byte    alarm_max_region_num/*æ¢å¤å‘Šè­¦çš„æœ€å¤§å—æ•°*/;
+        zce_byte    status/*æ˜¯å¦å¯æ§*/;
+        zce_byte    store_type/*å­˜å‚¨æ–¹å¼0x01ï¼šä¸­å¿ƒå­˜å‚¨  0x02ï¼šå‰ç«¯å­˜å‚¨*/;
+        zce_byte    record_type/*å½•åƒç±»å‹ï¼š0x01ï¼šæŒ‡ä»¤å½•åƒï¼ˆéå®šæ—¶ï¼‰0x02ï¼šå®šæ—¶å½•åƒ*/;
+        zce_uint32    total_capacity/*ä¸­å¿ƒå­˜å‚¨æ€»å®¹é‡ï¼ŒåŸºæœ¬å•ä½ï¼šM*/;
+        zce_uint32    spare_capacity/*ä¸­å¿ƒå­˜å‚¨å‰©ä½™å®¹é‡ï¼ŒåŸºæœ¬å•ä½ï¼šM*/;
+        zce_astring location/*ä½ç½®*/;
+        zce_astring desc/*å¤‡æ³¨*/;
     };
     struct VIDEOIN_CHANNEL_V2
     {
@@ -838,26 +838,26 @@ namespace gep
         {
         }
 
-        CHANNEL_ID    channel_id/*ÊÓÆµÍ¨µÀºÅ*/;
-        zce_astring channel_name/*Í¨µÀÃû³Æ*/;
-        zce_uint16    format/*ÊÓÆµ±àÂë¸ñÊ½,²Î¼ûÊÓÆµ±àÂë¸ñÊ½±í*/;
-        zce_byte    resolution/*Ö§³ÖµÄÊÓÆµÏÔÊ¾¸ñÊ½,²Î¼ûÊÓÆµÏÔÊ¾±í*/;
-        zce_byte    frame_rates/*Ö¡ÂÊ1¡«25*/;
-        zce_uint16    iframe_interval/*¹Ø¼üÖ¡¼ä¸ô2-2500*/;
-        zce_uint16    bit_rates/*ÂëÂÊ£¬µ¥Î»£ºKbps*/;
-        zce_byte    lost_detect/*ÊÇ·ñ½øĞĞÊÓÆµ¶ªÊ§¼ì²â*/;
-        zce_byte    lost_percent/*ÊÓÆµ¶ª°üÂÊ 0% ~ 100%*/;
-        zce_byte    priority/*ÊÓÆµÂëÂÊÓÅÏÈ¸ñÊ½(ËÙ¶ÈÓÅÏÈ»òÕßÊÇÖÊÁ¿ÓÅÏÈ)0 - ËÙ¶ÈÓÅÏÈ  1 - ÖÊÁ¿ÓÅÏÈ*/;
-        zce_byte    alarm_min_region_num/*²úÉú¸æ¾¯µÄ×îĞ¡¿éÊı*/;
-        zce_byte    alarm_max_region_num/*»Ö¸´¸æ¾¯µÄ×î´ó¿éÊı*/;
-        zce_uint32    status/*ÊÇ·ñ¿É¿Ø*/;
-        zce_uint32    reserve/*±£Áô*/;
-        zce_byte    store_type/*´æ´¢·½Ê½0x01£ºÖĞĞÄ´æ´¢  0x02£ºÇ°¶Ë´æ´¢*/;
-        zce_byte    record_type/*Â¼ÏñÀàĞÍ£º0x01£ºÖ¸ÁîÂ¼Ïñ£¨·Ç¶¨Ê±£©0x02£º¶¨Ê±Â¼Ïñ*/;
-        zce_uint32    total_capacity/*ÖĞĞÄ´æ´¢×ÜÈİÁ¿£¬»ù±¾µ¥Î»£ºM*/;
-        zce_uint32    spare_capacity/*ÖĞĞÄ´æ´¢Ê£ÓàÈİÁ¿£¬»ù±¾µ¥Î»£ºM*/;
-        zce_astring location/*Î»ÖÃ*/;
-        zce_astring desc/*±¸×¢*/;
+        CHANNEL_ID    channel_id/*è§†é¢‘é€šé“å·*/;
+        zce_astring channel_name/*é€šé“åç§°*/;
+        zce_uint16    format/*è§†é¢‘ç¼–ç æ ¼å¼,å‚è§è§†é¢‘ç¼–ç æ ¼å¼è¡¨*/;
+        zce_byte    resolution/*æ”¯æŒçš„è§†é¢‘æ˜¾ç¤ºæ ¼å¼,å‚è§è§†é¢‘æ˜¾ç¤ºè¡¨*/;
+        zce_byte    frame_rates/*å¸§ç‡1ï½25*/;
+        zce_uint16    iframe_interval/*å…³é”®å¸§é—´éš”2-2500*/;
+        zce_uint16    bit_rates/*ç ç‡ï¼Œå•ä½ï¼šKbps*/;
+        zce_byte    lost_detect/*æ˜¯å¦è¿›è¡Œè§†é¢‘ä¸¢å¤±æ£€æµ‹*/;
+        zce_byte    lost_percent/*è§†é¢‘ä¸¢åŒ…ç‡ 0% ~ 100%*/;
+        zce_byte    priority/*è§†é¢‘ç ç‡ä¼˜å…ˆæ ¼å¼(é€Ÿåº¦ä¼˜å…ˆæˆ–è€…æ˜¯è´¨é‡ä¼˜å…ˆ)0 - é€Ÿåº¦ä¼˜å…ˆ  1 - è´¨é‡ä¼˜å…ˆ*/;
+        zce_byte    alarm_min_region_num/*äº§ç”Ÿå‘Šè­¦çš„æœ€å°å—æ•°*/;
+        zce_byte    alarm_max_region_num/*æ¢å¤å‘Šè­¦çš„æœ€å¤§å—æ•°*/;
+        zce_uint32    status/*æ˜¯å¦å¯æ§*/;
+        zce_uint32    reserve/*ä¿ç•™*/;
+        zce_byte    store_type/*å­˜å‚¨æ–¹å¼0x01ï¼šä¸­å¿ƒå­˜å‚¨  0x02ï¼šå‰ç«¯å­˜å‚¨*/;
+        zce_byte    record_type/*å½•åƒç±»å‹ï¼š0x01ï¼šæŒ‡ä»¤å½•åƒï¼ˆéå®šæ—¶ï¼‰0x02ï¼šå®šæ—¶å½•åƒ*/;
+        zce_uint32    total_capacity/*ä¸­å¿ƒå­˜å‚¨æ€»å®¹é‡ï¼ŒåŸºæœ¬å•ä½ï¼šM*/;
+        zce_uint32    spare_capacity/*ä¸­å¿ƒå­˜å‚¨å‰©ä½™å®¹é‡ï¼ŒåŸºæœ¬å•ä½ï¼šM*/;
+        zce_astring location/*ä½ç½®*/;
+        zce_astring desc/*å¤‡æ³¨*/;
     };
     struct VIDEOOUT_CHANNEL
     {
@@ -870,14 +870,14 @@ namespace gep
         {
         }
 
-        CHANNEL_ID    channel_id/*ÊÓÆµÍ¨µÀºÅ*/;
-        zce_astring channel_name/*Í¨µÀÃû³Æ*/;
-        zce_uint16    format/*ÊÓÆµ±àÂë¸ñÊ½,²Î¼ûÊÓÆµ±àÂë¸ñÊ½±í*/;
-        zce_byte    resolution/*Ö§³ÖµÄÊÓÆµÏÔÊ¾¸ñÊ½,²Î¼ûÊÓÆµÏÔÊ¾±í*/;
-        zce_uint16    bit_rates/*ÂëÂÊ£¬µ¥Î»£ºKbps*/;
+        CHANNEL_ID    channel_id/*è§†é¢‘é€šé“å·*/;
+        zce_astring channel_name/*é€šé“åç§°*/;
+        zce_uint16    format/*è§†é¢‘ç¼–ç æ ¼å¼,å‚è§è§†é¢‘ç¼–ç æ ¼å¼è¡¨*/;
+        zce_byte    resolution/*æ”¯æŒçš„è§†é¢‘æ˜¾ç¤ºæ ¼å¼,å‚è§è§†é¢‘æ˜¾ç¤ºè¡¨*/;
+        zce_uint16    bit_rates/*ç ç‡ï¼Œå•ä½ï¼šKbps*/;
         zce_byte    reserve;
-        zce_astring location/*Î»ÖÃ*/;
-        zce_astring desc/*±¸×¢*/;
+        zce_astring location/*ä½ç½®*/;
+        zce_astring desc/*å¤‡æ³¨*/;
     };
     struct VIDEOOUT_CHANNEL_V2
     {
@@ -890,14 +890,14 @@ namespace gep
         {
         }
 
-        CHANNEL_ID    channel_id/*ÊÓÆµÍ¨µÀºÅ*/;
-        zce_astring channel_name/*Í¨µÀÃû³Æ*/;
-        zce_uint16    format/*ÊÓÆµ±àÂë¸ñÊ½,²Î¼ûÊÓÆµ±àÂë¸ñÊ½±í*/;
-        zce_byte    resolution/*Ö§³ÖµÄÊÓÆµÏÔÊ¾¸ñÊ½,²Î¼ûÊÓÆµÏÔÊ¾±í*/;
-        zce_uint16    bit_rates/*ÂëÂÊ£¬µ¥Î»£ºKbps*/;
+        CHANNEL_ID    channel_id/*è§†é¢‘é€šé“å·*/;
+        zce_astring channel_name/*é€šé“åç§°*/;
+        zce_uint16    format/*è§†é¢‘ç¼–ç æ ¼å¼,å‚è§è§†é¢‘ç¼–ç æ ¼å¼è¡¨*/;
+        zce_byte    resolution/*æ”¯æŒçš„è§†é¢‘æ˜¾ç¤ºæ ¼å¼,å‚è§è§†é¢‘æ˜¾ç¤ºè¡¨*/;
+        zce_uint16    bit_rates/*ç ç‡ï¼Œå•ä½ï¼šKbps*/;
         zce_byte    reserve;
-        zce_astring location/*Î»ÖÃ*/;
-        zce_astring desc/*±¸×¢*/;
+        zce_astring location/*ä½ç½®*/;
+        zce_astring desc/*å¤‡æ³¨*/;
     };
     struct AUDIOIN_CHANNEL
     {
@@ -909,13 +909,13 @@ namespace gep
         {
         }
 
-        CHANNEL_ID    channel_id/*Í¨µÀºÅ*/;
-        zce_astring channel_name/*Í¨µÀÃû³Æ*/;
-        zce_uint16    format/*µ±Ç°ÒôÆµ±àÂë¸ñÊ½,²Î¼ûÒôÆµ±àÂë¸ñÊ½±í*/;
-        zce_uint16    volumn/*±àÂëÒôÁ¿0¡«25*/;
-        zce_uint32    band_width/*Í¨µÀ´ø¿í£¬µ¥Î»£ºKbps*/;
-        zce_astring location/*Î»ÖÃ*/;
-        zce_astring desc/*±¸×¢*/;
+        CHANNEL_ID    channel_id/*é€šé“å·*/;
+        zce_astring channel_name/*é€šé“åç§°*/;
+        zce_uint16    format/*å½“å‰éŸ³é¢‘ç¼–ç æ ¼å¼,å‚è§éŸ³é¢‘ç¼–ç æ ¼å¼è¡¨*/;
+        zce_uint16    volumn/*ç¼–ç éŸ³é‡0ï½25*/;
+        zce_uint32    band_width/*é€šé“å¸¦å®½ï¼Œå•ä½ï¼šKbps*/;
+        zce_astring location/*ä½ç½®*/;
+        zce_astring desc/*å¤‡æ³¨*/;
     };
     struct AUDIOIN_CHANNEL_V2
     {
@@ -927,13 +927,13 @@ namespace gep
         {
         }
 
-        CHANNEL_ID    channel_id/*Í¨µÀºÅ*/;
-        zce_astring channel_name/*Í¨µÀÃû³Æ*/;
-        zce_uint16    format/*µ±Ç°ÒôÆµ±àÂë¸ñÊ½,²Î¼ûÒôÆµ±àÂë¸ñÊ½±í*/;
-        zce_uint16    volumn/*±àÂëÒôÁ¿0¡«25*/;
-        zce_uint32    band_width/*Í¨µÀ´ø¿í£¬µ¥Î»£ºKbps*/;
-        zce_astring location/*Î»ÖÃ*/;
-        zce_astring desc/*±¸×¢*/;
+        CHANNEL_ID    channel_id/*é€šé“å·*/;
+        zce_astring channel_name/*é€šé“åç§°*/;
+        zce_uint16    format/*å½“å‰éŸ³é¢‘ç¼–ç æ ¼å¼,å‚è§éŸ³é¢‘ç¼–ç æ ¼å¼è¡¨*/;
+        zce_uint16    volumn/*ç¼–ç éŸ³é‡0ï½25*/;
+        zce_uint32    band_width/*é€šé“å¸¦å®½ï¼Œå•ä½ï¼šKbps*/;
+        zce_astring location/*ä½ç½®*/;
+        zce_astring desc/*å¤‡æ³¨*/;
     };
     struct AUDIOOUT_CHANNEL
     {
@@ -945,13 +945,13 @@ namespace gep
         {
         }
 
-        CHANNEL_ID    channel_id/*Í¨µÀºÅ*/;
-        zce_astring channel_name/*Í¨µÀÃû³Æ*/;
-        zce_uint16    format/*µ±Ç°ÒôÆµ±àÂë¸ñÊ½,²Î¼ûÒôÆµ±àÂë¸ñÊ½±í*/;
-        zce_uint16    volumn/*±àÂëÒôÁ¿0¡«25*/;
-        zce_uint32    band_width/*Í¨µÀ´ø¿í£¬µ¥Î»£ºKbps*/;
-        zce_astring location/*Î»ÖÃ*/;
-        zce_astring desc/*±¸×¢*/;
+        CHANNEL_ID    channel_id/*é€šé“å·*/;
+        zce_astring channel_name/*é€šé“åç§°*/;
+        zce_uint16    format/*å½“å‰éŸ³é¢‘ç¼–ç æ ¼å¼,å‚è§éŸ³é¢‘ç¼–ç æ ¼å¼è¡¨*/;
+        zce_uint16    volumn/*ç¼–ç éŸ³é‡0ï½25*/;
+        zce_uint32    band_width/*é€šé“å¸¦å®½ï¼Œå•ä½ï¼šKbps*/;
+        zce_astring location/*ä½ç½®*/;
+        zce_astring desc/*å¤‡æ³¨*/;
     };
     struct AUDIOOUT_CHANNEL_V2
     {
@@ -963,13 +963,13 @@ namespace gep
         {
         }
 
-        CHANNEL_ID    channel_id/*Í¨µÀºÅ*/;
-        zce_astring channel_name/*Í¨µÀÃû³Æ*/;
-        zce_uint16    format/*µ±Ç°ÒôÆµ±àÂë¸ñÊ½,²Î¼ûÒôÆµ±àÂë¸ñÊ½±í*/;
-        zce_uint16    volumn/*±àÂëÒôÁ¿0¡«25*/;
-        zce_uint32    band_width/*Í¨µÀ´ø¿í£¬µ¥Î»£ºKbps*/;
-        zce_astring location/*Î»ÖÃ*/;
-        zce_astring desc/*±¸×¢*/;
+        CHANNEL_ID    channel_id/*é€šé“å·*/;
+        zce_astring channel_name/*é€šé“åç§°*/;
+        zce_uint16    format/*å½“å‰éŸ³é¢‘ç¼–ç æ ¼å¼,å‚è§éŸ³é¢‘ç¼–ç æ ¼å¼è¡¨*/;
+        zce_uint16    volumn/*ç¼–ç éŸ³é‡0ï½25*/;
+        zce_uint32    band_width/*é€šé“å¸¦å®½ï¼Œå•ä½ï¼šKbps*/;
+        zce_astring location/*ä½ç½®*/;
+        zce_astring desc/*å¤‡æ³¨*/;
     };
     struct WARNIN_CHANNEL
     {
@@ -983,17 +983,17 @@ namespace gep
         {
         }
 
-        CHANNEL_ID    channel_id/*Í¨µÀ±àºÅ£¨Éè±¸ÄÚ£©*/;
-        zce_astring channel_name/*Í¨µÀÃû³Æ*/;
-        zce_byte    alarm_type/*¸æ¾¯ÀàĞÍ*/;
-        zce_byte    input_type/*Àà±ğ 0£ºNONE 1£º¿ª¹ØÁ¿ 2£ºÄ£ÄâÁ¿*/;
-        zce_uint16    action/*Áª¶¯¶¯×÷£º0x0001£ºÆÕÍ¨Êä³ö  0x0002£ºÉùÒôÊä³ö  0x0004£ºÆô¶¯Â¼Ïñ  0x0008£ºÇĞ»»µ½Ö¸¶¨Î»ÖÃ 0x0010£ºÇĞ»»ÊÓÆµ£¨¿ÉÒÔ¶àÑ¡£©*/;
-        CHANNEL_ID    out_channel_id/*Áª¶¯¸æ¾¯Êä³öÍ¨µÀ*/;
-        CHANNEL_ID    video_channel_id/*Áª¶¯ÊÓÆµÍ¨µÀ*/;
-        zce_uint16    reserve/*±£Áô×Ö*/;
-        zce_uint16    delay_time/*³ÖĞøÊ±¼ä£¨Ãë£©*/;
-        zce_astring location/*Î»ÖÃ*/;
-        zce_astring desc/*±¸×¢*/;
+        CHANNEL_ID    channel_id/*é€šé“ç¼–å·ï¼ˆè®¾å¤‡å†…ï¼‰*/;
+        zce_astring channel_name/*é€šé“åç§°*/;
+        zce_byte    alarm_type/*å‘Šè­¦ç±»å‹*/;
+        zce_byte    input_type/*ç±»åˆ« 0ï¼šNONE 1ï¼šå¼€å…³é‡ 2ï¼šæ¨¡æ‹Ÿé‡*/;
+        zce_uint16    action/*è”åŠ¨åŠ¨ä½œï¼š0x0001ï¼šæ™®é€šè¾“å‡º  0x0002ï¼šå£°éŸ³è¾“å‡º  0x0004ï¼šå¯åŠ¨å½•åƒ  0x0008ï¼šåˆ‡æ¢åˆ°æŒ‡å®šä½ç½® 0x0010ï¼šåˆ‡æ¢è§†é¢‘ï¼ˆå¯ä»¥å¤šé€‰ï¼‰*/;
+        CHANNEL_ID    out_channel_id/*è”åŠ¨å‘Šè­¦è¾“å‡ºé€šé“*/;
+        CHANNEL_ID    video_channel_id/*è”åŠ¨è§†é¢‘é€šé“*/;
+        zce_uint16    reserve/*ä¿ç•™å­—*/;
+        zce_uint16    delay_time/*æŒç»­æ—¶é—´ï¼ˆç§’ï¼‰*/;
+        zce_astring location/*ä½ç½®*/;
+        zce_astring desc/*å¤‡æ³¨*/;
     };
     struct WARNIN_CHANNEL_V2
     {
@@ -1007,17 +1007,17 @@ namespace gep
         {
         }
 
-        CHANNEL_ID    channel_id/*Í¨µÀ±àºÅ£¨Éè±¸ÄÚ£©*/;
-        zce_astring channel_name/*Í¨µÀÃû³Æ*/;
-        zce_byte    alarm_type/*¸æ¾¯ÀàĞÍ*/;
-        zce_byte    input_type/*Àà±ğ 0£ºNONE 1£º¿ª¹ØÁ¿ 2£ºÄ£ÄâÁ¿*/;
-        zce_uint16    action/*Áª¶¯¶¯×÷£º0x0001£ºÆÕÍ¨Êä³ö  0x0002£ºÉùÒôÊä³ö  0x0004£ºÆô¶¯Â¼Ïñ  0x0008£ºÇĞ»»µ½Ö¸¶¨Î»ÖÃ 0x0010£ºÇĞ»»ÊÓÆµ£¨¿ÉÒÔ¶àÑ¡£©*/;
-        CHANNEL_ID    out_channel_id/*Áª¶¯¸æ¾¯Êä³öÍ¨µÀ*/;
-        CHANNEL_ID    video_channel_id/*Áª¶¯ÊÓÆµÍ¨µÀ*/;
-        zce_uint16    reserve/*±£Áô×Ö*/;
-        zce_uint16    delay_time/*³ÖĞøÊ±¼ä£¨Ãë£©*/;
-        zce_astring location/*Î»ÖÃ*/;
-        zce_astring desc/*±¸×¢*/;
+        CHANNEL_ID    channel_id/*é€šé“ç¼–å·ï¼ˆè®¾å¤‡å†…ï¼‰*/;
+        zce_astring channel_name/*é€šé“åç§°*/;
+        zce_byte    alarm_type/*å‘Šè­¦ç±»å‹*/;
+        zce_byte    input_type/*ç±»åˆ« 0ï¼šNONE 1ï¼šå¼€å…³é‡ 2ï¼šæ¨¡æ‹Ÿé‡*/;
+        zce_uint16    action/*è”åŠ¨åŠ¨ä½œï¼š0x0001ï¼šæ™®é€šè¾“å‡º  0x0002ï¼šå£°éŸ³è¾“å‡º  0x0004ï¼šå¯åŠ¨å½•åƒ  0x0008ï¼šåˆ‡æ¢åˆ°æŒ‡å®šä½ç½® 0x0010ï¼šåˆ‡æ¢è§†é¢‘ï¼ˆå¯ä»¥å¤šé€‰ï¼‰*/;
+        CHANNEL_ID    out_channel_id/*è”åŠ¨å‘Šè­¦è¾“å‡ºé€šé“*/;
+        CHANNEL_ID    video_channel_id/*è”åŠ¨è§†é¢‘é€šé“*/;
+        zce_uint16    reserve/*ä¿ç•™å­—*/;
+        zce_uint16    delay_time/*æŒç»­æ—¶é—´ï¼ˆç§’ï¼‰*/;
+        zce_astring location/*ä½ç½®*/;
+        zce_astring desc/*å¤‡æ³¨*/;
     };
     struct WARNOUT_CHANNEL
     {
@@ -1030,14 +1030,14 @@ namespace gep
         {
         }
 
-        CHANNEL_ID    channel_id/*Í¨µÀ±àºÅ£¨Éè±¸ÄÚ£©*/;
-        zce_astring channel_name/*Í¨µÀÃû³Æ*/;
-        zce_byte    alarm_type/*¸æ¾¯ÀàĞÍ*/;
-        zce_byte    output_type/*Àà±ğ0£ºNONE 1£º¿ª¹ØÁ¿  2£ºÄ£ÄâÁ¿*/;
-        zce_byte    reserve/*±£Áô×Ö*/;
-        zce_uint16    delay_time/*³ÖĞøÊ±¼ä£¨Ãë£©*/;
-        zce_astring location/*Î»ÖÃ*/;
-        zce_astring desc/*±¸×¢*/;
+        CHANNEL_ID    channel_id/*é€šé“ç¼–å·ï¼ˆè®¾å¤‡å†…ï¼‰*/;
+        zce_astring channel_name/*é€šé“åç§°*/;
+        zce_byte    alarm_type/*å‘Šè­¦ç±»å‹*/;
+        zce_byte    output_type/*ç±»åˆ«0ï¼šNONE 1ï¼šå¼€å…³é‡  2ï¼šæ¨¡æ‹Ÿé‡*/;
+        zce_byte    reserve/*ä¿ç•™å­—*/;
+        zce_uint16    delay_time/*æŒç»­æ—¶é—´ï¼ˆç§’ï¼‰*/;
+        zce_astring location/*ä½ç½®*/;
+        zce_astring desc/*å¤‡æ³¨*/;
     };
     struct WARNOUT_CHANNEL_V2
     {
@@ -1050,14 +1050,14 @@ namespace gep
         {
         }
 
-        CHANNEL_ID    channel_id/*Í¨µÀ±àºÅ£¨Éè±¸ÄÚ£©*/;
-        zce_astring channel_name/*Í¨µÀÃû³Æ*/;
-        zce_byte    alarm_type/*¸æ¾¯ÀàĞÍ*/;
-        zce_byte    output_type/*Àà±ğ0£ºNONE 1£º¿ª¹ØÁ¿  2£ºÄ£ÄâÁ¿*/;
-        zce_byte    reserve/*±£Áô×Ö*/;
-        zce_uint16    delay_time/*³ÖĞøÊ±¼ä£¨Ãë£©*/;
-        zce_astring location/*Î»ÖÃ*/;
-        zce_astring desc/*±¸×¢*/;
+        CHANNEL_ID    channel_id/*é€šé“ç¼–å·ï¼ˆè®¾å¤‡å†…ï¼‰*/;
+        zce_astring channel_name/*é€šé“åç§°*/;
+        zce_byte    alarm_type/*å‘Šè­¦ç±»å‹*/;
+        zce_byte    output_type/*ç±»åˆ«0ï¼šNONE 1ï¼šå¼€å…³é‡  2ï¼šæ¨¡æ‹Ÿé‡*/;
+        zce_byte    reserve/*ä¿ç•™å­—*/;
+        zce_uint16    delay_time/*æŒç»­æ—¶é—´ï¼ˆç§’ï¼‰*/;
+        zce_astring location/*ä½ç½®*/;
+        zce_astring desc/*å¤‡æ³¨*/;
     };
     struct NONSTANDARD_CHANNEL
     {
@@ -1067,11 +1067,11 @@ namespace gep
         {
         }
 
-        CHANNEL_ID    channel_id/*Í¨µÀºÅ*/;
-        zce_astring channel_name/*Í¨µÀÃû³Æ*/;
-        zce_astring location/*Î»ÖÃ*/;
-        zce_astring desc/*±¸×¢*/;
-        std::vector<zce_char> user_data/*ÓÃ»§Êı¾İ*/;
+        CHANNEL_ID    channel_id/*é€šé“å·*/;
+        zce_astring channel_name/*é€šé“åç§°*/;
+        zce_astring location/*ä½ç½®*/;
+        zce_astring desc/*å¤‡æ³¨*/;
+        std::vector<zce_char> user_data/*ç”¨æˆ·æ•°æ®*/;
     };
     struct NONSTANDARD_CHANNEL_V2
     {
@@ -1081,11 +1081,11 @@ namespace gep
         {
         }
 
-        CHANNEL_ID    channel_id/*Í¨µÀºÅ*/;
-        zce_astring channel_name/*Í¨µÀÃû³Æ*/;
-        zce_astring location/*Î»ÖÃ*/;
-        zce_astring desc/*±¸×¢*/;
-        std::vector<zce_char> user_data/*ÓÃ»§Êı¾İ*/;
+        CHANNEL_ID    channel_id/*é€šé“å·*/;
+        zce_astring channel_name/*é€šé“åç§°*/;
+        zce_astring location/*ä½ç½®*/;
+        zce_astring desc/*å¤‡æ³¨*/;
+        std::vector<zce_char> user_data/*ç”¨æˆ·æ•°æ®*/;
     };
     struct MATRIX_INFO
     {
@@ -1103,19 +1103,19 @@ namespace gep
         {
         }
 
-        zce_uint16    protocol_type/*Ğ­ÒéÀàĞÍ*/;
-        CHANNEL_ID    channel_id/*Í¨µÀºÅ*/;
-        zce_byte    video_in_num/*ÊäÈëÔ´ÊıÄ¿*/;
-        zce_byte    video_in_no/*ÊäÈëÔ´ºÅ*/;
-        zce_byte    video_out_num/*Êä³öÔ´ÊıÄ¿*/;
-        zce_byte    video_out_no/*Êä³öÔ´ºÅ*/;
-        zce_byte    action/*¿ØÖÆÃüÁî*/;
-        zce_byte    param/*ÃüÁî²ÎÊı*/;
-        zce_byte    camera_type/*ÉãÏñ»úÀàĞÍ*/;
-        zce_byte    camera_485addr/*ÉãÏñ»ú485µØÖ·*/;
-        zce_astring channel_name/*Ãû³Æ*/;
-        zce_astring location/*Î»ÖÃ*/;
-        zce_astring desc/*ÃèÊö*/;
+        zce_uint16    protocol_type/*åè®®ç±»å‹*/;
+        CHANNEL_ID    channel_id/*é€šé“å·*/;
+        zce_byte    video_in_num/*è¾“å…¥æºæ•°ç›®*/;
+        zce_byte    video_in_no/*è¾“å…¥æºå·*/;
+        zce_byte    video_out_num/*è¾“å‡ºæºæ•°ç›®*/;
+        zce_byte    video_out_no/*è¾“å‡ºæºå·*/;
+        zce_byte    action/*æ§åˆ¶å‘½ä»¤*/;
+        zce_byte    param/*å‘½ä»¤å‚æ•°*/;
+        zce_byte    camera_type/*æ‘„åƒæœºç±»å‹*/;
+        zce_byte    camera_485addr/*æ‘„åƒæœº485åœ°å€*/;
+        zce_astring channel_name/*åç§°*/;
+        zce_astring location/*ä½ç½®*/;
+        zce_astring desc/*æè¿°*/;
     };
     struct FD_INFO
     {
@@ -1137,26 +1137,26 @@ namespace gep
         {
         }
 
-        zce_astring id/*Éè±¸±àºÅ*/;
-        zce_astring domain_id/*Éè±¸ËùÔÚÓò±àºÅ*/;
-        zce_astring name/*Éè±¸Ãû³Æ*/;
-        std::vector<zce_char> pwd/*Éè±¸ÃÜÂëµÄMD5Öµ*/;
-        zce_uint32    type/*Éè±¸ÀàĞÍ*/;
-        zce_uint32    software_version/*Éè±¸°æ±¾ºÅ*/;
-        zce_astring factory_code/*Éè±¸ËùÊô³§¼Ò´úÂë*/;
-        zce_astring factory_name/*Éè±¸ËùÊô³§¼ÒÃû³Æ*/;
+        zce_astring id/*è®¾å¤‡ç¼–å·*/;
+        zce_astring domain_id/*è®¾å¤‡æ‰€åœ¨åŸŸç¼–å·*/;
+        zce_astring name/*è®¾å¤‡åç§°*/;
+        std::vector<zce_char> pwd/*è®¾å¤‡å¯†ç çš„MD5å€¼*/;
+        zce_uint32    type/*è®¾å¤‡ç±»å‹*/;
+        zce_uint32    software_version/*è®¾å¤‡ç‰ˆæœ¬å·*/;
+        zce_astring factory_code/*è®¾å¤‡æ‰€å±å‚å®¶ä»£ç */;
+        zce_astring factory_name/*è®¾å¤‡æ‰€å±å‚å®¶åç§°*/;
         zce_uint16    hardware_version;
-        zce_byte    video_in_num/*ÊÓÆµÊäÈëÍ¨µÀÊıÄ¿*/;
-        zce_byte    video_out_num/*ÊÓÆµÊä³öÍ¨µÀÊıÄ¿*/;
-        zce_byte    audio_in_num/*ÒôÆµÊäÈëÍ¨µÀÊıÄ¿*/;
-        zce_byte    audio_out_num/*ÒôÆµÊä³öÍ¨µÀÊıÄ¿*/;
-        zce_byte    alarm_in_num/*¸æ¾¯ÊäÈëÍ¨µÀÊıÄ¿*/;
-        zce_byte    alarm_out_num/*¸æ¾¯Êä³öÍ¨µÀÊıÄ¿*/;
-        zce_byte    non_standard_num/*Í¸Ã÷Í¨µÀÊıÄ¿*/;
+        zce_byte    video_in_num/*è§†é¢‘è¾“å…¥é€šé“æ•°ç›®*/;
+        zce_byte    video_out_num/*è§†é¢‘è¾“å‡ºé€šé“æ•°ç›®*/;
+        zce_byte    audio_in_num/*éŸ³é¢‘è¾“å…¥é€šé“æ•°ç›®*/;
+        zce_byte    audio_out_num/*éŸ³é¢‘è¾“å‡ºé€šé“æ•°ç›®*/;
+        zce_byte    alarm_in_num/*å‘Šè­¦è¾“å…¥é€šé“æ•°ç›®*/;
+        zce_byte    alarm_out_num/*å‘Šè­¦è¾“å‡ºé€šé“æ•°ç›®*/;
+        zce_byte    non_standard_num/*é€æ˜é€šé“æ•°ç›®*/;
         zce_byte    reserve;
-        zce_uint32    band_width/*Í¨µÀ´ø¿í£¬µ¥Î»£ºKbps*/;
-        zce_astring location/*Éè±¸°²×°Î»ÖÃ*/;
-        zce_astring desc/*Éè±¸ÃèÊö*/;
+        zce_uint32    band_width/*é€šé“å¸¦å®½ï¼Œå•ä½ï¼šKbps*/;
+        zce_astring location/*è®¾å¤‡å®‰è£…ä½ç½®*/;
+        zce_astring desc/*è®¾å¤‡æè¿°*/;
     };
     struct UA_INFO
     {
@@ -1167,15 +1167,15 @@ namespace gep
         {
         }
 
-        zce_astring id/*±àºÅ*/;
+        zce_astring id/*ç¼–å·*/;
         zce_astring email/*EMAIL*/;
-        zce_astring name/*ĞÕÃû*/;
-        zce_uint32    level/*ÓÃ»§¼¶±ğ*/;
-        zce_astring phone/*µç»°*/;
-        zce_astring mobile/*ÊÖ»ú*/;
-        zce_astring addr/*µØÖ·*/;
-        zce_astring desc/*ÏêÏ¸ÃèÊö*/;
-        zce_char    status/*ÓÃ»§×´Ì¬:ÔÚÓÃ Îª"A" ×¢ÏúÎª "P"*/;
+        zce_astring name/*å§“å*/;
+        zce_uint32    level/*ç”¨æˆ·çº§åˆ«*/;
+        zce_astring phone/*ç”µè¯*/;
+        zce_astring mobile/*æ‰‹æœº*/;
+        zce_astring addr/*åœ°å€*/;
+        zce_astring desc/*è¯¦ç»†æè¿°*/;
+        zce_char    status/*ç”¨æˆ·çŠ¶æ€:åœ¨ç”¨ ä¸º"A" æ³¨é”€ä¸º "P"*/;
     };
     struct UA_INFO_NOEMAIL
     {
@@ -1186,14 +1186,14 @@ namespace gep
         {
         }
 
-        zce_astring id/*ÃèÊö*/;
-        zce_astring name/*ĞÕÃû*/;
-        zce_uint32    level/*ÓÃ»§¼¶±ğ*/;
-        zce_astring phone/*µç»°*/;
-        zce_astring mobile/*ÊÖ»ú*/;
-        zce_astring addr/*µØÖ·*/;
-        zce_astring desc/*ÏêÏ¸ÃèÊö*/;
-        zce_char    status/*ÓÃ»§×´Ì¬:ÔÚÓÃ Îª"A" ×¢ÏúÎª "P"*/;
+        zce_astring id/*æè¿°*/;
+        zce_astring name/*å§“å*/;
+        zce_uint32    level/*ç”¨æˆ·çº§åˆ«*/;
+        zce_astring phone/*ç”µè¯*/;
+        zce_astring mobile/*æ‰‹æœº*/;
+        zce_astring addr/*åœ°å€*/;
+        zce_astring desc/*è¯¦ç»†æè¿°*/;
+        zce_char    status/*ç”¨æˆ·çŠ¶æ€:åœ¨ç”¨ ä¸º"A" æ³¨é”€ä¸º "P"*/;
     };
     struct GPS_INFO
     {
@@ -1204,8 +1204,8 @@ namespace gep
         {
         }
 
-        zce_int32    longitude/*¾­¶È*/;
-        zce_int32    latitude/*Î¬¶È*/;
+        zce_int32    longitude/*ç»åº¦*/;
+        zce_int32    latitude/*ç»´åº¦*/;
     };
     struct PRIVILEGE_INFO
     {
@@ -1215,7 +1215,7 @@ namespace gep
         {
         }
 
-        zce_uint32    privilege/*È¨ÏŞĞÅÏ¢*/;
+        zce_uint32    privilege/*æƒé™ä¿¡æ¯*/;
     };
     struct MIXTUREVIDEOIN_CHANNEL
     {
@@ -1369,9 +1369,9 @@ namespace gep
 
         FD_INFO    fd;
         GPS_INFO    gps;
-        zce_uint32    lLastLogin/*×îºóµÇÂ¼Ê±¼ä*/;
-        zce_uint32    lLastLogout/*×îºóµÇ³öÊ±¼ä*/;
-        zce_char    cFdState/*'W'´ı°²×°¡¢'A' Õı³£¡¢'P' Í£ÓÃ¡¢'C'Ïú»§*/;
+        zce_uint32    lLastLogin/*æœ€åç™»å½•æ—¶é—´*/;
+        zce_uint32    lLastLogout/*æœ€åç™»å‡ºæ—¶é—´*/;
+        zce_char    cFdState/*'W'å¾…å®‰è£…ã€'A' æ­£å¸¸ã€'P' åœç”¨ã€'C'é”€æˆ·*/;
     };
     struct FD_INFO_V4_EXT
     {
@@ -1385,25 +1385,25 @@ namespace gep
         }
 
         FD_INFO_V4    fd_info_v4;
-        zce_uint32    cfg_channel_num/*ÅäÖÃÍ¨µÀ¸öÊı£¬Ó¦ÓÀÔ¶Îª1*/;
-        zce_uint32    mix_channel_num/*»ìºÏÍ¨µÀ¸öÊı*/;
-        zce_uint32    status/*BIT0, ÊÇ·ñÔÚÏß*/;
+        zce_uint32    cfg_channel_num/*é…ç½®é€šé“ä¸ªæ•°ï¼Œåº”æ°¸è¿œä¸º1*/;
+        zce_uint32    mix_channel_num/*æ··åˆé€šé“ä¸ªæ•°*/;
+        zce_uint32    status/*BIT0, æ˜¯å¦åœ¨çº¿*/;
         zce_uint32    reserved1;
     };
     struct CUSTOMER_INFO
     {
         CUSTOMER_INFO() { };
-        zce_astring id/*±àºÅ*/;
-        zce_astring name/*Ãû³Æ*/;
-        zce_astring desc/*ÏêÏ¸ÃèÊö*/;
+        zce_astring id/*ç¼–å·*/;
+        zce_astring name/*åç§°*/;
+        zce_astring desc/*è¯¦ç»†æè¿°*/;
     };
     struct ROLE_INFO
     {
         ROLE_INFO() { };
-        zce_astring id/*ÃèÊö*/;
-        zce_astring name/*½ÇÉ«Ãû³Æ*/;
+        zce_astring id/*æè¿°*/;
+        zce_astring name/*è§’è‰²åç§°*/;
         zce_astring level_code;
-        zce_astring desc/*½ÇÉ«ÃèÊö*/;
+        zce_astring desc/*è§’è‰²æè¿°*/;
     };
     struct ROLE_PRIVILEGE_INFO
     {
@@ -1413,10 +1413,10 @@ namespace gep
         {
         }
 
-        zce_astring role_id/*½ÇÉ«ID*/;
-        zce_astring fd_id/*Éè±¸ID*/;
-        CHANNEL_ID    channel_id/*Í¨µÀºÅ*/;
-        zce_int32    privilege/*È¨ÏŞ*/;
+        zce_astring role_id/*è§’è‰²ID*/;
+        zce_astring fd_id/*è®¾å¤‡ID*/;
+        CHANNEL_ID    channel_id/*é€šé“å·*/;
+        zce_int32    privilege/*æƒé™*/;
     };
     struct UA_PRIVILEGE_INFO
     {
@@ -1426,10 +1426,10 @@ namespace gep
         {
         }
 
-        zce_astring ua_id/*ÓÃ»§ID*/;
-        zce_astring fd_id/*Éè±¸ID*/;
-        CHANNEL_ID    channel_id/*Í¨µÀºÅ*/;
-        zce_int32    privilege/*È¨ÏŞ Read = 0x0001; Write = 0x0002; Contrl = 0x0004; Manage = 0x0008*/;
+        zce_astring ua_id/*ç”¨æˆ·ID*/;
+        zce_astring fd_id/*è®¾å¤‡ID*/;
+        CHANNEL_ID    channel_id/*é€šé“å·*/;
+        zce_int32    privilege/*æƒé™ Read = 0x0001; Write = 0x0002; Contrl = 0x0004; Manage = 0x0008*/;
     };
     struct IP_ADDRESS
     {
@@ -1442,10 +1442,10 @@ namespace gep
         {
         }
 
-        zce_uint32    addr/*ÍøÂç½Ó¿ÚµØÖ·£¬IPµØÖ·£¬Ê¹ÓÃ³¤ÕûĞÍÀ´±íÊ¾*/;
-        zce_uint16    port/*±¾µØÍøÂç¶Ë¿Ú*/;
-        zce_byte    trans_type/*ÍøÂç´«ÊäÀàĞÍ0£ºAUTO1£ºUDP 2£ºTCP 3£ºMulticast*/;
-        zce_byte    reserve/*±£Áô×Ö*/;
+        zce_uint32    addr/*ç½‘ç»œæ¥å£åœ°å€ï¼ŒIPåœ°å€ï¼Œä½¿ç”¨é•¿æ•´å‹æ¥è¡¨ç¤º*/;
+        zce_uint16    port/*æœ¬åœ°ç½‘ç»œç«¯å£*/;
+        zce_byte    trans_type/*ç½‘ç»œä¼ è¾“ç±»å‹0ï¼šAUTO1ï¼šUDP 2ï¼šTCP 3ï¼šMulticast*/;
+        zce_byte    reserve/*ä¿ç•™å­—*/;
     };
     struct IP_ADDRESS_IPV6
     {
@@ -1457,10 +1457,10 @@ namespace gep
         {
         }
 
-        zce_astring addr/*ÍøÂç½Ó¿ÚµØÖ·£¬IPµØÖ· */;
-        zce_uint16    port/*±¾µØÍøÂç¶Ë¿Ú*/;
-        zce_byte    trans_type/*ÍøÂç´«ÊäÀàĞÍ0£ºAUTO 1£ºUDP 2£ºTCP  3£ºMulticast */;
-        zce_byte    reserve/*±£Áô×Ö*/;
+        zce_astring addr/*ç½‘ç»œæ¥å£åœ°å€ï¼ŒIPåœ°å€ */;
+        zce_uint16    port/*æœ¬åœ°ç½‘ç»œç«¯å£*/;
+        zce_byte    trans_type/*ç½‘ç»œä¼ è¾“ç±»å‹0ï¼šAUTO 1ï¼šUDP 2ï¼šTCP  3ï¼šMulticast */;
+        zce_byte    reserve/*ä¿ç•™å­—*/;
     };
     struct SCHEDULE_NOTIFY
     {
@@ -1474,11 +1474,11 @@ namespace gep
         {
         }
 
-        zce_byte    reserve/*±£Áô×Ö¶Î£¬Îª¶ÔÆë½á¹¹*/;
-        zce_byte    direction/*´«Êä·½Ïò: 0x01 SEND; 0x02 RECV; 0x03 BOTH*/;
-        zce_byte    transport/*´«ÊäĞ­Òé: 0x01 RTP; 0x02 GE£¨Ë½ÓĞĞ­Òé£©*/;
-        zce_byte    action/*¼¤»î±êÖ¾: 0x00 ÎŞĞè¼¤»î; 0x01 Ö÷¶¯·¢ËÍ¼¤»î; 0x02 ±»¶¯½ÓÊÕ¼¤»î*/;
-        IP_ADDRESS    addr/*Ä¿µÄµØÖ·*/;
+        zce_byte    reserve/*ä¿ç•™å­—æ®µï¼Œä¸ºå¯¹é½ç»“æ„*/;
+        zce_byte    direction/*ä¼ è¾“æ–¹å‘: 0x01 SEND; 0x02 RECV; 0x03 BOTH*/;
+        zce_byte    transport/*ä¼ è¾“åè®®: 0x01 RTP; 0x02 GEï¼ˆç§æœ‰åè®®ï¼‰*/;
+        zce_byte    action/*æ¿€æ´»æ ‡å¿—: 0x00 æ— éœ€æ¿€æ´»; 0x01 ä¸»åŠ¨å‘é€æ¿€æ´»; 0x02 è¢«åŠ¨æ¥æ”¶æ¿€æ´»*/;
+        IP_ADDRESS    addr/*ç›®çš„åœ°å€*/;
         std::vector<zce_byte> actid;
     };
     struct SCHEDULE_NOTIFY_IPV6
@@ -1493,11 +1493,11 @@ namespace gep
         {
         }
 
-        zce_byte    reserve/*±£Áô×Ö¶Î£¬Îª¶ÔÆë½á¹¹*/;
-        zce_byte    direction/*´«Êä·½Ïò: 0x01 SEND; 0x02 RECV; 0x03 BOTH*/;
-        zce_byte    transport/*´«ÊäĞ­Òé: 0x01 RTP; 0x02 GE£¨Ë½ÓĞĞ­Òé£©*/;
-        zce_byte    action/*¼¤»î±êÖ¾: 0x00 ÎŞĞè¼¤»î; 0x01 Ö÷¶¯·¢ËÍ¼¤»î; 0x02 ±»¶¯½ÓÊÕ¼¤»î*/;
-        IP_ADDRESS_IPV6    addr/*Ä¿µÄµØÖ·*/;
+        zce_byte    reserve/*ä¿ç•™å­—æ®µï¼Œä¸ºå¯¹é½ç»“æ„*/;
+        zce_byte    direction/*ä¼ è¾“æ–¹å‘: 0x01 SEND; 0x02 RECV; 0x03 BOTH*/;
+        zce_byte    transport/*ä¼ è¾“åè®®: 0x01 RTP; 0x02 GEï¼ˆç§æœ‰åè®®ï¼‰*/;
+        zce_byte    action/*æ¿€æ´»æ ‡å¿—: 0x00 æ— éœ€æ¿€æ´»; 0x01 ä¸»åŠ¨å‘é€æ¿€æ´»; 0x02 è¢«åŠ¨æ¥æ”¶æ¿€æ´»*/;
+        IP_ADDRESS_IPV6    addr/*ç›®çš„åœ°å€*/;
         std::vector<zce_byte> actid;
     };
     struct FD_ACTIVE_STATUS
@@ -1512,11 +1512,11 @@ namespace gep
         {
         }
 
-        zce_uint32    login_time/*ÉÏÏßÊ±¼ä*/;
-        zce_uint32    reserve1/* Í¬IE_FD_SIMPLEµÄisonline*/;
-        zce_uint32    reserve2/*±£Áô×Ö¶Î*/;
-        zce_uint32    reserve3/*±£Áô×Ö¶Î*/;
-        zce_uint32    reserve4/*±£Áô×Ö¶Î*/;
+        zce_uint32    login_time/*ä¸Šçº¿æ—¶é—´*/;
+        zce_uint32    reserve1/* åŒIE_FD_SIMPLEçš„isonline*/;
+        zce_uint32    reserve2/*ä¿ç•™å­—æ®µ*/;
+        zce_uint32    reserve3/*ä¿ç•™å­—æ®µ*/;
+        zce_uint32    reserve4/*ä¿ç•™å­—æ®µ*/;
     };
     struct ALARM_EVENT
     {
@@ -1529,9 +1529,9 @@ namespace gep
         }
 
         std::vector<zce_char> rule_guid/*Rule's GUID*/;
-        CHANNEL_ID    channel_id/*¸æ¾¯Í¨µÀ*/;
-        zce_char    major_type/*¸æ¾¯Ö÷ÀàĞÍ*/;
-        zce_char    minor_type/*¸æ¾¯×ÓÀàĞÍ*/;
+        CHANNEL_ID    channel_id/*å‘Šè­¦é€šé“*/;
+        zce_char    major_type/*å‘Šè­¦ä¸»ç±»å‹*/;
+        zce_char    minor_type/*å‘Šè­¦å­ç±»å‹*/;
     };
     struct TASK_SCHEDULE
     {
@@ -1544,11 +1544,11 @@ namespace gep
         {
         }
 
-        zce_uint32    section_start_time/*µÚÒ»¸öÊ±¶Î¿ªÊ¼Ê±¼ä£¬´Ó1970Äê¿ªÊ¼¼ÆËãµÄÃë*/;
-        zce_uint32    section_end_time/*µÚÒ»¸öÊ±¶Î½áÊøÊ±¼ä£¬´Ó1970Äê¿ªÊ¼¼ÆËãµÄÃë*/;
-        zce_uint32    period/*¼Æ»®Ñ­»·ÖÜÆÚ£¬µ¥Î»Ìì£¬0±íÊ¾²»Ñ­»·*/;
-        zce_uint32    schedule_end_time/*¼Æ»®½ØÖ¹Ê±¼ä£¬0±íÊ¾ÎŞ½ØÖ¹ÈÕÆÚ*/;
-        zce_astring memo/*±¸×¢*/;
+        zce_uint32    section_start_time/*ç¬¬ä¸€ä¸ªæ—¶æ®µå¼€å§‹æ—¶é—´ï¼Œä»1970å¹´å¼€å§‹è®¡ç®—çš„ç§’*/;
+        zce_uint32    section_end_time/*ç¬¬ä¸€ä¸ªæ—¶æ®µç»“æŸæ—¶é—´ï¼Œä»1970å¹´å¼€å§‹è®¡ç®—çš„ç§’*/;
+        zce_uint32    period/*è®¡åˆ’å¾ªç¯å‘¨æœŸï¼Œå•ä½å¤©ï¼Œ0è¡¨ç¤ºä¸å¾ªç¯*/;
+        zce_uint32    schedule_end_time/*è®¡åˆ’æˆªæ­¢æ—¶é—´ï¼Œ0è¡¨ç¤ºæ— æˆªæ­¢æ—¥æœŸ*/;
+        zce_astring memo/*å¤‡æ³¨*/;
     };
     struct ALARM_CONDITION
     {
@@ -1566,18 +1566,18 @@ namespace gep
         {
         }
 
-        zce_uint32    alarm_timespan/*¸æ¾¯¼ä¸ôÊ±¼ä(Ãë)*/;
-        zce_uint32    cancel_timespan/*×Ô¶¯Ïú¾¯¼ä¸ôÊÂ¼ş(Ãë)*/;
-        zce_char    in_effect/*ÊÇ·ñÆôÓÃ£¬0²»ÆôÓÃ£¬1ÆôÓÃ£¬Ä¬ÈÏÎª1*/;
-        zce_char    guard_cond/*BIT0(²¼·À×´Ì¬ÏÂ»á´¥·¢)/BIT1(³··À×´Ì¬ÏÂ»á´¥·¢)*/;
-        zce_uint32    condition/*¸æ¾¯Ìõ¼ş*/;
-        std::vector<zce_char> more_cond/*¸´ÔÓ¸æ¾¯Ìõ¼ş*/;
-        zce_uint32    least_persistence/*·À¶¶Ê±¼ä(ºÁÃë)*/;
-        zce_char    default_time_trigger_or_not/*ÔÚÎ´¶¨ÒåÊ±¶Î±¾ÊÂ¼şÊÇ·ñÉúĞ§£¬0·ñ1ÊÇ£¬Ä¬ÈÏÎª1*/;
-        std::vector<TASK_SCHEDULE> time_span/*Èç¹ûÔÚÎ´¶¨ÒåÊ±¶Î±¾ÊÂ¼şÉúĞ§£¬ÔòtimeSpanÎª²»ÉúĞ§Ê±¶Î£¬timeSpanExcludeÎª²»ÉúĞ§Ê±¶ÎÀıÍâ£¨¼ô³ı£©*/;
-        std::vector<TASK_SCHEDULE> time_span_exclude/*Èç¹ûÔÚÎ´¶¨ÒåÊ±¶Î±¾ÊÂ¼ş²»ÉúĞ§£¬ÔòtimeSpanÎªÉúĞ§Ê±¶Î£¬timeSpanExcludeÎªÉúĞ§Ê±¶ÎÀıÍâ£¨¼ô³ı£©*/;
-        zce_astring modifier/*ÅäÖÃ¹æÔòµÄÓÃ»§ÕÊºÅ*/;
-        zce_uint32    modify_date/*ÅäÖÃµÄÊ±¼ä*/;
+        zce_uint32    alarm_timespan/*å‘Šè­¦é—´éš”æ—¶é—´(ç§’)*/;
+        zce_uint32    cancel_timespan/*è‡ªåŠ¨é”€è­¦é—´éš”äº‹ä»¶(ç§’)*/;
+        zce_char    in_effect/*æ˜¯å¦å¯ç”¨ï¼Œ0ä¸å¯ç”¨ï¼Œ1å¯ç”¨ï¼Œé»˜è®¤ä¸º1*/;
+        zce_char    guard_cond/*BIT0(å¸ƒé˜²çŠ¶æ€ä¸‹ä¼šè§¦å‘)/BIT1(æ’¤é˜²çŠ¶æ€ä¸‹ä¼šè§¦å‘)*/;
+        zce_uint32    condition/*å‘Šè­¦æ¡ä»¶*/;
+        std::vector<zce_char> more_cond/*å¤æ‚å‘Šè­¦æ¡ä»¶*/;
+        zce_uint32    least_persistence/*é˜²æŠ–æ—¶é—´(æ¯«ç§’)*/;
+        zce_char    default_time_trigger_or_not/*åœ¨æœªå®šä¹‰æ—¶æ®µæœ¬äº‹ä»¶æ˜¯å¦ç”Ÿæ•ˆï¼Œ0å¦1æ˜¯ï¼Œé»˜è®¤ä¸º1*/;
+        std::vector<TASK_SCHEDULE> time_span/*å¦‚æœåœ¨æœªå®šä¹‰æ—¶æ®µæœ¬äº‹ä»¶ç”Ÿæ•ˆï¼Œåˆ™timeSpanä¸ºä¸ç”Ÿæ•ˆæ—¶æ®µï¼ŒtimeSpanExcludeä¸ºä¸ç”Ÿæ•ˆæ—¶æ®µä¾‹å¤–ï¼ˆå‰ªé™¤ï¼‰*/;
+        std::vector<TASK_SCHEDULE> time_span_exclude/*å¦‚æœåœ¨æœªå®šä¹‰æ—¶æ®µæœ¬äº‹ä»¶ä¸ç”Ÿæ•ˆï¼Œåˆ™timeSpanä¸ºç”Ÿæ•ˆæ—¶æ®µï¼ŒtimeSpanExcludeä¸ºç”Ÿæ•ˆæ—¶æ®µä¾‹å¤–ï¼ˆå‰ªé™¤ï¼‰*/;
+        zce_astring modifier/*é…ç½®è§„åˆ™çš„ç”¨æˆ·å¸å·*/;
+        zce_uint32    modify_date/*é…ç½®çš„æ—¶é—´*/;
     };
     struct ALARM_HANDLE
     {
@@ -1599,19 +1599,19 @@ namespace gep
         }
 
         std::vector<zce_char> handle_guid/*handle's GUID*/;
-        zce_char    alarm_cond/*BIT0(Ê×´Î¸æ¾¯´¥·¢)/BIT1(¶ş´Î¸æ¾¯´¥·¢)/BIT2(ºóĞø¸æ¾¯´¥·¢)/BIT3(Ïú¾¯´¥·¢)*/;
-        zce_char    action/*´¦Àí¶¯×÷ÀàĞÍ*/;
-        zce_uint16    param1/*´¦Àí²ÎÊı1*/;
-        zce_uint16    param2/*´¦Àí²ÎÊı2*/;
-        zce_uint16    param3/*´¦Àí²ÎÊı3*/;
-        zce_uint16    param4/*´¦Àí²ÎÊı4*/;
-        zce_uint16    param5/*´¦Àí²ÎÊı5*/;
-        zce_uint16    param6/*´¦Àí²ÎÊı6*/;
-        zce_uint16    param7/*´¦Àí²ÎÊı7*/;
-        zce_uint16    param8/*´¦Àí²ÎÊı8*/;
-        zce_astring param9/*´¦Àí²ÎÊı9*/;
-        zce_astring modifier/*ÅäÖÃ¹æÔòµÄÓÃ»§ÕÊºÅ*/;
-        zce_uint32    modify_date/*ÅäÖÃµÄÊ±¼ä*/;
+        zce_char    alarm_cond/*BIT0(é¦–æ¬¡å‘Šè­¦è§¦å‘)/BIT1(äºŒæ¬¡å‘Šè­¦è§¦å‘)/BIT2(åç»­å‘Šè­¦è§¦å‘)/BIT3(é”€è­¦è§¦å‘)*/;
+        zce_char    action/*å¤„ç†åŠ¨ä½œç±»å‹*/;
+        zce_uint16    param1/*å¤„ç†å‚æ•°1*/;
+        zce_uint16    param2/*å¤„ç†å‚æ•°2*/;
+        zce_uint16    param3/*å¤„ç†å‚æ•°3*/;
+        zce_uint16    param4/*å¤„ç†å‚æ•°4*/;
+        zce_uint16    param5/*å¤„ç†å‚æ•°5*/;
+        zce_uint16    param6/*å¤„ç†å‚æ•°6*/;
+        zce_uint16    param7/*å¤„ç†å‚æ•°7*/;
+        zce_uint16    param8/*å¤„ç†å‚æ•°8*/;
+        zce_astring param9/*å¤„ç†å‚æ•°9*/;
+        zce_astring modifier/*é…ç½®è§„åˆ™çš„ç”¨æˆ·å¸å·*/;
+        zce_uint32    modify_date/*é…ç½®çš„æ—¶é—´*/;
     };
     struct ALARM_HANDLE_CENTER
     {
@@ -1632,11 +1632,11 @@ namespace gep
         }
 
         std::vector<zce_char> handle_guid/*handle's GUID*/;
-        zce_astring fd_id/*fdµÄid*/;
+        zce_astring fd_id/*fdçš„id*/;
         CHANNEL_ID    channel_id;
-        zce_char    alarm_type/*f¸æ¾¯ÀàĞÍÌõ¼ş£º0±íÊ¾ÈÎÒâ¸æ¾¯ÀàĞÍ*/;
-        zce_char    alarm_sequence/*¸æ¾¯ĞòºÅÌõ¼ş£ºbit0±êÊ¶µÚÒ»´Î¸æ¾¯£¬bit2±êÊ¶µÚ¶ş´Î¸æ¾¯£¬bit3±êÊ¶ºóĞø¸æ¾¯£¬bit4±êÊ¶Ïú¾¯*/;
-        zce_char    lowest_level/*´¥·¢¶¯×÷µÄ×îµÍÑÏÖØ¼¶±ğ(5¡¢10¡¢15¡¢20¡¢25ÊıÖµÔ½´óÔ½ÑÏÖØ)*/;
+        zce_char    alarm_type/*få‘Šè­¦ç±»å‹æ¡ä»¶ï¼š0è¡¨ç¤ºä»»æ„å‘Šè­¦ç±»å‹*/;
+        zce_char    alarm_sequence/*å‘Šè­¦åºå·æ¡ä»¶ï¼šbit0æ ‡è¯†ç¬¬ä¸€æ¬¡å‘Šè­¦ï¼Œbit2æ ‡è¯†ç¬¬äºŒæ¬¡å‘Šè­¦ï¼Œbit3æ ‡è¯†åç»­å‘Šè­¦ï¼Œbit4æ ‡è¯†é”€è­¦*/;
+        zce_char    lowest_level/*è§¦å‘åŠ¨ä½œçš„æœ€ä½ä¸¥é‡çº§åˆ«(5ã€10ã€15ã€20ã€25æ•°å€¼è¶Šå¤§è¶Šä¸¥é‡)*/;
         zce_char    action;
         zce_uint16    param1;
         zce_uint16    param2;
@@ -1645,9 +1645,9 @@ namespace gep
         zce_uint32    param5;
         zce_astring param6;
         zce_astring param7;
-        zce_astring memo/*×¢ÊÍ*/;
-        zce_astring modifier/*ÅäÖÃ¹æÔòµÄÓÃ»§µÄemail*/;
-        zce_uint32    modify_date/*ÅäÖÃµÄÊ±¼ä*/;
+        zce_astring memo/*æ³¨é‡Š*/;
+        zce_astring modifier/*é…ç½®è§„åˆ™çš„ç”¨æˆ·çš„email*/;
+        zce_uint32    modify_date/*é…ç½®çš„æ—¶é—´*/;
     };
     struct ALARM_HANDLE_SHOW
     {
@@ -1680,22 +1680,22 @@ namespace gep
         }
 
         std::vector<zce_char> guid;
-        zce_int16    plan_type/*1Ò»´ÎĞÔ¼Æ»®; 2ÒÔÈÕÎªµ¥Î»ÖÜÆÚ¼Æ»®; 3ÒÔÖÜÎªµ¥Î»ÖÜÆÚ¼Æ»®; 4ÒÔÔÂÎªµ¥Î»ÖÜÆÚ¼Æ»®; */;
-        zce_int32    period/*Ñ­»·ÖÜÆÚ£¬Ò»´ÎĞÔ¼Æ»®ºÍÔÂ¼Æ»®µÄÑ­»·ÖÜÆÚÉèÖÃÎª0*/;
-        zce_int32    begin_date/*Ò»´ÎĞÔ¼Æ»®Ê±±íÊ¾¼Æ»®Êµ¼Ê¿ªÊ¼Ê±¼ä£¬ÈÕ¼Æ»®/ÖÜ¼Æ»®/ÔÂ¼Æ»®Ê±±íÊ¾¼Æ»®ÉúĞ§Ê±¼ä£¬È¡Õûµ½Ìì*/;
-        zce_int32    end_date/*Ò»´ÎĞÔ¼Æ»®Ê±±íÊ¾¼Æ»®Êµ¼Ê½áÊøÊ±¼ä£¬ÈÕ¼Æ»®/ÖÜ¼Æ»®/ÔÂ¼Æ»®Ê±±íÊ¾¼Æ»®Ê§Ğ§Ê±¼ä£¬È¡Õûµ½Ìì£¬Ä¬ÈÏÎª0£¬±íÊ¾¼Æ»®ÓÀÔ¶²»Ê§Ğ§*/;
-        zce_int32    work_day/*¹¤×÷ÈÕ*/;
-        zce_int16    work_month/*¹¤×÷ÔÂ*/;
-        zce_int16    begin_hour/*Ò»´ÎĞÔ¼Æ»®Ê±Ìî0*/;
-        zce_int16    begin_minute/*Ò»´ÎĞÔ¼Æ»®Ê±Ìî0*/;
-        zce_int16    end_hour/*Ò»´ÎĞÔ¼Æ»®Ê±Ìî0*/;
-        zce_int16    end_minute/*Ò»´ÎĞÔ¼Æ»®Ê±Ìî0*/;
-        zce_int32    time_span/*µ¥¸öÎÄ¼şµÄÊ±¼ä³¤¶È(s)*/;
+        zce_int16    plan_type/*1ä¸€æ¬¡æ€§è®¡åˆ’; 2ä»¥æ—¥ä¸ºå•ä½å‘¨æœŸè®¡åˆ’; 3ä»¥å‘¨ä¸ºå•ä½å‘¨æœŸè®¡åˆ’; 4ä»¥æœˆä¸ºå•ä½å‘¨æœŸè®¡åˆ’; */;
+        zce_int32    period/*å¾ªç¯å‘¨æœŸï¼Œä¸€æ¬¡æ€§è®¡åˆ’å’Œæœˆè®¡åˆ’çš„å¾ªç¯å‘¨æœŸè®¾ç½®ä¸º0*/;
+        zce_int32    begin_date/*ä¸€æ¬¡æ€§è®¡åˆ’æ—¶è¡¨ç¤ºè®¡åˆ’å®é™…å¼€å§‹æ—¶é—´ï¼Œæ—¥è®¡åˆ’/å‘¨è®¡åˆ’/æœˆè®¡åˆ’æ—¶è¡¨ç¤ºè®¡åˆ’ç”Ÿæ•ˆæ—¶é—´ï¼Œå–æ•´åˆ°å¤©*/;
+        zce_int32    end_date/*ä¸€æ¬¡æ€§è®¡åˆ’æ—¶è¡¨ç¤ºè®¡åˆ’å®é™…ç»“æŸæ—¶é—´ï¼Œæ—¥è®¡åˆ’/å‘¨è®¡åˆ’/æœˆè®¡åˆ’æ—¶è¡¨ç¤ºè®¡åˆ’å¤±æ•ˆæ—¶é—´ï¼Œå–æ•´åˆ°å¤©ï¼Œé»˜è®¤ä¸º0ï¼Œè¡¨ç¤ºè®¡åˆ’æ°¸è¿œä¸å¤±æ•ˆ*/;
+        zce_int32    work_day/*å·¥ä½œæ—¥*/;
+        zce_int16    work_month/*å·¥ä½œæœˆ*/;
+        zce_int16    begin_hour/*ä¸€æ¬¡æ€§è®¡åˆ’æ—¶å¡«0*/;
+        zce_int16    begin_minute/*ä¸€æ¬¡æ€§è®¡åˆ’æ—¶å¡«0*/;
+        zce_int16    end_hour/*ä¸€æ¬¡æ€§è®¡åˆ’æ—¶å¡«0*/;
+        zce_int16    end_minute/*ä¸€æ¬¡æ€§è®¡åˆ’æ—¶å¡«0*/;
+        zce_int32    time_span/*å•ä¸ªæ–‡ä»¶çš„æ—¶é—´é•¿åº¦(s)*/;
         zce_byte    qos;
-        zce_int16    compress_type/*0²»Ñ¹Ëõ; 1»­Ãæ±ä»¯Ñ¹Ëõ*/;
+        zce_int16    compress_type/*0ä¸å‹ç¼©; 1ç”»é¢å˜åŒ–å‹ç¼©*/;
         zce_astring memo;
         zce_astring modifier;
-        zce_int32    modify_date/*¾«È·µ½Ãë*/;
+        zce_int32    modify_date/*ç²¾ç¡®åˆ°ç§’*/;
     };
     struct astring254_WRAPPER
     {
@@ -1730,8 +1730,8 @@ namespace gep
         zce_uint16    right;
         zce_uint16    bottom;
         zce_uint16    confident;
-        std::vector<zce_uint32> reserverd/*reserverd[0]:ÉèÖÃÎª100Ê±±íÊ¾ºá×İ×ø±êÒÔ0~100µÄ¿Ì¶È±íÊ¾£¬left¡¢top¡¢right¡¢bottomÎª0~100Ö®¼äµÄÖµ
-        reserverd[1]:ÊÇ·ñÖ´ĞĞÈ«Í¼ËÑË÷£¬Ïê¼ûºóÃæ*/;
+        std::vector<zce_uint32> reserverd/*reserverd[0]:è®¾ç½®ä¸º100æ—¶è¡¨ç¤ºæ¨ªçºµåæ ‡ä»¥0~100çš„åˆ»åº¦è¡¨ç¤ºï¼Œleftã€topã€rightã€bottomä¸º0~100ä¹‹é—´çš„å€¼
+        reserverd[1]:æ˜¯å¦æ‰§è¡Œå…¨å›¾æœç´¢ï¼Œè¯¦è§åé¢*/;
         zce_astring str;
     };
     struct QOS_CAPACITY
@@ -1775,7 +1775,7 @@ namespace gep
         }
 
         zce_uint16    value;
-        std::vector<astring254_WRAPPER> enum_list/*Ã¶¾ÙÖµ*/;
+        std::vector<astring254_WRAPPER> enum_list/*æšä¸¾å€¼*/;
         zce_astring text;
     };
     struct SPEED_LIMIT
@@ -1788,9 +1788,9 @@ namespace gep
         {
         }
 
-        zce_byte    min_speed/*×îµÍËÙ¶ÈÏŞÖÆ,0±íÊ¾ÎŞÏŞÖÆ*/;
-        zce_byte    max_speed/*×î¸ßËÙ¶ÈÏŞÖÆ,0±íÊ¾ÎŞÏŞÖÆ*/;
-        std::vector<zce_byte> reserved/*´óĞÍ³µ ËÙ¶ÈÏŞÖÆ, Ôİ²»Ö§³Ö*/;
+        zce_byte    min_speed/*æœ€ä½é€Ÿåº¦é™åˆ¶,0è¡¨ç¤ºæ— é™åˆ¶*/;
+        zce_byte    max_speed/*æœ€é«˜é€Ÿåº¦é™åˆ¶,0è¡¨ç¤ºæ— é™åˆ¶*/;
+        std::vector<zce_byte> reserved/*å¤§å‹è½¦ é€Ÿåº¦é™åˆ¶, æš‚ä¸æ”¯æŒ*/;
     };
     struct SPEED_LIMIT_V2
     {
@@ -1810,16 +1810,16 @@ namespace gep
         {
         }
 
-        zce_uint16    small_car_max/*Ğ¡³µ×î¸ßÏŞËÙ*/;
-        zce_uint16    small_car_standard/*Ğ¡³µ±êÖ¾×î¸ßÏŞËÙ*/;
-        zce_uint16    small_car_abnormal_max/*Ğ¡³µÒì³£³¬ËÙ*/;
-        zce_uint16    cart_max/*´ó³µ×î¸ßÏŞËÙ*/;
-        zce_uint16    cart_min_standard/*´ó³µ±êÖ¾×î¸ßÏŞËÙ*/;
-        zce_uint16    cart_abnormal_max/*´ó³µÒì³£³¬ËÙ*/;
-        zce_byte    small_car_min/*Ğ¡³µ×îµÍÏŞËÙ*/;
-        zce_byte    small_car_abnormal_min/*Ğ¡³µÒì³£µÍËÙ*/;
-        zce_byte    cart_min/*´ó³µ×îµÍÏŞËÙ*/;
-        zce_byte    cart_abnormal_min/*´ó³µÒì³£µÍËÙ*/;
+        zce_uint16    small_car_max/*å°è½¦æœ€é«˜é™é€Ÿ*/;
+        zce_uint16    small_car_standard/*å°è½¦æ ‡å¿—æœ€é«˜é™é€Ÿ*/;
+        zce_uint16    small_car_abnormal_max/*å°è½¦å¼‚å¸¸è¶…é€Ÿ*/;
+        zce_uint16    cart_max/*å¤§è½¦æœ€é«˜é™é€Ÿ*/;
+        zce_uint16    cart_min_standard/*å¤§è½¦æ ‡å¿—æœ€é«˜é™é€Ÿ*/;
+        zce_uint16    cart_abnormal_max/*å¤§è½¦å¼‚å¸¸è¶…é€Ÿ*/;
+        zce_byte    small_car_min/*å°è½¦æœ€ä½é™é€Ÿ*/;
+        zce_byte    small_car_abnormal_min/*å°è½¦å¼‚å¸¸ä½é€Ÿ*/;
+        zce_byte    cart_min/*å¤§è½¦æœ€ä½é™é€Ÿ*/;
+        zce_byte    cart_abnormal_min/*å¤§è½¦å¼‚å¸¸ä½é€Ÿ*/;
         std::vector<zce_byte> reserved;
     };
     struct OSDSUB_TYPE
@@ -1856,10 +1856,10 @@ namespace gep
         {
         }
 
-        std::vector<zce_byte> iolist/*0x00-0xf±íÊ¾IO¿Ú, 0x80-0x8f±íÊ¾485¿Ú*/;
+        std::vector<zce_byte> iolist/*0x00-0xfè¡¨ç¤ºIOå£, 0x80-0x8fè¡¨ç¤º485å£*/;
         zce_byte    outid;
-        zce_byte    addr485/*485µØÖ·0-7*/;
-        zce_byte    level/*0:µÍµçÆ½´¥·¢ 1:¸ßµçÆ½´¥·¢ 2:±ßÔµ´¥·¢*/;
+        zce_byte    addr485/*485åœ°å€0-7*/;
+        zce_byte    level/*0:ä½ç”µå¹³è§¦å‘ 1:é«˜ç”µå¹³è§¦å‘ 2:è¾¹ç¼˜è§¦å‘*/;
         std::vector<zce_byte> reserved;
     };
     struct FDSDK_CAMERA_CONTROL_ITEM
@@ -1877,8 +1877,8 @@ namespace gep
         }
 
         zce_uint16    type;
-        zce_uint16    manner/*µ±Ç°µÄµÄ¿ØÖÆ·½·¨*/;
-        zce_uint32    support_manner/*Ö§³ÖµÄ¿ØÖÆ·½·¨ ECameraControlManner*/;
+        zce_uint16    manner/*å½“å‰çš„çš„æ§åˆ¶æ–¹æ³•*/;
+        zce_uint32    support_manner/*æ”¯æŒçš„æ§åˆ¶æ–¹æ³• ECameraControlManner*/;
         zce_float    fMin;
         zce_float    fMid;
         zce_float    fMax;
@@ -1906,7 +1906,7 @@ namespace gep
         }
 
         zce_uint16    value;
-        std::vector<astring254_WRAPPER> enum_list/*Ã¶¾ÙÖµ*/;
+        std::vector<astring254_WRAPPER> enum_list/*æšä¸¾å€¼*/;
         zce_astring text;
         std::vector<FDSDK_CAMERA_CONTROL_GROUP> camera_ctrl_group;
     };
@@ -1931,21 +1931,21 @@ namespace gep
         {
         }
 
-        zce_byte    enable/*ÎïÀíÏßÈ¦Ê¹ÄÜ*/;
-        zce_byte    show/*ÔÚÊÓÆµÉÏÏÔÊ¾ÏßÈ¦*/;
-        zce_byte    type/*³µÁ¾¼ì²âÆ÷ÀàĞÍ£¬0£º232¿Ú´®³µ¼ìÆ÷, 1:IO¸ßµçÆ½³µ¼ìÆ÷, 2:IOµÍµçÆ½³µ¼ìÆ÷*/;
-        zce_byte    coilNum/*ÏßÈ¦ÊıÄ¿,1»ò2,Ä¬ÈÏÎª2*/;
-        zce_byte    detect_speed/*ÊÇ·ñ²âËÙ£¬0£º²»²âËÙ£¬1£º²âËÙ*/;
-        zce_byte    detect_mode/*¼ì²âÄ£Ê½£¬1£ºÕıĞĞ£¬2£ºÄæĞĞ£¬3£ºË«Ïò; ¶ÔÓÚµ¥ÏßÈ¦,1:½øÏßÈ¦,2³öÏßÈ¦,3:½ø³öÏßÈ¦*/;
-        zce_byte    first_io/*³µ¼ìÆ÷Ç°ÏßÈ¦ÊäÈëIO*/;
-        zce_byte    second_io/*³µ¼ìÆ÷ºóÏßÈ¦IO*/;
-        zce_byte    comid/*Óë³µÁ¾¼ì²âÆ÷Á¬½ÓµÄ´®¿ÚID*/;
-        zce_byte    id/*³µÁ¾¼ì²âÆ÷ID*/;
-        zce_byte    first_id/*³µ¼ìÆ÷Ç°ÏßÈ¦ID;Èô²âËÙ,Ôò±íÊ¾×éID*/;
-        zce_byte    second_id/*³µ¼ìÆ÷ºóÏßÈ¦ID*/;
-        std::vector<zce_byte> reserved/*[0]:µØ¸Ğ´¥·¢×¥ÅÄÍ¼Æ¬µÄÕÅÊı£¬[2][1]:ÏßÈ¦¿í¶Èµ¥Î»ÀåÃ×£¬bit0: 0ÎŞĞ§£¬1ÓĞĞ§£¬[4][3]:ÏßÈ¦¼ä¾àµ¥Î»ÀåÃ×£¬bit0: 0ÎŞĞ§£¬1ÓĞĞ§*/;
+        zce_byte    enable/*ç‰©ç†çº¿åœˆä½¿èƒ½*/;
+        zce_byte    show/*åœ¨è§†é¢‘ä¸Šæ˜¾ç¤ºçº¿åœˆ*/;
+        zce_byte    type/*è½¦è¾†æ£€æµ‹å™¨ç±»å‹ï¼Œ0ï¼š232å£ä¸²è½¦æ£€å™¨, 1:IOé«˜ç”µå¹³è½¦æ£€å™¨, 2:IOä½ç”µå¹³è½¦æ£€å™¨*/;
+        zce_byte    coilNum/*çº¿åœˆæ•°ç›®,1æˆ–2,é»˜è®¤ä¸º2*/;
+        zce_byte    detect_speed/*æ˜¯å¦æµ‹é€Ÿï¼Œ0ï¼šä¸æµ‹é€Ÿï¼Œ1ï¼šæµ‹é€Ÿ*/;
+        zce_byte    detect_mode/*æ£€æµ‹æ¨¡å¼ï¼Œ1ï¼šæ­£è¡Œï¼Œ2ï¼šé€†è¡Œï¼Œ3ï¼šåŒå‘; å¯¹äºå•çº¿åœˆ,1:è¿›çº¿åœˆ,2å‡ºçº¿åœˆ,3:è¿›å‡ºçº¿åœˆ*/;
+        zce_byte    first_io/*è½¦æ£€å™¨å‰çº¿åœˆè¾“å…¥IO*/;
+        zce_byte    second_io/*è½¦æ£€å™¨åçº¿åœˆIO*/;
+        zce_byte    comid/*ä¸è½¦è¾†æ£€æµ‹å™¨è¿æ¥çš„ä¸²å£ID*/;
+        zce_byte    id/*è½¦è¾†æ£€æµ‹å™¨ID*/;
+        zce_byte    first_id/*è½¦æ£€å™¨å‰çº¿åœˆID;è‹¥æµ‹é€Ÿ,åˆ™è¡¨ç¤ºç»„ID*/;
+        zce_byte    second_id/*è½¦æ£€å™¨åçº¿åœˆID*/;
+        std::vector<zce_byte> reserved/*[0]:åœ°æ„Ÿè§¦å‘æŠ“æ‹å›¾ç‰‡çš„å¼ æ•°ï¼Œ[2][1]:çº¿åœˆå®½åº¦å•ä½å˜ç±³ï¼Œbit0: 0æ— æ•ˆï¼Œ1æœ‰æ•ˆï¼Œ[4][3]:çº¿åœˆé—´è·å•ä½å˜ç±³ï¼Œbit0: 0æ— æ•ˆï¼Œ1æœ‰æ•ˆ*/;
         GENERAL_RECT    coil;
-        std::vector<zce_byte> iolist/*0x00-0xf±íÊ¾IO¿Ú, 0x90-0x9f±íÊ¾232¿Ú*/;
+        std::vector<zce_byte> iolist/*0x00-0xfè¡¨ç¤ºIOå£, 0x90-0x9fè¡¨ç¤º232å£*/;
     };
     struct FDSDK_VIRTUAL_COIL
     {
@@ -1958,11 +1958,11 @@ namespace gep
         {
         }
 
-        zce_byte    enable/*ĞéÄâÏßÈ¦Ê¹ÄÜ*/;
-        zce_byte    show/*ÔÚÊÓÆµÉÏÏÔÊ¾ÏßÈ¦*/;
-        zce_byte    detect_mode/*¼ì²âÄ£Ê½£¬1£ºÕıĞĞ£¬2£ºÄæĞĞ£¬3£ºË«Ïò*/;
+        zce_byte    enable/*è™šæ‹Ÿçº¿åœˆä½¿èƒ½*/;
+        zce_byte    show/*åœ¨è§†é¢‘ä¸Šæ˜¾ç¤ºçº¿åœˆ*/;
+        zce_byte    detect_mode/*æ£€æµ‹æ¨¡å¼ï¼Œ1ï¼šæ­£è¡Œï¼Œ2ï¼šé€†è¡Œï¼Œ3ï¼šåŒå‘*/;
         std::vector<zce_byte> reserved;
-        std::vector<GENERAL_POINT> point/* Ç°Á½¸öµã¹¹³É¼ì²â¾ØĞÎ1;ºóÁ½¸öµã¹¹³É¾ØĞÎ2; ¾ØĞÎ1ÓÃÓÚĞèÒªÉÁ¹âÊ±µÄÌáÇ°¼ì²â */;
+        std::vector<GENERAL_POINT> point/* å‰ä¸¤ä¸ªç‚¹æ„æˆæ£€æµ‹çŸ©å½¢1;åä¸¤ä¸ªç‚¹æ„æˆçŸ©å½¢2; çŸ©å½¢1ç”¨äºéœ€è¦é—ªå…‰æ—¶çš„æå‰æ£€æµ‹ */;
     };
     struct FDSDK_CAPTURE_VEHICLE
     {
@@ -1978,16 +1978,16 @@ namespace gep
         {
         }
 
-        zce_byte    vehicle_id/*³µµÀºÅ*/;
-        zce_byte    dir/*0£ºÕıĞĞ³µÁ¾ÔÚ»­ÃæÉÏ´ÓÉÏÖÁÏÂ£»1£ºÕıĞĞ³µÁ¾ÔÚ»­ÃæÉÏ´ÓÏÂÖÁÉÏ¡£2£º»ìĞĞ³µµÀ*/;
-        zce_byte    support/*bit0:ÊÇ·ñÖ§³ÖµØ¸ĞÏßÈ¦ bit1:ÊÇ·ñÖ§³ÖĞéÄâÏßÈ¦	bit2:ÊÇ·ñÖ§³ÖÀ×´ï*/;
+        zce_byte    vehicle_id/*è½¦é“å·*/;
+        zce_byte    dir/*0ï¼šæ­£è¡Œè½¦è¾†åœ¨ç”»é¢ä¸Šä»ä¸Šè‡³ä¸‹ï¼›1ï¼šæ­£è¡Œè½¦è¾†åœ¨ç”»é¢ä¸Šä»ä¸‹è‡³ä¸Šã€‚2ï¼šæ··è¡Œè½¦é“*/;
+        zce_byte    support/*bit0:æ˜¯å¦æ”¯æŒåœ°æ„Ÿçº¿åœˆ bit1:æ˜¯å¦æ”¯æŒè™šæ‹Ÿçº¿åœˆ	bit2:æ˜¯å¦æ”¯æŒé›·è¾¾*/;
         std::vector<zce_byte> reserved;
-        zce_byte    osd_type/* 0£ºÔÚÍ¼Æ¬×îÏÂ·½£»1£ºÔÚÍ¼Æ¬×îÉÏ·½£»0xff£º×ø±êÖ¸¶¨£»*/;
+        zce_byte    osd_type/* 0ï¼šåœ¨å›¾ç‰‡æœ€ä¸‹æ–¹ï¼›1ï¼šåœ¨å›¾ç‰‡æœ€ä¸Šæ–¹ï¼›0xffï¼šåæ ‡æŒ‡å®šï¼›*/;
         zce_uint16    osd_x;
         zce_uint16    osd_y;
         zce_astring osd_text;
-        FLIGHT_CONTROL    flight_ctl/*flight_ctrl±íÊ¾²»Ö§³ÖÉÁ¹âÊ±²»ÔÊĞíÅäÖÃ*/;
-        SPEED_LIMIT    speed/*Ö»ÓĞµØ¸ĞÏßÈ¦Ö§³Ö²âËÙÊ±ÕâÏî²ÅÏÔÊ¾*/;
+        FLIGHT_CONTROL    flight_ctl/*flight_ctrlè¡¨ç¤ºä¸æ”¯æŒé—ªå…‰æ—¶ä¸å…è®¸é…ç½®*/;
+        SPEED_LIMIT    speed/*åªæœ‰åœ°æ„Ÿçº¿åœˆæ”¯æŒæµ‹é€Ÿæ—¶è¿™é¡¹æ‰æ˜¾ç¤º*/;
         FDSDK_PHYSICAL_COIL    physical_coil;
         FDSDK_VIRTUAL_COIL    virtual_coil;
     };
@@ -2016,26 +2016,26 @@ namespace gep
         {
         }
 
-        zce_byte    lane_id/*³µµÀºÅ, ´Ó0¿ªÊ¼*/;
-        zce_byte    lane_dir/*³µµÀÕıĞĞ·½Ïò£¬0£º´ÓÉÏµ½ÏÂ£¬1£º´ÓÏÂµ½ÉÏ¡£2£º»ìĞĞ³µµÀ*/;
-        zce_byte    detect_dir/*¼ì²âÄ£Ê½£¬1£ºÕıĞĞ£¬2£ºÄæĞĞ£¬3£ºË«Ïò; ¶ÔÓÚµ¥ÏßÈ¦,1:½øÏßÈ¦,2³öÏßÈ¦,3:½ø³öÏßÈ¦*/;
-        zce_byte    detect_speed/*ÊÇ·ñ²âËÙ£¬0£º²»²âËÙ£¬1£º²âËÙ*/;
-        zce_byte    reverse_illegal/*ÄæĞĞÊÇ·ñÊÇÎ¥ÕÂĞĞÎª, 0:·ñ£¬ 1£ºÊÇ*/;
-        zce_byte    flash_ioid/*¶ÔÓ¦ÉÁ¹âµÆio¿Ú: 1¡¢2¡¢3...io¿Ú; 0xff£ºÎŞ*/;
-        zce_byte    coilNum/*ÏßÈ¦ÊıÄ¿,1»ò2,Ä¬ÈÏÎª2*/;
-        zce_byte    level/* 0:µÍµçÆ½³µ¼ìÆ÷; 1:¸ßµçÆ½³µ¼ìÆ÷,*/;
-        zce_byte    first_io/*³µ¼ìÆ÷Ç°ÏßÈ¦ÊäÈëIO*/;
-        zce_byte    second_io/*³µ¼ìÆ÷ºóÏßÈ¦IO*/;
-        zce_byte    comid/*Óë³µÁ¾¼ì²âÆ÷Á¬½ÓµÄ´®¿ÚID*/;
-        zce_byte    id/*³µÁ¾¼ì²âÆ÷ID*/;
-        zce_byte    first_id/*³µ¼ìÆ÷Ç°ÏßÈ¦ID;Èô²âËÙ,Ôò±íÊ¾×éID*/;
-        zce_byte    second_id/*³µ¼ìÆ÷ºóÏßÈ¦ID*/;
+        zce_byte    lane_id/*è½¦é“å·, ä»0å¼€å§‹*/;
+        zce_byte    lane_dir/*è½¦é“æ­£è¡Œæ–¹å‘ï¼Œ0ï¼šä»ä¸Šåˆ°ä¸‹ï¼Œ1ï¼šä»ä¸‹åˆ°ä¸Šã€‚2ï¼šæ··è¡Œè½¦é“*/;
+        zce_byte    detect_dir/*æ£€æµ‹æ¨¡å¼ï¼Œ1ï¼šæ­£è¡Œï¼Œ2ï¼šé€†è¡Œï¼Œ3ï¼šåŒå‘; å¯¹äºå•çº¿åœˆ,1:è¿›çº¿åœˆ,2å‡ºçº¿åœˆ,3:è¿›å‡ºçº¿åœˆ*/;
+        zce_byte    detect_speed/*æ˜¯å¦æµ‹é€Ÿï¼Œ0ï¼šä¸æµ‹é€Ÿï¼Œ1ï¼šæµ‹é€Ÿ*/;
+        zce_byte    reverse_illegal/*é€†è¡Œæ˜¯å¦æ˜¯è¿ç« è¡Œä¸º, 0:å¦ï¼Œ 1ï¼šæ˜¯*/;
+        zce_byte    flash_ioid/*å¯¹åº”é—ªå…‰ç¯ioå£: 1ã€2ã€3...ioå£; 0xffï¼šæ— */;
+        zce_byte    coilNum/*çº¿åœˆæ•°ç›®,1æˆ–2,é»˜è®¤ä¸º2*/;
+        zce_byte    level/* 0:ä½ç”µå¹³è½¦æ£€å™¨; 1:é«˜ç”µå¹³è½¦æ£€å™¨,*/;
+        zce_byte    first_io/*è½¦æ£€å™¨å‰çº¿åœˆè¾“å…¥IO*/;
+        zce_byte    second_io/*è½¦æ£€å™¨åçº¿åœˆIO*/;
+        zce_byte    comid/*ä¸è½¦è¾†æ£€æµ‹å™¨è¿æ¥çš„ä¸²å£ID*/;
+        zce_byte    id/*è½¦è¾†æ£€æµ‹å™¨ID*/;
+        zce_byte    first_id/*è½¦æ£€å™¨å‰çº¿åœˆID;è‹¥æµ‹é€Ÿ,åˆ™è¡¨ç¤ºç»„ID*/;
+        zce_byte    second_id/*è½¦æ£€å™¨åçº¿åœˆID*/;
         std::vector<zce_byte> reserved;
-        zce_uint16    coil_width/*ÏßÈ¦¿í¶Èµ¥Î»ÀåÃ×*/;
-        zce_uint16    coil_space/*Á½ÏßÈ¦¼ä¾àµ¥Î»ÀåÃ×*/;
-        GENERAL_RECT    plate_rect/*³µÅÆÊ¶±ğÇøÓò*/;
+        zce_uint16    coil_width/*çº¿åœˆå®½åº¦å•ä½å˜ç±³*/;
+        zce_uint16    coil_space/*ä¸¤çº¿åœˆé—´è·å•ä½å˜ç±³*/;
+        GENERAL_RECT    plate_rect/*è½¦ç‰Œè¯†åˆ«åŒºåŸŸ*/;
         SPEED_LIMIT_V2    speed_limit;
-        std::vector<zce_byte> iolist/*0x00-0xf±íÊ¾IO¿Ú, 0x90-0x9f±íÊ¾232¿Ú, 0xa0-0xaf±íÊ¾485¿Ú*/;
+        std::vector<zce_byte> iolist/*0x00-0xfè¡¨ç¤ºIOå£, 0x90-0x9fè¡¨ç¤º232å£, 0xa0-0xafè¡¨ç¤º485å£*/;
     };
     struct FDSDK_CAPTURE_LANES_RADAR
     {
@@ -2053,16 +2053,16 @@ namespace gep
         {
         }
 
-        zce_byte    lane_id/*³µµÀºÅ, ´Ó0¿ªÊ¼*/;
-        zce_byte    lane_dir/*³µµÀÕıĞĞ·½Ïò£¬0£º´ÓÉÏµ½ÏÂ£¬1£º´ÓÏÂµ½ÉÏ¡£2£º»ìĞĞ³µµÀ*/;
-        zce_byte    detect_dir/*×¥ÅÄ·½Ïò£¬1£ºÕıĞĞ£¬2£ºÄæĞĞ£¬3£ºË«Ïò*/;
-        zce_byte    detect_speed/*ÊÇ·ñ²âËÙ£¬0£º²»²âËÙ£¬1£º²âËÙ*/;
-        zce_byte    reverse_illegal/*ÄæĞĞÊÇ·ñÊÇÎ¥ÕÂĞĞÎª, 0:·ñ£¬ 1£ºÊÇ*/;
-        zce_byte    flash_io_id/*¶ÔÓ¦ÉÁ¹âµÆio¿Ú: 1¡¢2¡¢3...io¿Ú; 0xff£ºÎŞ*/;
-        zce_byte    radar_type/*À×´ïÀàĞÍ*/;
-        zce_byte    rs_id/*ÓëÀ×´ïÁ¬½ÓµÄ´®¿ÚID*/;
+        zce_byte    lane_id/*è½¦é“å·, ä»0å¼€å§‹*/;
+        zce_byte    lane_dir/*è½¦é“æ­£è¡Œæ–¹å‘ï¼Œ0ï¼šä»ä¸Šåˆ°ä¸‹ï¼Œ1ï¼šä»ä¸‹åˆ°ä¸Šã€‚2ï¼šæ··è¡Œè½¦é“*/;
+        zce_byte    detect_dir/*æŠ“æ‹æ–¹å‘ï¼Œ1ï¼šæ­£è¡Œï¼Œ2ï¼šé€†è¡Œï¼Œ3ï¼šåŒå‘*/;
+        zce_byte    detect_speed/*æ˜¯å¦æµ‹é€Ÿï¼Œ0ï¼šä¸æµ‹é€Ÿï¼Œ1ï¼šæµ‹é€Ÿ*/;
+        zce_byte    reverse_illegal/*é€†è¡Œæ˜¯å¦æ˜¯è¿ç« è¡Œä¸º, 0:å¦ï¼Œ 1ï¼šæ˜¯*/;
+        zce_byte    flash_io_id/*å¯¹åº”é—ªå…‰ç¯ioå£: 1ã€2ã€3...ioå£; 0xffï¼šæ— */;
+        zce_byte    radar_type/*é›·è¾¾ç±»å‹*/;
+        zce_byte    rs_id/*ä¸é›·è¾¾è¿æ¥çš„ä¸²å£ID*/;
         std::vector<zce_byte> reserved;
-        GENERAL_RECT    plate_rect/*³µÅÆÊ¶±ğÇøÓò*/;
+        GENERAL_RECT    plate_rect/*è½¦ç‰Œè¯†åˆ«åŒºåŸŸ*/;
         SPEED_LIMIT_V2    speed_limit;
     };
     struct FDSDK_CAPTURE_LANES_INFO
@@ -2081,17 +2081,17 @@ namespace gep
         {
         }
 
-        std::vector<GENERAL_LINE> line/*³µµÀÏß6Ìõ*/;
-        std::vector<zce_uint16> detect_y/*×¥ÅÄÏß*/;
+        std::vector<GENERAL_LINE> line/*è½¦é“çº¿6æ¡*/;
+        std::vector<zce_uint16> detect_y/*æŠ“æ‹çº¿*/;
         std::vector<zce_byte> reserved1;
-        std::vector<zce_byte> lane_dir/*0£ºÕıĞĞ³µÁ¾ÔÚ»­ÃæÉÏ´ÓÉÏÖÁÏÂ£»1£ºÕıĞĞ³µÁ¾ÔÚ»­ÃæÉÏ´ÓÏÂÖÁÉÏ¡£2£º»ìĞĞ³µµÀ*/;
-        std::vector<zce_byte> detect_dir/*×¥ÅÄ·½Ïò£¬1£ºÕıĞĞ£¬2£ºÄæĞĞ£¬3£ºË«Ïò*/;
-        std::vector<zce_byte> detect_type/*×¥ÅÄÀàĞÍ,1£º»ú¶¯³µ£¬2£º·Ç»ú¶¯£¬3£ºËùÓĞ*/;
-        std::vector<zce_byte> touch_line_detect/*ÊÇ·ñ¼ì²âÑ¹Ïß,0:·ñ£¬1£ºÊÇ*/;
-        std::vector<zce_byte> reverse_illegal/*ÄæĞĞÊÇ·ñÊÇÎ¥ÕÂĞĞÎª, 0:·ñ£¬ 1£ºÊÇ*/;
-        std::vector<zce_byte> flash_io_id/*¶ÔÓ¦ÉÁ¹âµÆio¿Ú: 1¡¢2¡¢3...io¿Ú; 0xff£ºÎŞ*/;
+        std::vector<zce_byte> lane_dir/*0ï¼šæ­£è¡Œè½¦è¾†åœ¨ç”»é¢ä¸Šä»ä¸Šè‡³ä¸‹ï¼›1ï¼šæ­£è¡Œè½¦è¾†åœ¨ç”»é¢ä¸Šä»ä¸‹è‡³ä¸Šã€‚2ï¼šæ··è¡Œè½¦é“*/;
+        std::vector<zce_byte> detect_dir/*æŠ“æ‹æ–¹å‘ï¼Œ1ï¼šæ­£è¡Œï¼Œ2ï¼šé€†è¡Œï¼Œ3ï¼šåŒå‘*/;
+        std::vector<zce_byte> detect_type/*æŠ“æ‹ç±»å‹,1ï¼šæœºåŠ¨è½¦ï¼Œ2ï¼šéæœºåŠ¨ï¼Œ3ï¼šæ‰€æœ‰*/;
+        std::vector<zce_byte> touch_line_detect/*æ˜¯å¦æ£€æµ‹å‹çº¿,0:å¦ï¼Œ1ï¼šæ˜¯*/;
+        std::vector<zce_byte> reverse_illegal/*é€†è¡Œæ˜¯å¦æ˜¯è¿ç« è¡Œä¸º, 0:å¦ï¼Œ 1ï¼šæ˜¯*/;
+        std::vector<zce_byte> flash_io_id/*å¯¹åº”é—ªå…‰ç¯ioå£: 1ã€2ã€3...ioå£; 0xffï¼šæ— */;
         zce_byte    reserved2;
-        std::vector<GENERAL_LINE> detect_line/*¼ì²âÇøÓòµÄÉÏÏÂ×óÓÒ4Ìõ±ß½çÏß*/;
+        std::vector<GENERAL_LINE> detect_line/*æ£€æµ‹åŒºåŸŸçš„ä¸Šä¸‹å·¦å³4æ¡è¾¹ç•Œçº¿*/;
         std::vector<SPEED_LIMIT_V2> speed_limit;
     };
     struct FDSDK_FACE_DETECT
@@ -2107,10 +2107,10 @@ namespace gep
         }
 
         zce_byte    enable;
-        zce_byte    show/*ÔÚÊÓÆµÉÏÏÔÊ¾ÏßÈ¦*/;
-        zce_uint16    detect_count/*×î¶à¼ì²âÊıÄ¿*/;
-        zce_uint16    min_width/*ÈËÁ³×îĞ¡ÏñËØ¿í¶È*/;
-        zce_uint16    interval/*¼ì²â¼ä¸ôÖ¡Êı*/;
+        zce_byte    show/*åœ¨è§†é¢‘ä¸Šæ˜¾ç¤ºçº¿åœˆ*/;
+        zce_uint16    detect_count/*æœ€å¤šæ£€æµ‹æ•°ç›®*/;
+        zce_uint16    min_width/*äººè„¸æœ€å°åƒç´ å®½åº¦*/;
+        zce_uint16    interval/*æ£€æµ‹é—´éš”å¸§æ•°*/;
         std::vector<GENERAL_RECT> coil;
     };
     struct RESOLUTION_BITERATE_CAPACITY
@@ -2150,9 +2150,9 @@ namespace gep
         {
         }
 
-        zce_byte    preset_no/*Ô¤ÖÃµã±àºÅ*/;
+        zce_byte    preset_no/*é¢„ç½®ç‚¹ç¼–å·*/;
         zce_byte    reserve;
-        zce_uint16    delay_time/*Ãë*/;
+        zce_uint16    delay_time/*ç§’*/;
     };
     struct INTELLIGENT_ALGORITHMS_CFG
     {
@@ -2166,12 +2166,12 @@ namespace gep
         {
         }
 
-        zce_astring localtion/*µØµã ÈçÕã,»¦µÈ*/;
-        zce_byte    plate_direction/*0:ÕıÏò 1:·´Ïò*/;
-        zce_byte    plate_color_detect_enable/*0:³µÉíÑÕÉ«Ê¶±ğ¹Ø±Õ 1:³µÉíÑÕÉ«Ê¶±ğ¿ª*/;
+        zce_astring localtion/*åœ°ç‚¹ å¦‚æµ™,æ²ªç­‰*/;
+        zce_byte    plate_direction/*0:æ­£å‘ 1:åå‘*/;
+        zce_byte    plate_color_detect_enable/*0:è½¦èº«é¢œè‰²è¯†åˆ«å…³é—­ 1:è½¦èº«é¢œè‰²è¯†åˆ«å¼€*/;
         std::vector<zce_byte> reserve;
-        zce_uint16    plate_min_size/*60-120×îĞ¡³µÅÆ µ¥Î»ÏñËØ*/;
-        zce_uint16    plate_max_size/*60-120×î´ó³µÅÆ µ¥Î»ÏñËØ*/;
+        zce_uint16    plate_min_size/*60-120æœ€å°è½¦ç‰Œ å•ä½åƒç´ */;
+        zce_uint16    plate_max_size/*60-120æœ€å¤§è½¦ç‰Œ å•ä½åƒç´ */;
     };
     struct PICTURE_MERGE_TYPE
     {
@@ -2184,9 +2184,9 @@ namespace gep
         {
         }
 
-        zce_byte    one_picture_merge/*EPicMergeType Ò»ÕÅºÍÌØĞ´ÌØĞ´*/;
-        zce_byte    two_picture_merge/*EPicMergeType ÉÏÏÂ,×óÓÒÁ½ÖÖ*/;
-        zce_byte    three_picture_merge/*EPicMergeType ÈıÕÅ+ÌØĞ´*/;
+        zce_byte    one_picture_merge/*EPicMergeType ä¸€å¼ å’Œç‰¹å†™ç‰¹å†™*/;
+        zce_byte    two_picture_merge/*EPicMergeType ä¸Šä¸‹,å·¦å³ä¸¤ç§*/;
+        zce_byte    three_picture_merge/*EPicMergeType ä¸‰å¼ +ç‰¹å†™*/;
         zce_byte    reserve;
     };
     struct CONFIG_PARAM
@@ -2201,10 +2201,10 @@ namespace gep
         {
         }
 
-        zce_uint32    config_major_type/*ÅäÖÃÖ÷ÀàĞÍ EConfigMajorType*/;
-        zce_uint32    config_minor_type/*ÅäÖÃ×ÓÀàĞÍ EConfigMinorType*/;
-        zce_uint32    data_mask/*EConfigMask 0xffffffff±íÊ¾È«Ñ¡*/;
-        std::vector<zce_byte> data_buf/*×î´ó5M.*/;
+        zce_uint32    config_major_type/*é…ç½®ä¸»ç±»å‹ EConfigMajorType*/;
+        zce_uint32    config_minor_type/*é…ç½®å­ç±»å‹ EConfigMinorType*/;
+        zce_uint32    data_mask/*EConfigMask 0xffffffffè¡¨ç¤ºå…¨é€‰*/;
+        std::vector<zce_byte> data_buf/*æœ€å¤§5M.*/;
         zce_uint32    data_len;
     };
     enum IE_E
@@ -2772,9 +2772,9 @@ namespace gep
         E_MSG_FDSDK_NAME_VALUES_RES = 0x00008005,
         E_MSG_FDSDK_GET_GLOBAL_INFO_REQ = 0x00008100,
         E_MSG_FDSDK_GET_GLOBAL_INFO_RES = 0x00008101,
-        E_MSG_FDSDK_GET_GLOBAL_NETWORK_REQ = 0x00008102 /*ÍøÂç²ÎÊı*/,
+        E_MSG_FDSDK_GET_GLOBAL_NETWORK_REQ = 0x00008102 /*ç½‘ç»œå‚æ•°*/,
         E_MSG_FDSDK_GET_GLOBAL_NETWORK_RES = 0x00008103,
-        E_MSG_FDSDK_GET_GLOBAL_NVIEW_REQ = 0x00008104 /*·şÎñÆ÷*/,
+        E_MSG_FDSDK_GET_GLOBAL_NVIEW_REQ = 0x00008104 /*æœåŠ¡å™¨*/,
         E_MSG_FDSDK_GET_GLOBAL_NVIEW_RES = 0x00008105,
         E_MSG_FDSDK_GET_GLOBAL_SDK_REQ = 0x00008106,
         E_MSG_FDSDK_GET_GLOBAL_SDK_RES = 0x00008107,
@@ -3093,8 +3093,8 @@ namespace gep
         }
 
         zce_astring email/*email*/;
-        std::vector<zce_uint16> soft_version/*Èí¼ş°æ±¾ºÅ*/;
-        zce_char    client_type/*'A' ¹ÜÀíÔ± 'O'²Ù×÷Ô±*/;
+        std::vector<zce_uint16> soft_version/*è½¯ä»¶ç‰ˆæœ¬å·*/;
+        zce_char    client_type/*'A' ç®¡ç†å‘˜ 'O'æ“ä½œå‘˜*/;
     };
     struct IE_NEGOTIATE_RES
     {
@@ -3106,10 +3106,10 @@ namespace gep
         {
         }
 
-        zce_astring domain_id/*ÓòID*/;
+        zce_astring domain_id/*åŸŸID*/;
         zce_astring ua_id/*UAID*/;
-        zce_char    encrypt_algrithm/*¼ÓÃÜËã·¨*/;
-        std::vector<zce_char> encrypt_seed/*¼ÓÃÜÖÖ×Ó*/;
+        zce_char    encrypt_algrithm/*åŠ å¯†ç®—æ³•*/;
+        std::vector<zce_char> encrypt_seed/*åŠ å¯†ç§å­*/;
     };
     struct IE_ROLE_ID
     {
@@ -3146,8 +3146,8 @@ namespace gep
         }
 
         zce_astring ua_id/*UAID*/;
-        std::vector<zce_char> old_pwd/*ÓÃ»§ÀÏÃÜÂëMD5*/;
-        std::vector<zce_char> new_pwd/*ÓÃ»§ĞÂÃÜÂëMD5*/;
+        std::vector<zce_char> old_pwd/*ç”¨æˆ·è€å¯†ç MD5*/;
+        std::vector<zce_char> new_pwd/*ç”¨æˆ·æ–°å¯†ç MD5*/;
     };
     struct IE_ROLE_FD_AUTHENTICATION
     {
@@ -3182,8 +3182,8 @@ namespace gep
         {
         }
 
-        zce_char    op_type/*2Ôö¼Ó 4É¾³ı 1ĞŞ¸Ä*/;
-        ROLE_PRIVILEGE_INFO    info/*È¨ÏŞĞÅÏ¢*/;
+        zce_char    op_type/*2å¢åŠ  4åˆ é™¤ 1ä¿®æ”¹*/;
+        ROLE_PRIVILEGE_INFO    info/*æƒé™ä¿¡æ¯*/;
     };
     struct IE_LOG_REQ
     {
@@ -3198,8 +3198,8 @@ namespace gep
         zce_astring ua_id;
         zce_astring fd_id;
         CHANNEL_ID    channel_id;
-        zce_uint32    start_time/*¿ªÊ¼Ê±¼ä*/;
-        zce_uint32    stop_time/*½áÊøÊ±¼ä*/;
+        zce_uint32    start_time/*å¼€å§‹æ—¶é—´*/;
+        zce_uint32    stop_time/*ç»“æŸæ—¶é—´*/;
     };
     struct IE_QUALITY_REPORT
     {
@@ -3217,12 +3217,12 @@ namespace gep
 
         zce_astring fd_id;
         CHANNEL_ID    channel_id;
-        zce_int32    frame_rate/*Ö¡ÂÊ*/;
-        zce_int32    bit_speed/*ÂëÂÊ*/;
-        zce_int32    bytetotal_low/*ÊÕµ½µÄ×Ö½ÚÊı£¨µÍ£©*/;
-        zce_int32    bytetotal_high/*ÊÕµ½µÄMB×Ö½ÚÊı£¨¸ß£©*/;
-        zce_int32    lost_frame/*¶ªÖ¡Êı*/;
-        zce_int32    recv_frame/*×ÜÖ¡Êı*/;
+        zce_int32    frame_rate/*å¸§ç‡*/;
+        zce_int32    bit_speed/*ç ç‡*/;
+        zce_int32    bytetotal_low/*æ”¶åˆ°çš„å­—èŠ‚æ•°ï¼ˆä½ï¼‰*/;
+        zce_int32    bytetotal_high/*æ”¶åˆ°çš„MBå­—èŠ‚æ•°ï¼ˆé«˜ï¼‰*/;
+        zce_int32    lost_frame/*ä¸¢å¸§æ•°*/;
+        zce_int32    recv_frame/*æ€»å¸§æ•°*/;
     };
     struct IE_FD_DESCRIBE
     {
@@ -3247,13 +3247,13 @@ namespace gep
     {
         const static unsigned short IE_TYPE = E_IE_SCHEDULE_NOTIFY;
         IE_SCHEDULE_NOTIFY() { };
-        SCHEDULE_NOTIFY    notify/*µ÷¶ÈĞÅÏ¢*/;
+        SCHEDULE_NOTIFY    notify/*è°ƒåº¦ä¿¡æ¯*/;
     };
     struct IE_SCHEDULE_NOTIFY_IPV6
     {
         const static unsigned short IE_TYPE = E_IE_SCHEDULE_NOTIFY_IPV6;
         IE_SCHEDULE_NOTIFY_IPV6() { };
-        SCHEDULE_NOTIFY_IPV6    notify_ipv6/*µ÷¶ÈĞÅÏ¢*/;
+        SCHEDULE_NOTIFY_IPV6    notify_ipv6/*è°ƒåº¦ä¿¡æ¯*/;
     };
     struct IE_RECORDSTART_REQ
     {
@@ -3266,9 +3266,9 @@ namespace gep
         {
         }
 
-        zce_uint32    begin_time/*¿ªÊ¼Ê±¼ä*/;
-        zce_uint32    end_time/*½áÊøÊ±¼ä*/;
-        zce_uint32    store_mode/*´æ´¢Ä£Ê½, 0×Ô¶¯£¬1£¬ÂúÁËÍ££¬2£¬Ñ­»·*/;
+        zce_uint32    begin_time/*å¼€å§‹æ—¶é—´*/;
+        zce_uint32    end_time/*ç»“æŸæ—¶é—´*/;
+        zce_uint32    store_mode/*å­˜å‚¨æ¨¡å¼, 0è‡ªåŠ¨ï¼Œ1ï¼Œæ»¡äº†åœï¼Œ2ï¼Œå¾ªç¯*/;
     };
     struct IE_PORT_RANGE
     {
@@ -3294,10 +3294,10 @@ namespace gep
         {
         }
 
-        zce_astring fd_id/*Éè±¸±àºÅ*/;
-        std::vector<zce_char> pwd/*Éè±¸µÇÂ¼ÃÜÂë(MD5),ÃÜÂë²úÉú·½Ê½Îª£ºMd5(RandSeed+Md5(password))*/;
-        std::vector<zce_char> seed/*Ëæ»úÖÖ×Ó*/;
-        zce_uint16    net_type/*ÍøÂç×´¿ö£¬µÚ14,15±ÈÌØÎ»£º±£Áô£¬Ìî0; 13±ÈÌØÎ»: ÖÃ1±íÊ¾Ö§³Ö¶àtcpÁ¬½Ó£¨ÎŞÏßÉè±¸£©; 12±ÈÌØÎ»£ºÌî1±íÊ¾Ö§³ÖMSG_RECORD_START_REQÖ¸Áî; µÚ9,10,11±ÈÌØÎ»£º±£Áô£¬Ìî0£»µÚ8±ÈÌØÎ»£ºÌî1±íÊ¾Ö§³Ö¶àÂëÁ÷(QOS²»µÈÓÚ1); 7-4±ÈÌØÎ»£º±£Áô£¬Ìî0; µÚ0,1,2,3±ÈÌØÎ»£ºÌî1±íÊ¾Ê¹ÓÃudp´«ÊäÂëÁ÷£¬Ìî2±íÊ¾Ê¹ÓÃtcp*/;
+        zce_astring fd_id/*è®¾å¤‡ç¼–å·*/;
+        std::vector<zce_char> pwd/*è®¾å¤‡ç™»å½•å¯†ç (MD5),å¯†ç äº§ç”Ÿæ–¹å¼ä¸ºï¼šMd5(RandSeed+Md5(password))*/;
+        std::vector<zce_char> seed/*éšæœºç§å­*/;
+        zce_uint16    net_type/*ç½‘ç»œçŠ¶å†µï¼Œç¬¬14,15æ¯”ç‰¹ä½ï¼šä¿ç•™ï¼Œå¡«0; 13æ¯”ç‰¹ä½: ç½®1è¡¨ç¤ºæ”¯æŒå¤štcpè¿æ¥ï¼ˆæ— çº¿è®¾å¤‡ï¼‰; 12æ¯”ç‰¹ä½ï¼šå¡«1è¡¨ç¤ºæ”¯æŒMSG_RECORD_START_REQæŒ‡ä»¤; ç¬¬9,10,11æ¯”ç‰¹ä½ï¼šä¿ç•™ï¼Œå¡«0ï¼›ç¬¬8æ¯”ç‰¹ä½ï¼šå¡«1è¡¨ç¤ºæ”¯æŒå¤šç æµ(QOSä¸ç­‰äº1); 7-4æ¯”ç‰¹ä½ï¼šä¿ç•™ï¼Œå¡«0; ç¬¬0,1,2,3æ¯”ç‰¹ä½ï¼šå¡«1è¡¨ç¤ºä½¿ç”¨udpä¼ è¾“ç æµï¼Œå¡«2è¡¨ç¤ºä½¿ç”¨tcp*/;
     };
     struct IE_NETADDRESS
     {
@@ -3311,10 +3311,10 @@ namespace gep
         {
         }
 
-        zce_uint32    addr/*ÍøÂç½Ó¿ÚµØÖ·£¬IPµØÖ·£¬Ê¹ÓÃ³¤ÕûĞÍÀ´±íÊ¾*/;
-        zce_uint16    port/*¶Ë¿Ú*/;
-        zce_byte    trans_type/*ÍøÂç´«ÊäÀàĞÍ0£ºAUTO  1£ºUDP 2£ºTCP  3£ºMulticast*/;
-        zce_byte    reserve/*±£Áô×Ö*/;
+        zce_uint32    addr/*ç½‘ç»œæ¥å£åœ°å€ï¼ŒIPåœ°å€ï¼Œä½¿ç”¨é•¿æ•´å‹æ¥è¡¨ç¤º*/;
+        zce_uint16    port/*ç«¯å£*/;
+        zce_byte    trans_type/*ç½‘ç»œä¼ è¾“ç±»å‹0ï¼šAUTO  1ï¼šUDP 2ï¼šTCP  3ï¼šMulticast*/;
+        zce_byte    reserve/*ä¿ç•™å­—*/;
     };
     struct IE_NETADDRESS_IPV6
     {
@@ -3327,10 +3327,10 @@ namespace gep
         {
         }
 
-        zce_astring addr/*ÍøÂç½Ó¿ÚµØÖ·£¬IPµØÖ·£¬Ê¹ÓÃastring±íÊ¾*/;
-        zce_uint16    port/*¶Ë¿Ú*/;
-        zce_byte    trans_type/*ÍøÂç´«ÊäÀàĞÍ0£ºAUTO 1£ºUDP 2£ºTCP 3£ºMulticast*/;
-        zce_byte    reserve/*±£Áô×Ö*/;
+        zce_astring addr/*ç½‘ç»œæ¥å£åœ°å€ï¼ŒIPåœ°å€ï¼Œä½¿ç”¨astringè¡¨ç¤º*/;
+        zce_uint16    port/*ç«¯å£*/;
+        zce_byte    trans_type/*ç½‘ç»œä¼ è¾“ç±»å‹0ï¼šAUTO 1ï¼šUDP 2ï¼šTCP 3ï¼šMulticast*/;
+        zce_byte    reserve/*ä¿ç•™å­—*/;
     };
     struct IE_NETADDRESS_ANY
     {
@@ -3343,10 +3343,10 @@ namespace gep
         {
         }
 
-        zce_astring addr/*ÍøÂç½Ó¿ÚµØÖ·£¬IPµØÖ·£¬Ê¹ÓÃastring±íÊ¾*/;
-        zce_uint16    port/*¶Ë¿Ú*/;
-        zce_byte    trans_type/*ÍøÂç´«ÊäÀàĞÍ0£ºAUTO 1£ºUDP 2£ºTCP 3£ºMulticast*/;
-        zce_byte    reserve/*±£Áô×Ö*/;
+        zce_astring addr/*ç½‘ç»œæ¥å£åœ°å€ï¼ŒIPåœ°å€ï¼Œä½¿ç”¨astringè¡¨ç¤º*/;
+        zce_uint16    port/*ç«¯å£*/;
+        zce_byte    trans_type/*ç½‘ç»œä¼ è¾“ç±»å‹0ï¼šAUTO 1ï¼šUDP 2ï¼šTCP 3ï¼šMulticast*/;
+        zce_byte    reserve/*ä¿ç•™å­—*/;
     };
     struct IE_SERVER
     {
@@ -3359,10 +3359,10 @@ namespace gep
         {
         }
 
-        zce_astring addr/*ÍøÂç½Ó¿ÚµØÖ·£¬IPµØÖ·£¬Ê¹ÓÃastring±íÊ¾*/;
-        zce_uint16    port/*¶Ë¿Ú*/;
-        zce_byte    trans_type/*´«ÊäÀàĞÍ0£ºAUTO 1£ºUDP 2£ºTCP 3£ºMulticast*/;
-        zce_byte    prefer/*¿ÉÓÃĞÔÈ¨ÖØ£¬È¡Öµ·¶Î§1~100£¬Ô½´óÔ½prefer*/;
+        zce_astring addr/*ç½‘ç»œæ¥å£åœ°å€ï¼ŒIPåœ°å€ï¼Œä½¿ç”¨astringè¡¨ç¤º*/;
+        zce_uint16    port/*ç«¯å£*/;
+        zce_byte    trans_type/*ä¼ è¾“ç±»å‹0ï¼šAUTO 1ï¼šUDP 2ï¼šTCP 3ï¼šMulticast*/;
+        zce_byte    prefer/*å¯ç”¨æ€§æƒé‡ï¼Œå–å€¼èŒƒå›´1~100ï¼Œè¶Šå¤§è¶Šprefer*/;
     };
     struct IE_NET_SCHEDULE_ADDRESS
     {
@@ -3379,13 +3379,13 @@ namespace gep
         {
         }
 
-        zce_byte    protocol/*Ğ­Òé: 0x01 UDP; 0x02 TCP*/;
-        zce_byte    direction/*´«Êä·½Ïò: 0x01 SEND; 0x02 RECV; 0x03 BOTH*/;
-        zce_byte    transport/*´«ÊäĞ­Òé: 0x01 RTP; 0x02 RTSP; 0x03 NWP£¨Ë½ÓĞĞ­Òé£©; 0x04 GEP£¨Ë½ÓĞĞ­Òé£©; 0x05 GESHP£¨Ë½ÓĞĞ­Òé£©*/;
-        zce_byte    action/*¼¤»î±êÖ¾: 0x00 ÎŞĞè¼¤»î; 0x01 Ö÷¶¯·¢ËÍ¼¤»î; 0x02 ±»¶¯½ÓÊÕ¼¤»î*/;
-        zce_uint32    ip/*ÍøÂç½Ó¿ÚµØÖ·£¬IPµØÖ·£¬Ê¹ÓÃ³¤ÕûĞÍÀ´±íÊ¾*/;
-        zce_uint16    port/*±¾µØÍøÂç¶Ë¿Ú*/;
-        zce_uint16    reserve/*±£Áô×Ö£¨±ØĞëÎªÁ½¸ö£©*/;
+        zce_byte    protocol/*åè®®: 0x01 UDP; 0x02 TCP*/;
+        zce_byte    direction/*ä¼ è¾“æ–¹å‘: 0x01 SEND; 0x02 RECV; 0x03 BOTH*/;
+        zce_byte    transport/*ä¼ è¾“åè®®: 0x01 RTP; 0x02 RTSP; 0x03 NWPï¼ˆç§æœ‰åè®®ï¼‰; 0x04 GEPï¼ˆç§æœ‰åè®®ï¼‰; 0x05 GESHPï¼ˆç§æœ‰åè®®ï¼‰*/;
+        zce_byte    action/*æ¿€æ´»æ ‡å¿—: 0x00 æ— éœ€æ¿€æ´»; 0x01 ä¸»åŠ¨å‘é€æ¿€æ´»; 0x02 è¢«åŠ¨æ¥æ”¶æ¿€æ´»*/;
+        zce_uint32    ip/*ç½‘ç»œæ¥å£åœ°å€ï¼ŒIPåœ°å€ï¼Œä½¿ç”¨é•¿æ•´å‹æ¥è¡¨ç¤º*/;
+        zce_uint16    port/*æœ¬åœ°ç½‘ç»œç«¯å£*/;
+        zce_uint16    reserve/*ä¿ç•™å­—ï¼ˆå¿…é¡»ä¸ºä¸¤ä¸ªï¼‰*/;
     };
     struct IE_NET_SCHEDULE_ADDRESS_IPV6
     {
@@ -3401,13 +3401,13 @@ namespace gep
         {
         }
 
-        zce_byte    protocol/*Ğ­Òé: 0x01 UDP; 0x02 TCP*/;
-        zce_byte    direction/*´«Êä·½Ïò: 0x01 SEND; 0x02 RECV; 0x03 BOTH*/;
-        zce_byte    transport/*´«ÊäĞ­Òé: 0x01 RTP; 0x02 RTSP; 0x03 NWP£¨Ë½ÓĞĞ­Òé£©; 0x04 GEP£¨Ë½ÓĞĞ­Òé£©; 0x05 GESHP£¨Ë½ÓĞĞ­Òé£©*/;
-        zce_byte    action/*¼¤»î±êÖ¾: 0x00 ÎŞĞè¼¤»î; 0x01 Ö÷¶¯·¢ËÍ¼¤»î; 0x02 ±»¶¯½ÓÊÕ¼¤»î*/;
-        zce_astring addr/*ÍøÂç½Ó¿ÚµØÖ·£¬IPµØÖ·£¬Ê¹ÓÃastring±íÊ¾*/;
-        zce_uint16    port/*±¾µØÍøÂç¶Ë¿Ú*/;
-        zce_uint16    reserve/*±£Áô×Ö£¨±ØĞëÎªÁ½¸ö£©*/;
+        zce_byte    protocol/*åè®®: 0x01 UDP; 0x02 TCP*/;
+        zce_byte    direction/*ä¼ è¾“æ–¹å‘: 0x01 SEND; 0x02 RECV; 0x03 BOTH*/;
+        zce_byte    transport/*ä¼ è¾“åè®®: 0x01 RTP; 0x02 RTSP; 0x03 NWPï¼ˆç§æœ‰åè®®ï¼‰; 0x04 GEPï¼ˆç§æœ‰åè®®ï¼‰; 0x05 GESHPï¼ˆç§æœ‰åè®®ï¼‰*/;
+        zce_byte    action/*æ¿€æ´»æ ‡å¿—: 0x00 æ— éœ€æ¿€æ´»; 0x01 ä¸»åŠ¨å‘é€æ¿€æ´»; 0x02 è¢«åŠ¨æ¥æ”¶æ¿€æ´»*/;
+        zce_astring addr/*ç½‘ç»œæ¥å£åœ°å€ï¼ŒIPåœ°å€ï¼Œä½¿ç”¨astringè¡¨ç¤º*/;
+        zce_uint16    port/*æœ¬åœ°ç½‘ç»œç«¯å£*/;
+        zce_uint16    reserve/*ä¿ç•™å­—ï¼ˆå¿…é¡»ä¸ºä¸¤ä¸ªï¼‰*/;
     };
     struct IE_VIDEOIN_CHANNEL
     {
@@ -3467,9 +3467,9 @@ namespace gep
         {
         }
 
-        CHANNEL_ID    channel_id/*Í¨µÀºÅ*/;
-        zce_byte    action/*¿ØÖÆÃüÁî,ÃüÁî¶¨Òå²Î¼û¸½¼ÓËµÃ÷*/;
-        zce_byte    param/*¿ØÖÆ²ÎÊı£¬ËÙ¶È·¶Î§[0, 6]£¬ÁÁ¶È¡¢¶Ô±È¶È¡¢±¥ºÍ¶È¡¢É«¶È·¶Î§[0, 100]*/;
+        CHANNEL_ID    channel_id/*é€šé“å·*/;
+        zce_byte    action/*æ§åˆ¶å‘½ä»¤,å‘½ä»¤å®šä¹‰å‚è§é™„åŠ è¯´æ˜*/;
+        zce_byte    param/*æ§åˆ¶å‚æ•°ï¼Œé€Ÿåº¦èŒƒå›´[0, 6]ï¼Œäº®åº¦ã€å¯¹æ¯”åº¦ã€é¥±å’Œåº¦ã€è‰²åº¦èŒƒå›´[0, 100]*/;
     };
     struct IE_CTRL_CMD
     {
@@ -3481,8 +3481,8 @@ namespace gep
         {
         }
 
-        zce_byte    control_type/*¿ØÖÆÀàĞÍ£¬È¡ÖµÈçÏÂ£º0x01£º¿ì½ø 0x02£º¿ìÍË 0x03£ºÔİÍ£ 0x04£ºÍ£Ö¹ 0x05£º¼ÌĞø»Ø·Å 0x06£º»Ø·ÅÍÏ¶¯ 0x07: Âı½ø 0x08: ÂıÍË 0x09: µ¥Ö¡·Å 0x0a: ÒÔµ±Ç°±¶ÂÊÏòÇ°·Å 0x0b: ÒÔµ±Ç°±¶ÂÊÏòºó·Å 0x0c: ÉèÖÃÖ»·¢IÖ¡Ä£Ê½µÄ±¶ÂÊ 0x0d: pause at*/;
-        zce_int32    param/*ÍÏ¶¯Ê±Ìîtime_t£¨1970Äê1ÔÂ1ÈÕÒÔÀ´µÄÃëÊı£©;¿ì½ø¡¢¿ìÍË¡¢Âı½ø¡¢ÂıÍËÊ±Ìî±¶Êı, (¿ì½ø¡¢¿ìÍË:Ğ¡ÓÚ100Ê±±íÊ¾±¶ÂÊ£¬>100±íÊ¾param/100.0£¬Èç130±íÊ¾1.3±¶ÂÊ),(Âı½ø¡¢ÂıÍË£ºĞ¡ÓÚ100±íÊ¾1/param, >100±íÊ¾100.0/param£¬Èç125±íÊ¾100.0/125=0.8±¶ÂÊ);ÉèÖÃÖ»·¢IÖ¡±¶ÂÊÊ±Ìî±¶ÂÊ*100£¨Èç4±¶ËÙÌî400)*/;
+        zce_byte    control_type/*æ§åˆ¶ç±»å‹ï¼Œå–å€¼å¦‚ä¸‹ï¼š0x01ï¼šå¿«è¿› 0x02ï¼šå¿«é€€ 0x03ï¼šæš‚åœ 0x04ï¼šåœæ­¢ 0x05ï¼šç»§ç»­å›æ”¾ 0x06ï¼šå›æ”¾æ‹–åŠ¨ 0x07: æ…¢è¿› 0x08: æ…¢é€€ 0x09: å•å¸§æ”¾ 0x0a: ä»¥å½“å‰å€ç‡å‘å‰æ”¾ 0x0b: ä»¥å½“å‰å€ç‡å‘åæ”¾ 0x0c: è®¾ç½®åªå‘Iå¸§æ¨¡å¼çš„å€ç‡ 0x0d: pause at*/;
+        zce_int32    param/*æ‹–åŠ¨æ—¶å¡«time_tï¼ˆ1970å¹´1æœˆ1æ—¥ä»¥æ¥çš„ç§’æ•°ï¼‰;å¿«è¿›ã€å¿«é€€ã€æ…¢è¿›ã€æ…¢é€€æ—¶å¡«å€æ•°, (å¿«è¿›ã€å¿«é€€:å°äº100æ—¶è¡¨ç¤ºå€ç‡ï¼Œ>100è¡¨ç¤ºparam/100.0ï¼Œå¦‚130è¡¨ç¤º1.3å€ç‡),(æ…¢è¿›ã€æ…¢é€€ï¼šå°äº100è¡¨ç¤º1/param, >100è¡¨ç¤º100.0/paramï¼Œå¦‚125è¡¨ç¤º100.0/125=0.8å€ç‡);è®¾ç½®åªå‘Iå¸§å€ç‡æ—¶å¡«å€ç‡*100ï¼ˆå¦‚4å€é€Ÿå¡«400)*/;
     };
     struct IE_ALARM_INFO
     {
@@ -3494,10 +3494,10 @@ namespace gep
         {
         }
 
-        zce_uint16    alarm_type/*Ç°¶ËÉè±¸¸æ¾¯ÀàĞÍ(¼û6.5¸æ¾¯ÀàĞÍ±í)*/;
-        CHANNEL_ID    alarm_channel_id/*¸æ¾¯Í¨µÀºÅ*/;
-        CHANNEL_ID    video_channel_id/*¶ÔÓ¦µÄÊÓÆµÍ¨µÀºÅ*/;
-        std::vector<zce_char> user_data/*ÓëÖ¸¶¨¸æ¾¯Ïà¹ØĞÅÏ¢*/;
+        zce_uint16    alarm_type/*å‰ç«¯è®¾å¤‡å‘Šè­¦ç±»å‹(è§6.5å‘Šè­¦ç±»å‹è¡¨)*/;
+        CHANNEL_ID    alarm_channel_id/*å‘Šè­¦é€šé“å·*/;
+        CHANNEL_ID    video_channel_id/*å¯¹åº”çš„è§†é¢‘é€šé“å·*/;
+        std::vector<zce_char> user_data/*ä¸æŒ‡å®šå‘Šè­¦ç›¸å…³ä¿¡æ¯*/;
     };
     struct IE_TIME
     {
@@ -3508,7 +3508,7 @@ namespace gep
         {
         }
 
-        zce_uint32    time/*Ê¹ÓÃ³¤ÕûĞÍÀ´±íÊ¾*/;
+        zce_uint32    time/*ä½¿ç”¨é•¿æ•´å‹æ¥è¡¨ç¤º*/;
     };
     struct IE_TIME_DETAIL_LIST
     {
@@ -3525,13 +3525,13 @@ namespace gep
         {
         }
 
-        zce_byte    workday/*±íÃ÷ÄÄ¸ö¹¤×÷ÈÕ  ĞÇÆÚÈÕ=0£¬ĞÇÆÚÒ»=1£¬ĞÇÆÚ¶ş=2£¬ĞÇÆÚÈı=3£¬ĞÇÆÚËÄ=4£¬ĞÇÆÚÎå=5£¬ĞÇÆÚÁù=6£¬ÌØÊâÖµ=7,±íÊ¾Ã¿Ìì*/;
-        zce_byte    begin_hour/*¿ªÊ¼Ê±¼äÖ®Ğ¡Ê±£¬0~23*/;
-        zce_byte    begin_minute/*¿ªÊ¼Ê±¼äÖ®·ÖÖÓ£¬0~59*/;
-        zce_byte    end_hour/*½áÊøÊ±¼äÖ®Ğ¡Ê±£¬0~23*/;
-        zce_byte    end_minute/*½áÊøÊ±¼äÖ®·ÖÖÓ£¬0~59*/;
-        zce_byte    record_flag/*ÊÇ·ñ½øĞĞÂ¼Ïñ 0x00£¬²»½øĞĞÂ¼Ïñ 0x01£¬½øĞĞÂ¼Ïñ */;
-        zce_int32    timespan/*µ¥¸öÎÄ¼şµÄÊ±¼äÆ¬*/;
+        zce_byte    workday/*è¡¨æ˜å“ªä¸ªå·¥ä½œæ—¥  æ˜ŸæœŸæ—¥=0ï¼Œæ˜ŸæœŸä¸€=1ï¼Œæ˜ŸæœŸäºŒ=2ï¼Œæ˜ŸæœŸä¸‰=3ï¼Œæ˜ŸæœŸå››=4ï¼Œæ˜ŸæœŸäº”=5ï¼Œæ˜ŸæœŸå…­=6ï¼Œç‰¹æ®Šå€¼=7,è¡¨ç¤ºæ¯å¤©*/;
+        zce_byte    begin_hour/*å¼€å§‹æ—¶é—´ä¹‹å°æ—¶ï¼Œ0~23*/;
+        zce_byte    begin_minute/*å¼€å§‹æ—¶é—´ä¹‹åˆ†é’Ÿï¼Œ0~59*/;
+        zce_byte    end_hour/*ç»“æŸæ—¶é—´ä¹‹å°æ—¶ï¼Œ0~23*/;
+        zce_byte    end_minute/*ç»“æŸæ—¶é—´ä¹‹åˆ†é’Ÿï¼Œ0~59*/;
+        zce_byte    record_flag/*æ˜¯å¦è¿›è¡Œå½•åƒ 0x00ï¼Œä¸è¿›è¡Œå½•åƒ 0x01ï¼Œè¿›è¡Œå½•åƒ */;
+        zce_int32    timespan/*å•ä¸ªæ–‡ä»¶çš„æ—¶é—´ç‰‡*/;
     };
     struct IE_SYSTEM_CONFIG
     {
@@ -3543,10 +3543,10 @@ namespace gep
         {
         }
 
-        zce_uint32    server_ip/*·şÎñÆ÷IPµØÖ·*/;
-        zce_uint16    server_port/*·şÎñÆ÷ÕìÌı¶Ë¿Ú*/;
-        zce_astring fd_id/*Éè±¸±àºÅ*/;
-        zce_astring fd_name/*Éè±¸Ãû³Æ*/;
+        zce_uint32    server_ip/*æœåŠ¡å™¨IPåœ°å€*/;
+        zce_uint16    server_port/*æœåŠ¡å™¨ä¾¦å¬ç«¯å£*/;
+        zce_astring fd_id/*è®¾å¤‡ç¼–å·*/;
+        zce_astring fd_name/*è®¾å¤‡åç§°*/;
     };
     struct IE_SYSTEM_CONFIG_IPV6
     {
@@ -3557,10 +3557,10 @@ namespace gep
         {
         }
 
-        zce_astring server_ip/*·şÎñÆ÷IPµØÖ·£¬ÓÃastring±íÊ¾·şÎñÆ÷IPµØÖ·£¬ÓÃastring±íÊ¾*/;
-        zce_uint16    server_port/*·şÎñÆ÷ÕìÌı¶Ë¿Ú*/;
-        zce_astring fd_id/*Éè±¸±àºÅ*/;
-        zce_astring fd_name/*Éè±¸Ãû³Æ*/;
+        zce_astring server_ip/*æœåŠ¡å™¨IPåœ°å€ï¼Œç”¨astringè¡¨ç¤ºæœåŠ¡å™¨IPåœ°å€ï¼Œç”¨astringè¡¨ç¤º*/;
+        zce_uint16    server_port/*æœåŠ¡å™¨ä¾¦å¬ç«¯å£*/;
+        zce_astring fd_id/*è®¾å¤‡ç¼–å·*/;
+        zce_astring fd_name/*è®¾å¤‡åç§°*/;
     };
     struct IE_VIDEO_CONFIG
     {
@@ -3578,14 +3578,14 @@ namespace gep
         {
         }
 
-        zce_uint16    channel_type/*Í¨µÀÀàĞÍ*/;
-        zce_uint16    channel_no/*Í¨µÀ±àºÅ£¨Éè±¸ÄÚÎ¨Ò»£©*/;
-        zce_uint16    video_format/*ÊÓÆµ±àÂë¸ñÊ½,²Î¼û¸½±í*/;
-        zce_uint16    video_resolution/*Ö§³ÖµÄÊÓÆµÏÔÊ¾¸ñÊ½,²Î¼û¸½±í*/;
-        zce_byte    video_priority/*ÊÓÆµÂëÂÊÓÅÏÈ¸ñÊ½(ËÙ¶ÈÓÅÏÈ»òÕßÊÇÖÊÁ¿ÓÅÏÈ)0 - ËÙ¶ÈÓÅÏÈ 1 - ÖÊÁ¿ÓÅÏÈ*/;
-        zce_byte    frame_rate/*Ö¡ÂÊ1¡«25*/;
-        zce_uint16    iframe_iterval/*¹Ø¼üÖ¡¼ä¸ô2-2500*/;
-        zce_uint32    bit_rate/*±àÂë±ÈÌØÂÊ,µ¥Î»kbps*/;
+        zce_uint16    channel_type/*é€šé“ç±»å‹*/;
+        zce_uint16    channel_no/*é€šé“ç¼–å·ï¼ˆè®¾å¤‡å†…å”¯ä¸€ï¼‰*/;
+        zce_uint16    video_format/*è§†é¢‘ç¼–ç æ ¼å¼,å‚è§é™„è¡¨*/;
+        zce_uint16    video_resolution/*æ”¯æŒçš„è§†é¢‘æ˜¾ç¤ºæ ¼å¼,å‚è§é™„è¡¨*/;
+        zce_byte    video_priority/*è§†é¢‘ç ç‡ä¼˜å…ˆæ ¼å¼(é€Ÿåº¦ä¼˜å…ˆæˆ–è€…æ˜¯è´¨é‡ä¼˜å…ˆ)0 - é€Ÿåº¦ä¼˜å…ˆ 1 - è´¨é‡ä¼˜å…ˆ*/;
+        zce_byte    frame_rate/*å¸§ç‡1ï½25*/;
+        zce_uint16    iframe_iterval/*å…³é”®å¸§é—´éš”2-2500*/;
+        zce_uint32    bit_rate/*ç¼–ç æ¯”ç‰¹ç‡,å•ä½kbps*/;
     };
     struct IE_AUDIO_CONFIG
     {
@@ -3601,12 +3601,12 @@ namespace gep
         {
         }
 
-        zce_uint16    channel_type/*Í¨µÀÀàĞÍ*/;
-        zce_uint16    channel_no/*Í¨µÀ±àºÅ£¨Éè±¸ÄÚÎ¨Ò»£©*/;
-        zce_byte    format/*µ±Ç°ÒôÆµ±àÂë¸ñÊ½*/;
-        zce_uint16    volumn/*±àÂëÒôÁ¿0¡«25*/;
-        zce_byte    back_mng/*ÊÇ·ñ»ØÉùµÖÏû*/;
-        zce_byte    mute/*ÊÇ·ñÑÆÒô*/;
+        zce_uint16    channel_type/*é€šé“ç±»å‹*/;
+        zce_uint16    channel_no/*é€šé“ç¼–å·ï¼ˆè®¾å¤‡å†…å”¯ä¸€ï¼‰*/;
+        zce_byte    format/*å½“å‰éŸ³é¢‘ç¼–ç æ ¼å¼*/;
+        zce_uint16    volumn/*ç¼–ç éŸ³é‡0ï½25*/;
+        zce_byte    back_mng/*æ˜¯å¦å›å£°æŠµæ¶ˆ*/;
+        zce_byte    mute/*æ˜¯å¦å“‘éŸ³*/;
     };
     struct IE_VIDEO_REGION
     {
@@ -3617,7 +3617,7 @@ namespace gep
         {
         }
 
-        std::vector<zce_uint16> region/*ÊÓÆµÇøÓò£¬ÒÔbitÀ´´ú±íÒ»¸öÏñËØ¿í16µã£¬¸ß12µã*/;
+        std::vector<zce_uint16> region/*è§†é¢‘åŒºåŸŸï¼Œä»¥bitæ¥ä»£è¡¨ä¸€ä¸ªåƒç´ å®½16ç‚¹ï¼Œé«˜12ç‚¹*/;
     };
     struct IE_VIDEO_MOTION
     {
@@ -3634,13 +3634,13 @@ namespace gep
         {
         }
 
-        zce_byte    record_flag/*ÊÇ·ñÂ¼Ïñ*/;
-        zce_byte    sensitivity/*ÁéÃô¶È£¬1£º¸ßÁéÃô¶È 2£ºÖĞÁéÃô¶È3£ºµÍÁéÃô¶È*/;
-        zce_byte    alarm_out/*ÊÇ·ñ¸æ¾¯Êä³ö*/;
-        zce_byte    alarm_outport/*¸æ¾¯Êä³ö¶Ë¿ÚºÅ*/;
+        zce_byte    record_flag/*æ˜¯å¦å½•åƒ*/;
+        zce_byte    sensitivity/*çµæ•åº¦ï¼Œ1ï¼šé«˜çµæ•åº¦ 2ï¼šä¸­çµæ•åº¦3ï¼šä½çµæ•åº¦*/;
+        zce_byte    alarm_out/*æ˜¯å¦å‘Šè­¦è¾“å‡º*/;
+        zce_byte    alarm_outport/*å‘Šè­¦è¾“å‡ºç«¯å£å·*/;
         zce_uint16    alarm_time;
         zce_uint16    record_time;
-        std::vector<zce_uint16> video_region/*ÊÓÆµÇøÓò£¬ÒÔbitÀ´´ú±íÒ»¸öÏñËØ¿í16µã£¬¸ß12µã*/;
+        std::vector<zce_uint16> video_region/*è§†é¢‘åŒºåŸŸï¼Œä»¥bitæ¥ä»£è¡¨ä¸€ä¸ªåƒç´ å®½16ç‚¹ï¼Œé«˜12ç‚¹*/;
     };
     struct IE_WARNIN_CONFIG
     {
@@ -3651,7 +3651,7 @@ namespace gep
         {
         }
 
-        zce_byte    type/*Àà±ğ 0£º»ğ¾¯Ì½²âÉè±¸ 1£ºÑÌ¸ĞÉè±¸ 2£ººìÍâÉè±¸ 3£ºÎÂ¶ÈÌ½²âÉè±¸ 4£ºÆøÌåÌ½²âÉè±¸255£ºÆäËû¸æ¾¯ÊäÈëÉè±¸*/;
+        zce_byte    type/*ç±»åˆ« 0ï¼šç«è­¦æ¢æµ‹è®¾å¤‡ 1ï¼šçƒŸæ„Ÿè®¾å¤‡ 2ï¼šçº¢å¤–è®¾å¤‡ 3ï¼šæ¸©åº¦æ¢æµ‹è®¾å¤‡ 4ï¼šæ°”ä½“æ¢æµ‹è®¾å¤‡255ï¼šå…¶ä»–å‘Šè­¦è¾“å…¥è®¾å¤‡*/;
     };
     struct IE_WARNOUT_CONFIG
     {
@@ -3662,7 +3662,7 @@ namespace gep
         {
         }
 
-        zce_byte    type/*Àà±ğ 0£º¾¯µÆÊä³öÉè±¸ 1£º¾¯ÁåÊä³öÉè±¸ 255£ºÆäËû¸æ¾¯Êä³öÉè±¸ */;
+        zce_byte    type/*ç±»åˆ« 0ï¼šè­¦ç¯è¾“å‡ºè®¾å¤‡ 1ï¼šè­¦é“ƒè¾“å‡ºè®¾å¤‡ 255ï¼šå…¶ä»–å‘Šè­¦è¾“å‡ºè®¾å¤‡ */;
     };
     struct IE_CAMERA_CONFIG
     {
@@ -3688,24 +3688,24 @@ namespace gep
         {
         }
 
-        zce_astring no/*ÉãÏñ»ú±àºÅ*/;
-        zce_astring name/*ÉãÏñ»úÃû³Æ*/;
-        zce_byte    type/*ÉãÏñ»úÀàĞÍ*/;
-        zce_byte    video_channel/*ÊÓÆµÍ¨µÀ*/;
-        zce_byte    rs485/*ÉãÏñ»úµÄ485µØÖ·*/;
-        zce_byte    data_bits/*Êı¾İÎ»*/;
-        zce_byte    stop_bits/*Í£Ö¹Î»*/;
-        zce_byte    parity/*ÆæÅ¼Ğ£ÑéÎ»*/;
-        zce_byte    baudrate/*²¨ÌØÂÊ*/;
-        zce_byte    ptz_point/*ÔÆÌ¨¿ØÖÆÆ÷µÄµãºÅ*/;
-        zce_byte    light_ctrl/*ÊÇ·ñÓĞµÆ¹â¿ØÖÆ*/;
-        zce_byte    light_ctrl_485/*µÆ¹â¿ØÖÆÆ÷485µØÖ·*/;
-        zce_byte    light_ctrl_point/*¶ÔÓ¦µÆ¹â¿ØÖÆÆ÷ÉÏµÄµãºÅ*/;
-        zce_byte    light_ctrl_databits/*µÆ¹â¿ØÖÆÆ÷Êı¾İÎ»*/;
-        zce_byte    light_ctrl_stopbits/*µÆ¹â¿ØÖÆÆ÷Í£Ö¹Î»*/;
-        zce_byte    light_ctrl_parity/*µÆ¹â¿ØÖÆÆ÷ÆæÅ¼Ğ£ÑéÎ»*/;
-        zce_byte    light_ctrl_baudrate/*µÆ¹â¿ØÖÆÆ÷²¨ÌØÂÊ*/;
-        zce_byte    reserve/*±£Áô×Ö½Ú*/;
+        zce_astring no/*æ‘„åƒæœºç¼–å·*/;
+        zce_astring name/*æ‘„åƒæœºåç§°*/;
+        zce_byte    type/*æ‘„åƒæœºç±»å‹*/;
+        zce_byte    video_channel/*è§†é¢‘é€šé“*/;
+        zce_byte    rs485/*æ‘„åƒæœºçš„485åœ°å€*/;
+        zce_byte    data_bits/*æ•°æ®ä½*/;
+        zce_byte    stop_bits/*åœæ­¢ä½*/;
+        zce_byte    parity/*å¥‡å¶æ ¡éªŒä½*/;
+        zce_byte    baudrate/*æ³¢ç‰¹ç‡*/;
+        zce_byte    ptz_point/*äº‘å°æ§åˆ¶å™¨çš„ç‚¹å·*/;
+        zce_byte    light_ctrl/*æ˜¯å¦æœ‰ç¯å…‰æ§åˆ¶*/;
+        zce_byte    light_ctrl_485/*ç¯å…‰æ§åˆ¶å™¨485åœ°å€*/;
+        zce_byte    light_ctrl_point/*å¯¹åº”ç¯å…‰æ§åˆ¶å™¨ä¸Šçš„ç‚¹å·*/;
+        zce_byte    light_ctrl_databits/*ç¯å…‰æ§åˆ¶å™¨æ•°æ®ä½*/;
+        zce_byte    light_ctrl_stopbits/*ç¯å…‰æ§åˆ¶å™¨åœæ­¢ä½*/;
+        zce_byte    light_ctrl_parity/*ç¯å…‰æ§åˆ¶å™¨å¥‡å¶æ ¡éªŒä½*/;
+        zce_byte    light_ctrl_baudrate/*ç¯å…‰æ§åˆ¶å™¨æ³¢ç‰¹ç‡*/;
+        zce_byte    reserve/*ä¿ç•™å­—èŠ‚*/;
     };
     struct IE_CAMERA_PRESET_CONFIG
     {
@@ -3717,9 +3717,9 @@ namespace gep
         {
         }
 
-        zce_byte    preset_no/*Ô¤ÖÃµã±àºÅ*/;
-        zce_byte    reserve/*±£Áô×Ö*/;
-        zce_astring preset_name/*Ô¤ÖÃµãÃû³Æ*/;
+        zce_byte    preset_no/*é¢„ç½®ç‚¹ç¼–å·*/;
+        zce_byte    reserve/*ä¿ç•™å­—*/;
+        zce_astring preset_name/*é¢„ç½®ç‚¹åç§°*/;
     };
     struct IE_POINT_MAGNIFY_PARAM
     {
@@ -3734,8 +3734,8 @@ namespace gep
         {
         }
 
-        zce_uint16    percent/*µÍÊ®ÎåÎ»Îª0±íÊ¾µã»÷Æ½ÒÆ£»Îª1±íÊ¾¿òÑ¡·Å´ó£»Îª2±íÊ¾¿òÑ¡·Å´ó·µ»Ø(¾ØĞÎ²ÎÊıÌî0)¡£×î¸ßÎ»Îª1±íÊ¾ÓÃ°Ù·Ö±È±íÊ¾×ø±ê0~100£»×î¸ßÎ»Îª0±íÊ¾ÓÃÊµ¼Ê×ø±ê±íÊ¾¡£*/;
-        zce_uint16    left/*×ó±ß×ø±ê¡£µã»÷Æ½ÒÆÓÃ×ø±êleftºÍtop±íÊ¾Ò»¸öµã*/;
+        zce_uint16    percent/*ä½åäº”ä½ä¸º0è¡¨ç¤ºç‚¹å‡»å¹³ç§»ï¼›ä¸º1è¡¨ç¤ºæ¡†é€‰æ”¾å¤§ï¼›ä¸º2è¡¨ç¤ºæ¡†é€‰æ”¾å¤§è¿”å›(çŸ©å½¢å‚æ•°å¡«0)ã€‚æœ€é«˜ä½ä¸º1è¡¨ç¤ºç”¨ç™¾åˆ†æ¯”è¡¨ç¤ºåæ ‡0~100ï¼›æœ€é«˜ä½ä¸º0è¡¨ç¤ºç”¨å®é™…åæ ‡è¡¨ç¤ºã€‚*/;
+        zce_uint16    left/*å·¦è¾¹åæ ‡ã€‚ç‚¹å‡»å¹³ç§»ç”¨åæ ‡leftå’Œtopè¡¨ç¤ºä¸€ä¸ªç‚¹*/;
         zce_uint16    top;
         zce_uint16    right;
         zce_uint16    bottom;
@@ -3744,8 +3744,8 @@ namespace gep
     {
         const static unsigned short IE_TYPE = E_IE_DOMAIN_INFO;
         IE_DOMAIN_INFO() { };
-        zce_astring domain_id/*ÓòID*/;
-        zce_astring domain_desc/*ÓòÃèÊö*/;
+        zce_astring domain_id/*åŸŸID*/;
+        zce_astring domain_desc/*åŸŸæè¿°*/;
     };
     struct IE_FD_INFO
     {
@@ -3769,20 +3769,20 @@ namespace gep
     {
         const static unsigned short IE_TYPE = E_IE_FD_ID;
         IE_FD_ID() { };
-        zce_astring id/*Éè±¸±àºÅ*/;
+        zce_astring id/*è®¾å¤‡ç¼–å·*/;
     };
     struct IE_CHANNEL_ID
     {
         const static unsigned short IE_TYPE = E_IE_CHANNEL_ID;
         IE_CHANNEL_ID() { };
-        CHANNEL_ID    channel_id/*Í¨µÀ±àºÅ£¨Éè±¸ÄÚ£©*/;
+        CHANNEL_ID    channel_id/*é€šé“ç¼–å·ï¼ˆè®¾å¤‡å†…ï¼‰*/;
     };
     struct IE_FD_CHANNEL_ID
     {
         const static unsigned short IE_TYPE = E_IE_FD_CHANNEL_ID;
         IE_FD_CHANNEL_ID() { };
-        zce_astring id/*Éè±¸±àºÅ*/;
-        CHANNEL_ID    channel_id/*Í¨µÀ±àºÅ£¨Éè±¸ÄÚ£©*/;
+        zce_astring id/*è®¾å¤‡ç¼–å·*/;
+        CHANNEL_ID    channel_id/*é€šé“ç¼–å·ï¼ˆè®¾å¤‡å†…ï¼‰*/;
     };
     struct IE_TIME_FILE
     {
@@ -3797,12 +3797,12 @@ namespace gep
         {
         }
 
-        zce_byte    flag/*Ê¹ÓÃ·½Ê½: 0²»Ê¹ÓÃ; 1Ê¹ÓÃÊ±¼ä; 2Ê¹ÓÃÎÄ¼ş; 3Ö§³Ö»Ø·ÅµØÖ·*/;
-        zce_byte    reserve/*±£Áô*/;
-        zce_uint32    begin_time/*ÆğÊ¼Ê±¼ä*/;
-        zce_uint32    end_time/*½áÊøÊ±¼ä*/;
-        zce_astring name/*ÎÄ¼şÃû³Æ¹æ·¶: FDID+Channnel+Type+start_yymmddhhmmss+end_yymmddhhmmss,ÆäÖĞTypeÎª£º0: Á¢¼´Â¼Ïñ1: ¼Æ»®Â¼Ïñ2: ¸æ¾¯Â¼Ïñ3: ÖÜÆÚÂ¼Ïñ  Èç¹ûflag=3Îª»Ø·ÅÄ£Ê½£¬ÎÄ¼şÃûÎªFDID+Channnel+Type+start_yymmddhhmmss+end_yymmddhhmmss+\r\n+url */;
-        zce_uint16    size/*ÎÄ¼ş´óĞ¡£¬»ù±¾µ¥Î»£ºMB*/;
+        zce_byte    flag/*ä½¿ç”¨æ–¹å¼: 0ä¸ä½¿ç”¨; 1ä½¿ç”¨æ—¶é—´; 2ä½¿ç”¨æ–‡ä»¶; 3æ”¯æŒå›æ”¾åœ°å€*/;
+        zce_byte    reserve/*ä¿ç•™*/;
+        zce_uint32    begin_time/*èµ·å§‹æ—¶é—´*/;
+        zce_uint32    end_time/*ç»“æŸæ—¶é—´*/;
+        zce_astring name/*æ–‡ä»¶åç§°è§„èŒƒ: FDID+Channnel+Type+start_yymmddhhmmss+end_yymmddhhmmss,å…¶ä¸­Typeä¸ºï¼š0: ç«‹å³å½•åƒ1: è®¡åˆ’å½•åƒ2: å‘Šè­¦å½•åƒ3: å‘¨æœŸå½•åƒ  å¦‚æœflag=3ä¸ºå›æ”¾æ¨¡å¼ï¼Œæ–‡ä»¶åä¸ºFDID+Channnel+Type+start_yymmddhhmmss+end_yymmddhhmmss+\r\n+url */;
+        zce_uint16    size/*æ–‡ä»¶å¤§å°ï¼ŒåŸºæœ¬å•ä½ï¼šMB*/;
     };
     struct IE_TIME_FILE_V2
     {
@@ -3819,21 +3819,21 @@ namespace gep
         {
         }
 
-        zce_byte    flag/*Ê¹ÓÃ·½Ê½: 0²»Ê¹ÓÃ; 
-        UA->UAS: 1Ê¹ÓÃÊ±¼ä; 2Ê¹ÓÃÎÄ¼ş; 3Ê¹ÓÃÊ±¼ä¶Î£¬²¢ÒªÇó·µ»ØÖ±½Ó»Ø·Å¡¢ÏÂÔØURL; 4Ê¹ÓÃGUID; 
-        Æ½Ì¨->UA: 5Ê¹ÓÃÊ±¼ä¶Î£¬¼°ÀàÊµÊ±¼à¿ØÄ£Ê½; 6Ê¹ÓÃÎÄ¼şÃû£¬¼°ÀàÊµÊ±¼à¿ØÄ£Ê½; 7Ê¹ÓÃÎÄ¼şÃû£¬¼°ÀàÊµÊ±¼à¿ØÄ£Ê½½øĞĞ»Ø·ÅºÍÏÂÔØ*/;
-        zce_byte    status/*×´Ì¬: 0x01Ëø¶¨±êÖ¾; 0x02¿É»Ø·Å±êÖ¾; 0x04¿ÉÏÂÔØ±êÖ¾; 0x08ĞÇÍûSSU; 0x10µÚÈı·½³§¼ÒNVR; 0x20Ö§³Ö¿çÎÄ¼ş»Ø·Å;0x40GABĞ­ÒéÉè±¸*/;
-        zce_uint32    unlock_time/*½âËøÊ±¼ä£¬0»òĞ¡ÓÚµ±Ç°Ê±¼ä¶¼±íÃ÷½âËø*/;
-        zce_uint32    begin_time/*ÆğÊ¼Ê±¼ä*/;
-        zce_uint32    end_time/*½áÊøÊ±¼ä*/;
-        zce_astring id/*Éè±¸±àºÅ*/;
-        CHANNEL_ID    channel_id/*Í¨µÀ±àºÅ£¨Éè±¸ÄÚ£©*/;
-        zce_byte    qos/*QoS¼¶±ğ*/;
-        zce_uint32    size/*ÎÄ¼ş´óĞ¡£¬»ù±¾µ¥Î»£ºB*/;
-        zce_astring area/*´æ´¢ÇøÓò*/;
-        zce_astring name/*ÎÄ¼şÃû*/;
-        zce_astring playback_url/*Ö±½Ó»Ø·ÅURL*/;
-        zce_astring download_url/*Ö±½ÓÏÂÔØURL*/;
+        zce_byte    flag/*ä½¿ç”¨æ–¹å¼: 0ä¸ä½¿ç”¨; 
+        UA->UAS: 1ä½¿ç”¨æ—¶é—´; 2ä½¿ç”¨æ–‡ä»¶; 3ä½¿ç”¨æ—¶é—´æ®µï¼Œå¹¶è¦æ±‚è¿”å›ç›´æ¥å›æ”¾ã€ä¸‹è½½URL; 4ä½¿ç”¨GUID; 
+        å¹³å°->UA: 5ä½¿ç”¨æ—¶é—´æ®µï¼ŒåŠç±»å®æ—¶ç›‘æ§æ¨¡å¼; 6ä½¿ç”¨æ–‡ä»¶åï¼ŒåŠç±»å®æ—¶ç›‘æ§æ¨¡å¼; 7ä½¿ç”¨æ–‡ä»¶åï¼ŒåŠç±»å®æ—¶ç›‘æ§æ¨¡å¼è¿›è¡Œå›æ”¾å’Œä¸‹è½½*/;
+        zce_byte    status/*çŠ¶æ€: 0x01é”å®šæ ‡å¿—; 0x02å¯å›æ”¾æ ‡å¿—; 0x04å¯ä¸‹è½½æ ‡å¿—; 0x08æ˜Ÿæœ›SSU; 0x10ç¬¬ä¸‰æ–¹å‚å®¶NVR; 0x20æ”¯æŒè·¨æ–‡ä»¶å›æ”¾;0x40GABåè®®è®¾å¤‡*/;
+        zce_uint32    unlock_time/*è§£é”æ—¶é—´ï¼Œ0æˆ–å°äºå½“å‰æ—¶é—´éƒ½è¡¨æ˜è§£é”*/;
+        zce_uint32    begin_time/*èµ·å§‹æ—¶é—´*/;
+        zce_uint32    end_time/*ç»“æŸæ—¶é—´*/;
+        zce_astring id/*è®¾å¤‡ç¼–å·*/;
+        CHANNEL_ID    channel_id/*é€šé“ç¼–å·ï¼ˆè®¾å¤‡å†…ï¼‰*/;
+        zce_byte    qos/*QoSçº§åˆ«*/;
+        zce_uint32    size/*æ–‡ä»¶å¤§å°ï¼ŒåŸºæœ¬å•ä½ï¼šB*/;
+        zce_astring area/*å­˜å‚¨åŒºåŸŸ*/;
+        zce_astring name/*æ–‡ä»¶å*/;
+        zce_astring playback_url/*ç›´æ¥å›æ”¾URL*/;
+        zce_astring download_url/*ç›´æ¥ä¸‹è½½URL*/;
     };
     struct IE_TIME_XML
     {
@@ -3847,8 +3847,8 @@ namespace gep
         }
 
         zce_uint32    tt/*time_t*/;
-        zce_uint32    ms/*ºÁÃëÊı*/;
-        zce_uint32    type/*ÀàĞÍ*/;
+        zce_uint32    ms/*æ¯«ç§’æ•°*/;
+        zce_uint32    type/*ç±»å‹*/;
         zce_astring xml;
     };
     struct IE_RESULT
@@ -3874,10 +3874,10 @@ namespace gep
         {
         }
 
-        zce_byte    major_version/* Ö÷°æ±¾*/;
-        zce_byte    minor_version/*Ğ¡°æ±¾*/;
-        zce_uint16    build_version/*±àÒë°æ±¾*/;
-        zce_uint16    revision_version/*ĞŞ¶©°æ±¾*/;
+        zce_byte    major_version/* ä¸»ç‰ˆæœ¬*/;
+        zce_byte    minor_version/*å°ç‰ˆæœ¬*/;
+        zce_uint16    build_version/*ç¼–è¯‘ç‰ˆæœ¬*/;
+        zce_uint16    revision_version/*ä¿®è®¢ç‰ˆæœ¬*/;
     };
     struct IE_UUDATA
     {
@@ -3889,8 +3889,8 @@ namespace gep
         {
         }
 
-        std::vector<zce_char> reserve/*±£Áô*/;
-        std::vector<zce_char> content/*²»¶¨³¤µÄ×Ö½ÚÁ÷*/;
+        std::vector<zce_char> reserve/*ä¿ç•™*/;
+        std::vector<zce_char> content/*ä¸å®šé•¿çš„å­—èŠ‚æµ*/;
     };
     struct IE_HARDDISK
     {
@@ -3902,8 +3902,8 @@ namespace gep
         {
         }
 
-        zce_uint32    total_capacity/*µ¥¸öÓ²ÅÌ×ÜÈİÁ¿£¬µ¥Î»£ºMB*/;
-        zce_uint32    spare_capacity/*µ¥¸öÓ²ÅÌÊ£ÓàÈİÁ¿£¬µ¥Î»£ºMB*/;
+        zce_uint32    total_capacity/*å•ä¸ªç¡¬ç›˜æ€»å®¹é‡ï¼Œå•ä½ï¼šMB*/;
+        zce_uint32    spare_capacity/*å•ä¸ªç¡¬ç›˜å‰©ä½™å®¹é‡ï¼Œå•ä½ï¼šMB*/;
     };
     struct IE_DEAL_ALARM
     {
@@ -3917,11 +3917,11 @@ namespace gep
         }
 
         zce_astring fd_id;
-        zce_uint32    sessionid/*¸æ¾¯»á»°id*/;
-        zce_char    action/*´¦Àí¶¯×÷ 1¿ªÊ¼´¦Àí 2Íê³É´¦Àí*/;
-        zce_uint32    dealtime/*´¦ÀíÊ±¼ä 1970-Ãë*/;
-        zce_astring dealer/*´¦ÀíÈËÕÊºÅ£¨ÓÊ¼ş£©*/;
-        zce_astring dealmemo/*´¦ÀíÃèÊö*/;
+        zce_uint32    sessionid/*å‘Šè­¦ä¼šè¯id*/;
+        zce_char    action/*å¤„ç†åŠ¨ä½œ 1å¼€å§‹å¤„ç† 2å®Œæˆå¤„ç†*/;
+        zce_uint32    dealtime/*å¤„ç†æ—¶é—´ 1970-ç§’*/;
+        zce_astring dealer/*å¤„ç†äººå¸å·ï¼ˆé‚®ä»¶ï¼‰*/;
+        zce_astring dealmemo/*å¤„ç†æè¿°*/;
     };
     struct IE_OPERATE_LOG
     {
@@ -4022,7 +4022,7 @@ namespace gep
         {
         }
 
-        std::vector<zce_byte> any/*Ğ¡ÓÚ10MB*/;
+        std::vector<zce_byte> any/*å°äº10MB*/;
     };
     struct IE_MAPINFO
     {
@@ -4127,10 +4127,10 @@ namespace gep
         {
         }
 
-        std::vector<zce_char> guid/*Ê±¼äĞÅÏ¢µÄGUID*/;
-        zce_uint32    begin_time/*ÆğÊ¼Ê±¼ä*/;
-        zce_uint32    end_time/*½áÊøÊ±¼ä*/;
-        zce_int32    timespan/*µ¥¸öÂ¼ÏñÎÄ¼şµÄÊ±¼ä³¤¶È£¨Ãë£©*/;
+        std::vector<zce_char> guid/*æ—¶é—´ä¿¡æ¯çš„GUID*/;
+        zce_uint32    begin_time/*èµ·å§‹æ—¶é—´*/;
+        zce_uint32    end_time/*ç»“æŸæ—¶é—´*/;
+        zce_int32    timespan/*å•ä¸ªå½•åƒæ–‡ä»¶çš„æ—¶é—´é•¿åº¦ï¼ˆç§’ï¼‰*/;
     };
     struct IE_RECORD_STATUS
     {
@@ -4146,12 +4146,12 @@ namespace gep
         }
 
         zce_astring uaid/*uaid*/;
-        CHANNEL_ID    channel_id/*Í¨µÀID*/;
-        zce_char    status/*Â¼Ïñ×´Ì¬ 0 ÕıÔÚÂ¼Ïñ 1 ÕıÔÚ×¼±¸¿ªÊ¼Â¼Ïñ 2 Ã»ÓĞÂ¼Ïñ 3 Î´Öª×´Ì¬*/;
-        zce_uint32    begin_time/*ÆğÊ¼Ê±¼ä*/;
-        zce_uint32    end_time/*½áÊøÊ±¼ä*/;
-        zce_uint32    bytes/*×Ö½ÚÊı£¬±¾´ÎÒÑ¾­Â¼µÄÕ××Ö½ÚÊı*/;
-        zce_int32    timespan/*=-1 ²»½Ø¶Ï£¬> 0 ¶àÉÙÃë½Ø¶ÏÒ»¸öÎÄ¼ş*/;
+        CHANNEL_ID    channel_id/*é€šé“ID*/;
+        zce_char    status/*å½•åƒçŠ¶æ€ 0 æ­£åœ¨å½•åƒ 1 æ­£åœ¨å‡†å¤‡å¼€å§‹å½•åƒ 2 æ²¡æœ‰å½•åƒ 3 æœªçŸ¥çŠ¶æ€*/;
+        zce_uint32    begin_time/*èµ·å§‹æ—¶é—´*/;
+        zce_uint32    end_time/*ç»“æŸæ—¶é—´*/;
+        zce_uint32    bytes/*å­—èŠ‚æ•°ï¼Œæœ¬æ¬¡å·²ç»å½•çš„å…†å­—èŠ‚æ•°*/;
+        zce_int32    timespan/*=-1 ä¸æˆªæ–­ï¼Œ> 0 å¤šå°‘ç§’æˆªæ–­ä¸€ä¸ªæ–‡ä»¶*/;
     };
     struct IE_LONG
     {
@@ -4173,7 +4173,7 @@ namespace gep
         {
         }
 
-        zce_char    is_online/*0£º²»ÔÚÏß£»1£ºÔÚÏß*/;
+        zce_char    is_online/*0ï¼šä¸åœ¨çº¿ï¼›1ï¼šåœ¨çº¿*/;
     };
     struct IE_CHANNEL_PRIVILEGE
     {
@@ -4186,23 +4186,23 @@ namespace gep
         {
         }
 
-        zce_uint16    channel_type/*Í¨µÀÀàĞÍ*/;
-        zce_uint16    channel_no/*Í¨µÀºÅ*/;
-        zce_byte    priv/*È¨ÏŞ: Read = 0x0001; Write = 0x0002; Contrl = 0x0004; Manage = 0x0008;*/;
+        zce_uint16    channel_type/*é€šé“ç±»å‹*/;
+        zce_uint16    channel_no/*é€šé“å·*/;
+        zce_byte    priv/*æƒé™: Read = 0x0001; Write = 0x0002; Contrl = 0x0004; Manage = 0x0008;*/;
     };
     struct IE_FD_IDNAME
     {
         const static unsigned short IE_TYPE = E_IE_FD_IDNAME;
         IE_FD_IDNAME() { };
-        zce_astring fd_id/*¿Í»§ID*/;
-        zce_astring fd_name/*¿Í»§Ãû³Æ*/;
+        zce_astring fd_id/*å®¢æˆ·ID*/;
+        zce_astring fd_name/*å®¢æˆ·åç§°*/;
     };
     struct IE_CLIENT_IDNAME
     {
         const static unsigned short IE_TYPE = E_IE_CLIENT_IDNAME;
         IE_CLIENT_IDNAME() { };
-        zce_astring client_id/*¿Í»§ID*/;
-        zce_astring client_name/*¿Í»§Ãû³Æ*/;
+        zce_astring client_id/*å®¢æˆ·ID*/;
+        zce_astring client_name/*å®¢æˆ·åç§°*/;
     };
     struct IE_UPDATE_SOFTWARE
     {
@@ -4213,8 +4213,8 @@ namespace gep
         {
         }
 
-        zce_uint32    time/*Éı¼¶Ê±¼ä,ÒÔUTCÃèÊö*/;
-        zce_astring url/*Éı¼¶µØÖ·,²»¶¨³¤µÄ×Ö½ÚÁ÷*/;
+        zce_uint32    time/*å‡çº§æ—¶é—´,ä»¥UTCæè¿°*/;
+        zce_astring url/*å‡çº§åœ°å€,ä¸å®šé•¿çš„å­—èŠ‚æµ*/;
     };
     struct IE_CHANNEL_STATUS
     {
@@ -4235,17 +4235,17 @@ namespace gep
         {
         }
 
-        zce_uint16    channel_type/*Í¨µÀÀàĞÍ*/;
-        zce_uint16    channel_no/*Í¨µÀ±àºÅ£¨Éè±¸ÄÚÎ¨Ò»£©*/;
-        zce_byte    record_status/*ÊÇ·ñÕıÔÚ±¾µØÂ¼Ïñ0x00:·ñ0x01:ÊÇ*/;
-        zce_byte    monitor_status/*ÊÇ·ñÕıÔÚ¼à¿Ø,0x00:·ñ0x01:ÊÇ*/;
-        zce_byte    replay_status/*ÊÇ·ñÕıÔÚ»Ø·Å0x00:·ñ0x01:ÊÇ*/;
-        zce_byte    download_status/*ÊÇ·ñÕıÔÚÏÂÔØ0x00:·ñ0x01:ÊÇ*/;
-        zce_uint16    video_format/*µ±Ç°ÊÓÆµ±àÂë¸ñÊ½ ,²Î¼ûÊÓÆµ±àÂë¸ñÊ½±í*/;
-        zce_uint16    video_resolution/*µ±Ç°ÊÓÆµÏÔÊ¾¸ñÊ½, ,²Î¼ûÊÓÆµÏÔÊ¾¸ñÊ½±í*/;
-        zce_uint32    store_totalcapacity/*´æ´¢×ÜÈİÁ¿£¬µ¥Î»£ºMB*/;
-        zce_uint32    store_sparecapacity/*´æ´¢Ê£ÓàÈİÁ¿£¬µ¥Î»£ºMB*/;
-        zce_uint32    bit_rate/*µ±Ç°·¢ËÍÂëÁ÷,£¬µ¥Î»£ºkbps*/;
+        zce_uint16    channel_type/*é€šé“ç±»å‹*/;
+        zce_uint16    channel_no/*é€šé“ç¼–å·ï¼ˆè®¾å¤‡å†…å”¯ä¸€ï¼‰*/;
+        zce_byte    record_status/*æ˜¯å¦æ­£åœ¨æœ¬åœ°å½•åƒ0x00:å¦0x01:æ˜¯*/;
+        zce_byte    monitor_status/*æ˜¯å¦æ­£åœ¨ç›‘æ§,0x00:å¦0x01:æ˜¯*/;
+        zce_byte    replay_status/*æ˜¯å¦æ­£åœ¨å›æ”¾0x00:å¦0x01:æ˜¯*/;
+        zce_byte    download_status/*æ˜¯å¦æ­£åœ¨ä¸‹è½½0x00:å¦0x01:æ˜¯*/;
+        zce_uint16    video_format/*å½“å‰è§†é¢‘ç¼–ç æ ¼å¼ ,å‚è§è§†é¢‘ç¼–ç æ ¼å¼è¡¨*/;
+        zce_uint16    video_resolution/*å½“å‰è§†é¢‘æ˜¾ç¤ºæ ¼å¼, ,å‚è§è§†é¢‘æ˜¾ç¤ºæ ¼å¼è¡¨*/;
+        zce_uint32    store_totalcapacity/*å­˜å‚¨æ€»å®¹é‡ï¼Œå•ä½ï¼šMB*/;
+        zce_uint32    store_sparecapacity/*å­˜å‚¨å‰©ä½™å®¹é‡ï¼Œå•ä½ï¼šMB*/;
+        zce_uint32    bit_rate/*å½“å‰å‘é€ç æµ,ï¼Œå•ä½ï¼škbps*/;
     };
     struct IE_CHANNEL_STATUS_V2
     {
@@ -4259,9 +4259,9 @@ namespace gep
         }
 
         CHANNEL_STATUS    status;
-        zce_byte    video_lost_status/*ÊÓÆµ¶ªÊ§×´Ì¬0x00:Õı³£0x01:¶ªÊ§*/;
-        zce_byte    optic_exist_flag/*ÊÇ·ñÓĞ¹â¶Ë»ú0x00:ÎŞ0x01:ÓĞ*/;
-        zce_byte    optic_error_flag/*¹â¶Ë»úÒì³£×´Ì¬0x00:Õı³£0x01:Òì³£*/;
+        zce_byte    video_lost_status/*è§†é¢‘ä¸¢å¤±çŠ¶æ€0x00:æ­£å¸¸0x01:ä¸¢å¤±*/;
+        zce_byte    optic_exist_flag/*æ˜¯å¦æœ‰å…‰ç«¯æœº0x00:æ— 0x01:æœ‰*/;
+        zce_byte    optic_error_flag/*å…‰ç«¯æœºå¼‚å¸¸çŠ¶æ€0x00:æ­£å¸¸0x01:å¼‚å¸¸*/;
     };
     struct IE_CHANNEL_STATUS_SIMPLE
     {
@@ -4311,7 +4311,7 @@ namespace gep
         {
         }
 
-        zce_uint16    cmd_type/*Ö¸ÁîÀàĞÍ£¨ÊÕµ½µÄ²»Ö§³ÖµÄÏûÏ¢ÀàĞÍ£©*/;
+        zce_uint16    cmd_type/*æŒ‡ä»¤ç±»å‹ï¼ˆæ”¶åˆ°çš„ä¸æ”¯æŒçš„æ¶ˆæ¯ç±»å‹ï¼‰*/;
     };
     struct IE_MIXTUREVIDEOIN_CHANNEL
     {
@@ -4330,30 +4330,30 @@ namespace gep
         {
         }
 
-        zce_astring lock_email/*Ëø¶¨Õßemail*/;
-        zce_uint32    lock_level/*Ëø¶¨¼¶±ğ*/;
-        zce_uint32    lock_time/*ÒÔUTC±íÊ¾µÄ½áÊøËø¶¨Ê±¿Ì*/;
+        zce_astring lock_email/*é”å®šè€…email*/;
+        zce_uint32    lock_level/*é”å®šçº§åˆ«*/;
+        zce_uint32    lock_time/*ä»¥UTCè¡¨ç¤ºçš„ç»“æŸé”å®šæ—¶åˆ»*/;
     };
     struct IE_ALARM_RULE
     {
         const static unsigned short IE_TYPE = E_IE_ALARM_RULE;
         IE_ALARM_RULE() { };
-        ALARM_EVENT    alarm_event/*¸æ¾¯ÊÂ¼ş, KEY*/;
-        ALARM_CONDITION    alarm_cond/*¸æ¾¯Ìõ¼ş*/;
-        std::vector<ALARM_HANDLE> alarm_handle/*¸æ¾¯´¦Àí*/;
+        ALARM_EVENT    alarm_event/*å‘Šè­¦äº‹ä»¶, KEY*/;
+        ALARM_CONDITION    alarm_cond/*å‘Šè­¦æ¡ä»¶*/;
+        std::vector<ALARM_HANDLE> alarm_handle/*å‘Šè­¦å¤„ç†*/;
     };
     struct IE_FDALARM_HANDLE
     {
         const static unsigned short IE_TYPE = E_IE_FDALARM_HANDLE;
         IE_FDALARM_HANDLE() { };
-        ALARM_EVENT    alarm_event/*¸æ¾¯ÊÂ¼ş, KEY*/;
-        std::vector<ALARM_HANDLE> alarm_handle/*¸æ¾¯´¦Àí*/;
+        ALARM_EVENT    alarm_event/*å‘Šè­¦äº‹ä»¶, KEY*/;
+        std::vector<ALARM_HANDLE> alarm_handle/*å‘Šè­¦å¤„ç†*/;
     };
     struct IE_CENTERALARM_HANDLE
     {
         const static unsigned short IE_TYPE = E_IE_CENTERALARM_HANDLE;
         IE_CENTERALARM_HANDLE() { };
-        ALARM_HANDLE_CENTER    alarm_handle_center/*¸æ¾¯´¦Àí*/;
+        ALARM_HANDLE_CENTER    alarm_handle_center/*å‘Šè­¦å¤„ç†*/;
         ALARM_HANDLE_SHOW    alarm_handle_show;
     };
     struct IE_SET_ALARMRULE_TIMESPAN
@@ -4381,10 +4381,10 @@ namespace gep
         {
         }
 
-        zce_char    guard/*0£¬³··À£¬1£¬²¼·À*/;
-        zce_uint32    last_guard_time/*×îºóÒ»¸ö²¼³··ÀÖ¸ÁîÊ±¼ä*/;
-        zce_uint32    guard_rule_update_time/*Éè±¸²¼³··À¹æÔòµÄ×î½ü¸üĞÂÊ±¼ä*/;
-        zce_uint32    alarm_rule_update_time/*¸æ¾¯ÊÂ¼ş¹æÔòµÄ×î½ü¸üĞÂÊ±¼ä*/;
+        zce_char    guard/*0ï¼Œæ’¤é˜²ï¼Œ1ï¼Œå¸ƒé˜²*/;
+        zce_uint32    last_guard_time/*æœ€åä¸€ä¸ªå¸ƒæ’¤é˜²æŒ‡ä»¤æ—¶é—´*/;
+        zce_uint32    guard_rule_update_time/*è®¾å¤‡å¸ƒæ’¤é˜²è§„åˆ™çš„æœ€è¿‘æ›´æ–°æ—¶é—´*/;
+        zce_uint32    alarm_rule_update_time/*å‘Šè­¦äº‹ä»¶è§„åˆ™çš„æœ€è¿‘æ›´æ–°æ—¶é—´*/;
     };
     struct IE_PRESET_SCHEDULE
     {
@@ -4408,10 +4408,10 @@ namespace gep
         {
         }
 
-        zce_uint16    guard_delay_second/*ÊÕµ½±¾µØ²¼·ÀÖ¸ÁîºóÑÓ³Ù¶àÉÙÃë²¼·À£¬±ÜÃâ±¾µØ²¼·Àºó£¬²¼·ÀÈËÔ±²»ÄÜ¼°Ê±Àë¿ª·ÀÇøµ¼ÖÂÎó±¨*/;
-        zce_char    default_time_guard_or_not/*ÔÚÎ´¶¨ÒåÊ±¶ÎÊÇ·ñ²¼·À£¬0·ñ1ÊÇ£¬Ä¬ÈÏÎª1*/;
-        std::vector<TASK_SCHEDULE> time_span/*Èç¹ûÔÚÎ´¶¨ÒåÊ±¶Î²¼·À£¬ÔòtimeSpanÎª³··ÀÊ±¶Î£¬timeSpanExcludeÎª³··ÀÊ±¶ÎÀıÍâ£¨¼ô³ı£©*/;
-        std::vector<TASK_SCHEDULE> time_span_exclude/*Èç¹ûÔÚÎ´¶¨ÒåÊ±¶Î³··À£¬ÔòtimeSpanÎª²¼·ÀÊ±¶Î£¬timeSpanExcludeÎª²¼·ÀÊ±¶ÎÀıÍâ£¨¼ô³ı£©*/;
+        zce_uint16    guard_delay_second/*æ”¶åˆ°æœ¬åœ°å¸ƒé˜²æŒ‡ä»¤åå»¶è¿Ÿå¤šå°‘ç§’å¸ƒé˜²ï¼Œé¿å…æœ¬åœ°å¸ƒé˜²åï¼Œå¸ƒé˜²äººå‘˜ä¸èƒ½åŠæ—¶ç¦»å¼€é˜²åŒºå¯¼è‡´è¯¯æŠ¥*/;
+        zce_char    default_time_guard_or_not/*åœ¨æœªå®šä¹‰æ—¶æ®µæ˜¯å¦å¸ƒé˜²ï¼Œ0å¦1æ˜¯ï¼Œé»˜è®¤ä¸º1*/;
+        std::vector<TASK_SCHEDULE> time_span/*å¦‚æœåœ¨æœªå®šä¹‰æ—¶æ®µå¸ƒé˜²ï¼Œåˆ™timeSpanä¸ºæ’¤é˜²æ—¶æ®µï¼ŒtimeSpanExcludeä¸ºæ’¤é˜²æ—¶æ®µä¾‹å¤–ï¼ˆå‰ªé™¤ï¼‰*/;
+        std::vector<TASK_SCHEDULE> time_span_exclude/*å¦‚æœåœ¨æœªå®šä¹‰æ—¶æ®µæ’¤é˜²ï¼Œåˆ™timeSpanä¸ºå¸ƒé˜²æ—¶æ®µï¼ŒtimeSpanExcludeä¸ºå¸ƒé˜²æ—¶æ®µä¾‹å¤–ï¼ˆå‰ªé™¤ï¼‰*/;
     };
     struct IE_ALARM_CONTENT_HEADER
     {
@@ -4426,31 +4426,31 @@ namespace gep
         {
         }
 
-        ALARM_EVENT    alarm_event/*¸æ¾¯ÊÂ¼ş*/;
-        zce_char    alarm_level/*¸æ¾¯ÑÏÖØ¼¶±ğ(5¡¢10¡¢15¡¢20¡¢25ÊıÖµÔ½´óÔ½ÑÏÖØ)*/;
-        zce_char    alarm_confidence/*¸æ¾¯ÖÃĞÅ¶È*/;
-        zce_uint32    alarm_session_id/*¸æ¾¯»á»°±àºÅ£¬0,±£Áô£¬1-0xFFFFFFFF*/;
-        zce_uint16    reserved/* ±£Áô */;
-        zce_uint16    alarm_sequence_id/*¸æ¾¯ĞòºÅ£¬0,±£Áô; nµÚN´Î¸æ¾¯£¬0xFFFFÏú¾¯*/;
+        ALARM_EVENT    alarm_event/*å‘Šè­¦äº‹ä»¶*/;
+        zce_char    alarm_level/*å‘Šè­¦ä¸¥é‡çº§åˆ«(5ã€10ã€15ã€20ã€25æ•°å€¼è¶Šå¤§è¶Šä¸¥é‡)*/;
+        zce_char    alarm_confidence/*å‘Šè­¦ç½®ä¿¡åº¦*/;
+        zce_uint32    alarm_session_id/*å‘Šè­¦ä¼šè¯ç¼–å·ï¼Œ0,ä¿ç•™ï¼Œ1-0xFFFFFFFF*/;
+        zce_uint16    reserved/* ä¿ç•™ */;
+        zce_uint16    alarm_sequence_id/*å‘Šè­¦åºå·ï¼Œ0,ä¿ç•™; nç¬¬Næ¬¡å‘Šè­¦ï¼Œ0xFFFFé”€è­¦*/;
     };
     struct IE_ALARM_EVENT
     {
         const static unsigned short IE_TYPE = E_IE_ALARM_EVENT;
         IE_ALARM_EVENT() { };
-        ALARM_EVENT    alarm_event/*¸æ¾¯ÊÂ¼ş*/;
+        ALARM_EVENT    alarm_event/*å‘Šè­¦äº‹ä»¶*/;
     };
     struct IE_ALARM_CONTENT_TEXT
     {
         const static unsigned short IE_TYPE = E_IE_ALARM_CONTENT_TEXT;
         IE_ALARM_CONTENT_TEXT() { };
-        zce_astring content/*ÎÄ±¾ÄÚÈİ*/;
+        zce_astring content/*æ–‡æœ¬å†…å®¹*/;
     };
     struct IE_ALARM_CONTENT_TEXT_UA
     {
         const static unsigned short IE_TYPE = E_IE_ALARM_CONTENT_TEXT_UA;
         IE_ALARM_CONTENT_TEXT_UA() { };
-        zce_astring type/*ÀàĞÍ*/;
-        zce_astring content/*ÎÄ±¾ÄÚÈİ*/;
+        zce_astring type/*ç±»å‹*/;
+        zce_astring content/*æ–‡æœ¬å†…å®¹*/;
     };
     struct IE_ALARM_CONTENT_TEXT_FD
     {
@@ -4465,13 +4465,13 @@ namespace gep
         {
         }
 
-        zce_astring type/*ÀàĞÍ*/;
-        zce_uint16    left/* ³µÅÆ¾ØĞÎ*/;
+        zce_astring type/*ç±»å‹*/;
+        zce_uint16    left/* è½¦ç‰ŒçŸ©å½¢*/;
         zce_uint16    top;
         zce_uint16    right;
         zce_uint16    bottom;
         zce_uint16    confident;
-        zce_astring content/*ÎÄ±¾ÄÚÈİ*/;
+        zce_astring content/*æ–‡æœ¬å†…å®¹*/;
     };
     struct IE_ALARM_CONTENT_PICTURE
     {
@@ -4484,10 +4484,10 @@ namespace gep
         {
         }
 
-        CHANNEL_ID    channel_id/*ÊÓÆµÍ¨µÀid*/;
-        zce_uint16    format/*Í¼Æ¬¸ñÊ½, JPG(0),×î¸ßÎ»ÖÃ1±íÊ¾ÌØÕ÷Í¼Æ¬£¨Èç³µÅÆµÄĞ¡Í¼£©*/;
-        zce_uint16    reserved/*±£ÁôÓïÒâ*/;
-        std::vector<zce_byte> content/*Í¼Æ¬ÄÚÈİ£¬Ğ¡ÓÚ2MB*/;
+        CHANNEL_ID    channel_id/*è§†é¢‘é€šé“id*/;
+        zce_uint16    format/*å›¾ç‰‡æ ¼å¼, JPG(0),æœ€é«˜ä½ç½®1è¡¨ç¤ºç‰¹å¾å›¾ç‰‡ï¼ˆå¦‚è½¦ç‰Œçš„å°å›¾ï¼‰*/;
+        zce_uint16    reserved/*ä¿ç•™è¯­æ„*/;
+        std::vector<zce_byte> content/*å›¾ç‰‡å†…å®¹ï¼Œå°äº2MB*/;
     };
     struct IE_ALARM_CONTENT_PICTURE_WITH_RECT_PARAMETER
     {
@@ -4500,15 +4500,15 @@ namespace gep
         {
         }
 
-        CHANNEL_ID    channel_id/*ÊÓÆµÍ¨µÀid*/;
-        zce_uint16    format/*Í¼Æ¬¸ñÊ½, JPG(0)£¬ASF(1), ×î¸ßÎ»ÖÃ1±íÊ¾ÌØÕ÷Í¼Æ¬£¨Èç³µÅÆµÄĞ¡Í¼£©*/;
-        zce_uint16    reserved/*±£ÁôÓïÒâ, &0x01£¬Ê¹ÓÃÉÏÒ»¸±*/;
-        RECT_PARAMETER    vehicle/*³µÁ¾¾ØĞÎ, 
-        vehicle.reserverd[1]Îª0±íÊ¾Ê¶±ğÊ§°ÜÊ±ÊÇ·ñÖ´ĞĞÈ«Í¼ËÑË÷ÒÀÀµÓÚ³µÅÆ·şÎñÆ÷µÄÅäÖÃ
-        vehicle.reserverd[1]Îª1±íÊ¾Ê¶±ğÊ§°ÜÊ±²»ÔÙÖ´ĞĞÈ«Í¼ËÑË÷
-        vehicle.reserverd[1]Îª2±íÊ¾Ê¶±ğÊ§°ÜÊ±Ò»¶¨Ö´ĞĞÈ«Í¼ËÑË÷*/;
-        std::vector<RECT_PARAMETER> plate/*³µÅÆ¾ØĞÎ*/;
-        std::vector<zce_byte> content/*Í¼Æ¬ÄÚÈİ£¬Ğ¡ÓÚ5MB*/;
+        CHANNEL_ID    channel_id/*è§†é¢‘é€šé“id*/;
+        zce_uint16    format/*å›¾ç‰‡æ ¼å¼, JPG(0)ï¼ŒASF(1), æœ€é«˜ä½ç½®1è¡¨ç¤ºç‰¹å¾å›¾ç‰‡ï¼ˆå¦‚è½¦ç‰Œçš„å°å›¾ï¼‰*/;
+        zce_uint16    reserved/*ä¿ç•™è¯­æ„, &0x01ï¼Œä½¿ç”¨ä¸Šä¸€å‰¯*/;
+        RECT_PARAMETER    vehicle/*è½¦è¾†çŸ©å½¢, 
+        vehicle.reserverd[1]ä¸º0è¡¨ç¤ºè¯†åˆ«å¤±è´¥æ—¶æ˜¯å¦æ‰§è¡Œå…¨å›¾æœç´¢ä¾èµ–äºè½¦ç‰ŒæœåŠ¡å™¨çš„é…ç½®
+        vehicle.reserverd[1]ä¸º1è¡¨ç¤ºè¯†åˆ«å¤±è´¥æ—¶ä¸å†æ‰§è¡Œå…¨å›¾æœç´¢
+        vehicle.reserverd[1]ä¸º2è¡¨ç¤ºè¯†åˆ«å¤±è´¥æ—¶ä¸€å®šæ‰§è¡Œå…¨å›¾æœç´¢*/;
+        std::vector<RECT_PARAMETER> plate/*è½¦ç‰ŒçŸ©å½¢*/;
+        std::vector<zce_byte> content/*å›¾ç‰‡å†…å®¹ï¼Œå°äº5MB*/;
     };
     struct IE_SCHEME
     {
@@ -4519,10 +4519,10 @@ namespace gep
         {
         }
 
-        zce_uint32    id/*Ô¤°¸±êÊ¶*/;
-        zce_astring name/*Ô¤°¸Ãû³Æ*/;
-        zce_astring content/*Ô¤°¸ÄÚÈİ*/;
-        zce_astring memo/*Ô¤°¸±¸×¢*/;
+        zce_uint32    id/*é¢„æ¡ˆæ ‡è¯†*/;
+        zce_astring name/*é¢„æ¡ˆåç§°*/;
+        zce_astring content/*é¢„æ¡ˆå†…å®¹*/;
+        zce_astring memo/*é¢„æ¡ˆå¤‡æ³¨*/;
     };
     struct IE_FD_PARAMETER_INFO
     {
@@ -4533,12 +4533,12 @@ namespace gep
         {
         }
 
-        zce_astring name/*Ãû³Æ*/;
-        zce_byte    writable/*¿ÉĞ´*/;
-        zce_astring type/*ÀàĞÍÃû:object astring int unsignedInt boolean dateTime base64*/;
-        zce_astring reserved_str1/*±£Áô*/;
-        zce_astring reserved_str2/*±£Áô*/;
-        std::vector<astring254_WRAPPER> reserved_strarray/*±£Áô*/;
+        zce_astring name/*åç§°*/;
+        zce_byte    writable/*å¯å†™*/;
+        zce_astring type/*ç±»å‹å:object astring int unsignedInt boolean dateTime base64*/;
+        zce_astring reserved_str1/*ä¿ç•™*/;
+        zce_astring reserved_str2/*ä¿ç•™*/;
+        std::vector<astring254_WRAPPER> reserved_strarray/*ä¿ç•™*/;
     };
     struct IE_FD_PARAMTER_ATTRIBUTE
     {
@@ -4552,9 +4552,9 @@ namespace gep
         zce_astring name;
         zce_byte    notification/*0:off 1:passive 2:active*/;
         std::vector<astring254_WRAPPER> access_list/*Subscriber*/;
-        zce_astring reserved_str1/*±£Áô*/;
-        zce_astring reserved_str2/*±£Áô*/;
-        std::vector<astring254_WRAPPER> reserved_strarray/*±£Áô*/;
+        zce_astring reserved_str1/*ä¿ç•™*/;
+        zce_astring reserved_str2/*ä¿ç•™*/;
+        std::vector<astring254_WRAPPER> reserved_strarray/*ä¿ç•™*/;
     };
     struct IE_FD_TYPE
     {
@@ -4566,8 +4566,8 @@ namespace gep
         {
         }
 
-        zce_uint16    factory/*³§ÉÌ±êÊ¶*/;
-        zce_uint16    type/*Éè±¸ÀàĞÍ*/;
+        zce_uint16    factory/*å‚å•†æ ‡è¯†*/;
+        zce_uint16    type/*è®¾å¤‡ç±»å‹*/;
     };
     struct IE_FDCHANNEL_RIGHT
     {
@@ -4578,9 +4578,9 @@ namespace gep
         {
         }
 
-        zce_astring fd_id/*Éè±¸id*/;
-        CHANNEL_ID    channel_id/*Í¨µÀidÈç¹ûÍ¨µÀÀàĞÍºÍÍ¨µÀºÅ¶¼Îª0£¬±íÊ¾ÓÃ»§¶Ô¸ÃÉè±¸µÄËùÓĞÍ¨µÀ¶¼ÓĞÈ¨ÏŞ£¬ÇÒÈ¨ÏŞÏàÍ¬*/;
-        zce_uint32    right/*È¨ÏŞ*/;
+        zce_astring fd_id/*è®¾å¤‡id*/;
+        CHANNEL_ID    channel_id/*é€šé“idå¦‚æœé€šé“ç±»å‹å’Œé€šé“å·éƒ½ä¸º0ï¼Œè¡¨ç¤ºç”¨æˆ·å¯¹è¯¥è®¾å¤‡çš„æ‰€æœ‰é€šé“éƒ½æœ‰æƒé™ï¼Œä¸”æƒé™ç›¸åŒ*/;
+        zce_uint32    right/*æƒé™*/;
     };
     struct IE_UAS_VERSION
     {
@@ -4592,8 +4592,8 @@ namespace gep
     {
         const static unsigned short IE_TYPE = E_IE_NAME_VALUE;
         IE_NAME_VALUE() { };
-        zce_astring name/*Ãû*/;
-        zce_astring value/*Öµ*/;
+        zce_astring name/*å*/;
+        zce_astring value/*å€¼*/;
     };
     struct IE_COMPRESS
     {
@@ -4604,7 +4604,7 @@ namespace gep
         {
         }
 
-        zce_uint16    compress/* Ñ¹ËõËã·¨, 0: ²»Ñ¹Ëõ, 1: BZIP2 */;
+        zce_uint16    compress/* å‹ç¼©ç®—æ³•, 0: ä¸å‹ç¼©, 1: BZIP2 */;
     };
     struct IE_BALANCE_REDIRECT_FLAG
     {
@@ -4615,32 +4615,32 @@ namespace gep
         {
         }
 
-        zce_uint16    balance_redirect_flag/* 1¸ºÔØ¾ùºâÖØ¶¨ÏòºóµÄµÇÂ¼£¬0·Ç¸ºÔØ¾ùºâÖØ¶¨ÏòµÇÂ¼ */;
+        zce_uint16    balance_redirect_flag/* 1è´Ÿè½½å‡è¡¡é‡å®šå‘åçš„ç™»å½•ï¼Œ0éè´Ÿè½½å‡è¡¡é‡å®šå‘ç™»å½• */;
     };
     struct IE_RECORD_PLAN
     {
         const static unsigned short IE_TYPE = E_IE_RECORD_PLAN;
         IE_RECORD_PLAN() { };
-        RECORD_PLAN    record_plan/*Â¼Ïñ¼Æ»®*/;
+        RECORD_PLAN    record_plan/*å½•åƒè®¡åˆ’*/;
     };
     struct IE_COMMON_OPERATION
     {
         const static unsigned short IE_TYPE = E_IE_COMMON_OPERATION;
         IE_COMMON_OPERATION() { };
-        zce_astring type/*²Ù×÷ÀàĞÍ*/;
+        zce_astring type/*æ“ä½œç±»å‹*/;
     };
     struct IE_COMMON_CONTENT
     {
         const static unsigned short IE_TYPE = E_IE_COMMON_CONTENT;
         IE_COMMON_CONTENT() { };
-        zce_astring key/*×Ö¶ÎÃû³Æ*/;
-        zce_astring value/*×Ö¶ÎÄÚÈİ*/;
+        zce_astring key/*å­—æ®µåç§°*/;
+        zce_astring value/*å­—æ®µå†…å®¹*/;
     };
     struct IE_COMMON_RESULT
     {
         const static unsigned short IE_TYPE = E_IE_COMMON_RESULT;
         IE_COMMON_RESULT() { };
-        zce_astring result/*²Ù×÷·µ»ØÄÚÈİ*/;
+        zce_astring result/*æ“ä½œè¿”å›å†…å®¹*/;
     };
     struct FD_ACTION
     {
@@ -4652,12 +4652,12 @@ namespace gep
         {
         }
 
-        zce_astring fdid/*Éè±¸±àºÅ*/;
-        zce_astring factory/*³§¼Ò´úÂë*/;
-        zce_byte    cState/*Éè±¸×´Ì¬£º'W'´ı°²×°¡¢'A' Õı³£¡¢'P' Í£ÓÃ*/;
-        zce_uint16    directnum/*Ö±Á¬Êı*/;
-        zce_astring ip/*Ö»ÓÃÓÚ²éÑ¯£¬Éè±¸µÄµÇÂ¼ip£¬²»ÔÚÏßÉè±¸·µ»Ø×îºóÒ»´ÎµÇÂ¼µÄip*/;
-        zce_uint16    flag/*µÚ0Î»Îª1±íÊ¾ÔÚÏß*/;
+        zce_astring fdid/*è®¾å¤‡ç¼–å·*/;
+        zce_astring factory/*å‚å®¶ä»£ç */;
+        zce_byte    cState/*è®¾å¤‡çŠ¶æ€ï¼š'W'å¾…å®‰è£…ã€'A' æ­£å¸¸ã€'P' åœç”¨*/;
+        zce_uint16    directnum/*ç›´è¿æ•°*/;
+        zce_astring ip/*åªç”¨äºæŸ¥è¯¢ï¼Œè®¾å¤‡çš„ç™»å½•ipï¼Œä¸åœ¨çº¿è®¾å¤‡è¿”å›æœ€åä¸€æ¬¡ç™»å½•çš„ip*/;
+        zce_uint16    flag/*ç¬¬0ä½ä¸º1è¡¨ç¤ºåœ¨çº¿*/;
     };
     struct IE_FD_ACTION
     {
@@ -4676,7 +4676,7 @@ namespace gep
 
         FD_ACTION    fd_action;
         zce_uint16    protocol/*0==gep, 1==onvif, 2=GBT28181, 3=RTSP*/;
-        zce_astring param/*onvif²ÎÊı: onvifport=xxx;username=xxxx;password=xxx*/;
+        zce_astring param/*onvifå‚æ•°: onvifport=xxx;username=xxxx;password=xxx*/;
     };
     struct IE_FD_ACTION_V3
     {
@@ -4690,8 +4690,8 @@ namespace gep
 
         FD_ACTION    fd_action;
         zce_uint16    protocol/*0==gep, 1==onvif, 2=GBT28181, 3=RTSP*/;
-        zce_astring param/*onvif²ÎÊı: onvifport=xxx;username=xxxx;password=xxx*/;
-        zce_int32    timeoffset/*Ê±ÖÓÆ«ÒÆ, INT_MAX±íÊ¾NA*/;
+        zce_astring param/*onvifå‚æ•°: onvifport=xxx;username=xxxx;password=xxx*/;
+        zce_int32    timeoffset/*æ—¶é’Ÿåç§», INT_MAXè¡¨ç¤ºNA*/;
     };
     struct IE_CHANNEL_ACTION
     {
@@ -4705,21 +4705,21 @@ namespace gep
         {
         }
 
-        zce_astring fdid/*Éè±¸±àºÅ*/;
+        zce_astring fdid/*è®¾å¤‡ç¼–å·*/;
         CHANNEL_ID    id;
-        zce_byte    cState/*Í¨µÀ×´Ì¬, 'A' Õı³£¡¢'P' Í£ÓÃ*/;
-        zce_uint16    type/*ÀàĞÍ£ºÇò»ú£¬Ç¹»ú*/;
-        zce_uint16    flag/*×î¸ßÎ»ÖÃ1±íÊ¾²»¿É¿Ø£¬´Î¸ßÎ»ÖÃ1±íÊ¾Ò»Ö±ÖĞĞÄÂ¼Ïñ£¨·ñÔò£¬ÊÓºõÂ¼Ïñ¼Æ»®Æô¶¯Â¼Ïñ£©*/;
-        zce_uint32    keeptime/*Â¼Ïñ±£´æÊ±¼ä£¨Ãë£©*/;
-        zce_astring name/*Í¨µÀÃû³Æ*/;
+        zce_byte    cState/*é€šé“çŠ¶æ€, 'A' æ­£å¸¸ã€'P' åœç”¨*/;
+        zce_uint16    type/*ç±»å‹ï¼šçƒæœºï¼Œæªæœº*/;
+        zce_uint16    flag/*æœ€é«˜ä½ç½®1è¡¨ç¤ºä¸å¯æ§ï¼Œæ¬¡é«˜ä½ç½®1è¡¨ç¤ºä¸€ç›´ä¸­å¿ƒå½•åƒï¼ˆå¦åˆ™ï¼Œè§†ä¹å½•åƒè®¡åˆ’å¯åŠ¨å½•åƒï¼‰*/;
+        zce_uint32    keeptime/*å½•åƒä¿å­˜æ—¶é—´ï¼ˆç§’ï¼‰*/;
+        zce_astring name/*é€šé“åç§°*/;
     };
     struct IE_UA_ACTION
     {
         const static unsigned short IE_TYPE = E_IE_UA_ACTION;
         IE_UA_ACTION() { };
-        zce_astring uaid/*UA±àºÅ*/;
-        zce_astring user/*µÇÂ¼ÕÊºÅemail*/;
-        zce_astring desc/*ÃèÊö*/;
+        zce_astring uaid/*UAç¼–å·*/;
+        zce_astring user/*ç™»å½•å¸å·email*/;
+        zce_astring desc/*æè¿°*/;
     };
     struct SIMPLE_CHANNEL
     {
@@ -4733,9 +4733,9 @@ namespace gep
 
         CHANNEL_ID    channel_id;
         zce_astring channel_name;
-        zce_uint32    longitude/*¾­¶È*/;
-        zce_uint32    latitude/*Î¬¶È*/;
-        zce_byte    status/*BIT 1,ÊÇ·ñ¿É¿Ø£¬2,ÕıÔÚÇ°¶ËÂ¼Ïñ£¬3£¬ÕıÔÚÖĞĞÄÂ¼Ïñ£¬4£¬ÊÓÆµ*/;
+        zce_uint32    longitude/*ç»åº¦*/;
+        zce_uint32    latitude/*ç»´åº¦*/;
+        zce_byte    status/*BIT 1,æ˜¯å¦å¯æ§ï¼Œ2,æ­£åœ¨å‰ç«¯å½•åƒï¼Œ3ï¼Œæ­£åœ¨ä¸­å¿ƒå½•åƒï¼Œ4ï¼Œè§†é¢‘*/;
     };
     struct IE_FD_SIMPLE
     {
@@ -4749,8 +4749,8 @@ namespace gep
 
         zce_astring id;
         zce_astring name;
-        zce_byte    isonline/*×îµÍÎ»±íÊ¾Éè±¸ÔÚÏß×´Ì¬£¬¸ß7Î»±íÊ¾Éè±¸µÄµÇÂ¼Ğ­Òé£¬¼ûPTL_TYPE*/;
-        zce_uint16    factory_code/*²é¿´ÊÓÆµµÄÊ±ºò¾Í²»ÓÃÔÙ²éÏêÏ¸ĞÅÏ¢ÁË*/;
+        zce_byte    isonline/*æœ€ä½ä½è¡¨ç¤ºè®¾å¤‡åœ¨çº¿çŠ¶æ€ï¼Œé«˜7ä½è¡¨ç¤ºè®¾å¤‡çš„ç™»å½•åè®®ï¼Œè§PTL_TYPE*/;
+        zce_uint16    factory_code/*æŸ¥çœ‹è§†é¢‘çš„æ—¶å€™å°±ä¸ç”¨å†æŸ¥è¯¦ç»†ä¿¡æ¯äº†*/;
         std::vector<SIMPLE_CHANNEL> channels;
     };
     struct SIMPLE_CHANNEL_V2
@@ -4765,11 +4765,11 @@ namespace gep
         }
 
         CHANNEL_ID    channel_id;
-        zce_astring channel_name/*Í¨µÀÃû³Æ*/;
-        zce_uint32    longitude/*¾­¶È*/;
-        zce_uint32    latitude/*Î¬¶È*/;
-        zce_uint32    status/*BIT 1,ÊÇ·ñ¿É¿Ø£¬2,ÕıÔÚÇ°¶ËÂ¼Ïñ£¬3£¬ÕıÔÚÖĞĞÄÂ¼Ïñ£¬4£¬ÊÓÆµ, 5£¬ÆôÓÃÖĞĞÄÂ¼Ïñ£¬6£¬ÆôÓÃÇ°¶ËÂ¼Ïñ£¬7~12,Ç°¶ËÀàĞÍ(²»¿É¿Ø£¨Ç¹»ú£©=0,¿É¿Ø£¨Çò»ú£©=1,×¥ÅÄÇ¹»ú=2,¸ßÇå=3,×¥ÅÄ¸ßÇå=4)*/;
-        zce_uint32    reserve/*±£Áô×´Ì¬*/;
+        zce_astring channel_name/*é€šé“åç§°*/;
+        zce_uint32    longitude/*ç»åº¦*/;
+        zce_uint32    latitude/*ç»´åº¦*/;
+        zce_uint32    status/*BIT 1,æ˜¯å¦å¯æ§ï¼Œ2,æ­£åœ¨å‰ç«¯å½•åƒï¼Œ3ï¼Œæ­£åœ¨ä¸­å¿ƒå½•åƒï¼Œ4ï¼Œè§†é¢‘, 5ï¼Œå¯ç”¨ä¸­å¿ƒå½•åƒï¼Œ6ï¼Œå¯ç”¨å‰ç«¯å½•åƒï¼Œ7~12,å‰ç«¯ç±»å‹(ä¸å¯æ§ï¼ˆæªæœºï¼‰=0,å¯æ§ï¼ˆçƒæœºï¼‰=1,æŠ“æ‹æªæœº=2,é«˜æ¸…=3,æŠ“æ‹é«˜æ¸…=4)*/;
+        zce_uint32    reserve/*ä¿ç•™çŠ¶æ€*/;
     };
     struct IE_FD_SIMPLE_V2
     {
@@ -4781,11 +4781,11 @@ namespace gep
         {
         }
 
-        zce_astring id/*Éè±¸´úÂë*/;
-        zce_astring name/*Éè±¸Ãû³Æ*/;
-        zce_byte    isonline/*×îµÍÎ»±íÊ¾Éè±¸ÔÚÏß×´Ì¬£¬¸ß7Î»±íÊ¾Éè±¸µÄµÇÂ¼Ğ­Òé£¬¼ûPTL_TYPE*/;
-        zce_uint16    factory_code/*³§ÉÌ´úÂë£¬²é¿´ÊÓÆµµÄÊ±ºò¾Í²»ÓÃÔÙ²éÏêÏ¸ĞÅÏ¢ÁË*/;
-        std::vector<SIMPLE_CHANNEL_V2> channels/*¼òµ¥Í¨µÀĞÅÏ¢*/;
+        zce_astring id/*è®¾å¤‡ä»£ç */;
+        zce_astring name/*è®¾å¤‡åç§°*/;
+        zce_byte    isonline/*æœ€ä½ä½è¡¨ç¤ºè®¾å¤‡åœ¨çº¿çŠ¶æ€ï¼Œé«˜7ä½è¡¨ç¤ºè®¾å¤‡çš„ç™»å½•åè®®ï¼Œè§PTL_TYPE*/;
+        zce_uint16    factory_code/*å‚å•†ä»£ç ï¼ŒæŸ¥çœ‹è§†é¢‘çš„æ—¶å€™å°±ä¸ç”¨å†æŸ¥è¯¦ç»†ä¿¡æ¯äº†*/;
+        std::vector<SIMPLE_CHANNEL_V2> channels/*ç®€å•é€šé“ä¿¡æ¯*/;
     };
     struct IE_SOFT_VERSION
     {
@@ -4796,16 +4796,16 @@ namespace gep
         {
         }
 
-        std::vector<zce_uint16> soft_version/*Èí¼ş°æ±¾ºÅ*/;
+        std::vector<zce_uint16> soft_version/*è½¯ä»¶ç‰ˆæœ¬å·*/;
     };
     struct IE_UAS_INFO
     {
         const static unsigned short IE_TYPE = E_IE_UAS_INFO;
         IE_UAS_INFO() { };
         zce_astring id/*UAS ID*/;
-        zce_astring name/*Ãû³Æ*/;
-        zce_astring location/*Î»ÖÃ*/;
-        zce_astring desc/*±¸×¢*/;
+        zce_astring name/*åç§°*/;
+        zce_astring location/*ä½ç½®*/;
+        zce_astring desc/*å¤‡æ³¨*/;
     };
     struct IE_CUSTOMER_INFO
     {
@@ -4817,8 +4817,8 @@ namespace gep
     {
         const static unsigned short IE_TYPE = E_IE_GRANTED_CUSTOMER_INFO;
         IE_GRANTED_CUSTOMER_INFO() { };
-        zce_astring grant_id/*ÊÚÈ¨¿Í»§ID*/;
-        zce_astring granted_id/*±»ÊÚÈ¨¿Í»§ID*/;
+        zce_astring grant_id/*æˆæƒå®¢æˆ·ID*/;
+        zce_astring granted_id/*è¢«æˆæƒå®¢æˆ·ID*/;
     };
     struct IE_FDCHANNELPRIV_INFO
     {
@@ -4832,7 +4832,7 @@ namespace gep
         std::vector<WARNIN_CHANNEL_EXT> wi_channel_ext;
         std::vector<WARNOUT_CHANNEL_EXT> wo_channel_ext;
         std::vector<NONSTANDARD_CHANNEL_EXT> ns_channel_ext;
-        std::vector<NONSTANDARD_CHANNEL_EXT> cf_channel_ext/*ÅäÖÃÍ¨µÀ£¬¹²ÓÃ½á¹¹*/;
+        std::vector<NONSTANDARD_CHANNEL_EXT> cf_channel_ext/*é…ç½®é€šé“ï¼Œå…±ç”¨ç»“æ„*/;
         std::vector<MIXTUREVIDEOIN_CHANNEL_EXT> mx_channel_ext;
     };
     struct IE_CHANNEL_NUMBER
@@ -4874,8 +4874,8 @@ namespace gep
         {
         }
 
-        CHANNEL_ID    channel_id/*ÊÓÆµÍ¨µÀºÅ*/;
-        zce_uint16    channel_type/*Í¨µÀÀàĞÍ£º0:Ö÷Í¨µÀ£¬ 1:´ÓÍ¨µÀ*/;
+        CHANNEL_ID    channel_id/*è§†é¢‘é€šé“å·*/;
+        zce_uint16    channel_type/*é€šé“ç±»å‹ï¼š0:ä¸»é€šé“ï¼Œ 1:ä»é€šé“*/;
         std::vector<MEDIATYPE_CAPACITY> media_capacity;
     };
     struct IE_SERIAL_CAPACITY
@@ -4905,7 +4905,7 @@ namespace gep
     {
         const static unsigned short IE_TYPE = E_IE_HTTP_PROXY;
         IE_HTTP_PROXY() { };
-        zce_astring proxy/*¸ñÊ½"ip=;port=;domainid="£¬Èç¹ûÃ»ÓĞdomainid£¬±íÊ¾±¾´úÀíÎªËùÓĞµÄdomian·şÎñ*/;
+        zce_astring proxy/*æ ¼å¼"ip=;port=;domainid="ï¼Œå¦‚æœæ²¡æœ‰domainidï¼Œè¡¨ç¤ºæœ¬ä»£ç†ä¸ºæ‰€æœ‰çš„domianæœåŠ¡*/;
     };
     struct IE_MONITOR_CHANNEL_PAIR
     {
@@ -4926,9 +4926,9 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Ñ²º½¼ÇÂ¼µÄID£¬±ØĞëÎ¨Ò»*/;
+        zce_uint16    id/*å·¡èˆªè®°å½•çš„IDï¼Œå¿…é¡»å”¯ä¸€*/;
         zce_uint16    reserve;
-        std::vector<CRUISE_ITEM> ie_cruise_item/*Ñ²º½¼ÇÂ¼*/;
+        std::vector<CRUISE_ITEM> ie_cruise_item/*å·¡èˆªè®°å½•*/;
     };
     struct IE_WATCH
     {
@@ -4946,10 +4946,10 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*ÊØÍû±àºÅ*/;
-        zce_byte    enable/*ÊÇ·ñÆôÓÃ*/;
-        zce_byte    type/*1:Ô¤ÖÃµã£»2£ºÑ²º½£»3£ºÉ¨Ãè*/;
-        zce_byte    content/*ÈôÎªÔ¤ÖÃµã ±íÊ¾Ô¤ÖÃµãID£»ÈôÎªÑ²º½ ±íÊ¾Ñ²º½ID£»ÈôÎªÉ¨Ãè ²»Ìî*/;
+        zce_uint16    id/*å®ˆæœ›ç¼–å·*/;
+        zce_byte    enable/*æ˜¯å¦å¯ç”¨*/;
+        zce_byte    type/*1:é¢„ç½®ç‚¹ï¼›2ï¼šå·¡èˆªï¼›3ï¼šæ‰«æ*/;
+        zce_byte    content/*è‹¥ä¸ºé¢„ç½®ç‚¹ è¡¨ç¤ºé¢„ç½®ç‚¹IDï¼›è‹¥ä¸ºå·¡èˆª è¡¨ç¤ºå·¡èˆªIDï¼›è‹¥ä¸ºæ‰«æ ä¸å¡«*/;
         zce_byte    begin_hour;
         zce_byte    begin_min;
         zce_byte    end_hour;
@@ -4959,19 +4959,19 @@ namespace gep
     {
         const static unsigned short IE_TYPE = E_IE_MUA;
         IE_MUA() { };
-        zce_astring model/*muaĞÍºÅ*/;
+        zce_astring model/*muaå‹å·*/;
     };
     struct IE_STRVERSION
     {
         const static unsigned short IE_TYPE = E_IE_STRVERSION;
         IE_STRVERSION() { };
-        zce_astring ver/*°æ±¾*/;
+        zce_astring ver/*ç‰ˆæœ¬*/;
     };
     struct MSG_HEADER : public zce_smartptr_mtbase
     {
         const static unsigned short MSG_TYPE = E_MSG_HEADER;
         static const char* type_name() { return ("MSG_HEADER");}
-        GEP_HEADER_T    ie_header/*ÏûÏ¢Í·*/;
+        GEP_HEADER_T    ie_header/*æ¶ˆæ¯å¤´*/;
     };
     typedef zce_smartptr<MSG_HEADER> MSG_HEADER_PTR;
 
@@ -4980,15 +4980,15 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_NEGOTIATE_REQ;
         static const char* type_name() { return ("MSG_NEGOTIATE_REQ");}
         IE_UA_ID    ie_ua_id/*UA_ID*/;
-        IE_NEGOTIATE_REQ    ie_nego_req/*µÇÂ½Ğ­ÉÌÇëÇó*/;
-        IE_ULONG    ie_net_type/*Ìî1*/;
-        std::vector<IE_UCHAR> ie_by_network/*ÍøÂçÇé¿ö£¬7-4±ÈÌØÎ»£º0x00×Ô¶¯Æ¥Åä 0x10RTPÀ©Õ¹Ğ­Òé 0x20ÄÏÍûÃ½ÌåĞ­Òé£¬3-0±ÈÌØÎ»£º0x00-AUTO 0x01-UDP 0x02-TCP 0x03-MULTICAST 0x04-UDP_TCP 0x05-TCP_UDP*/;
-        std::vector<IE_COMPRESS> ie_compress/* UA¶ËÖ§³ÖµÄÑ¹ËõËã·¨£¬0¸ö£¨±íÊ¾²»Ö§³ÖÑ¹Ëõ£©, 1¸ö»òÕß¶à¸ö£¨Ö§³Ö¶àÖÖËã·¨£¬UAS¿ÉÒÔÑ¡ÓÃÈÎÒâÒ»ÖÖ) */;
-        std::vector<IE_BALANCE_REDIRECT_FLAG> ie_balance_redirect/*ÓĞ´Ë¿ÉÑ¡Ïî±íÊ¾Ö§³Ö¸ºÔØ¾ùºâÖØ¶¨Ïò£¬1¸ºÔØ¾ùºâÖØ¶¨ÏòºóµÄµÇÂ¼£¬0·Ç¸ºÔØ¾ùºâÖØ¶¨ÏòµÇÂ¼£¬·şÎñÆ÷Ö»ÄÜ¶ÔÓĞ´Ë¿ÉÑ¡ÏîÇÒÖµÎª0µÄµÇÂ¼½øĞĞ¸ºÔØ¾ùºâÖØ¶¨Ïò*/;
-        std::vector<IE_NETADDRESS_ANY> ie_ip/*¿Í»§¶Ësocket connectÉÏuasÖ®ºó£¬È¡±¾µØµÄipµØÖ·£¬¶Ë¿Ú*/;
-        std::vector<IE_astring64> ie_mac/*¿Í»§¶Ësocket connectÉÏuasÖ®ºó£¬È¡±¾µØµÄipµØÖ·Ëù¶ÔÓ¦µÄMACµØÖ·¡£µÚ¶ş¸ö¸Ã½á¹¹ÎŞÎıËùÍø¹ØÄ£Ê½Ê±OCXµÇÂ¼ÒìµØÍø¹ØÌîÈëµÄ±¾µØÍø¹Øid£¬20Î»*/;
+        IE_NEGOTIATE_REQ    ie_nego_req/*ç™»é™†åå•†è¯·æ±‚*/;
+        IE_ULONG    ie_net_type/*å¡«1*/;
+        std::vector<IE_UCHAR> ie_by_network/*ç½‘ç»œæƒ…å†µï¼Œ7-4æ¯”ç‰¹ä½ï¼š0x00è‡ªåŠ¨åŒ¹é… 0x10RTPæ‰©å±•åè®® 0x20å—æœ›åª’ä½“åè®®ï¼Œ3-0æ¯”ç‰¹ä½ï¼š0x00-AUTO 0x01-UDP 0x02-TCP 0x03-MULTICAST 0x04-UDP_TCP 0x05-TCP_UDP*/;
+        std::vector<IE_COMPRESS> ie_compress/* UAç«¯æ”¯æŒçš„å‹ç¼©ç®—æ³•ï¼Œ0ä¸ªï¼ˆè¡¨ç¤ºä¸æ”¯æŒå‹ç¼©ï¼‰, 1ä¸ªæˆ–è€…å¤šä¸ªï¼ˆæ”¯æŒå¤šç§ç®—æ³•ï¼ŒUASå¯ä»¥é€‰ç”¨ä»»æ„ä¸€ç§) */;
+        std::vector<IE_BALANCE_REDIRECT_FLAG> ie_balance_redirect/*æœ‰æ­¤å¯é€‰é¡¹è¡¨ç¤ºæ”¯æŒè´Ÿè½½å‡è¡¡é‡å®šå‘ï¼Œ1è´Ÿè½½å‡è¡¡é‡å®šå‘åçš„ç™»å½•ï¼Œ0éè´Ÿè½½å‡è¡¡é‡å®šå‘ç™»å½•ï¼ŒæœåŠ¡å™¨åªèƒ½å¯¹æœ‰æ­¤å¯é€‰é¡¹ä¸”å€¼ä¸º0çš„ç™»å½•è¿›è¡Œè´Ÿè½½å‡è¡¡é‡å®šå‘*/;
+        std::vector<IE_NETADDRESS_ANY> ie_ip/*å®¢æˆ·ç«¯socket connectä¸Šuasä¹‹åï¼Œå–æœ¬åœ°çš„ipåœ°å€ï¼Œç«¯å£*/;
+        std::vector<IE_astring64> ie_mac/*å®¢æˆ·ç«¯socket connectä¸Šuasä¹‹åï¼Œå–æœ¬åœ°çš„ipåœ°å€æ‰€å¯¹åº”çš„MACåœ°å€ã€‚ç¬¬äºŒä¸ªè¯¥ç»“æ„æ— é”¡æ‰€ç½‘å…³æ¨¡å¼æ—¶OCXç™»å½•å¼‚åœ°ç½‘å…³å¡«å…¥çš„æœ¬åœ°ç½‘å…³idï¼Œ20ä½*/;
         std::vector<IE_MUA> ie_mua;
-        std::vector<IE_STRVERSION> ie_strversion/*Èç¹û´æÔÚ£¬Ê¹ÓÃÖ®×÷Îª¿Í»§¶Ë°æ±¾ºÅ£»Èç¹û²»´æÔÚ£¬Ê¹ÓÃIE_NEGOTIATE_REQÀïÃæµÄsoft_version×÷Îª¿Í»§¶Ë°æ±¾ºÅ*/;
+        std::vector<IE_STRVERSION> ie_strversion/*å¦‚æœå­˜åœ¨ï¼Œä½¿ç”¨ä¹‹ä½œä¸ºå®¢æˆ·ç«¯ç‰ˆæœ¬å·ï¼›å¦‚æœä¸å­˜åœ¨ï¼Œä½¿ç”¨IE_NEGOTIATE_REQé‡Œé¢çš„soft_versionä½œä¸ºå®¢æˆ·ç«¯ç‰ˆæœ¬å·*/;
     };
     typedef zce_smartptr<MSG_NEGOTIATE_REQ> MSG_NEGOTIATE_REQ_PTR;
 
@@ -4996,18 +4996,18 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_NEGOTIATE_RES;
         static const char* type_name() { return ("MSG_NEGOTIATE_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û<0£¬Ê§°Ü£¬¸ø³öÊ§°ÜÂë£» =0£º³É¹¦£» PTL_SUCCESS_UA_REDIRECT(0x00020002)£ºÖØ¶¨Ïò*/;
-        std::vector<IE_NEGOTIATE_RES> ie_nego_res/*µÇÂ½Ğ­ÉÌÏìÓ¦*/;
-        std::vector<IE_NETADDRESS> ie_netaddr/*³É¹¦Ê±(=1)ÌîUAS¼ì²âµ½µÄUAÍâ²¿µØÖ·*/;
-        std::vector<IE_astring64> ie_url/*Èí¼şÉı¼¶URL*/;
-        std::vector<IE_NETADDRESS_IPV6> ie_netaddr_ipv6/*³É¹¦Ê±(=1)ÌîUAS¼ì²âµ½µÄUAÍâ²¿ipv6µØÖ·*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœ<0ï¼Œå¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼› =0ï¼šæˆåŠŸï¼› PTL_SUCCESS_UA_REDIRECT(0x00020002)ï¼šé‡å®šå‘*/;
+        std::vector<IE_NEGOTIATE_RES> ie_nego_res/*ç™»é™†åå•†å“åº”*/;
+        std::vector<IE_NETADDRESS> ie_netaddr/*æˆåŠŸæ—¶(=1)å¡«UASæ£€æµ‹åˆ°çš„UAå¤–éƒ¨åœ°å€*/;
+        std::vector<IE_astring64> ie_url/*è½¯ä»¶å‡çº§URL*/;
+        std::vector<IE_NETADDRESS_IPV6> ie_netaddr_ipv6/*æˆåŠŸæ—¶(=1)å¡«UASæ£€æµ‹åˆ°çš„UAå¤–éƒ¨ipv6åœ°å€*/;
         std::vector<IE_UAS_VERSION> ie_uas_version;
-        std::vector<IE_astring64> ie_web_url/*WEB·şÎñURL*/;
-        std::vector<IE_SERVER> ie_server_list/* ¿ÉÓÃµÄ·şÎñÆ÷µØÖ·ÁĞ±í, ipv4, ipv6¶¼ÓÃastringÀ´±íÊ¾*/;
-        std::vector<IE_COMPRESS> ie_compress/* UASÖ§³ÖµÄÑ¹ËõËã·¨£¬0¸ö£¨±íÊ¾²»Ö§³ÖÑ¹Ëõ£©»òÕß1¸ö£¨±íÊ¾¿ÉÒÔ²ÉÓÃÕâÖÖÑ¹ËõËã·¨£© */;
-        std::vector<IE_astring254> ie_map_url/*µç×ÓµØÍ¼URLµØÖ·*/;
-        std::vector<IE_HTTP_PROXY> ie_http_proxy/*httpÏÂÔØ´úÀí*/;
-        std::vector<IE_ULONG> ie_streaming_time_warn/*Á÷Ã½ÌåÌáĞÑÊ±¼ä£¬·ÖÖÓ*/;
+        std::vector<IE_astring64> ie_web_url/*WEBæœåŠ¡URL*/;
+        std::vector<IE_SERVER> ie_server_list/* å¯ç”¨çš„æœåŠ¡å™¨åœ°å€åˆ—è¡¨, ipv4, ipv6éƒ½ç”¨astringæ¥è¡¨ç¤º*/;
+        std::vector<IE_COMPRESS> ie_compress/* UASæ”¯æŒçš„å‹ç¼©ç®—æ³•ï¼Œ0ä¸ªï¼ˆè¡¨ç¤ºä¸æ”¯æŒå‹ç¼©ï¼‰æˆ–è€…1ä¸ªï¼ˆè¡¨ç¤ºå¯ä»¥é‡‡ç”¨è¿™ç§å‹ç¼©ç®—æ³•ï¼‰ */;
+        std::vector<IE_astring254> ie_map_url/*ç”µå­åœ°å›¾URLåœ°å€*/;
+        std::vector<IE_HTTP_PROXY> ie_http_proxy/*httpä¸‹è½½ä»£ç†*/;
+        std::vector<IE_ULONG> ie_streaming_time_warn/*æµåª’ä½“æé†’æ—¶é—´ï¼Œåˆ†é’Ÿ*/;
     };
     typedef zce_smartptr<MSG_NEGOTIATE_RES> MSG_NEGOTIATE_RES_PTR;
 
@@ -5015,7 +5015,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_LOGIN_REQ;
         static const char* type_name() { return ("MSG_LOGIN_REQ");}
-        IE_CHAR16    ie_pwd/*¼ÓÃÜºó×Ö·û´®*/;
+        IE_CHAR16    ie_pwd/*åŠ å¯†åå­—ç¬¦ä¸²*/;
     };
     typedef zce_smartptr<MSG_LOGIN_REQ> MSG_LOGIN_REQ_PTR;
 
@@ -5024,9 +5024,9 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_LOGIN_RES;
         static const char* type_name() { return ("MSG_LOGIN_RES");}
         IE_RESULT    ie_result;
-        std::vector<IE_ULONG> ie_heart_time/*ĞÄÌø¼ä¸ôÊ±¼ä*/;
-        std::vector<IE_UCHAR> ie_sms_auth_code/*ÊÇ·ñĞèÒª¶ÌĞÅµÇÂ¼ÑéÖ¤Âë*/;
-        std::vector<IE_USHORT> ie_ssu_admin_port/*´æÔÚÊ±±íÃ÷ÊÇSSU£¬¿Í»§¶ËÖ±½ÓShellExecute´ò¿ªurl(¿Í»§¶ËµÇÂ¼µØÖ·£¬¼ÓÉÏÕâ¸ö¶Ë¿Ú¹¹½¨³Éhttp://ip:port)½øÈëssu¹ÜÀíÒ³Ãæ*/;
+        std::vector<IE_ULONG> ie_heart_time/*å¿ƒè·³é—´éš”æ—¶é—´*/;
+        std::vector<IE_UCHAR> ie_sms_auth_code/*æ˜¯å¦éœ€è¦çŸ­ä¿¡ç™»å½•éªŒè¯ç */;
+        std::vector<IE_USHORT> ie_ssu_admin_port/*å­˜åœ¨æ—¶è¡¨æ˜æ˜¯SSUï¼Œå®¢æˆ·ç«¯ç›´æ¥ShellExecuteæ‰“å¼€url(å®¢æˆ·ç«¯ç™»å½•åœ°å€ï¼ŒåŠ ä¸Šè¿™ä¸ªç«¯å£æ„å»ºæˆhttp://ip:port)è¿›å…¥ssuç®¡ç†é¡µé¢*/;
     };
     typedef zce_smartptr<MSG_LOGIN_RES> MSG_LOGIN_RES_PTR;
 
@@ -5034,7 +5034,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_SMS_AUTH_REQ;
         static const char* type_name() { return ("MSG_SMS_AUTH_REQ");}
-        IE_astring    ie_sms_auth_code/*¶ÌĞÅµÇÂ¼ÑéÖ¤Âë*/;
+        IE_astring    ie_sms_auth_code/*çŸ­ä¿¡ç™»å½•éªŒè¯ç */;
     };
     typedef zce_smartptr<MSG_SMS_AUTH_REQ> MSG_SMS_AUTH_REQ_PTR;
 
@@ -5068,7 +5068,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_LIST_REQ;
         static const char* type_name() { return ("MSG_UA_LIST_REQ");}
-        std::vector<IE_UA_ID> ie_ua_id/*ÓÃ»§ID£¨²»ÌîÊÇ»ñÈ¡ËùÓĞ£©*/;
+        std::vector<IE_UA_ID> ie_ua_id/*ç”¨æˆ·IDï¼ˆä¸å¡«æ˜¯è·å–æ‰€æœ‰ï¼‰*/;
     };
     typedef zce_smartptr<MSG_UA_LIST_REQ> MSG_UA_LIST_REQ_PTR;
 
@@ -5076,8 +5076,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_LIST_RES;
         static const char* type_name() { return ("MSG_UA_LIST_RES");}
-        IE_RESULT    ie_result/*<0:´íÎóÔ­Òò>=0:ÓÃ»§×ÜÊı*/;
-        std::vector<IE_UA> ie_ua/*0µ½¶à¸öÓÃ»§ÊµÀı*/;
+        IE_RESULT    ie_result/*<0:é”™è¯¯åŸå› >=0:ç”¨æˆ·æ€»æ•°*/;
+        std::vector<IE_UA> ie_ua/*0åˆ°å¤šä¸ªç”¨æˆ·å®ä¾‹*/;
     };
     typedef zce_smartptr<MSG_UA_LIST_RES> MSG_UA_LIST_RES_PTR;
 
@@ -5085,7 +5085,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_MODIFY_REQ;
         static const char* type_name() { return ("MSG_UA_MODIFY_REQ");}
-        IE_UA_MODIFY    ie_ua_modify/*ĞŞ¸ÄÓÃ»§ĞÅÏ¢*/;
+        IE_UA_MODIFY    ie_ua_modify/*ä¿®æ”¹ç”¨æˆ·ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_UA_MODIFY_REQ> MSG_UA_MODIFY_REQ_PTR;
 
@@ -5117,7 +5117,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_LIST_REQ;
         static const char* type_name() { return ("MSG_FD_LIST_REQ");}
-        std::vector<IE_UCHAR> ie_fdver/*Èô3·µ»ØIE_FD_INFO_V3ÁĞ±í£»4·µ»ØIE_FD_INFO_V4ÁĞ±í£»Îª¿Õ»òÕßÆäËûÖµ·µ»ØIE_FD_INFOÁĞ±í*/;
+        std::vector<IE_UCHAR> ie_fdver/*è‹¥3è¿”å›IE_FD_INFO_V3åˆ—è¡¨ï¼›4è¿”å›IE_FD_INFO_V4åˆ—è¡¨ï¼›ä¸ºç©ºæˆ–è€…å…¶ä»–å€¼è¿”å›IE_FD_INFOåˆ—è¡¨*/;
     };
     typedef zce_smartptr<MSG_FD_LIST_REQ> MSG_FD_LIST_REQ_PTR;
 
@@ -5126,9 +5126,9 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_FD_LIST_RES;
         static const char* type_name() { return ("MSG_FD_LIST_RES");}
         IE_RESULT    ie_result;
-        std::vector<IE_FD_INFO> ie_fd_info/*0µ½¶à¸öÉè±¸*/;
-        std::vector<IE_FD_INFO_V3> ie_fd_info_v3/*0µ½¶à¸öÉè±¸*/;
-        std::vector<IE_FD_INFO_V4> ie_fd_info_v4/*0µ½¶à¸öÉè±¸*/;
+        std::vector<IE_FD_INFO> ie_fd_info/*0åˆ°å¤šä¸ªè®¾å¤‡*/;
+        std::vector<IE_FD_INFO_V3> ie_fd_info_v3/*0åˆ°å¤šä¸ªè®¾å¤‡*/;
+        std::vector<IE_FD_INFO_V4> ie_fd_info_v4/*0åˆ°å¤šä¸ªè®¾å¤‡*/;
     };
     typedef zce_smartptr<MSG_FD_LIST_RES> MSG_FD_LIST_RES_PTR;
 
@@ -5136,7 +5136,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CHANNEL_LIST_REQ;
         static const char* type_name() { return ("MSG_CHANNEL_LIST_REQ");}
-        std::vector<IE_CHANNEL_ID> ie_channel_id/*Éè±¸Í¨µÀË÷Òı£¬IEÎª¿Õ±íÊ¾²éÑ¯ËùÓĞÍ¨µÀ*/;
+        std::vector<IE_CHANNEL_ID> ie_channel_id/*è®¾å¤‡é€šé“ç´¢å¼•ï¼ŒIEä¸ºç©ºè¡¨ç¤ºæŸ¥è¯¢æ‰€æœ‰é€šé“*/;
     };
     typedef zce_smartptr<MSG_CHANNEL_LIST_REQ> MSG_CHANNEL_LIST_REQ_PTR;
 
@@ -5144,15 +5144,15 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CHANNEL_LIST_RES;
         static const char* type_name() { return ("MSG_CHANNEL_LIST_RES");}
-        IE_RESULT    ie_result/*<0:´íÎóÔ­Òò>=0:Í¨µÀĞÅÏ¢×ÜÊı*/;
-        std::vector<IE_VIDEOIN_CHANNEL> ie_video_in/*0µ½¶à¸öÍ¨µÀ*/;
-        std::vector<IE_VIDEOOUT_CHANNEL> ie_video_out/*0µ½¶à¸öÍ¨µÀ*/;
-        std::vector<IE_AUDIOIN_CHANNEL> ie_audio_in/*0µ½¶à¸öÍ¨µÀ*/;
-        std::vector<IE_AUDIOOUT_CHANNEL> ie_audio_out/*0µ½¶à¸öÍ¨µÀ*/;
-        std::vector<IE_WARNIN_CHANNEL> ie_warn_in/*0µ½¶à¸öÍ¨µÀ*/;
-        std::vector<IE_WARNOUT_CHANNEL> ie_warn_out/*0µ½¶à¸öÍ¨µÀ*/;
-        std::vector<IE_NONSTANDARD_CHANNEL> ie_non_standard/*0µ½¶à¸öÍ¨µÀ*/;
-        std::vector<IE_MIXTUREVIDEOIN_CHANNEL> ie_mixture/*0µ½¶à¸öÍ¨µÀ*/;
+        IE_RESULT    ie_result/*<0:é”™è¯¯åŸå› >=0:é€šé“ä¿¡æ¯æ€»æ•°*/;
+        std::vector<IE_VIDEOIN_CHANNEL> ie_video_in/*0åˆ°å¤šä¸ªé€šé“*/;
+        std::vector<IE_VIDEOOUT_CHANNEL> ie_video_out/*0åˆ°å¤šä¸ªé€šé“*/;
+        std::vector<IE_AUDIOIN_CHANNEL> ie_audio_in/*0åˆ°å¤šä¸ªé€šé“*/;
+        std::vector<IE_AUDIOOUT_CHANNEL> ie_audio_out/*0åˆ°å¤šä¸ªé€šé“*/;
+        std::vector<IE_WARNIN_CHANNEL> ie_warn_in/*0åˆ°å¤šä¸ªé€šé“*/;
+        std::vector<IE_WARNOUT_CHANNEL> ie_warn_out/*0åˆ°å¤šä¸ªé€šé“*/;
+        std::vector<IE_NONSTANDARD_CHANNEL> ie_non_standard/*0åˆ°å¤šä¸ªé€šé“*/;
+        std::vector<IE_MIXTUREVIDEOIN_CHANNEL> ie_mixture/*0åˆ°å¤šä¸ªé€šé“*/;
     };
     typedef zce_smartptr<MSG_CHANNEL_LIST_RES> MSG_CHANNEL_LIST_RES_PTR;
 
@@ -5167,8 +5167,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_LIST_DOMAIN_RES;
         static const char* type_name() { return ("MSG_LIST_DOMAIN_RES");}
-        IE_RESULT    ie_result/*<0:´íÎóÔ­Òò>=0:Óò×ÜÊı*/;
-        std::vector<IE_DOMAIN_INFO> ie_domain_info/*ÓòĞÅÏ¢*/;
+        IE_RESULT    ie_result/*<0:é”™è¯¯åŸå› >=0:åŸŸæ€»æ•°*/;
+        std::vector<IE_DOMAIN_INFO> ie_domain_info/*åŸŸä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_LIST_DOMAIN_RES> MSG_LIST_DOMAIN_RES_PTR;
 
@@ -5178,7 +5178,7 @@ namespace gep
         static const char* type_name() { return ("MSG_HEART_BEAT_REQ");}
         std::vector<IE_CHANNEL_STATUS> ie_channel_status;
         std::vector<IE_CHANNEL_STATUS_V2> ie_channel_status_v2;
-        std::vector<IE_TIME> ie_time/*Éè±¸ÏµÍ³Ê±¼ä(time_t)*/;
+        std::vector<IE_TIME> ie_time/*è®¾å¤‡ç³»ç»Ÿæ—¶é—´(time_t)*/;
     };
     typedef zce_smartptr<MSG_HEART_BEAT_REQ> MSG_HEART_BEAT_REQ_PTR;
 
@@ -5186,7 +5186,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_HEART_BEAT_RES;
         static const char* type_name() { return ("MSG_HEART_BEAT_RES");}
-        IE_TIME    ie_time/*ÏµÍ³Ê±¼ä(time_t)*/;
+        IE_TIME    ie_time/*ç³»ç»Ÿæ—¶é—´(time_t)*/;
     };
     typedef zce_smartptr<MSG_HEART_BEAT_RES> MSG_HEART_BEAT_RES_PTR;
 
@@ -5194,7 +5194,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_ROLE_LIST_REQ;
         static const char* type_name() { return ("MSG_ROLE_LIST_REQ");}
-        std::vector<IE_ROLE_ID> ie_role_id/*½ÇÉ«ID£¨²»ÌîÊÇ»ñÈ¡ËùÓĞ£©*/;
+        std::vector<IE_ROLE_ID> ie_role_id/*è§’è‰²IDï¼ˆä¸å¡«æ˜¯è·å–æ‰€æœ‰ï¼‰*/;
     };
     typedef zce_smartptr<MSG_ROLE_LIST_REQ> MSG_ROLE_LIST_REQ_PTR;
 
@@ -5202,8 +5202,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_ROLE_LIST_RES;
         static const char* type_name() { return ("MSG_ROLE_LIST_RES");}
-        IE_RESULT    ie_result/*<0:´íÎóÔ­Òò>=0: ½ÇÉ«×ÜÊı*/;
-        std::vector<IE_ROLE> ie_role/*0µ½¶à¸ö½ÇÉ«ĞÅÏ¢*/;
+        IE_RESULT    ie_result/*<0:é”™è¯¯åŸå› >=0: è§’è‰²æ€»æ•°*/;
+        std::vector<IE_ROLE> ie_role/*0åˆ°å¤šä¸ªè§’è‰²ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_ROLE_LIST_RES> MSG_ROLE_LIST_RES_PTR;
 
@@ -5211,7 +5211,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_ROLE_FD_PRIVILEGE_REQ;
         static const char* type_name() { return ("MSG_ROLE_FD_PRIVILEGE_REQ");}
-        IE_ROLE_ID    ie_role_id/*½ÇÉ«ID*/;
+        IE_ROLE_ID    ie_role_id/*è§’è‰²ID*/;
     };
     typedef zce_smartptr<MSG_ROLE_FD_PRIVILEGE_REQ> MSG_ROLE_FD_PRIVILEGE_REQ_PTR;
 
@@ -5219,8 +5219,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_ROLE_FD_PRIVILEGE_RES;
         static const char* type_name() { return ("MSG_ROLE_FD_PRIVILEGE_RES");}
-        IE_RESULT    ie_result/*<0:´íÎóÔ­Òò>=0: ÓÃ»§Éè±¸È¨ÏŞ×ÜÊı*/;
-        std::vector<IE_ROLE_FD_AUTHENTICATION> ie_auth/*½ÇÉ«È¨ÏŞ¶ÔÓ¦ĞÅÏ¢*/;
+        IE_RESULT    ie_result/*<0:é”™è¯¯åŸå› >=0: ç”¨æˆ·è®¾å¤‡æƒé™æ€»æ•°*/;
+        std::vector<IE_ROLE_FD_AUTHENTICATION> ie_auth/*è§’è‰²æƒé™å¯¹åº”ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_ROLE_FD_PRIVILEGE_RES> MSG_ROLE_FD_PRIVILEGE_RES_PTR;
 
@@ -5229,10 +5229,10 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_UA_ADD_REQ;
         static const char* type_name() { return ("MSG_UA_ADD_REQ");}
         IE_UA_ADD    ie_ua_add;
-        IE_CHAR16    ie_pwd/*Md5ºóµÄÃÜÂë*/;
-        IE_UCHAR    ie_type/*Ìí¼ÓµÄÓÃ»§ÀàĞÍ:'A':¹ÜÀíÔ±,'O':²Ù×÷Ô±*/;
-        IE_ROLE_ID    ie_role_id/*½ÇÉ«ID*/;
-        IE_UCHAR    ie_admin_type/*ÓÃ»§ÀàĞÍ: 1 ÆÕÍ¨ÈËÔ± 3 Éè±¸¹ÜÀíÔ± 7 Éè±¸¹ÜÀíÔ±¼ÓÈËÊÂ¹ÜÀíÔ±*/;
+        IE_CHAR16    ie_pwd/*Md5åçš„å¯†ç */;
+        IE_UCHAR    ie_type/*æ·»åŠ çš„ç”¨æˆ·ç±»å‹:'A':ç®¡ç†å‘˜,'O':æ“ä½œå‘˜*/;
+        IE_ROLE_ID    ie_role_id/*è§’è‰²ID*/;
+        IE_UCHAR    ie_admin_type/*ç”¨æˆ·ç±»å‹: 1 æ™®é€šäººå‘˜ 3 è®¾å¤‡ç®¡ç†å‘˜ 7 è®¾å¤‡ç®¡ç†å‘˜åŠ äººäº‹ç®¡ç†å‘˜*/;
     };
     typedef zce_smartptr<MSG_UA_ADD_REQ> MSG_UA_ADD_REQ_PTR;
 
@@ -5241,7 +5241,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_UA_ADD_RES;
         static const char* type_name() { return ("MSG_UA_ADD_RES");}
         IE_RESULT    ie_result;
-        std::vector<IE_UA_ID> ie_ua_id/*Èç¹ûÌí¼Ó³É¹¦·µ»ØUA ID*/;
+        std::vector<IE_UA_ID> ie_ua_id/*å¦‚æœæ·»åŠ æˆåŠŸè¿”å›UA ID*/;
     };
     typedef zce_smartptr<MSG_UA_ADD_RES> MSG_UA_ADD_RES_PTR;
 
@@ -5265,7 +5265,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_ROLE_PRIVILEGE_ADMIN_REQ;
         static const char* type_name() { return ("MSG_ROLE_PRIVILEGE_ADMIN_REQ");}
-        IE_ROLE_PRIV_ADMIN    ie_admin/*È¨ÏŞĞŞ¸Ä*/;
+        IE_ROLE_PRIV_ADMIN    ie_admin/*æƒé™ä¿®æ”¹*/;
     };
     typedef zce_smartptr<MSG_ROLE_PRIVILEGE_ADMIN_REQ> MSG_ROLE_PRIVILEGE_ADMIN_REQ_PTR;
 
@@ -5289,8 +5289,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_OP_LOG_RES;
         static const char* type_name() { return ("MSG_QUERY_OP_LOG_RES");}
-        IE_RESULT    ie_result/*<0:´íÎóÔ­Òò>=0:²Ù×÷ÈÕÖ¾×ÜÊı*/;
-        std::vector<IE_OPERATE_LOG> ie_res/*ÈÕÖ¾¼ÇÂ¼*/;
+        IE_RESULT    ie_result/*<0:é”™è¯¯åŸå› >=0:æ“ä½œæ—¥å¿—æ€»æ•°*/;
+        std::vector<IE_OPERATE_LOG> ie_res/*æ—¥å¿—è®°å½•*/;
     };
     typedef zce_smartptr<MSG_QUERY_OP_LOG_RES> MSG_QUERY_OP_LOG_RES_PTR;
 
@@ -5307,7 +5307,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_DEAL_ALARM_RES;
         static const char* type_name() { return ("MSG_DEAL_ALARM_RES");}
-        IE_RESULT    ie_result/*<0:´íÎóÔ­Òò=0: ³É¹¦*/;
+        IE_RESULT    ie_result/*<0:é”™è¯¯åŸå› =0: æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_DEAL_ALARM_RES> MSG_DEAL_ALARM_RES_PTR;
 
@@ -5354,8 +5354,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_PRIVILEGE_RES;
         static const char* type_name() { return ("MSG_UA_PRIVILEGE_RES");}
-        IE_RESULT    ie_result/*<0:´íÎóÔ­Òò>=0: ÓÃ»§Éè±¸È¨ÏŞ×ÜÊı*/;
-        std::vector<IE_UA_FD_AUTHENTICATION> ie_auth/*ÓÃ»§Éè±¸²Ù×÷È¨ÏŞ*/;
+        IE_RESULT    ie_result/*<0:é”™è¯¯åŸå› >=0: ç”¨æˆ·è®¾å¤‡æƒé™æ€»æ•°*/;
+        std::vector<IE_UA_FD_AUTHENTICATION> ie_auth/*ç”¨æˆ·è®¾å¤‡æ“ä½œæƒé™*/;
     };
     typedef zce_smartptr<MSG_UA_PRIVILEGE_RES> MSG_UA_PRIVILEGE_RES_PTR;
 
@@ -5363,7 +5363,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_QUALITY_NOTIFY;
         static const char* type_name() { return ("MSG_UA_QUALITY_NOTIFY");}
-        IE_QUALITY_REPORT    ie_report/*Í¨µÀºÅ*/;
+        IE_QUALITY_REPORT    ie_report/*é€šé“å·*/;
     };
     typedef zce_smartptr<MSG_UA_QUALITY_NOTIFY> MSG_UA_QUALITY_NOTIFY_PTR;
 
@@ -5405,12 +5405,12 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_MONITORSTART_REQ;
         static const char* type_name() { return ("MSG_UA_MONITORSTART_REQ");}
-        std::vector<IE_NETADDRESS> ie_netaddr/*µØÖ·*/;
+        std::vector<IE_NETADDRESS> ie_netaddr/*åœ°å€*/;
         IE_CHANNEL_ID    ie_channel_id;
         std::vector<IE_CHANNEL_INFO> ie_channel_info;
-        std::vector<IE_PORT_RANGE> ie_portrange/*¶Ë¿Ú·¶Î§*/;
-        std::vector<IE_NETADDRESS_IPV6> ie_netaddr_ipv6/*µØÖ·(IPV6)*/;
-        std::vector<IE_NETADDRESS_ANY> ie_netaddress_any/*¼¶ÁªÊ±ÌîuaµÄÕæÊµµØÖ·*/;
+        std::vector<IE_PORT_RANGE> ie_portrange/*ç«¯å£èŒƒå›´*/;
+        std::vector<IE_NETADDRESS_IPV6> ie_netaddr_ipv6/*åœ°å€(IPV6)*/;
+        std::vector<IE_NETADDRESS_ANY> ie_netaddress_any/*çº§è”æ—¶å¡«uaçš„çœŸå®åœ°å€*/;
     };
     typedef zce_smartptr<MSG_UA_MONITORSTART_REQ> MSG_UA_MONITORSTART_REQ_PTR;
 
@@ -5431,7 +5431,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_UA_MONITORSTOP_REQ;
         static const char* type_name() { return ("MSG_UA_MONITORSTOP_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        std::vector<IE_CHAR16> ie_guid/*16×Ö½ÚµÄguid,±êÊ¶¸Ã¼à¿ØID*/;
+        std::vector<IE_CHAR16> ie_guid/*16å­—èŠ‚çš„guid,æ ‡è¯†è¯¥ç›‘æ§ID*/;
     };
     typedef zce_smartptr<MSG_UA_MONITORSTOP_REQ> MSG_UA_MONITORSTOP_REQ_PTR;
 
@@ -5447,7 +5447,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_THIRD_MONITORSTART_REQ;
         static const char* type_name() { return ("MSG_UA_THIRD_MONITORSTART_REQ");}
-        IE_MONITOR_CHANNEL_PAIR    channel_pair/*Í¨µÀ¶Ô*/;
+        IE_MONITOR_CHANNEL_PAIR    channel_pair/*é€šé“å¯¹*/;
     };
     typedef zce_smartptr<MSG_UA_THIRD_MONITORSTART_REQ> MSG_UA_THIRD_MONITORSTART_REQ_PTR;
 
@@ -5456,7 +5456,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_UA_THIRD_MONITORSTART_RES;
         static const char* type_name() { return ("MSG_UA_THIRD_MONITORSTART_RES");}
         IE_RESULT    ie_result;
-        std::vector<IE_CHAR16> ie_guid/*16×Ö½ÚµÄguid,±êÊ¶¸Ã¼à¿ØID*/;
+        std::vector<IE_CHAR16> ie_guid/*16å­—èŠ‚çš„guid,æ ‡è¯†è¯¥ç›‘æ§ID*/;
     };
     typedef zce_smartptr<MSG_UA_THIRD_MONITORSTART_RES> MSG_UA_THIRD_MONITORSTART_RES_PTR;
 
@@ -5464,7 +5464,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_THIRD_MONITORSTOP_REQ;
         static const char* type_name() { return ("MSG_UA_THIRD_MONITORSTOP_REQ");}
-        IE_CHAR16    ie_guid/*16×Ö½ÚµÄguid,±êÊ¶¸Ã¼à¿ØID*/;
+        IE_CHAR16    ie_guid/*16å­—èŠ‚çš„guid,æ ‡è¯†è¯¥ç›‘æ§ID*/;
     };
     typedef zce_smartptr<MSG_UA_THIRD_MONITORSTOP_REQ> MSG_UA_THIRD_MONITORSTOP_REQ_PTR;
 
@@ -5480,7 +5480,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_RECORDSTART_REQ;
         static const char* type_name() { return ("MSG_UA_RECORDSTART_REQ");}
-        IE_UCHAR    ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ*/;
+        IE_UCHAR    ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ*/;
         IE_CHANNEL_ID    ie_channel_id;
         std::vector<IE_CHANNEL_INFO> ie_channel_info;
         IE_RECORDSTART_REQ    ie_req;
@@ -5501,10 +5501,10 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_RECORDSTOP_REQ;
         static const char* type_name() { return ("MSG_UA_RECORDSTOP_REQ");}
-        IE_UCHAR    ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ*/;
+        IE_UCHAR    ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ*/;
         IE_CHANNEL_ID    ie_channel_id;
         std::vector<IE_UCHAR> ie_qos;
-        std::vector<IE_CHAR16> ie_guid/*16×Ö½ÚµÄguid,±êÊ¶¸ÃÂ¼ÏñID*/;
+        std::vector<IE_CHAR16> ie_guid/*16å­—èŠ‚çš„guid,æ ‡è¯†è¯¥å½•åƒID*/;
     };
     typedef zce_smartptr<MSG_UA_RECORDSTOP_REQ> MSG_UA_RECORDSTOP_REQ_PTR;
 
@@ -5513,7 +5513,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_UA_RECORDSTOP_RES;
         static const char* type_name() { return ("MSG_UA_RECORDSTOP_RES");}
         IE_RESULT    ie_result;
-        std::vector<IE_ULONG> ie_stop_time/*Í£Ö¹Ê±¼ä*/;
+        std::vector<IE_ULONG> ie_stop_time/*åœæ­¢æ—¶é—´*/;
     };
     typedef zce_smartptr<MSG_UA_RECORDSTOP_RES> MSG_UA_RECORDSTOP_RES_PTR;
 
@@ -5521,15 +5521,15 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_PLAYBACKSTART_REQ;
         static const char* type_name() { return ("MSG_UA_PLAYBACKSTART_REQ");}
-        IE_UCHAR    ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ*/;
+        IE_UCHAR    ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ*/;
         IE_CHANNEL_ID    ie_channel_id;
         std::vector<IE_CHANNEL_INFO> ie_channel_info;
-        IE_TIME_FILE    ie_time_file/*»Ø·ÅÄ£Ê½²ÎÊı*/;
+        IE_TIME_FILE    ie_time_file/*å›æ”¾æ¨¡å¼å‚æ•°*/;
         std::vector<IE_NETADDRESS> ie_netaddr;
-        std::vector<IE_PORT_RANGE> ie_portrange/*¶Ë¿Ú·¶Î§*/;
-        std::vector<IE_NETADDRESS_IPV6> ie_netaddr_ipv6/*µØÖ·(IPV6)*/;
-        std::vector<IE_TIME_FILE_V2> ie_time_file_v2/*»Ø·ÅÄ£Ê½²ÎÊıV2°æ±¾*/;
-        std::vector<IE_NETADDRESS_ANY> ie_netaddress_any/*¼¶ÁªÊ±ÌîuaµÄÕæÊµµØÖ·*/;
+        std::vector<IE_PORT_RANGE> ie_portrange/*ç«¯å£èŒƒå›´*/;
+        std::vector<IE_NETADDRESS_IPV6> ie_netaddr_ipv6/*åœ°å€(IPV6)*/;
+        std::vector<IE_TIME_FILE_V2> ie_time_file_v2/*å›æ”¾æ¨¡å¼å‚æ•°V2ç‰ˆæœ¬*/;
+        std::vector<IE_NETADDRESS_ANY> ie_netaddress_any/*çº§è”æ—¶å¡«uaçš„çœŸå®åœ°å€*/;
     };
     typedef zce_smartptr<MSG_UA_PLAYBACKSTART_REQ> MSG_UA_PLAYBACKSTART_REQ_PTR;
 
@@ -5538,9 +5538,9 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_UA_PLAYBACKSTART_RES;
         static const char* type_name() { return ("MSG_UA_PLAYBACKSTART_RES");}
         IE_RESULT    ie_result;
-        std::vector<IE_SCHEDULE_NOTIFY> ie_res/*Ç°¶ËÏÂÔØµ÷¶ÈĞÅÏ¢*/;
-        std::vector<IE_astring254> ie_url/*ÖĞĞÄÏÂÔØurl*/;
-        std::vector<IE_SCHEDULE_NOTIFY_IPV6> ie_res_ipv6/*Ç°¶ËÏÂÔØµ÷¶ÈĞÅÏ¢*/;
+        std::vector<IE_SCHEDULE_NOTIFY> ie_res/*å‰ç«¯ä¸‹è½½è°ƒåº¦ä¿¡æ¯*/;
+        std::vector<IE_astring254> ie_url/*ä¸­å¿ƒä¸‹è½½url*/;
+        std::vector<IE_SCHEDULE_NOTIFY_IPV6> ie_res_ipv6/*å‰ç«¯ä¸‹è½½è°ƒåº¦ä¿¡æ¯*/;
         std::vector<IE_CHANNEL_INFO> ie_channel_info;
     };
     typedef zce_smartptr<MSG_UA_PLAYBACKSTART_RES> MSG_UA_PLAYBACKSTART_RES_PTR;
@@ -5549,9 +5549,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_PLAYBACKSTOP_REQ;
         static const char* type_name() { return ("MSG_UA_PLAYBACKSTOP_REQ");}
-        IE_UCHAR    ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ*/;
+        IE_UCHAR    ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ*/;
         IE_CHANNEL_ID    ie_channel_id;
-        std::vector<IE_CHAR16> ie_guid/*16×Ö½ÚµÄguid,±êÊ¶¸Ã»Ø·ÅID*/;
+        std::vector<IE_CHAR16> ie_guid/*16å­—èŠ‚çš„guid,æ ‡è¯†è¯¥å›æ”¾ID*/;
     };
     typedef zce_smartptr<MSG_UA_PLAYBACKSTOP_REQ> MSG_UA_PLAYBACKSTOP_REQ_PTR;
 
@@ -5567,16 +5567,16 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_DOWNLOADSTART_REQ;
         static const char* type_name() { return ("MSG_UA_DOWNLOADSTART_REQ");}
-        IE_UCHAR    ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ*/;
+        IE_UCHAR    ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ*/;
         IE_CHANNEL_ID    ie_channel_id;
         std::vector<IE_CHANNEL_INFO> ie_channel_info;
-        IE_TIME_FILE    ie_time_file/*ÏÂÔØÄ£Ê½²ÎÊı*/;
+        IE_TIME_FILE    ie_time_file/*ä¸‹è½½æ¨¡å¼å‚æ•°*/;
         std::vector<IE_NETADDRESS> ie_netaddr;
-        std::vector<IE_PORT_RANGE> ie_portrange/*¶Ë¿Ú·¶Î§*/;
-        std::vector<IE_NETADDRESS_IPV6> ie_netaddr_ipv6/*µØÖ·(IPV6)*/;
-        std::vector<IE_TIME_FILE_V2> ie_time_file_v2/*ÏÂÔØÄ£Ê½²ÎÊıV2°æ±¾*/;
-        std::vector<IE_astring> ie_storage_area_id/*´æ´¢ÇøÓòID*/;
-        std::vector<IE_NETADDRESS_ANY> ie_netaddress_any/*¼¶ÁªÊ±ÌîuaµÄÕæÊµµØÖ·*/;
+        std::vector<IE_PORT_RANGE> ie_portrange/*ç«¯å£èŒƒå›´*/;
+        std::vector<IE_NETADDRESS_IPV6> ie_netaddr_ipv6/*åœ°å€(IPV6)*/;
+        std::vector<IE_TIME_FILE_V2> ie_time_file_v2/*ä¸‹è½½æ¨¡å¼å‚æ•°V2ç‰ˆæœ¬*/;
+        std::vector<IE_astring> ie_storage_area_id/*å­˜å‚¨åŒºåŸŸID*/;
+        std::vector<IE_NETADDRESS_ANY> ie_netaddress_any/*çº§è”æ—¶å¡«uaçš„çœŸå®åœ°å€*/;
     };
     typedef zce_smartptr<MSG_UA_DOWNLOADSTART_REQ> MSG_UA_DOWNLOADSTART_REQ_PTR;
 
@@ -5585,9 +5585,9 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_UA_DOWNLOADSTART_RES;
         static const char* type_name() { return ("MSG_UA_DOWNLOADSTART_RES");}
         IE_RESULT    ie_result;
-        std::vector<IE_SCHEDULE_NOTIFY> ie_res/*Ç°¶ËÏÂÔØµ÷¶ÈĞÅÏ¢*/;
-        std::vector<IE_astring254> ie_url/*ÖĞĞÄÏÂÔØurl*/;
-        std::vector<IE_SCHEDULE_NOTIFY_IPV6> ie_res_ipv6/*Ç°¶ËÏÂÔØµ÷¶ÈĞÅÏ¢*/;
+        std::vector<IE_SCHEDULE_NOTIFY> ie_res/*å‰ç«¯ä¸‹è½½è°ƒåº¦ä¿¡æ¯*/;
+        std::vector<IE_astring254> ie_url/*ä¸­å¿ƒä¸‹è½½url*/;
+        std::vector<IE_SCHEDULE_NOTIFY_IPV6> ie_res_ipv6/*å‰ç«¯ä¸‹è½½è°ƒåº¦ä¿¡æ¯*/;
         std::vector<IE_CHANNEL_INFO> ie_channel_info;
     };
     typedef zce_smartptr<MSG_UA_DOWNLOADSTART_RES> MSG_UA_DOWNLOADSTART_RES_PTR;
@@ -5596,9 +5596,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_DOWNLOADSTOP_REQ;
         static const char* type_name() { return ("MSG_UA_DOWNLOADSTOP_REQ");}
-        IE_UCHAR    ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ*/;
+        IE_UCHAR    ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ*/;
         IE_CHANNEL_ID    ie_channel_id;
-        std::vector<IE_CHAR16> ie_guid/*16×Ö½ÚµÄguid,±êÊ¶¸ÃÏÂÔØID*/;
+        std::vector<IE_CHAR16> ie_guid/*16å­—èŠ‚çš„guid,æ ‡è¯†è¯¥ä¸‹è½½ID*/;
     };
     typedef zce_smartptr<MSG_UA_DOWNLOADSTOP_REQ> MSG_UA_DOWNLOADSTOP_REQ_PTR;
 
@@ -5614,11 +5614,11 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_DELETERECORD_REQ;
         static const char* type_name() { return ("MSG_UA_DELETERECORD_REQ");}
-        IE_UCHAR    ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ*/;
+        IE_UCHAR    ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ*/;
         IE_CHANNEL_ID    ie_channel_id;
-        IE_TIME_FILE    ie_time_file/*É¾³ı²ÎÊı*/;
+        IE_TIME_FILE    ie_time_file/*åˆ é™¤å‚æ•°*/;
         std::vector<IE_UCHAR> ie_qos;
-        std::vector<IE_TIME_FILE_V2> ie_time_file_v2/*É¾³ı²ÎÊıV2°æ±¾*/;
+        std::vector<IE_TIME_FILE_V2> ie_time_file_v2/*åˆ é™¤å‚æ•°V2ç‰ˆæœ¬*/;
     };
     typedef zce_smartptr<MSG_UA_DELETERECORD_REQ> MSG_UA_DELETERECORD_REQ_PTR;
 
@@ -5636,7 +5636,7 @@ namespace gep
         static const char* type_name() { return ("MSG_TIME_XML_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
         IE_astring    ie_ssuid;
-        std::vector<IE_TIME_XML> ie_time_xml/*xml==¡°*¡±±íÊ¾É¾³ı*/;
+        std::vector<IE_TIME_XML> ie_time_xml/*xml==â€œ*â€è¡¨ç¤ºåˆ é™¤*/;
     };
     typedef zce_smartptr<MSG_TIME_XML_REQ> MSG_TIME_XML_REQ_PTR;
 
@@ -5652,12 +5652,12 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_QUERYRECORD_REQ;
         static const char* type_name() { return ("MSG_UA_QUERYRECORD_REQ");}
-        IE_UCHAR    ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ*/;
+        IE_UCHAR    ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ*/;
         IE_CHANNEL_ID    ie_channel_id;
-        IE_TIME_FILE    ie_time_file/*²éÑ¯Ìõ¼ş*/;
+        IE_TIME_FILE    ie_time_file/*æŸ¥è¯¢æ¡ä»¶*/;
         std::vector<IE_UCHAR> ie_qos;
-        std::vector<IE_TIME_FILE_V2> ie_time_file_v2/*²éÑ¯²ÎÊıV2°æ±¾*/;
-        std::vector<IE_TIME_XML> ie_time_xml/*0»ò1Ìõ²éÑ¯¹ıÂËÌõ¼ş£¬¹ıÂËÀàĞÍÔÚxmlÖÖÌîÈëĞÎÈç'65,48'ÕâÑùµÄ×Ö·û´®,xml="0"±íÊ¾²»¹ıÂË*/;
+        std::vector<IE_TIME_FILE_V2> ie_time_file_v2/*æŸ¥è¯¢å‚æ•°V2ç‰ˆæœ¬*/;
+        std::vector<IE_TIME_XML> ie_time_xml/*0æˆ–1æ¡æŸ¥è¯¢è¿‡æ»¤æ¡ä»¶ï¼Œè¿‡æ»¤ç±»å‹åœ¨xmlç§å¡«å…¥å½¢å¦‚'65,48'è¿™æ ·çš„å­—ç¬¦ä¸²,xml="0"è¡¨ç¤ºä¸è¿‡æ»¤*/;
     };
     typedef zce_smartptr<MSG_UA_QUERYRECORD_REQ> MSG_UA_QUERYRECORD_REQ_PTR;
 
@@ -5665,9 +5665,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_QUERYRECORD_RES;
         static const char* type_name() { return ("MSG_UA_QUERYRECORD_RES");}
-        IE_RESULT    ie_result/*<0:´íÎóÔ­Òò>=0: Â¼ÏñĞÅÏ¢×ÜÊı*/;
-        std::vector<IE_TIME_FILE> ie_list/*·µ»Ø¶à¸öÂ¼ÏñĞÅÏ¢£¬Èç¹ûÃ»ÓĞÎÄ¼ş½á¹¹¿ÉÒÔ²»Ìî±¾Óò£¬½ö¸ù¾İIE_RESULTÅĞ¶ÏÊÇ·ñÂ¼ÏñÊÇ·ñ´æÔÚ*/;
-        std::vector<IE_TIME_FILE_V2> ie_list2/*·µ»Ø¶à¸öV2Â¼ÏñĞÅÏ¢£¬Èç¹ûÃ»ÓĞÎÄ¼ş½á¹¹¿ÉÒÔ²»Ìî±¾Óò£¬½ö¸ù¾İIE_RESULTÅĞ¶ÏÊÇ·ñÂ¼ÏñÊÇ·ñ´æÔÚ*/;
+        IE_RESULT    ie_result/*<0:é”™è¯¯åŸå› >=0: å½•åƒä¿¡æ¯æ€»æ•°*/;
+        std::vector<IE_TIME_FILE> ie_list/*è¿”å›å¤šä¸ªå½•åƒä¿¡æ¯ï¼Œå¦‚æœæ²¡æœ‰æ–‡ä»¶ç»“æ„å¯ä»¥ä¸å¡«æœ¬åŸŸï¼Œä»…æ ¹æ®IE_RESULTåˆ¤æ–­æ˜¯å¦å½•åƒæ˜¯å¦å­˜åœ¨*/;
+        std::vector<IE_TIME_FILE_V2> ie_list2/*è¿”å›å¤šä¸ªV2å½•åƒä¿¡æ¯ï¼Œå¦‚æœæ²¡æœ‰æ–‡ä»¶ç»“æ„å¯ä»¥ä¸å¡«æœ¬åŸŸï¼Œä»…æ ¹æ®IE_RESULTåˆ¤æ–­æ˜¯å¦å½•åƒæ˜¯å¦å­˜åœ¨*/;
         std::vector<IE_TIME_XML> ie_time_xml;
     };
     typedef zce_smartptr<MSG_UA_QUERYRECORD_RES> MSG_UA_QUERYRECORD_RES_PTR;
@@ -5676,14 +5676,14 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_REG_LOGIN_STEP1_REQ;
         static const char* type_name() { return ("MSG_REG_LOGIN_STEP1_REQ");}
-        IE_FD_ID    ie_fd_id/*Éè±¸ID£¬±ØÌî*/;
-        std::vector<IE_FD_TYPE> ie_fd_type/*Éè±¸ÀàĞÍ£¬±ØÌî*/;
-        std::vector<IE_FD_VERSION> ie_fd_version/*Éè±¸°æ±¾ĞÅÏ¢*/;
-        std::vector<IE_COMPRESS> ie_compress/* FD¶ËÖ§³ÖµÄÑ¹ËõËã·¨: 0¸ö£¨±íÊ¾²»Ö§³ÖÑ¹Ëõ£©, 1¸ö»òÕß¶à¸ö£¨Ö§³Ö¶àÖÖËã·¨£¬FDMS¿ÉÒÔÑ¡ÓÃÈÎÒâÒ»ÖÖ) */;
-        std::vector<IE_BALANCE_REDIRECT_FLAG> ie_balance_redirect/*ÓĞ´Ë¿ÉÑ¡Ïî±íÊ¾Ö§³Ö¸ºÔØ¾ùºâÖØ¶¨Ïò£¬1¸ºÔØ¾ùºâÖØ¶¨ÏòºóµÄµÇÂ¼£¬0·Ç¸ºÔØ¾ùºâÖØ¶¨ÏòµÇÂ¼£¬·şÎñÆ÷Ö»ÄÜ¶ÔÓĞ´Ë¿ÉÑ¡ÏîÇÒÖµÎª0µÄµÇÂ¼½øĞĞ¸ºÔØ¾ùºâÖØ¶¨Ïò*/;
-        std::vector<IE_NETADDRESS_ANY> ie_selfaddr/*ÌîFD×ÔÉíÓÃÓÚÁ¬½ÓÆ½Ì¨µÄIPµØÖ·*/;
-        std::vector<IE_UCHAR> ie_ssu/* ssu·¢ËÍrecord start/stopÖ¸Áî */;
-        std::vector<IE_FD_VERSION_V2> ie_fd_version_v2/*Éè±¸°æ±¾ĞÅÏ¢*/;
+        IE_FD_ID    ie_fd_id/*è®¾å¤‡IDï¼Œå¿…å¡«*/;
+        std::vector<IE_FD_TYPE> ie_fd_type/*è®¾å¤‡ç±»å‹ï¼Œå¿…å¡«*/;
+        std::vector<IE_FD_VERSION> ie_fd_version/*è®¾å¤‡ç‰ˆæœ¬ä¿¡æ¯*/;
+        std::vector<IE_COMPRESS> ie_compress/* FDç«¯æ”¯æŒçš„å‹ç¼©ç®—æ³•: 0ä¸ªï¼ˆè¡¨ç¤ºä¸æ”¯æŒå‹ç¼©ï¼‰, 1ä¸ªæˆ–è€…å¤šä¸ªï¼ˆæ”¯æŒå¤šç§ç®—æ³•ï¼ŒFDMSå¯ä»¥é€‰ç”¨ä»»æ„ä¸€ç§) */;
+        std::vector<IE_BALANCE_REDIRECT_FLAG> ie_balance_redirect/*æœ‰æ­¤å¯é€‰é¡¹è¡¨ç¤ºæ”¯æŒè´Ÿè½½å‡è¡¡é‡å®šå‘ï¼Œ1è´Ÿè½½å‡è¡¡é‡å®šå‘åçš„ç™»å½•ï¼Œ0éè´Ÿè½½å‡è¡¡é‡å®šå‘ç™»å½•ï¼ŒæœåŠ¡å™¨åªèƒ½å¯¹æœ‰æ­¤å¯é€‰é¡¹ä¸”å€¼ä¸º0çš„ç™»å½•è¿›è¡Œè´Ÿè½½å‡è¡¡é‡å®šå‘*/;
+        std::vector<IE_NETADDRESS_ANY> ie_selfaddr/*å¡«FDè‡ªèº«ç”¨äºè¿æ¥å¹³å°çš„IPåœ°å€*/;
+        std::vector<IE_UCHAR> ie_ssu/* ssuå‘é€record start/stopæŒ‡ä»¤ */;
+        std::vector<IE_FD_VERSION_V2> ie_fd_version_v2/*è®¾å¤‡ç‰ˆæœ¬ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_REG_LOGIN_STEP1_REQ> MSG_REG_LOGIN_STEP1_REQ_PTR;
 
@@ -5691,13 +5691,13 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_REG_LOGIN_STEP1_RES;
         static const char* type_name() { return ("MSG_REG_LOGIN_STEP1_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û<0£¬Ê§°Ü£¬¸ø³öÊ§°ÜÂë£» =0£ºĞèÒªÓò¼äÖØ¶¨Ïò£» =1£º³É¹¦£» =2£º¸ºÔØ¾ùºâÖØ¶¨Ïò*/;
-        std::vector<IE_NETADDRESS> ie_netaddr/*³É¹¦Ê±(=1)£¬Ìîfdms¼ì²âµ½µÄfdÍâ²¿µØÖ·*/;
-        std::vector<IE_CHAR16> ie_seed/*Ëæ»úÖÖ×Ó£¬16¸ö×Ö½Ú£¬µÇÂ½³É¹¦Ê±±ØÌî£»·ñÔò²»ÓÃ¡£*/;
-        std::vector<IE_NETADDRESS_IPV6> ie_netaddr_ipv6/*³É¹¦Ê±(=1)Ìîfdms¼ì²âµ½µÄfdÍâ²¿ipv6µØÖ·*/;
-        std::vector<IE_VERSION> ie_max_version/* FDMS Ö§³ÖµÄ×î¸ßĞ­Òé°æ±¾ºÅ*/;
-        std::vector<IE_SERVER> ie_server_list/* ¿ÉÓÃµÄ·şÎñÆ÷µØÖ·ÁĞ±í, ipv4, ipv6¶¼ÓÃastringÀ´±íÊ¾*/;
-        std::vector<IE_COMPRESS> ie_compress/* FDMSÖ§³ÖµÄÑ¹ËõËã·¨£¬0¸ö£¨±íÊ¾²»Ö§³ÖÑ¹Ëõ£©»òÕß1¸ö£¨±íÊ¾¿ÉÒÔ²ÉÓÃÕâÖÖÑ¹ËõËã·¨£© */;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœ<0ï¼Œå¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼› =0ï¼šéœ€è¦åŸŸé—´é‡å®šå‘ï¼› =1ï¼šæˆåŠŸï¼› =2ï¼šè´Ÿè½½å‡è¡¡é‡å®šå‘*/;
+        std::vector<IE_NETADDRESS> ie_netaddr/*æˆåŠŸæ—¶(=1)ï¼Œå¡«fdmsæ£€æµ‹åˆ°çš„fdå¤–éƒ¨åœ°å€*/;
+        std::vector<IE_CHAR16> ie_seed/*éšæœºç§å­ï¼Œ16ä¸ªå­—èŠ‚ï¼Œç™»é™†æˆåŠŸæ—¶å¿…å¡«ï¼›å¦åˆ™ä¸ç”¨ã€‚*/;
+        std::vector<IE_NETADDRESS_IPV6> ie_netaddr_ipv6/*æˆåŠŸæ—¶(=1)å¡«fdmsæ£€æµ‹åˆ°çš„fdå¤–éƒ¨ipv6åœ°å€*/;
+        std::vector<IE_VERSION> ie_max_version/* FDMS æ”¯æŒçš„æœ€é«˜åè®®ç‰ˆæœ¬å·*/;
+        std::vector<IE_SERVER> ie_server_list/* å¯ç”¨çš„æœåŠ¡å™¨åœ°å€åˆ—è¡¨, ipv4, ipv6éƒ½ç”¨astringæ¥è¡¨ç¤º*/;
+        std::vector<IE_COMPRESS> ie_compress/* FDMSæ”¯æŒçš„å‹ç¼©ç®—æ³•ï¼Œ0ä¸ªï¼ˆè¡¨ç¤ºä¸æ”¯æŒå‹ç¼©ï¼‰æˆ–è€…1ä¸ªï¼ˆè¡¨ç¤ºå¯ä»¥é‡‡ç”¨è¿™ç§å‹ç¼©ç®—æ³•ï¼‰ */;
     };
     typedef zce_smartptr<MSG_REG_LOGIN_STEP1_RES> MSG_REG_LOGIN_STEP1_RES_PTR;
 
@@ -5707,9 +5707,9 @@ namespace gep
         static const char* type_name() { return ("MSG_REG_LOGIN_STEP2_REQ");}
         IE_FD_LOGIN_INFO    ie_info;
         std::vector<IE_astring64> ie_validate;
-        std::vector<IE_VIDEOIN_CAPACITY> ie_videoin_capacity/*ÉÏ±¨ÊÓÆµÊäÈëÍ¨µÀµÄÄÜÁ¦¡£channelnoÌî0£¬Ê¹ÓÃ0ÓïÒå£¬±íÊ¾ËùÓĞÊÓÆµÊäÈëÍ¨µÀ¾ßÓĞÏàÍ¬µÄÄÜÁ¦*/;
-        std::vector<IE_ANY> ie_spec/*±£Áô±êÊ¶*/;
-        std::vector<IE_astring254> ie_adminurl/*Éè±¸¹ÜÀíURL*/;
+        std::vector<IE_VIDEOIN_CAPACITY> ie_videoin_capacity/*ä¸ŠæŠ¥è§†é¢‘è¾“å…¥é€šé“çš„èƒ½åŠ›ã€‚channelnoå¡«0ï¼Œä½¿ç”¨0è¯­ä¹‰ï¼Œè¡¨ç¤ºæ‰€æœ‰è§†é¢‘è¾“å…¥é€šé“å…·æœ‰ç›¸åŒçš„èƒ½åŠ›*/;
+        std::vector<IE_ANY> ie_spec/*ä¿ç•™æ ‡è¯†*/;
+        std::vector<IE_astring254> ie_adminurl/*è®¾å¤‡ç®¡ç†URL*/;
     };
     typedef zce_smartptr<MSG_REG_LOGIN_STEP2_REQ> MSG_REG_LOGIN_STEP2_REQ_PTR;
 
@@ -5717,9 +5717,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_REG_LOGIN_STEP2_RES;
         static const char* type_name() { return ("MSG_REG_LOGIN_STEP2_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û<0£¬µÇÂ¼Ê§°Ü£¬¸ø³öÊ§°ÜÂë=0£ºµÇÂ¼³É¹¦*/;
-        std::vector<IE_TIME> ie_heart_interval/*ĞÄÌø¼ä¸ôÊ±¼ä*/;
-        std::vector<IE_CHANNEL_NUMBER> ie_channel_number/*Í¨µÀÊı*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœ<0ï¼Œç™»å½•å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç =0ï¼šç™»å½•æˆåŠŸ*/;
+        std::vector<IE_TIME> ie_heart_interval/*å¿ƒè·³é—´éš”æ—¶é—´*/;
+        std::vector<IE_CHANNEL_NUMBER> ie_channel_number/*é€šé“æ•°*/;
     };
     typedef zce_smartptr<MSG_REG_LOGIN_STEP2_RES> MSG_REG_LOGIN_STEP2_RES_PTR;
 
@@ -5727,7 +5727,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_REG_LOGOUT_REQ;
         static const char* type_name() { return ("MSG_REG_LOGOUT_REQ");}
-        IE_FD_ID    ie_fd_id/*Éè±¸ID£¬±ØÌî*/;
+        IE_FD_ID    ie_fd_id/*è®¾å¤‡IDï¼Œå¿…å¡«*/;
     };
     typedef zce_smartptr<MSG_REG_LOGOUT_REQ> MSG_REG_LOGOUT_REQ_PTR;
 
@@ -5735,7 +5735,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_REG_LOGOUT_RES;
         static const char* type_name() { return ("MSG_REG_LOGOUT_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_REG_LOGOUT_RES> MSG_REG_LOGOUT_RES_PTR;
 
@@ -5744,11 +5744,11 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_MONITOR_START_REQ;
         static const char* type_name() { return ("MSG_MONITOR_START_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        std::vector<IE_NET_SCHEDULE_ADDRESS> ie_schedule_addr/*ÊÓÆµµ÷¶ÈµØÖ·*/;
-        IE_CHAR16    ie_guid/*16×Ö½ÚµÄguid,¼¤»îID*/;
-        std::vector<IE_NET_SCHEDULE_ADDRESS_IPV6> ie_schedule_addr_ipv6/*ÊÓÆµµ÷¶ÈµØÖ·ipv6*/;
+        std::vector<IE_NET_SCHEDULE_ADDRESS> ie_schedule_addr/*è§†é¢‘è°ƒåº¦åœ°å€*/;
+        IE_CHAR16    ie_guid/*16å­—èŠ‚çš„guid,æ¿€æ´»ID*/;
+        std::vector<IE_NET_SCHEDULE_ADDRESS_IPV6> ie_schedule_addr_ipv6/*è§†é¢‘è°ƒåº¦åœ°å€ipv6*/;
         std::vector<IE_CHANNEL_INFO> ie_channel_info;
-        std::vector<IE_UCHAR> ie_uchar/*µÚ0¸öucharÎª1±íÊ¾½ÓÊÕ¶ËÖ§³ÖÎŞÏß¶àTCPÁ¬½Ó*/;
+        std::vector<IE_UCHAR> ie_uchar/*ç¬¬0ä¸ªucharä¸º1è¡¨ç¤ºæ¥æ”¶ç«¯æ”¯æŒæ— çº¿å¤šTCPè¿æ¥*/;
     };
     typedef zce_smartptr<MSG_MONITOR_START_REQ> MSG_MONITOR_START_REQ_PTR;
 
@@ -5756,9 +5756,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_MONITOR_START_RES;
         static const char* type_name() { return ("MSG_MONITOR_START_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦£¬±ØĞëÌîºóĞø×Ö¶Î*/;
-        std::vector<IE_NETADDRESS> ie_netaddr/*½ÓÊÕµØÖ·*/;
-        std::vector<IE_NETADDRESS_IPV6> ie_netaddr_ipv6/*½ÓÊÕµØÖ·*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸï¼Œå¿…é¡»å¡«åç»­å­—æ®µ*/;
+        std::vector<IE_NETADDRESS> ie_netaddr/*æ¥æ”¶åœ°å€*/;
+        std::vector<IE_NETADDRESS_IPV6> ie_netaddr_ipv6/*æ¥æ”¶åœ°å€*/;
         std::vector<IE_astring254> ie_url;
         std::vector<IE_CHANNEL_INFO> ie_channel_info;
     };
@@ -5769,7 +5769,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_MONITOR_STOP_REQ;
         static const char* type_name() { return ("MSG_MONITOR_STOP_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_CHAR16    ie_guid/*16×Ö½ÚµÄguid,±êÊ¶¸Ã¼à¿ØID*/;
+        IE_CHAR16    ie_guid/*16å­—èŠ‚çš„guid,æ ‡è¯†è¯¥ç›‘æ§ID*/;
     };
     typedef zce_smartptr<MSG_MONITOR_STOP_REQ> MSG_MONITOR_STOP_REQ_PTR;
 
@@ -5777,7 +5777,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_MONITOR_STOP_RES;
         static const char* type_name() { return ("MSG_MONITOR_STOP_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_MONITOR_STOP_RES> MSG_MONITOR_STOP_RES_PTR;
 
@@ -5785,8 +5785,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONTROL_PTZ_REQ;
         static const char* type_name() { return ("MSG_CONTROL_PTZ_REQ");}
-        IE_PTZ_CMD    ie_cmd/*Éè±¸¿ØÖÆ²Ù×÷*/;
-        std::vector<IE_PTZLOCK_INFO> ie_ptzlock_info/*Éè±¸Ëø¶¨ĞÅÏ¢*/;
+        IE_PTZ_CMD    ie_cmd/*è®¾å¤‡æ§åˆ¶æ“ä½œ*/;
+        std::vector<IE_PTZLOCK_INFO> ie_ptzlock_info/*è®¾å¤‡é”å®šä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_CONTROL_PTZ_REQ> MSG_CONTROL_PTZ_REQ_PTR;
 
@@ -5794,8 +5794,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONTROL_PTZ_RES;
         static const char* type_name() { return ("MSG_CONTROL_PTZ_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
-        std::vector<IE_PTZLOCK_INFO> ie_ptzlock_info/*Éè±¸Ëø¶¨ĞÅÏ¢*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
+        std::vector<IE_PTZLOCK_INFO> ie_ptzlock_info/*è®¾å¤‡é”å®šä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_CONTROL_PTZ_RES> MSG_CONTROL_PTZ_RES_PTR;
 
@@ -5803,7 +5803,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONTROL_MATRIX_REQ;
         static const char* type_name() { return ("MSG_CONTROL_MATRIX_REQ");}
-        IE_MATRIX    ie_matrix/*¾ØÕó¼¶Áª¿ØÖÆ²ÎÊı*/;
+        IE_MATRIX    ie_matrix/*çŸ©é˜µçº§è”æ§åˆ¶å‚æ•°*/;
     };
     typedef zce_smartptr<MSG_CONTROL_MATRIX_REQ> MSG_CONTROL_MATRIX_REQ_PTR;
 
@@ -5811,7 +5811,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONTROL_MATRIX_RES;
         static const char* type_name() { return ("MSG_CONTROL_MATRIX_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_CONTROL_MATRIX_RES> MSG_CONTROL_MATRIX_RES_PTR;
 
@@ -5820,7 +5820,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_CONTROL_ADDCPS_REQ;
         static const char* type_name() { return ("MSG_CONTROL_ADDCPS_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_CAMERA_PRESET_CONFIG    ie_config/*ÉãÏñ»úÔ¤ÖÃµãÅäÖÃĞÅÏ¢*/;
+        IE_CAMERA_PRESET_CONFIG    ie_config/*æ‘„åƒæœºé¢„ç½®ç‚¹é…ç½®ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_CONTROL_ADDCPS_REQ> MSG_CONTROL_ADDCPS_REQ_PTR;
 
@@ -5828,7 +5828,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONTROL_ADDCPS_RES;
         static const char* type_name() { return ("MSG_CONTROL_ADDCPS_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_CONTROL_ADDCPS_RES> MSG_CONTROL_ADDCPS_RES_PTR;
 
@@ -5837,7 +5837,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_CONTROL_DELCPS_REQ;
         static const char* type_name() { return ("MSG_CONTROL_DELCPS_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_CAMERA_PRESET_CONFIG    ie_config/*ÉãÏñ»úÔ¤ÖÃµãÅäÖÃĞÅÏ¢£¬£¨³ıÔ¤ÖÃµãºÅÍâ£¬ÆäËûĞÅÏ¢¿É²»Ìî£©*/;
+        IE_CAMERA_PRESET_CONFIG    ie_config/*æ‘„åƒæœºé¢„ç½®ç‚¹é…ç½®ä¿¡æ¯ï¼Œï¼ˆé™¤é¢„ç½®ç‚¹å·å¤–ï¼Œå…¶ä»–ä¿¡æ¯å¯ä¸å¡«ï¼‰*/;
     };
     typedef zce_smartptr<MSG_CONTROL_DELCPS_REQ> MSG_CONTROL_DELCPS_REQ_PTR;
 
@@ -5845,7 +5845,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONTROL_DELCPS_RES;
         static const char* type_name() { return ("MSG_CONTROL_DELCPS_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_CONTROL_DELCPS_RES> MSG_CONTROL_DELCPS_RES_PTR;
 
@@ -5854,7 +5854,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_CONTROL_GOTOCPS_REQ;
         static const char* type_name() { return ("MSG_CONTROL_GOTOCPS_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_CAMERA_PRESET_CONFIG    ie_config/*ÉãÏñ»úÔ¤ÖÃµãĞÅÏ¢£¨³ıÔ¤ÖÃµãºÅÍâ£¬ÆäËûĞÅÏ¢¿É²»Ìî£©*/;
+        IE_CAMERA_PRESET_CONFIG    ie_config/*æ‘„åƒæœºé¢„ç½®ç‚¹ä¿¡æ¯ï¼ˆé™¤é¢„ç½®ç‚¹å·å¤–ï¼Œå…¶ä»–ä¿¡æ¯å¯ä¸å¡«ï¼‰*/;
     };
     typedef zce_smartptr<MSG_CONTROL_GOTOCPS_REQ> MSG_CONTROL_GOTOCPS_REQ_PTR;
 
@@ -5862,7 +5862,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONTROL_GOTOCPS_RES;
         static const char* type_name() { return ("MSG_CONTROL_GOTOCPS_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_CONTROL_GOTOCPS_RES> MSG_CONTROL_GOTOCPS_RES_PTR;
 
@@ -5878,7 +5878,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONTROL_CLRCPS_RES;
         static const char* type_name() { return ("MSG_CONTROL_CLRCPS_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_CONTROL_CLRCPS_RES> MSG_CONTROL_CLRCPS_RES_PTR;
 
@@ -5886,7 +5886,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_PTZ_REQ;
         static const char* type_name() { return ("MSG_QUERY_PTZ_REQ");}
-        IE_PTZ_CMD    ie_cmd/*Ö¸¶¨²éÑ¯µÄ¿ØÖÆÃüÁî*/;
+        IE_PTZ_CMD    ie_cmd/*æŒ‡å®šæŸ¥è¯¢çš„æ§åˆ¶å‘½ä»¤*/;
     };
     typedef zce_smartptr<MSG_QUERY_PTZ_REQ> MSG_QUERY_PTZ_REQ_PTR;
 
@@ -5894,8 +5894,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_PTZ_RES;
         static const char* type_name() { return ("MSG_QUERY_PTZ_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
-        std::vector<IE_PTZ_CMD> ie_cmd/*·µ»Ø²éÑ¯µÄ¿ØÖÆ²ÎÊı*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
+        std::vector<IE_PTZ_CMD> ie_cmd/*è¿”å›æŸ¥è¯¢çš„æ§åˆ¶å‚æ•°*/;
     };
     typedef zce_smartptr<MSG_QUERY_PTZ_RES> MSG_QUERY_PTZ_RES_PTR;
 
@@ -5904,7 +5904,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_POINT_MAGNIFY_REQ;
         static const char* type_name() { return ("MSG_POINT_MAGNIFY_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_POINT_MAGNIFY_PARAM    ie_param/*ÉãÏñ»úµã»÷·Å´ó²ÎÊı*/;
+        IE_POINT_MAGNIFY_PARAM    ie_param/*æ‘„åƒæœºç‚¹å‡»æ”¾å¤§å‚æ•°*/;
     };
     typedef zce_smartptr<MSG_POINT_MAGNIFY_REQ> MSG_POINT_MAGNIFY_REQ_PTR;
 
@@ -5912,7 +5912,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_POINT_MAGNIFY_RES;
         static const char* type_name() { return ("MSG_POINT_MAGNIFY_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_POINT_MAGNIFY_RES> MSG_POINT_MAGNIFY_RES_PTR;
 
@@ -5922,7 +5922,7 @@ namespace gep
         static const char* type_name() { return ("MSG_CALL_START_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
         std::vector<IE_NETADDRESS> ie_netaddr;
-        std::vector<IE_NETADDRESS_IPV6> ie_netaddr_ipv6/*ÒôÆµµ÷¶ÈµØÖ·ipv6*/;
+        std::vector<IE_NETADDRESS_IPV6> ie_netaddr_ipv6/*éŸ³é¢‘è°ƒåº¦åœ°å€ipv6*/;
     };
     typedef zce_smartptr<MSG_CALL_START_REQ> MSG_CALL_START_REQ_PTR;
 
@@ -5930,7 +5930,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CALL_START_RES;
         static const char* type_name() { return ("MSG_CALL_START_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦£¬±ØĞëÌîºóĞø×Ö¶Î*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸï¼Œå¿…é¡»å¡«åç»­å­—æ®µ*/;
         std::vector<IE_NETADDRESS> ie_netaddr;
         std::vector<IE_NETADDRESS_IPV6> ie_netaddr_ipv6;
     };
@@ -5948,7 +5948,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CALL_STOP_RES;
         static const char* type_name() { return ("MSG_CALL_STOP_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_CALL_STOP_RES> MSG_CALL_STOP_RES_PTR;
 
@@ -5956,9 +5956,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_WARNING_NOTIFY;
         static const char* type_name() { return ("MSG_WARNING_NOTIFY");}
-        IE_ALARM_INFO    ie_alarm_info/*¸æ¾¯ĞÅÏ¢*/;
-        std::vector<IE_ALARM_CONTENT_PICTURE> alarm_content_picture/*Í¼Æ¬¸æ¾¯ÄÚÈİ*/;
-        std::vector<IE_UUDATA> ie_data/*ÓÃ»§µÄÓÃ»§Êı¾İ*/;
+        IE_ALARM_INFO    ie_alarm_info/*å‘Šè­¦ä¿¡æ¯*/;
+        std::vector<IE_ALARM_CONTENT_PICTURE> alarm_content_picture/*å›¾ç‰‡å‘Šè­¦å†…å®¹*/;
+        std::vector<IE_UUDATA> ie_data/*ç”¨æˆ·çš„ç”¨æˆ·æ•°æ®*/;
     };
     typedef zce_smartptr<MSG_WARNING_NOTIFY> MSG_WARNING_NOTIFY_PTR;
 
@@ -5966,13 +5966,13 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_RECORD_START_REQ;
         static const char* type_name() { return ("MSG_RECORD_START_REQ");}
-        IE_UCHAR    ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ*/;
+        IE_UCHAR    ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ*/;
         IE_CHANNEL_ID    ie_channel_id;
         std::vector<IE_CHANNEL_INFO> ie_channel_info;
-        IE_RECORDSTART_REQ    ie_req/*Â¼ÏñµÄ¿ªÊ¼Ê±¼äºÍ½áÊøÊ±¼ä*/;
-        std::vector<IE_LONG> ie_timespan/*µ¥¸öÂ¼ÏñÎÄ¼şµÄÊ±¼ä³¤¶È£¨Ãë£©£ºnumber=0£ºÊ¹ÓÃ·şÎñÆ÷Ä¬ÈÏµÄÊ±¼ä³¤¶È£»number=-1£º²»ÏŞ¶¨µ¥¸öÂ¼ÏñÎÄ¼şµÄÊ±¼ä³¤¶È£»number>0£ºÈôÔÚÓĞĞ§·¶Î§ÄÚ£¬ÔòÊ¹ÓÃÓÃ»§Ö¸¶¨µÄÊ±¼ä³¤¶È£¬·ñÔòÊ¹ÓÃ·şÎñÆ÷µÄ·¶Î§±ß½ç£¨5·ÖÖÓ¡«2Ğ¡Ê±£©£¬¸ÃÉèÖÃÖ»¶Ôµ±´ÎÂ¼ÏñÓĞĞ§*/;
-        std::vector<IE_CHAR16> ie_guid/*16×Ö½ÚµÄguid,¼¤»îID*/;
-        std::vector<IE_NET_SCHEDULE_ADDRESS_IPV6> ie_schedule_addr_ipv6/*ÊÓÆµµ÷¶ÈµØÖ·ipv6*/;
+        IE_RECORDSTART_REQ    ie_req/*å½•åƒçš„å¼€å§‹æ—¶é—´å’Œç»“æŸæ—¶é—´*/;
+        std::vector<IE_LONG> ie_timespan/*å•ä¸ªå½•åƒæ–‡ä»¶çš„æ—¶é—´é•¿åº¦ï¼ˆç§’ï¼‰ï¼šnumber=0ï¼šä½¿ç”¨æœåŠ¡å™¨é»˜è®¤çš„æ—¶é—´é•¿åº¦ï¼›number=-1ï¼šä¸é™å®šå•ä¸ªå½•åƒæ–‡ä»¶çš„æ—¶é—´é•¿åº¦ï¼›number>0ï¼šè‹¥åœ¨æœ‰æ•ˆèŒƒå›´å†…ï¼Œåˆ™ä½¿ç”¨ç”¨æˆ·æŒ‡å®šçš„æ—¶é—´é•¿åº¦ï¼Œå¦åˆ™ä½¿ç”¨æœåŠ¡å™¨çš„èŒƒå›´è¾¹ç•Œï¼ˆ5åˆ†é’Ÿï½2å°æ—¶ï¼‰ï¼Œè¯¥è®¾ç½®åªå¯¹å½“æ¬¡å½•åƒæœ‰æ•ˆ*/;
+        std::vector<IE_CHAR16> ie_guid/*16å­—èŠ‚çš„guid,æ¿€æ´»ID*/;
+        std::vector<IE_NET_SCHEDULE_ADDRESS_IPV6> ie_schedule_addr_ipv6/*è§†é¢‘è°ƒåº¦åœ°å€ipv6*/;
     };
     typedef zce_smartptr<MSG_RECORD_START_REQ> MSG_RECORD_START_REQ_PTR;
 
@@ -5980,7 +5980,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_RECORD_START_RES;
         static const char* type_name() { return ("MSG_RECORD_START_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
         std::vector<IE_CHANNEL_INFO> ie_channel_info;
     };
     typedef zce_smartptr<MSG_RECORD_START_RES> MSG_RECORD_START_RES_PTR;
@@ -5989,10 +5989,10 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_RECORD_STOP_REQ;
         static const char* type_name() { return ("MSG_RECORD_STOP_REQ");}
-        IE_UCHAR    ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ*/;
+        IE_UCHAR    ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ*/;
         IE_CHANNEL_ID    ie_channel_id;
         std::vector<IE_UCHAR> ie_qos;
-        std::vector<IE_CHAR16> ie_guid/*16×Ö½ÚµÄguid,±êÊ¶¸ÃÂ¼ÏñID*/;
+        std::vector<IE_CHAR16> ie_guid/*16å­—èŠ‚çš„guid,æ ‡è¯†è¯¥å½•åƒID*/;
     };
     typedef zce_smartptr<MSG_RECORD_STOP_REQ> MSG_RECORD_STOP_REQ_PTR;
 
@@ -6000,7 +6000,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_RECORD_STOP_RES;
         static const char* type_name() { return ("MSG_RECORD_STOP_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_RECORD_STOP_RES> MSG_RECORD_STOP_RES_PTR;
 
@@ -6009,12 +6009,12 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_RECORD_START_REPLAY_REQ;
         static const char* type_name() { return ("MSG_RECORD_START_REPLAY_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_TIME_FILE    ie_file/*»Ø·ÅÄ£Ê½²ÎÊı*/;
-        std::vector<IE_NET_SCHEDULE_ADDRESS> ie_scheduler_addr/*ÆÚÍûµÄ½ÓÊÕµØÖ·£¬Ö¸Ê¾ºóĞøÂëÁ÷·¢ÍùºÎ´¦*/;
-        IE_CHAR16    ie_guid/*16×Ö½ÚµÄguid,¼¤»îID*/;
+        IE_TIME_FILE    ie_file/*å›æ”¾æ¨¡å¼å‚æ•°*/;
+        std::vector<IE_NET_SCHEDULE_ADDRESS> ie_scheduler_addr/*æœŸæœ›çš„æ¥æ”¶åœ°å€ï¼ŒæŒ‡ç¤ºåç»­ç æµå‘å¾€ä½•å¤„*/;
+        IE_CHAR16    ie_guid/*16å­—èŠ‚çš„guid,æ¿€æ´»ID*/;
         std::vector<IE_ULONG> ie_uaip;
         std::vector<IE_astring64> ie_uaip_ipv6;
-        std::vector<IE_NET_SCHEDULE_ADDRESS_IPV6> ie_schedule_addr_ipv6/*ÆÚÍûµÄ½ÓÊÕµØÖ·ipv6*/;
+        std::vector<IE_NET_SCHEDULE_ADDRESS_IPV6> ie_schedule_addr_ipv6/*æœŸæœ›çš„æ¥æ”¶åœ°å€ipv6*/;
         std::vector<IE_CHANNEL_INFO> ie_channel_info;
     };
     typedef zce_smartptr<MSG_RECORD_START_REPLAY_REQ> MSG_RECORD_START_REPLAY_REQ_PTR;
@@ -6023,10 +6023,10 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_RECORD_START_REPLAY_RES;
         static const char* type_name() { return ("MSG_RECORD_START_REPLAY_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦£¬±ØĞëÌîºóĞø×Ö¶Î*/;
-        std::vector<IE_NETADDRESS> ie_netaddr/*½ÓÊÕµØÖ·*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸï¼Œå¿…é¡»å¡«åç»­å­—æ®µ*/;
+        std::vector<IE_NETADDRESS> ie_netaddr/*æ¥æ”¶åœ°å€*/;
         std::vector<IE_astring254> ie_url;
-        std::vector<IE_NETADDRESS_IPV6> ie_netaddr_ipv6/*½ÓÊÕµØÖ·*/;
+        std::vector<IE_NETADDRESS_IPV6> ie_netaddr_ipv6/*æ¥æ”¶åœ°å€*/;
         std::vector<IE_CHANNEL_INFO> ie_channel_info;
     };
     typedef zce_smartptr<MSG_RECORD_START_REPLAY_RES> MSG_RECORD_START_REPLAY_RES_PTR;
@@ -6036,7 +6036,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_RECORD_STOP_REPLAY_REQ;
         static const char* type_name() { return ("MSG_RECORD_STOP_REPLAY_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        std::vector<IE_CHAR16> ie_guid/*16×Ö½ÚµÄguid,±êÊ¶¸Ã»Ø·ÅID*/;
+        std::vector<IE_CHAR16> ie_guid/*16å­—èŠ‚çš„guid,æ ‡è¯†è¯¥å›æ”¾ID*/;
     };
     typedef zce_smartptr<MSG_RECORD_STOP_REPLAY_REQ> MSG_RECORD_STOP_REPLAY_REQ_PTR;
 
@@ -6044,7 +6044,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_RECORD_STOP_REPLAY_RES;
         static const char* type_name() { return ("MSG_RECORD_STOP_REPLAY_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦£¬±ØĞëÌîºóĞø×Ö¶Î*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸï¼Œå¿…é¡»å¡«åç»­å­—æ®µ*/;
     };
     typedef zce_smartptr<MSG_RECORD_STOP_REPLAY_RES> MSG_RECORD_STOP_REPLAY_RES_PTR;
 
@@ -6053,12 +6053,12 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_RECORD_START_DOWNLOAD_REQ;
         static const char* type_name() { return ("MSG_RECORD_START_DOWNLOAD_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_TIME_FILE    ie_file/*ÏÂÔØÄ£Ê½²ÎÊı*/;
-        std::vector<IE_NET_SCHEDULE_ADDRESS> ie_scheduler_addr/*ÆÚÍû½ÓÊÕµÄµØÖ·*/;
-        IE_CHAR16    ie_guid/*16×Ö½ÚµÄguid,¼¤»îID*/;
+        IE_TIME_FILE    ie_file/*ä¸‹è½½æ¨¡å¼å‚æ•°*/;
+        std::vector<IE_NET_SCHEDULE_ADDRESS> ie_scheduler_addr/*æœŸæœ›æ¥æ”¶çš„åœ°å€*/;
+        IE_CHAR16    ie_guid/*16å­—èŠ‚çš„guid,æ¿€æ´»ID*/;
         std::vector<IE_ULONG> ie_uaip;
         std::vector<IE_astring64> ie_uaip_ipv6;
-        std::vector<IE_NET_SCHEDULE_ADDRESS_IPV6> ie_schedule_addr_ipv6/*ÆÚÍûµÄ½ÓÊÕµØÖ·ipv6*/;
+        std::vector<IE_NET_SCHEDULE_ADDRESS_IPV6> ie_schedule_addr_ipv6/*æœŸæœ›çš„æ¥æ”¶åœ°å€ipv6*/;
         std::vector<IE_CHANNEL_INFO> ie_channel_info;
     };
     typedef zce_smartptr<MSG_RECORD_START_DOWNLOAD_REQ> MSG_RECORD_START_DOWNLOAD_REQ_PTR;
@@ -6067,10 +6067,10 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_RECORD_START_DOWNLOAD_RES;
         static const char* type_name() { return ("MSG_RECORD_START_DOWNLOAD_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦£¬±ØĞëÌîºóĞø×Ö¶Î*/;
-        std::vector<IE_NETADDRESS> ie_netaddr/*½ÓÊÕµØÖ·*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸï¼Œå¿…é¡»å¡«åç»­å­—æ®µ*/;
+        std::vector<IE_NETADDRESS> ie_netaddr/*æ¥æ”¶åœ°å€*/;
         std::vector<IE_astring254> ie_url;
-        std::vector<IE_NETADDRESS_IPV6> ie_netaddr_ipv6/*½ÓÊÕµØÖ·*/;
+        std::vector<IE_NETADDRESS_IPV6> ie_netaddr_ipv6/*æ¥æ”¶åœ°å€*/;
         std::vector<IE_CHANNEL_INFO> ie_channel_info;
     };
     typedef zce_smartptr<MSG_RECORD_START_DOWNLOAD_RES> MSG_RECORD_START_DOWNLOAD_RES_PTR;
@@ -6080,7 +6080,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_RECORD_STOP_DOWNLOAD_REQ;
         static const char* type_name() { return ("MSG_RECORD_STOP_DOWNLOAD_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        std::vector<IE_CHAR16> ie_guid/*16×Ö½ÚµÄguid,±êÊ¶¸ÃÏÂÔØID*/;
+        std::vector<IE_CHAR16> ie_guid/*16å­—èŠ‚çš„guid,æ ‡è¯†è¯¥ä¸‹è½½ID*/;
     };
     typedef zce_smartptr<MSG_RECORD_STOP_DOWNLOAD_REQ> MSG_RECORD_STOP_DOWNLOAD_REQ_PTR;
 
@@ -6088,7 +6088,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_RECORD_STOP_DOWNLOAD_RES;
         static const char* type_name() { return ("MSG_RECORD_STOP_DOWNLOAD_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦£¬±ØĞëÌîºóĞø×Ö¶Î*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸï¼Œå¿…é¡»å¡«åç»­å­—æ®µ*/;
     };
     typedef zce_smartptr<MSG_RECORD_STOP_DOWNLOAD_RES> MSG_RECORD_STOP_DOWNLOAD_RES_PTR;
 
@@ -6097,9 +6097,9 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_RECORD_DELETE_FILE_REQ;
         static const char* type_name() { return ("MSG_RECORD_DELETE_FILE_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_TIME_FILE    ie_file/*É¾³ı²ÎÊı*/;
+        IE_TIME_FILE    ie_file/*åˆ é™¤å‚æ•°*/;
         std::vector<IE_UCHAR> ie_qos;
-        std::vector<IE_TIME_FILE_V2> ie_time_file_v2/*É¾³ı²ÎÊıV2°æ±¾*/;
+        std::vector<IE_TIME_FILE_V2> ie_time_file_v2/*åˆ é™¤å‚æ•°V2ç‰ˆæœ¬*/;
     };
     typedef zce_smartptr<MSG_RECORD_DELETE_FILE_REQ> MSG_RECORD_DELETE_FILE_REQ_PTR;
 
@@ -6107,7 +6107,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_RECORD_DELETE_FILE_RES;
         static const char* type_name() { return ("MSG_RECORD_DELETE_FILE_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_RECORD_DELETE_FILE_RES> MSG_RECORD_DELETE_FILE_RES_PTR;
 
@@ -6116,8 +6116,8 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_CONTROL_RECORD_REPLAY_REQ;
         static const char* type_name() { return ("MSG_CONTROL_RECORD_REPLAY_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_CTRL_CMD    ie_cmd/*»Ø·Å¿ØÖÆÃüÁî*/;
-        std::vector<IE_CHAR16> ie_guid/*16×Ö½ÚµÄguid,±êÊ¶¸Ã»Ø·ÅID*/;
+        IE_CTRL_CMD    ie_cmd/*å›æ”¾æ§åˆ¶å‘½ä»¤*/;
+        std::vector<IE_CHAR16> ie_guid/*16å­—èŠ‚çš„guid,æ ‡è¯†è¯¥å›æ”¾ID*/;
     };
     typedef zce_smartptr<MSG_CONTROL_RECORD_REPLAY_REQ> MSG_CONTROL_RECORD_REPLAY_REQ_PTR;
 
@@ -6125,7 +6125,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONTROL_RECORD_REPLAY_RES;
         static const char* type_name() { return ("MSG_CONTROL_RECORD_REPLAY_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_CONTROL_RECORD_REPLAY_RES> MSG_CONTROL_RECORD_REPLAY_RES_PTR;
 
@@ -6134,8 +6134,8 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_CONTROL_RECORD_DOWNLOAD_REQ;
         static const char* type_name() { return ("MSG_CONTROL_RECORD_DOWNLOAD_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_CTRL_CMD    ie_cmd/*ÏÂÔØ¿ØÖÆÃüÁî*/;
-        std::vector<IE_CHAR16> ie_guid/*16×Ö½ÚµÄguid,±êÊ¶¸Ã»Ø·ÅID*/;
+        IE_CTRL_CMD    ie_cmd/*ä¸‹è½½æ§åˆ¶å‘½ä»¤*/;
+        std::vector<IE_CHAR16> ie_guid/*16å­—èŠ‚çš„guid,æ ‡è¯†è¯¥å›æ”¾ID*/;
     };
     typedef zce_smartptr<MSG_CONTROL_RECORD_DOWNLOAD_REQ> MSG_CONTROL_RECORD_DOWNLOAD_REQ_PTR;
 
@@ -6143,7 +6143,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONTROL_RECORD_DOWNLOAD_RES;
         static const char* type_name() { return ("MSG_CONTROL_RECORD_DOWNLOAD_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_CONTROL_RECORD_DOWNLOAD_RES> MSG_CONTROL_RECORD_DOWNLOAD_RES_PTR;
 
@@ -6152,7 +6152,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_RECORD_LOCK_FILE_REQ;
         static const char* type_name() { return ("MSG_RECORD_LOCK_FILE_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        std::vector<IE_TIME_FILE_V2> ie_time_file_v2/*Ëø¶¨²ÎÊıV2°æ±¾*/;
+        std::vector<IE_TIME_FILE_V2> ie_time_file_v2/*é”å®šå‚æ•°V2ç‰ˆæœ¬*/;
     };
     typedef zce_smartptr<MSG_RECORD_LOCK_FILE_REQ> MSG_RECORD_LOCK_FILE_REQ_PTR;
 
@@ -6160,7 +6160,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_RECORD_LOCK_FILE_RES;
         static const char* type_name() { return ("MSG_RECORD_LOCK_FILE_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_RECORD_LOCK_FILE_RES> MSG_RECORD_LOCK_FILE_RES_PTR;
 
@@ -6169,11 +6169,11 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_QUERY_RECORDINFO_REQ;
         static const char* type_name() { return ("MSG_QUERY_RECORDINFO_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_TIME_FILE    ie_file/*²éÑ¯Ìõ¼ş¡££¨¿ÉÒÔÍ¨¹ıÖ¸¶¨Flag×Ö¶ÎÀ´Ö¸Ã÷Í¨¹ıÊ±¼ä»¹ÊÇÍ¨¹ıÎÄ¼şÀ´²éÑ¯£©*/;
+        IE_TIME_FILE    ie_file/*æŸ¥è¯¢æ¡ä»¶ã€‚ï¼ˆå¯ä»¥é€šè¿‡æŒ‡å®šFlagå­—æ®µæ¥æŒ‡æ˜é€šè¿‡æ—¶é—´è¿˜æ˜¯é€šè¿‡æ–‡ä»¶æ¥æŸ¥è¯¢ï¼‰*/;
         std::vector<IE_ULONG> ie_uaip;
-        std::vector<IE_astring64> ie_uaip_ipv6/*uas¼ì²âµ½µÄua ipµØÖ·*/;
+        std::vector<IE_astring64> ie_uaip_ipv6/*uasæ£€æµ‹åˆ°çš„ua ipåœ°å€*/;
         std::vector<IE_UCHAR> ie_qos;
-        std::vector<IE_TIME_FILE_V2> ie_time_file_v2/*²éÑ¯²ÎÊıV2°æ±¾*/;
+        std::vector<IE_TIME_FILE_V2> ie_time_file_v2/*æŸ¥è¯¢å‚æ•°V2ç‰ˆæœ¬*/;
     };
     typedef zce_smartptr<MSG_QUERY_RECORDINFO_REQ> MSG_QUERY_RECORDINFO_REQ_PTR;
 
@@ -6181,9 +6181,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_RECORDINFO_RES;
         static const char* type_name() { return ("MSG_QUERY_RECORDINFO_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û<0£¬Ê§°Ü£¬¸ø³öÊ§°ÜÂë >=0£º±íÊ¾×Ü¸öÊı*/;
-        std::vector<IE_TIME_FILE> ie_file/*·µ»Ø¶à¸öÂ¼ÏñĞÅÏ¢£¬Èç¹ûÃ»ÓĞÎÄ¼ş½á¹¹¿ÉÒÔ²»Ìî±¾Óò£¬½ö¸ù¾İIE_RESULTÅĞ¶ÏÊÇ·ñÂ¼ÏñÊÇ·ñ´æÔÚ*/;
-        std::vector<IE_TIME_FILE_V2> ie_list2/*·µ»Ø¶à¸öV2Â¼ÏñĞÅÏ¢£¬Èç¹ûÃ»ÓĞÎÄ¼ş½á¹¹¿ÉÒÔ²»Ìî±¾Óò£¬½ö¸ù¾İIE_RESULTÅĞ¶ÏÊÇ·ñÂ¼ÏñÊÇ·ñ´æÔÚ*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœ<0ï¼Œå¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç  >=0ï¼šè¡¨ç¤ºæ€»ä¸ªæ•°*/;
+        std::vector<IE_TIME_FILE> ie_file/*è¿”å›å¤šä¸ªå½•åƒä¿¡æ¯ï¼Œå¦‚æœæ²¡æœ‰æ–‡ä»¶ç»“æ„å¯ä»¥ä¸å¡«æœ¬åŸŸï¼Œä»…æ ¹æ®IE_RESULTåˆ¤æ–­æ˜¯å¦å½•åƒæ˜¯å¦å­˜åœ¨*/;
+        std::vector<IE_TIME_FILE_V2> ie_list2/*è¿”å›å¤šä¸ªV2å½•åƒä¿¡æ¯ï¼Œå¦‚æœæ²¡æœ‰æ–‡ä»¶ç»“æ„å¯ä»¥ä¸å¡«æœ¬åŸŸï¼Œä»…æ ¹æ®IE_RESULTåˆ¤æ–­æ˜¯å¦å½•åƒæ˜¯å¦å­˜åœ¨*/;
     };
     typedef zce_smartptr<MSG_QUERY_RECORDINFO_RES> MSG_QUERY_RECORDINFO_RES_PTR;
 
@@ -6198,8 +6198,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_DISKINFO_RES;
         static const char* type_name() { return ("MSG_QUERY_DISKINFO_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û<0£¬Ê§°Ü£¬¸ø³öÊ§°ÜÂë >=0£º±íÊ¾×Ü¸öÊı*/;
-        std::vector<IE_HARDDISK> ie_info/*´ÅÅÌĞÅÏ¢ÁĞ±í²Ù×÷Ê§°ÜÎŞ´ËÓò£¬³É¹¦ÌîĞ´µ¥¸ö´ÅÅÌĞÅÏ¢*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœ<0ï¼Œå¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç  >=0ï¼šè¡¨ç¤ºæ€»ä¸ªæ•°*/;
+        std::vector<IE_HARDDISK> ie_info/*ç£ç›˜ä¿¡æ¯åˆ—è¡¨æ“ä½œå¤±è´¥æ— æ­¤åŸŸï¼ŒæˆåŠŸå¡«å†™å•ä¸ªç£ç›˜ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_QUERY_DISKINFO_RES> MSG_QUERY_DISKINFO_RES_PTR;
 
@@ -6214,9 +6214,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_SYSINFO_RES;
         static const char* type_name() { return ("MSG_QUERY_SYSINFO_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
-        std::vector<IE_SYSTEM_CONFIG> ie_info/*²Ù×÷Ê§°ÜÎŞ´ËÓò£¬³É¹¦ÌîĞ´ÏµÍ³ÅäÖÃĞÅÏ¢£¬ÆäÖĞ±£ÃÜµÄĞÅÏ¢£¨ÈçÃÜÂë£©¿É²»Ìî*/;
-        std::vector<IE_SYSTEM_CONFIG_IPV6> ie_info_ipv6/*²Ù×÷Ê§°ÜÎŞ´ËÓò£¬³É¹¦ÌîĞ´ÏµÍ³ÅäÖÃĞÅÏ¢£¬ÆäÖĞ±£ÃÜµÄĞÅÏ¢£¨ÈçÃÜÂë£©¿É²»Ìî*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
+        std::vector<IE_SYSTEM_CONFIG> ie_info/*æ“ä½œå¤±è´¥æ— æ­¤åŸŸï¼ŒæˆåŠŸå¡«å†™ç³»ç»Ÿé…ç½®ä¿¡æ¯ï¼Œå…¶ä¸­ä¿å¯†çš„ä¿¡æ¯ï¼ˆå¦‚å¯†ç ï¼‰å¯ä¸å¡«*/;
+        std::vector<IE_SYSTEM_CONFIG_IPV6> ie_info_ipv6/*æ“ä½œå¤±è´¥æ— æ­¤åŸŸï¼ŒæˆåŠŸå¡«å†™ç³»ç»Ÿé…ç½®ä¿¡æ¯ï¼Œå…¶ä¸­ä¿å¯†çš„ä¿¡æ¯ï¼ˆå¦‚å¯†ç ï¼‰å¯ä¸å¡«*/;
     };
     typedef zce_smartptr<MSG_QUERY_SYSINFO_RES> MSG_QUERY_SYSINFO_RES_PTR;
 
@@ -6232,8 +6232,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_CAMINFO_RES;
         static const char* type_name() { return ("MSG_QUERY_CAMINFO_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
-        std::vector<IE_CAMERA_CONFIG> ie_info/*²Ù×÷Ê§°ÜÎŞ´ËÓò£¬³É¹¦ÌîĞ´ÉãÏñ»úÅäÖÃĞÅÏ¢*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
+        std::vector<IE_CAMERA_CONFIG> ie_info/*æ“ä½œå¤±è´¥æ— æ­¤åŸŸï¼ŒæˆåŠŸå¡«å†™æ‘„åƒæœºé…ç½®ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_QUERY_CAMINFO_RES> MSG_QUERY_CAMINFO_RES_PTR;
 
@@ -6249,8 +6249,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_CPSINFO_RES;
         static const char* type_name() { return ("MSG_QUERY_CPSINFO_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û<0£¬Ê§°Ü£¬¸ø³öÊ§°ÜÂë>=0£º±íÊ¾×Ü¸öÊı*/;
-        std::vector<IE_CAMERA_PRESET_CONFIG> ie_info/*²Ù×÷Ê§°ÜÎŞ´ËÓò£¬³É¹¦ÌîĞ´ÉãÏñ»úÔ¤ÖÃµãÅäÖÃĞÅÏ¢*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœ<0ï¼Œå¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç >=0ï¼šè¡¨ç¤ºæ€»ä¸ªæ•°*/;
+        std::vector<IE_CAMERA_PRESET_CONFIG> ie_info/*æ“ä½œå¤±è´¥æ— æ­¤åŸŸï¼ŒæˆåŠŸå¡«å†™æ‘„åƒæœºé¢„ç½®ç‚¹é…ç½®ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_QUERY_CPSINFO_RES> MSG_QUERY_CPSINFO_RES_PTR;
 
@@ -6267,8 +6267,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_RECTIME_RES;
         static const char* type_name() { return ("MSG_QUERY_RECTIME_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û<0£¬Ê§°Ü£¬¸ø³öÊ§°ÜÂë>=0£º±íÊ¾×Ü¸öÊı*/;
-        std::vector<IE_TIME_DETAIL_LIST> ie_list/*²Ù×÷Ê§°ÜÎŞ´ËÓò£¬³É¹¦ÌîĞ´Â¼ÏñÊ±¼ä±í£¬¿ÉÄÜÓĞ¶à¸ö£¬ÊÓ¾ßÌåÇé¿ö*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœ<0ï¼Œå¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç >=0ï¼šè¡¨ç¤ºæ€»ä¸ªæ•°*/;
+        std::vector<IE_TIME_DETAIL_LIST> ie_list/*æ“ä½œå¤±è´¥æ— æ­¤åŸŸï¼ŒæˆåŠŸå¡«å†™å½•åƒæ—¶é—´è¡¨ï¼Œå¯èƒ½æœ‰å¤šä¸ªï¼Œè§†å…·ä½“æƒ…å†µ*/;
     };
     typedef zce_smartptr<MSG_QUERY_RECTIME_RES> MSG_QUERY_RECTIME_RES_PTR;
 
@@ -6284,8 +6284,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_VMOTION_RES;
         static const char* type_name() { return ("MSG_QUERY_VMOTION_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û<0£¬Ê§°Ü£¬¸ø³öÊ§°ÜÂë£¬ÎŞºóĞøÄÚÈİ=0£º³É¹¦£¬±ØĞëÌîĞ´ºóĞøÄÚÈİ*/;
-        std::vector<IE_VIDEO_MOTION> ie_config/*ÊÓÆµ²ÎÊı*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœ<0ï¼Œå¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼Œæ— åç»­å†…å®¹=0ï¼šæˆåŠŸï¼Œå¿…é¡»å¡«å†™åç»­å†…å®¹*/;
+        std::vector<IE_VIDEO_MOTION> ie_config/*è§†é¢‘å‚æ•°*/;
     };
     typedef zce_smartptr<MSG_QUERY_VMOTION_RES> MSG_QUERY_VMOTION_RES_PTR;
 
@@ -6301,8 +6301,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_VLOST_RES;
         static const char* type_name() { return ("MSG_QUERY_VLOST_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û<0£¬Ê§°Ü£¬¸ø³öÊ§°ÜÂë£¬ÎŞºóĞøÄÚÈİ=0£º³É¹¦£¬±ØĞëÌîĞ´ºóĞøÄÚÈİ*/;
-        std::vector<IE_UCHAR> ie_uc/*²éÑ¯ÊÓÆµ¶ªÊ§¼ì²âÅäÖÃ0£ºÒÑÈ¡ÏûÊÓÆµ¶ªÊ§¼ì²â1£ºÒÑÆôÓÃÊÓÆµ¶ªÊ§¼ì²â*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœ<0ï¼Œå¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼Œæ— åç»­å†…å®¹=0ï¼šæˆåŠŸï¼Œå¿…é¡»å¡«å†™åç»­å†…å®¹*/;
+        std::vector<IE_UCHAR> ie_uc/*æŸ¥è¯¢è§†é¢‘ä¸¢å¤±æ£€æµ‹é…ç½®0ï¼šå·²å–æ¶ˆè§†é¢‘ä¸¢å¤±æ£€æµ‹1ï¼šå·²å¯ç”¨è§†é¢‘ä¸¢å¤±æ£€æµ‹*/;
     };
     typedef zce_smartptr<MSG_QUERY_VLOST_RES> MSG_QUERY_VLOST_RES_PTR;
 
@@ -6318,8 +6318,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_VMOSAIC_RES;
         static const char* type_name() { return ("MSG_QUERY_VMOSAIC_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û<0£¬Ê§°Ü£¬¸ø³öÊ§°ÜÂë£¬ÎŞºóĞøÄÚÈİ=0£º³É¹¦£¬±ØĞëÌîĞ´ºóĞøÄÚÈİ*/;
-        std::vector<IE_VIDEO_REGION> ie_region/*ÊÓÆµÇøÓò*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœ<0ï¼Œå¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼Œæ— åç»­å†…å®¹=0ï¼šæˆåŠŸï¼Œå¿…é¡»å¡«å†™åç»­å†…å®¹*/;
+        std::vector<IE_VIDEO_REGION> ie_region/*è§†é¢‘åŒºåŸŸ*/;
     };
     typedef zce_smartptr<MSG_QUERY_VMOSAIC_RES> MSG_QUERY_VMOSAIC_RES_PTR;
 
@@ -6335,8 +6335,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_VPARAM_RES;
         static const char* type_name() { return ("MSG_QUERY_VPARAM_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û<0£¬Ê§°Ü£¬¸ø³öÊ§°ÜÂë£¬ÎŞºóĞøÄÚÈİ=0£º³É¹¦£¬±ØĞëÌîĞ´ºóĞøÄÚÈİ*/;
-        std::vector<IE_VIDEO_CONFIG> ie_config/*ÊÓÆµÍ¼Ïñ²ÎÊıĞÅÏ¢ÁĞ±í*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœ<0ï¼Œå¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼Œæ— åç»­å†…å®¹=0ï¼šæˆåŠŸï¼Œå¿…é¡»å¡«å†™åç»­å†…å®¹*/;
+        std::vector<IE_VIDEO_CONFIG> ie_config/*è§†é¢‘å›¾åƒå‚æ•°ä¿¡æ¯åˆ—è¡¨*/;
     };
     typedef zce_smartptr<MSG_QUERY_VPARAM_RES> MSG_QUERY_VPARAM_RES_PTR;
 
@@ -6344,8 +6344,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_SYSINFO_REQ;
         static const char* type_name() { return ("MSG_CONFIG_SYSINFO_REQ");}
-        std::vector<IE_SYSTEM_CONFIG> ie_config/*ÏµÍ³ÅäÖÃĞÅÏ¢*/;
-        std::vector<IE_SYSTEM_CONFIG_IPV6> ie_config_ipv6/*ÏµÍ³ÅäÖÃĞÅÏ¢*/;
+        std::vector<IE_SYSTEM_CONFIG> ie_config/*ç³»ç»Ÿé…ç½®ä¿¡æ¯*/;
+        std::vector<IE_SYSTEM_CONFIG_IPV6> ie_config_ipv6/*ç³»ç»Ÿé…ç½®ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_CONFIG_SYSINFO_REQ> MSG_CONFIG_SYSINFO_REQ_PTR;
 
@@ -6353,7 +6353,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_SYSINFO_RES;
         static const char* type_name() { return ("MSG_CONFIG_SYSINFO_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_CONFIG_SYSINFO_RES> MSG_CONFIG_SYSINFO_RES_PTR;
 
@@ -6362,7 +6362,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_CAMINFO_REQ;
         static const char* type_name() { return ("MSG_CONFIG_CAMINFO_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_CAMERA_CONFIG    ie_config/*ÉãÏñ»úÅäÖÃĞÅÏ¢*/;
+        IE_CAMERA_CONFIG    ie_config/*æ‘„åƒæœºé…ç½®ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_CONFIG_CAMINFO_REQ> MSG_CONFIG_CAMINFO_REQ_PTR;
 
@@ -6370,7 +6370,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_CAMINFO_RES;
         static const char* type_name() { return ("MSG_CONFIG_CAMINFO_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_CONFIG_CAMINFO_RES> MSG_CONFIG_CAMINFO_RES_PTR;
 
@@ -6379,8 +6379,8 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_RECTIME_REQ;
         static const char* type_name() { return ("MSG_CONFIG_RECTIME_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        std::vector<IE_UCHAR> ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ; ²»Ìî¸ÃIEÄ¬ÈÏÎª0*/;
-        std::vector<IE_TIME_DETAIL_LIST> ie_list/*Â¼ÏñÊ±¼ä±í£¬¿ÉÄÜÓĞ¶à¸ö£¬ÊÓ¾ßÌåÇé¿ö*/;
+        std::vector<IE_UCHAR> ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ; ä¸å¡«è¯¥IEé»˜è®¤ä¸º0*/;
+        std::vector<IE_TIME_DETAIL_LIST> ie_list/*å½•åƒæ—¶é—´è¡¨ï¼Œå¯èƒ½æœ‰å¤šä¸ªï¼Œè§†å…·ä½“æƒ…å†µ*/;
         std::vector<IE_UCHAR> ie_qos;
     };
     typedef zce_smartptr<MSG_CONFIG_RECTIME_REQ> MSG_CONFIG_RECTIME_REQ_PTR;
@@ -6389,7 +6389,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_RECTIME_RES;
         static const char* type_name() { return ("MSG_CONFIG_RECTIME_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_CONFIG_RECTIME_RES> MSG_CONFIG_RECTIME_RES_PTR;
 
@@ -6398,7 +6398,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_VMOTION_REQ;
         static const char* type_name() { return ("MSG_CONFIG_VMOTION_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_VIDEO_MOTION    ie_config/*ÊÓÆµÕì²â²ÎÊı*/;
+        IE_VIDEO_MOTION    ie_config/*è§†é¢‘ä¾¦æµ‹å‚æ•°*/;
     };
     typedef zce_smartptr<MSG_CONFIG_VMOTION_REQ> MSG_CONFIG_VMOTION_REQ_PTR;
 
@@ -6406,7 +6406,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_VMOTION_RES;
         static const char* type_name() { return ("MSG_CONFIG_VMOTION_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_CONFIG_VMOTION_RES> MSG_CONFIG_VMOTION_RES_PTR;
 
@@ -6415,7 +6415,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_VLOST_REQ;
         static const char* type_name() { return ("MSG_CONFIG_VLOST_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_UCHAR    ie_uc/*ÅäÖÃÊÓÆµ¶ªÊ§¼ì²â²Ù×÷0£ºÈ¡Ïû¸ÃÍ¨µÀµÄÊÓÆµ¶ªÊ§¼ì²â1£ºÉèÖÃ¸ÃÍ¨µÀµÄÊÓÆµ¶ªÊ§¼ì²â*/;
+        IE_UCHAR    ie_uc/*é…ç½®è§†é¢‘ä¸¢å¤±æ£€æµ‹æ“ä½œ0ï¼šå–æ¶ˆè¯¥é€šé“çš„è§†é¢‘ä¸¢å¤±æ£€æµ‹1ï¼šè®¾ç½®è¯¥é€šé“çš„è§†é¢‘ä¸¢å¤±æ£€æµ‹*/;
     };
     typedef zce_smartptr<MSG_CONFIG_VLOST_REQ> MSG_CONFIG_VLOST_REQ_PTR;
 
@@ -6423,7 +6423,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_VLOST_RES;
         static const char* type_name() { return ("MSG_CONFIG_VLOST_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_CONFIG_VLOST_RES> MSG_CONFIG_VLOST_RES_PTR;
 
@@ -6432,7 +6432,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_VMOSAIC_REQ;
         static const char* type_name() { return ("MSG_CONFIG_VMOSAIC_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_VIDEO_REGION    ie_region/*ÊÓÆµÇøÓò*/;
+        IE_VIDEO_REGION    ie_region/*è§†é¢‘åŒºåŸŸ*/;
     };
     typedef zce_smartptr<MSG_CONFIG_VMOSAIC_REQ> MSG_CONFIG_VMOSAIC_REQ_PTR;
 
@@ -6440,7 +6440,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_VMOSAIC_RES;
         static const char* type_name() { return ("MSG_CONFIG_VMOSAIC_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_CONFIG_VMOSAIC_RES> MSG_CONFIG_VMOSAIC_RES_PTR;
 
@@ -6448,7 +6448,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_VPARAM_REQ;
         static const char* type_name() { return ("MSG_CONFIG_VPARAM_REQ");}
-        std::vector<IE_VIDEO_CONFIG> ie_config/*ÊÓÆµÍ¼Ïñ²ÎÊıĞÅÏ¢ÁĞ±í*/;
+        std::vector<IE_VIDEO_CONFIG> ie_config/*è§†é¢‘å›¾åƒå‚æ•°ä¿¡æ¯åˆ—è¡¨*/;
     };
     typedef zce_smartptr<MSG_CONFIG_VPARAM_REQ> MSG_CONFIG_VPARAM_REQ_PTR;
 
@@ -6456,7 +6456,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_VPARAM_RES;
         static const char* type_name() { return ("MSG_CONFIG_VPARAM_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_CONFIG_VPARAM_RES> MSG_CONFIG_VPARAM_RES_PTR;
 
@@ -6464,7 +6464,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_MGR_REMOTE_RESTART_REQ;
         static const char* type_name() { return ("MSG_MGR_REMOTE_RESTART_REQ");}
-        IE_ULONG    ie_time/*ÒÔUTC±íÊ¾µÄÖØÆôÊ±¿Ì,0±íÊ¾Á¢¼´ÖØÆô*/;
+        IE_ULONG    ie_time/*ä»¥UTCè¡¨ç¤ºçš„é‡å¯æ—¶åˆ»,0è¡¨ç¤ºç«‹å³é‡å¯*/;
     };
     typedef zce_smartptr<MSG_MGR_REMOTE_RESTART_REQ> MSG_MGR_REMOTE_RESTART_REQ_PTR;
 
@@ -6472,7 +6472,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_MGR_REMOTE_RESTART_RES;
         static const char* type_name() { return ("MSG_MGR_REMOTE_RESTART_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_MGR_REMOTE_RESTART_RES> MSG_MGR_REMOTE_RESTART_RES_PTR;
 
@@ -6487,8 +6487,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_MGR_QUERY_SYSTIME_RES;
         static const char* type_name() { return ("MSG_MGR_QUERY_SYSTIME_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
-        std::vector<IE_ULONG> ie_time/*Ê±¼ä£¬ÒÔ³¤ÕûĞÍ±íÊ¾£¬¾«È·µ½Ãë*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
+        std::vector<IE_ULONG> ie_time/*æ—¶é—´ï¼Œä»¥é•¿æ•´å‹è¡¨ç¤ºï¼Œç²¾ç¡®åˆ°ç§’*/;
     };
     typedef zce_smartptr<MSG_MGR_QUERY_SYSTIME_RES> MSG_MGR_QUERY_SYSTIME_RES_PTR;
 
@@ -6496,7 +6496,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_MGR_CONFIG_SYSTIME_REQ;
         static const char* type_name() { return ("MSG_MGR_CONFIG_SYSTIME_REQ");}
-        IE_TIME    ie_time/*Ê±¼ä£¬¾«È·µ½Ãë*/;
+        IE_TIME    ie_time/*æ—¶é—´ï¼Œç²¾ç¡®åˆ°ç§’*/;
     };
     typedef zce_smartptr<MSG_MGR_CONFIG_SYSTIME_REQ> MSG_MGR_CONFIG_SYSTIME_REQ_PTR;
 
@@ -6504,7 +6504,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_MGR_CONFIG_SYSTIME_RES;
         static const char* type_name() { return ("MSG_MGR_CONFIG_SYSTIME_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_MGR_CONFIG_SYSTIME_RES> MSG_MGR_CONFIG_SYSTIME_RES_PTR;
 
@@ -6512,8 +6512,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_MGR_UPGRADE_SOFTWARE_REQ;
         static const char* type_name() { return ("MSG_MGR_UPGRADE_SOFTWARE_REQ");}
-        IE_UPDATE_SOFTWARE    ie_update/*Éı¼¶ÏêÏ¸ĞÅÏ¢*/;
-        std::vector<IE_ANY_V2> ie_file/*Éı¼¶ÎÄ¼ş*/;
+        IE_UPDATE_SOFTWARE    ie_update/*å‡çº§è¯¦ç»†ä¿¡æ¯*/;
+        std::vector<IE_ANY_V2> ie_file/*å‡çº§æ–‡ä»¶*/;
     };
     typedef zce_smartptr<MSG_MGR_UPGRADE_SOFTWARE_REQ> MSG_MGR_UPGRADE_SOFTWARE_REQ_PTR;
 
@@ -6521,7 +6521,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_MGR_UPGRADE_SOFTWARE_RES;
         static const char* type_name() { return ("MSG_MGR_UPGRADE_SOFTWARE_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_MGR_UPGRADE_SOFTWARE_RES> MSG_MGR_UPGRADE_SOFTWARE_RES_PTR;
 
@@ -6530,7 +6530,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_NONSTANDARD_CMD;
         static const char* type_name() { return ("MSG_NONSTANDARD_CMD");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_UUDATA    ie_data/*ÓÃ»§µÄÓÃ»§Êı¾İ*/;
+        IE_UUDATA    ie_data/*ç”¨æˆ·çš„ç”¨æˆ·æ•°æ®*/;
     };
     typedef zce_smartptr<MSG_NONSTANDARD_CMD> MSG_NONSTANDARD_CMD_PTR;
 
@@ -6538,7 +6538,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FDMS_LOG_NOTIFY;
         static const char* type_name() { return ("MSG_FDMS_LOG_NOTIFY");}
-        IE_UCHAR    ie_type/*0:µÇ³ö 1:µÇÂ½, (¸ß7Î»±íÊ¾Éè±¸µÄµÇÂ¼Ğ­Òé£¬¼ûPTL_TYPE)*/;
+        IE_UCHAR    ie_type/*0:ç™»å‡º 1:ç™»é™†, (é«˜7ä½è¡¨ç¤ºè®¾å¤‡çš„ç™»å½•åè®®ï¼Œè§PTL_TYPE)*/;
     };
     typedef zce_smartptr<MSG_FDMS_LOG_NOTIFY> MSG_FDMS_LOG_NOTIFY_PTR;
 
@@ -6570,9 +6570,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_STATUS_NOTIFY;
         static const char* type_name() { return ("MSG_FD_STATUS_NOTIFY");}
-        IE_ULONG    ie_event/*0, Éè±¸ÉÏÏÂÏßÍ¨Öª£¬1£¬Í¨µÀ×´Ì¬±ä»¯Í¨Öª*/;
-        std::vector<IE_ONLINE_STATUS> ie_fd_online_status/*ie_event=0Ê±ÌîĞ´*/;
-        std::vector<IE_CHANNEL_STATUS_SIMPLE> ie_channel_status_simple/*ie_event=1Ê±ÌîĞ´*/;
+        IE_ULONG    ie_event/*0, è®¾å¤‡ä¸Šä¸‹çº¿é€šçŸ¥ï¼Œ1ï¼Œé€šé“çŠ¶æ€å˜åŒ–é€šçŸ¥*/;
+        std::vector<IE_ONLINE_STATUS> ie_fd_online_status/*ie_event=0æ—¶å¡«å†™*/;
+        std::vector<IE_CHANNEL_STATUS_SIMPLE> ie_channel_status_simple/*ie_event=1æ—¶å¡«å†™*/;
     };
     typedef zce_smartptr<MSG_FD_STATUS_NOTIFY> MSG_FD_STATUS_NOTIFY_PTR;
 
@@ -6588,7 +6588,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_QUERYCAMERAPRESET_RES;
         static const char* type_name() { return ("MSG_UA_QUERYCAMERAPRESET_RES");}
-        IE_RESULT    ie_result/*<0:´íÎóÔ­Òò>=0: ÉãÏñ»úÔ¤ÖÃµãÅäÖÃĞÅÏ¢¸öÊı*/;
+        IE_RESULT    ie_result/*<0:é”™è¯¯åŸå› >=0: æ‘„åƒæœºé¢„ç½®ç‚¹é…ç½®ä¿¡æ¯ä¸ªæ•°*/;
         std::vector<IE_CAMERA_PRESET_CONFIG> ie_preset_list;
     };
     typedef zce_smartptr<MSG_UA_QUERYCAMERAPRESET_RES> MSG_UA_QUERYCAMERAPRESET_RES_PTR;
@@ -6630,7 +6630,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_UAROLE_REQ;
         static const char* type_name() { return ("MSG_QUERY_UAROLE_REQ");}
-        IE_UA_ID    ie_ua_id/*ÓÃ»§ID:È«0±íÊ¾×Ô¼º*/;
+        IE_UA_ID    ie_ua_id/*ç”¨æˆ·ID:å…¨0è¡¨ç¤ºè‡ªå·±*/;
     };
     typedef zce_smartptr<MSG_QUERY_UAROLE_REQ> MSG_QUERY_UAROLE_REQ_PTR;
 
@@ -6638,8 +6638,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_UAROLE_RES;
         static const char* type_name() { return ("MSG_QUERY_UAROLE_RES");}
-        IE_RESULT    ie_result/*<0:´íÎóÔ­Òò>=0:¸ÃÓÃ»§¶ÔÓ¦µÄ¸ù¹ÜÀíµ¥Ôª¸öÊı*/;
-        std::vector<IE_UA_ROLE> ie_ua_role/*½ÇÉ«¼°¶ÔÓ¦ÓÃ»§ÀàĞÍÁĞ±í*/;
+        IE_RESULT    ie_result/*<0:é”™è¯¯åŸå› >=0:è¯¥ç”¨æˆ·å¯¹åº”çš„æ ¹ç®¡ç†å•å…ƒä¸ªæ•°*/;
+        std::vector<IE_UA_ROLE> ie_ua_role/*è§’è‰²åŠå¯¹åº”ç”¨æˆ·ç±»å‹åˆ—è¡¨*/;
     };
     typedef zce_smartptr<MSG_QUERY_UAROLE_RES> MSG_QUERY_UAROLE_RES_PTR;
 
@@ -6647,7 +6647,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_SUBROLE_REQ;
         static const char* type_name() { return ("MSG_QUERY_SUBROLE_REQ");}
-        IE_ROLE_ID    ie_role_id/*½ÇÉ«ID */;
+        IE_ROLE_ID    ie_role_id/*è§’è‰²ID */;
     };
     typedef zce_smartptr<MSG_QUERY_SUBROLE_REQ> MSG_QUERY_SUBROLE_REQ_PTR;
 
@@ -6655,8 +6655,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_SUBROLE_RES;
         static const char* type_name() { return ("MSG_QUERY_SUBROLE_RES");}
-        IE_RESULT    ie_result/*<0:´íÎóÔ­Òò>=0:¸Ã½ÇÉ«¶ÔÓ¦µÄ×Óµ¥Ôª¸öÊı*/;
-        std::vector<IE_ROLE> ie_role/*×Óµ¥ÔªÁĞ±í,²»µİ¹é*/;
+        IE_RESULT    ie_result/*<0:é”™è¯¯åŸå› >=0:è¯¥è§’è‰²å¯¹åº”çš„å­å•å…ƒä¸ªæ•°*/;
+        std::vector<IE_ROLE> ie_role/*å­å•å…ƒåˆ—è¡¨,ä¸é€’å½’*/;
     };
     typedef zce_smartptr<MSG_QUERY_SUBROLE_RES> MSG_QUERY_SUBROLE_RES_PTR;
 
@@ -6664,9 +6664,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_SUBUAROLE_REQ;
         static const char* type_name() { return ("MSG_QUERY_SUBUAROLE_REQ");}
-        IE_UA_ID    ie_ua_id/*ÓÃ»§ID:È«0±íÊ¾*/;
-        IE_ROLE_ID    ie_role_id/*½ÇÉ«ID */;
-        IE_UCHAR    ie_ua_type/*ÓÃ»§ÀàĞÍ:1 ÆÕÍ¨ÈËÔ±¹ØÏµ 2 Éè±¸¹ÜÀíÈ¨¹ØÏµ 4 ÈËÊÂ¹ÜÀíÈ¨¹ØÏµ*/;
+        IE_UA_ID    ie_ua_id/*ç”¨æˆ·ID:å…¨0è¡¨ç¤º*/;
+        IE_ROLE_ID    ie_role_id/*è§’è‰²ID */;
+        IE_UCHAR    ie_ua_type/*ç”¨æˆ·ç±»å‹:1 æ™®é€šäººå‘˜å…³ç³» 2 è®¾å¤‡ç®¡ç†æƒå…³ç³» 4 äººäº‹ç®¡ç†æƒå…³ç³»*/;
     };
     typedef zce_smartptr<MSG_QUERY_SUBUAROLE_REQ> MSG_QUERY_SUBUAROLE_REQ_PTR;
 
@@ -6674,7 +6674,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_SUBUAROLE_RES;
         static const char* type_name() { return ("MSG_QUERY_SUBUAROLE_RES");}
-        IE_RESULT    ie_result/*<0:´íÎóÔ­Òò>=0:¸Ã½ÇÉ«¶ÔÓ¦µÄ×Óµ¥Ôª¸öÊı*/;
+        IE_RESULT    ie_result/*<0:é”™è¯¯åŸå› >=0:è¯¥è§’è‰²å¯¹åº”çš„å­å•å…ƒä¸ªæ•°*/;
         std::vector<IE_UA_ROLE> ie_ua_role;
     };
     typedef zce_smartptr<MSG_QUERY_SUBUAROLE_RES> MSG_QUERY_SUBUAROLE_RES_PTR;
@@ -6683,9 +6683,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_ROLEUSER_REQ;
         static const char* type_name() { return ("MSG_QUERY_ROLEUSER_REQ");}
-        IE_ROLE_ID    ie_role_id/*½ÇÉ«ID */;
-        IE_UCHAR    ie_ua_type/*ÓÃ»§ÀàĞÍ: 1 ÆÕÍ¨ÈËÔ±¹ØÏµ 2 Éè±¸¹ÜÀíÈ¨¹ØÏµ 4 ÈËÊÂ¹ÜÀíÈ¨¹ØÏµ,°´Î»»ò*/;
-        std::vector<IE_UCHAR> ie_recursive/*ÊÇ·ñµİ¹é²éÑ¯½ÇÉ«µÄ×Ó½ÇÉ«Ïà¹ØµÄÓÃ»§:1,µİ¹é;0²»µİ¹é;Èç¹ûÃ»ÓĞ¸ÃIEÔò²»µİ¹é*/;
+        IE_ROLE_ID    ie_role_id/*è§’è‰²ID */;
+        IE_UCHAR    ie_ua_type/*ç”¨æˆ·ç±»å‹: 1 æ™®é€šäººå‘˜å…³ç³» 2 è®¾å¤‡ç®¡ç†æƒå…³ç³» 4 äººäº‹ç®¡ç†æƒå…³ç³»,æŒ‰ä½æˆ–*/;
+        std::vector<IE_UCHAR> ie_recursive/*æ˜¯å¦é€’å½’æŸ¥è¯¢è§’è‰²çš„å­è§’è‰²ç›¸å…³çš„ç”¨æˆ·:1,é€’å½’;0ä¸é€’å½’;å¦‚æœæ²¡æœ‰è¯¥IEåˆ™ä¸é€’å½’*/;
     };
     typedef zce_smartptr<MSG_QUERY_ROLEUSER_REQ> MSG_QUERY_ROLEUSER_REQ_PTR;
 
@@ -6693,9 +6693,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_ROLEUSER_RES;
         static const char* type_name() { return ("MSG_QUERY_ROLEUSER_RES");}
-        IE_RESULT    ie_result/*<0:´íÎóÔ­Òò>=0:¸Ã½ÇÉ«¶ÔÓ¦µÄÓÃ»§¸öÊı*/;
-        std::vector<IE_ROLE_USER> ie_role_user/*ÓÃ»§ÁĞ±í*/;
-        std::vector<IE_ROLE_ID> ie_role_id/*ÓÃ»§¶ÔÓ¦µÄ½ÇÉ«ÁĞ±í*/;
+        IE_RESULT    ie_result/*<0:é”™è¯¯åŸå› >=0:è¯¥è§’è‰²å¯¹åº”çš„ç”¨æˆ·ä¸ªæ•°*/;
+        std::vector<IE_ROLE_USER> ie_role_user/*ç”¨æˆ·åˆ—è¡¨*/;
+        std::vector<IE_ROLE_ID> ie_role_id/*ç”¨æˆ·å¯¹åº”çš„è§’è‰²åˆ—è¡¨*/;
     };
     typedef zce_smartptr<MSG_QUERY_ROLEUSER_RES> MSG_QUERY_ROLEUSER_RES_PTR;
 
@@ -6703,8 +6703,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_ADD_ROLE_REQ;
         static const char* type_name() { return ("MSG_ADD_ROLE_REQ");}
-        IE_ROLE_ID    ie_parent_role_id/*¸¸½ÇÉ«ID*/;
-        IE_ROLE    ie_role/*½ÇÉ«ĞÅÏ¢*/;
+        IE_ROLE_ID    ie_parent_role_id/*çˆ¶è§’è‰²ID*/;
+        IE_ROLE    ie_role/*è§’è‰²ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_ADD_ROLE_REQ> MSG_ADD_ROLE_REQ_PTR;
 
@@ -6712,8 +6712,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_ADD_ROLE_RES;
         static const char* type_name() { return ("MSG_ADD_ROLE_RES");}
-        IE_RESULT    ie_result/*<0:´íÎóÔ­Òò=0: ´´½¨³É¹¦*/;
-        std::vector<IE_ROLE_ID> ie_role_id/*´´½¨³É¹¦µÄ½ÇÉ«ID*/;
+        IE_RESULT    ie_result/*<0:é”™è¯¯åŸå› =0: åˆ›å»ºæˆåŠŸ*/;
+        std::vector<IE_ROLE_ID> ie_role_id/*åˆ›å»ºæˆåŠŸçš„è§’è‰²ID*/;
     };
     typedef zce_smartptr<MSG_ADD_ROLE_RES> MSG_ADD_ROLE_RES_PTR;
 
@@ -6721,7 +6721,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_DELETE_ROLE_REQ;
         static const char* type_name() { return ("MSG_DELETE_ROLE_REQ");}
-        IE_ROLE_ID    ie_role_id/*ÒªÉ¾³ıµÄ½ÇÉ«ID*/;
+        IE_ROLE_ID    ie_role_id/*è¦åˆ é™¤çš„è§’è‰²ID*/;
     };
     typedef zce_smartptr<MSG_DELETE_ROLE_REQ> MSG_DELETE_ROLE_REQ_PTR;
 
@@ -6729,7 +6729,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_DELETE_ROLE_RES;
         static const char* type_name() { return ("MSG_DELETE_ROLE_RES");}
-        IE_RESULT    ie_result/*<0:´íÎóÔ­Òò=0: É¾³ı³É¹¦*/;
+        IE_RESULT    ie_result/*<0:é”™è¯¯åŸå› =0: åˆ é™¤æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_DELETE_ROLE_RES> MSG_DELETE_ROLE_RES_PTR;
 
@@ -6745,7 +6745,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_MODIFY_ROLE_RES;
         static const char* type_name() { return ("MSG_MODIFY_ROLE_RES");}
-        IE_RESULT    ie_result/*<0:´íÎóÔ­Òò=0: É¾³ı³É¹¦*/;
+        IE_RESULT    ie_result/*<0:é”™è¯¯åŸå› =0: åˆ é™¤æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_MODIFY_ROLE_RES> MSG_MODIFY_ROLE_RES_PTR;
 
@@ -6770,9 +6770,9 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_ONCERECORDSCHEDULE_ADMIN_REQ;
         static const char* type_name() { return ("MSG_ONCERECORDSCHEDULE_ADMIN_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_UCHAR    ie_admin_type/*²Ù×÷ÀàĞÍ£º1£ºĞŞ¸Ä£»2£ºÌí¼Ó£»4£ºÉ¾³ı*/;
-        std::vector<IE_UCHAR> ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ; ²»Ìî¸ÃIEÄ¬ÈÏÎª0*/;
-        std::vector<IE_TIME_SECTOR_WITHGUID> ie_list/*IE_TIME_SECTOR_WITHGUIDÁĞ±í£¨Ìí¼ÓÊ±£¬GUIDÖµÌîÈ«0£»É¾³ıÊ±£º¸ù¾İGUIDÀ´É¾³ı¼Æ»®£ºbegintimeºÍendtimeÖµÌî0£»ÁĞ±íÎª¿ÕÊ±£¬±íÊ¾É¾³ı¸ÃÍ¨µÀËùÓĞµÄÒ»´ÎĞÔ¼Æ»®£©*/;
+        IE_UCHAR    ie_admin_type/*æ“ä½œç±»å‹ï¼š1ï¼šä¿®æ”¹ï¼›2ï¼šæ·»åŠ ï¼›4ï¼šåˆ é™¤*/;
+        std::vector<IE_UCHAR> ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ; ä¸å¡«è¯¥IEé»˜è®¤ä¸º0*/;
+        std::vector<IE_TIME_SECTOR_WITHGUID> ie_list/*IE_TIME_SECTOR_WITHGUIDåˆ—è¡¨ï¼ˆæ·»åŠ æ—¶ï¼ŒGUIDå€¼å¡«å…¨0ï¼›åˆ é™¤æ—¶ï¼šæ ¹æ®GUIDæ¥åˆ é™¤è®¡åˆ’ï¼šbegintimeå’Œendtimeå€¼å¡«0ï¼›åˆ—è¡¨ä¸ºç©ºæ—¶ï¼Œè¡¨ç¤ºåˆ é™¤è¯¥é€šé“æ‰€æœ‰çš„ä¸€æ¬¡æ€§è®¡åˆ’ï¼‰*/;
         std::vector<IE_UCHAR> ie_qos;
     };
     typedef zce_smartptr<MSG_ONCERECORDSCHEDULE_ADMIN_REQ> MSG_ONCERECORDSCHEDULE_ADMIN_REQ_PTR;
@@ -6782,7 +6782,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_ONCERECORDSCHEDULE_ADMIN_RES;
         static const char* type_name() { return ("MSG_ONCERECORDSCHEDULE_ADMIN_RES");}
         IE_RESULT    ie_result;
-        std::vector<IE_CHAR16> ie_guid/*GUIDÁĞ±í£¨Ìí¼Ó³É¹¦£º·µ»Ø¸÷Ê±¼ä¶Î¶ÔÓ¦µÄGUID£»£©*/;
+        std::vector<IE_CHAR16> ie_guid/*GUIDåˆ—è¡¨ï¼ˆæ·»åŠ æˆåŠŸï¼šè¿”å›å„æ—¶é—´æ®µå¯¹åº”çš„GUIDï¼›ï¼‰*/;
     };
     typedef zce_smartptr<MSG_ONCERECORDSCHEDULE_ADMIN_RES> MSG_ONCERECORDSCHEDULE_ADMIN_RES_PTR;
 
@@ -6791,8 +6791,8 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_QUERY_ONCERECORDSCHEDULE_REQ;
         static const char* type_name() { return ("MSG_QUERY_ONCERECORDSCHEDULE_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        std::vector<IE_UCHAR> ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ; ²»Ìî¸ÃIEÄ¬ÈÏÎª0*/;
-        std::vector<IE_TIME_SECTOR> ie_list/*²éÑ¯µÄÊ±¼ä¶Î£¬begintime=0:±íÊ¾²éÑ¯endtimeÖ®Ç°µÄËùÓĞ¼Æ»®£»endtime£½0£º±íÊ¾²éÑ¯begintimeÖ®ºóµÄËùÓĞ¼Æ»®£»Ã»ÓĞ¸ÃIE£º±íÊ¾²éÑ¯ËùÓĞµÄÒ»´ÎĞÔ¼Æ»®*/;
+        std::vector<IE_UCHAR> ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ; ä¸å¡«è¯¥IEé»˜è®¤ä¸º0*/;
+        std::vector<IE_TIME_SECTOR> ie_list/*æŸ¥è¯¢çš„æ—¶é—´æ®µï¼Œbegintime=0:è¡¨ç¤ºæŸ¥è¯¢endtimeä¹‹å‰çš„æ‰€æœ‰è®¡åˆ’ï¼›endtimeï¼0ï¼šè¡¨ç¤ºæŸ¥è¯¢begintimeä¹‹åçš„æ‰€æœ‰è®¡åˆ’ï¼›æ²¡æœ‰è¯¥IEï¼šè¡¨ç¤ºæŸ¥è¯¢æ‰€æœ‰çš„ä¸€æ¬¡æ€§è®¡åˆ’*/;
         std::vector<IE_UCHAR> ie_qos;
     };
     typedef zce_smartptr<MSG_QUERY_ONCERECORDSCHEDULE_REQ> MSG_QUERY_ONCERECORDSCHEDULE_REQ_PTR;
@@ -6810,8 +6810,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_RECORDSTATUS_REQ;
         static const char* type_name() { return ("MSG_QUERY_RECORDSTATUS_REQ");}
-        std::vector<IE_CHANNEL_ID> ie_channel_id/*Éè±¸Í¨µÀË÷Òı£¬IEÎª¿Õ±íÊ¾²éÑ¯ËùÓĞÍ¨µÀ*/;
-        std::vector<IE_UCHAR> ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ; ²»Ìî¸ÃIEÄ¬ÈÏÎª0*/;
+        std::vector<IE_CHANNEL_ID> ie_channel_id/*è®¾å¤‡é€šé“ç´¢å¼•ï¼ŒIEä¸ºç©ºè¡¨ç¤ºæŸ¥è¯¢æ‰€æœ‰é€šé“*/;
+        std::vector<IE_UCHAR> ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ; ä¸å¡«è¯¥IEé»˜è®¤ä¸º0*/;
         std::vector<IE_UCHAR> ie_qos;
     };
     typedef zce_smartptr<MSG_QUERY_RECORDSTATUS_REQ> MSG_QUERY_RECORDSTATUS_REQ_PTR;
@@ -6820,7 +6820,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_RECORDSTATUS_RES;
         static const char* type_name() { return ("MSG_QUERY_RECORDSTATUS_RES");}
-        IE_RESULT    ie_result/*<0,±íÊ¾´íÎóÂë£»£½0±íÊ¾Ëù²éÑ¯µÄÍ¨µÀ¶¼²»ÔÚÂ¼Ïñ×´Ì¬£»>0,±íÊ¾ÓĞÂ¼Ïñ×´Ì¬£¨ÕıÔÚÂ¼Ïñ¡¢Õı×¼±¸Â¼ÏñµÈ£©µÄÍ¨µÀ¸öÊı*/;
+        IE_RESULT    ie_result/*<0,è¡¨ç¤ºé”™è¯¯ç ï¼›ï¼0è¡¨ç¤ºæ‰€æŸ¥è¯¢çš„é€šé“éƒ½ä¸åœ¨å½•åƒçŠ¶æ€ï¼›>0,è¡¨ç¤ºæœ‰å½•åƒçŠ¶æ€ï¼ˆæ­£åœ¨å½•åƒã€æ­£å‡†å¤‡å½•åƒç­‰ï¼‰çš„é€šé“ä¸ªæ•°*/;
         std::vector<IE_RECORD_STATUS> ie_status;
     };
     typedef zce_smartptr<MSG_QUERY_RECORDSTATUS_RES> MSG_QUERY_RECORDSTATUS_RES_PTR;
@@ -6830,7 +6830,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_RECORDSTOP_NOTIFY;
         static const char* type_name() { return ("MSG_RECORDSTOP_NOTIFY");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_UCHAR    ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ*/;
+        IE_UCHAR    ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ*/;
         std::vector<IE_UCHAR> ie_qos;
     };
     typedef zce_smartptr<MSG_RECORDSTOP_NOTIFY> MSG_RECORDSTOP_NOTIFY_PTR;
@@ -6840,7 +6840,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_RECORDSTART_NOTIFY;
         static const char* type_name() { return ("MSG_RECORDSTART_NOTIFY");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_UCHAR    ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ*/;
+        IE_UCHAR    ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ*/;
         std::vector<IE_UCHAR> ie_qos;
     };
     typedef zce_smartptr<MSG_RECORDSTART_NOTIFY> MSG_RECORDSTART_NOTIFY_PTR;
@@ -6849,8 +6849,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_UASTATUS_REQ;
         static const char* type_name() { return ("MSG_QUERY_UASTATUS_REQ");}
-        std::vector<IE_UA_ID> ie_ua_id/*Ö¸¶¨²éÑ¯µÄÓÃ»§ID*/;
-        std::vector<IE_astring64> ie_email/*Email£¬idºÍemailÁ½ÕßÑ¡ÆäÒ»£»ÈôÁ½¸ö¶¼ÓĞ£¬ÒÔidÎª×¼£»ÈôÁ½¸ö¶¼Ã»ÓĞ£¬·µ»Ø´íÎó*/;
+        std::vector<IE_UA_ID> ie_ua_id/*æŒ‡å®šæŸ¥è¯¢çš„ç”¨æˆ·ID*/;
+        std::vector<IE_astring64> ie_email/*Emailï¼Œidå’Œemailä¸¤è€…é€‰å…¶ä¸€ï¼›è‹¥ä¸¤ä¸ªéƒ½æœ‰ï¼Œä»¥idä¸ºå‡†ï¼›è‹¥ä¸¤ä¸ªéƒ½æ²¡æœ‰ï¼Œè¿”å›é”™è¯¯*/;
     };
     typedef zce_smartptr<MSG_QUERY_UASTATUS_REQ> MSG_QUERY_UASTATUS_REQ_PTR;
 
@@ -6858,7 +6858,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_UASTATUS_RES;
         static const char* type_name() { return ("MSG_QUERY_UASTATUS_RES");}
-        IE_RESULT    ie_result/*<0,²éÑ¯Ê§°Ü£»=0,²éÑ¯³É¹¦ */;
+        IE_RESULT    ie_result/*<0,æŸ¥è¯¢å¤±è´¥ï¼›=0,æŸ¥è¯¢æˆåŠŸ */;
         std::vector<IE_ONLINE_STATUS> ie_ua_status;
     };
     typedef zce_smartptr<MSG_QUERY_UASTATUS_RES> MSG_QUERY_UASTATUS_RES_PTR;
@@ -6867,9 +6867,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_FDACCREDIT_REQ;
         static const char* type_name() { return ("MSG_UA_FDACCREDIT_REQ");}
-        IE_FD_IDNAME    ie_fd_idname/*Éè±¸ID¼°name*/;
-        IE_CLIENT_IDNAME    ie_client_idname/*¿Í»§id¼°name*/;
-        std::vector<IE_CHANNEL_PRIVILEGE> ie_channel_priv/*Éè±¸Í¨µÀ¼°¶ÔÓ¦µÄÈ¨ÏŞ*/;
+        IE_FD_IDNAME    ie_fd_idname/*è®¾å¤‡IDåŠname*/;
+        IE_CLIENT_IDNAME    ie_client_idname/*å®¢æˆ·idåŠname*/;
+        std::vector<IE_CHANNEL_PRIVILEGE> ie_channel_priv/*è®¾å¤‡é€šé“åŠå¯¹åº”çš„æƒé™*/;
     };
     typedef zce_smartptr<MSG_UA_FDACCREDIT_REQ> MSG_UA_FDACCREDIT_REQ_PTR;
 
@@ -6893,9 +6893,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_STATUS_RES;
         static const char* type_name() { return ("MSG_QUERY_STATUS_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û<0£¬Ê§°Ü£¬¸ø³öÊ§°ÜÂë£¬ÎŞºóĞøÄÚÈİ=0£º³É¹¦£¬±ØĞëÌîĞ´ºóĞøÄÚÈİ*/;
-        std::vector<IE_CHANNEL_STATUS> ie_channel_status/*0»ò¶à¸ö¸Ã½á¹¹.¶ÔÓ¦Í¨µÀµÄÔËĞĞ×´Ì¬ĞÅÏ¢,Èç¹û²éÑ¯ËùÓĞ,ÔòÌîËùÓĞÍ¨µÀ×´Ì¬ĞÅÏ¢*/;
-        std::vector<IE_CHANNEL_STATUS_V2> ie_channel_status_v2/*0»ò¶à¸ö¸Ã½á¹¹.¶ÔÓ¦Í¨µÀµÄÔËĞĞ×´Ì¬ĞÅÏ¢,Èç¹û²éÑ¯ËùÓĞ,ÔòÌîËùÓĞÍ¨µÀ×´Ì¬ĞÅÏ¢*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœ<0ï¼Œå¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼Œæ— åç»­å†…å®¹=0ï¼šæˆåŠŸï¼Œå¿…é¡»å¡«å†™åç»­å†…å®¹*/;
+        std::vector<IE_CHANNEL_STATUS> ie_channel_status/*0æˆ–å¤šä¸ªè¯¥ç»“æ„.å¯¹åº”é€šé“çš„è¿è¡ŒçŠ¶æ€ä¿¡æ¯,å¦‚æœæŸ¥è¯¢æ‰€æœ‰,åˆ™å¡«æ‰€æœ‰é€šé“çŠ¶æ€ä¿¡æ¯*/;
+        std::vector<IE_CHANNEL_STATUS_V2> ie_channel_status_v2/*0æˆ–å¤šä¸ªè¯¥ç»“æ„.å¯¹åº”é€šé“çš„è¿è¡ŒçŠ¶æ€ä¿¡æ¯,å¦‚æœæŸ¥è¯¢æ‰€æœ‰,åˆ™å¡«æ‰€æœ‰é€šé“çŠ¶æ€ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_QUERY_STATUS_RES> MSG_QUERY_STATUS_RES_PTR;
 
@@ -6903,10 +6903,10 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_REG_REPORT_CHANNEL_INFO;
         static const char* type_name() { return ("MSG_REG_REPORT_CHANNEL_INFO");}
-        std::vector<IE_SYSTEM_CONFIG> ie_system_config/*¼òµ¥µÄÏµÍ³ĞÅÏ¢*/;
-        std::vector<IE_VIDEO_CONFIG> ie_video_config/*ÊÓÆµÍ¨µÀĞÅÏ¢ÁĞ±í,0»ò¶à¸ö*/;
-        std::vector<IE_AUDIO_CONFIG> ie_audio_config/*ÒôÆµÍ¨µÀĞÅÏ¢ÁĞ±í,0»ò¶à¸ö*/;
-        std::vector<IE_SYSTEM_CONFIG_IPV6> ie_system_config_ipv6/*¼òµ¥µÄÏµÍ³ĞÅÏ¢*/;
+        std::vector<IE_SYSTEM_CONFIG> ie_system_config/*ç®€å•çš„ç³»ç»Ÿä¿¡æ¯*/;
+        std::vector<IE_VIDEO_CONFIG> ie_video_config/*è§†é¢‘é€šé“ä¿¡æ¯åˆ—è¡¨,0æˆ–å¤šä¸ª*/;
+        std::vector<IE_AUDIO_CONFIG> ie_audio_config/*éŸ³é¢‘é€šé“ä¿¡æ¯åˆ—è¡¨,0æˆ–å¤šä¸ª*/;
+        std::vector<IE_SYSTEM_CONFIG_IPV6> ie_system_config_ipv6/*ç®€å•çš„ç³»ç»Ÿä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_REG_REPORT_CHANNEL_INFO> MSG_REG_REPORT_CHANNEL_INFO_PTR;
 
@@ -6914,8 +6914,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_PTZ_ACT_REQ;
         static const char* type_name() { return ("MSG_PTZ_ACT_REQ");}
-        IE_UCHAR    ie_action/*0 ÖØÉè£»1 Ôö¼Ó£»2 É¾³ı*/;
-        std::vector<IE_FD_ID> ie_fd_id/*FDID´úÀí*/;
+        IE_UCHAR    ie_action/*0 é‡è®¾ï¼›1 å¢åŠ ï¼›2 åˆ é™¤*/;
+        std::vector<IE_FD_ID> ie_fd_id/*FDIDä»£ç†*/;
     };
     typedef zce_smartptr<MSG_PTZ_ACT_REQ> MSG_PTZ_ACT_REQ_PTR;
 
@@ -6923,7 +6923,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_PTZ_ACT_RES;
         static const char* type_name() { return ("MSG_PTZ_ACT_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û<0£¬Ê§°Ü£¬¸ø³öÊ§°ÜÂë>=0£º±íÊ¾×Ü¸öÊı*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœ<0ï¼Œå¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç >=0ï¼šè¡¨ç¤ºæ€»ä¸ªæ•°*/;
     };
     typedef zce_smartptr<MSG_PTZ_ACT_RES> MSG_PTZ_ACT_RES_PTR;
 
@@ -6931,7 +6931,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UACONFIG_QUERY_REQ;
         static const char* type_name() { return ("MSG_UACONFIG_QUERY_REQ");}
-        std::vector<IE_UCHAR> ie_default/*ÊÇ·ñÇëÇó¸ÃÓÃ»§ËùÊô¿Í»§µÄÄ¬ÈÏÅäÖÃ£º0£º·ñ£»1£ºÊÇ*/;
+        std::vector<IE_UCHAR> ie_default/*æ˜¯å¦è¯·æ±‚è¯¥ç”¨æˆ·æ‰€å±å®¢æˆ·çš„é»˜è®¤é…ç½®ï¼š0ï¼šå¦ï¼›1ï¼šæ˜¯*/;
     };
     typedef zce_smartptr<MSG_UACONFIG_QUERY_REQ> MSG_UACONFIG_QUERY_REQ_PTR;
 
@@ -6939,7 +6939,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UACONFIG_QUERY_RES;
         static const char* type_name() { return ("MSG_UACONFIG_QUERY_RES");}
-        IE_RESULT    ie_result/*<0:Ê§°Ü; 0:Ã»ÓĞÅäÖÃĞÅÏ¢; =1:³É¹¦*/;
+        IE_RESULT    ie_result/*<0:å¤±è´¥; 0:æ²¡æœ‰é…ç½®ä¿¡æ¯; =1:æˆåŠŸ*/;
         std::vector<IE_UACONFIG> ie_uaconfig;
     };
     typedef zce_smartptr<MSG_UACONFIG_QUERY_RES> MSG_UACONFIG_QUERY_RES_PTR;
@@ -6948,8 +6948,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UACONFIG_ADMIN_REQ;
         static const char* type_name() { return ("MSG_UACONFIG_ADMIN_REQ");}
-        IE_UCHAR    ie_as_default/*ÊÇ·ñ½«¸ÃÅäÖÃ×÷Îª¸ÃÓÃ»§ËùÊô¿Í»§µÄÄ¬ÈÏÅäÖÃ£º0£º·ñ£»1£ºÊÇ*/;
-        IE_UACONFIG    ie_uaconfig/*ÅäÖÃĞÅÏ¢*/;
+        IE_UCHAR    ie_as_default/*æ˜¯å¦å°†è¯¥é…ç½®ä½œä¸ºè¯¥ç”¨æˆ·æ‰€å±å®¢æˆ·çš„é»˜è®¤é…ç½®ï¼š0ï¼šå¦ï¼›1ï¼šæ˜¯*/;
+        IE_UACONFIG    ie_uaconfig/*é…ç½®ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_UACONFIG_ADMIN_REQ> MSG_UACONFIG_ADMIN_REQ_PTR;
 
@@ -6957,7 +6957,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UACONFIG_ADMIN_RES;
         static const char* type_name() { return ("MSG_UACONFIG_ADMIN_RES");}
-        IE_RESULT    ie_result/*<0:Ê§°Ü; =0:³É¹¦*/;
+        IE_RESULT    ie_result/*<0:å¤±è´¥; =0:æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_UACONFIG_ADMIN_RES> MSG_UACONFIG_ADMIN_RES_PTR;
 
@@ -6966,7 +6966,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_CAPTURE_REQ;
         static const char* type_name() { return ("MSG_CAPTURE_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_CAPTURE    ie_capture/*ÓÃ»§Ö¸¶¨µÄ×¥ÅÄ²ÎÊı*/;
+        IE_CAPTURE    ie_capture/*ç”¨æˆ·æŒ‡å®šçš„æŠ“æ‹å‚æ•°*/;
     };
     typedef zce_smartptr<MSG_CAPTURE_REQ> MSG_CAPTURE_REQ_PTR;
 
@@ -6974,10 +6974,10 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CAPTURE_RES;
         static const char* type_name() { return ("MSG_CAPTURE_RES");}
-        IE_RESULT    ie_result/*<0:Ê§°Ü; =0:³É¹¦*/;
-        std::vector<IE_CAPTURE> ie_capture/*Éè±¸¶Ë²ÉÓÃµÄ×¥ÅÄ²ÎÊı*/;
-        std::vector<IE_PICTURE> ie_picture/*Í¼Æ¬ÄÚÈİ*/;
-        std::vector<IE_PICTURE_V2> ie_picture_v2/*Í¼Æ¬ÄÚÈİ*/;
+        IE_RESULT    ie_result/*<0:å¤±è´¥; =0:æˆåŠŸ*/;
+        std::vector<IE_CAPTURE> ie_capture/*è®¾å¤‡ç«¯é‡‡ç”¨çš„æŠ“æ‹å‚æ•°*/;
+        std::vector<IE_PICTURE> ie_picture/*å›¾ç‰‡å†…å®¹*/;
+        std::vector<IE_PICTURE_V2> ie_picture_v2/*å›¾ç‰‡å†…å®¹*/;
     };
     typedef zce_smartptr<MSG_CAPTURE_RES> MSG_CAPTURE_RES_PTR;
 
@@ -6993,8 +6993,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_MATRIX_RES;
         static const char* type_name() { return ("MSG_QUERY_MATRIX_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û <0:Ê§°Ü£¬¸ø³öÊ§°ÜÂë; =0:³É¹¦*/;
-        std::vector<IE_MATRIX> ie_matrix/*²Ù×÷Ê§°ÜÎŞ´ËÓò£¬³É¹¦ÌîĞ´¾ØÕó¼¶ÁªĞÅÏ¢*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœ <0:å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ; =0:æˆåŠŸ*/;
+        std::vector<IE_MATRIX> ie_matrix/*æ“ä½œå¤±è´¥æ— æ­¤åŸŸï¼ŒæˆåŠŸå¡«å†™çŸ©é˜µçº§è”ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_QUERY_MATRIX_RES> MSG_QUERY_MATRIX_RES_PTR;
 
@@ -7002,7 +7002,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_MAPINFO_REQ;
         static const char* type_name() { return ("MSG_QUERY_MAPINFO_REQ");}
-        std::vector<IE_MAPINFO> ie_mapinfo/*Ã»ÓĞ¸ÃIE£¬±íÊ¾²éÑ¯ËùÓĞµÄµç×ÓµØÍ¼£»Èç¹ûÓĞ¶à¸ö£¬·şÎñÆ÷Ö»È¡µÚÒ»¸öIEÖĞµÄname¡¢provinceºÍdistrictÓÃÓÚÖ¸¶¨²éÑ¯Ìõ¼ş£¬ÈôÄ³¸öÌõ¼ş²»Ö¸¶¨£¬ÔòÉèÖÃ¸Ã×Ö¶ÎÎª¿Õ¡£ÆäÓàÏîÎŞĞèÌîĞ´¡£*/;
+        std::vector<IE_MAPINFO> ie_mapinfo/*æ²¡æœ‰è¯¥IEï¼Œè¡¨ç¤ºæŸ¥è¯¢æ‰€æœ‰çš„ç”µå­åœ°å›¾ï¼›å¦‚æœæœ‰å¤šä¸ªï¼ŒæœåŠ¡å™¨åªå–ç¬¬ä¸€ä¸ªIEä¸­çš„nameã€provinceå’Œdistrictç”¨äºæŒ‡å®šæŸ¥è¯¢æ¡ä»¶ï¼Œè‹¥æŸä¸ªæ¡ä»¶ä¸æŒ‡å®šï¼Œåˆ™è®¾ç½®è¯¥å­—æ®µä¸ºç©ºã€‚å…¶ä½™é¡¹æ— éœ€å¡«å†™ã€‚*/;
     };
     typedef zce_smartptr<MSG_QUERY_MAPINFO_REQ> MSG_QUERY_MAPINFO_REQ_PTR;
 
@@ -7010,8 +7010,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_MAPINFO_RES;
         static const char* type_name() { return ("MSG_QUERY_MAPINFO_RES");}
-        IE_RESULT    ie_result/*<0:Ê§°Ü£»£½0:³É¹¦*/;
-        std::vector<IE_MAPINFO> ie_mapinfo/*·ûºÏ²éÑ¯Ìõ¼şµÄµç×ÓµØÍ¼ĞÅÏ¢*/;
+        IE_RESULT    ie_result/*<0:å¤±è´¥ï¼›ï¼0:æˆåŠŸ*/;
+        std::vector<IE_MAPINFO> ie_mapinfo/*ç¬¦åˆæŸ¥è¯¢æ¡ä»¶çš„ç”µå­åœ°å›¾ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_QUERY_MAPINFO_RES> MSG_QUERY_MAPINFO_RES_PTR;
 
@@ -7028,7 +7028,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_MODIFY_FDINFO_REQ;
         static const char* type_name() { return ("MSG_MODIFY_FDINFO_REQ");}
         IE_FD_INFO_V3    ie_fdinfo_v3;
-        IE_ULONG    ie_key/*ĞŞ¸ÄµÄĞÅÏ¢Ïîid£¬ĞŞ¸Ä¶àÏî°´Î»»ò*/;
+        IE_ULONG    ie_key/*ä¿®æ”¹çš„ä¿¡æ¯é¡¹idï¼Œä¿®æ”¹å¤šé¡¹æŒ‰ä½æˆ–*/;
     };
     typedef zce_smartptr<MSG_MODIFY_FDINFO_REQ> MSG_MODIFY_FDINFO_REQ_PTR;
 
@@ -7036,7 +7036,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_MODIFY_FDINFO_RES;
         static const char* type_name() { return ("MSG_MODIFY_FDINFO_RES");}
-        IE_RESULT    ie_result/*<0:Ê§°Ü£»£½0:³É¹¦*/;
+        IE_RESULT    ie_result/*<0:å¤±è´¥ï¼›ï¼0:æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_MODIFY_FDINFO_RES> MSG_MODIFY_FDINFO_RES_PTR;
 
@@ -7044,7 +7044,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_MIXTUREVIDEOINCHANNEL_REQ;
         static const char* type_name() { return ("MSG_QUERY_MIXTUREVIDEOINCHANNEL_REQ");}
-        std::vector<IE_CHANNEL_ID> ie_channel_id/*Éè±¸Í¨µÀË÷Òı£¬IEÎª¿Õ±íÊ¾²éÑ¯ËùÓĞÍ¨µÀ*/;
+        std::vector<IE_CHANNEL_ID> ie_channel_id/*è®¾å¤‡é€šé“ç´¢å¼•ï¼ŒIEä¸ºç©ºè¡¨ç¤ºæŸ¥è¯¢æ‰€æœ‰é€šé“*/;
     };
     typedef zce_smartptr<MSG_QUERY_MIXTUREVIDEOINCHANNEL_REQ> MSG_QUERY_MIXTUREVIDEOINCHANNEL_REQ_PTR;
 
@@ -7052,8 +7052,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_MIXTUREVIDEOINCHANNEL_RES;
         static const char* type_name() { return ("MSG_QUERY_MIXTUREVIDEOINCHANNEL_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û<0£¬Ê§°Ü£¬¸ø³öÊ§°ÜÂë£¬ÎŞºóĞøÄÚÈİ=0£º³É¹¦£¬±ØĞëÌîĞ´ºóĞøÄÚÈİ*/;
-        std::vector<IE_MIXTUREVIDEOIN_CHANNEL> ie_mixture/*0»ò¶à¸ö¸Ã½á¹¹.ÊÓÆµÊäÈëºÏ³ÉÍ¨µÀĞÅÏ¢ÁĞ±í*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœ<0ï¼Œå¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼Œæ— åç»­å†…å®¹=0ï¼šæˆåŠŸï¼Œå¿…é¡»å¡«å†™åç»­å†…å®¹*/;
+        std::vector<IE_MIXTUREVIDEOIN_CHANNEL> ie_mixture/*0æˆ–å¤šä¸ªè¯¥ç»“æ„.è§†é¢‘è¾“å…¥åˆæˆé€šé“ä¿¡æ¯åˆ—è¡¨*/;
     };
     typedef zce_smartptr<MSG_QUERY_MIXTUREVIDEOINCHANNEL_RES> MSG_QUERY_MIXTUREVIDEOINCHANNEL_RES_PTR;
 
@@ -7061,7 +7061,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_MIXTUREVIDEOINCHANNEL_REQ;
         static const char* type_name() { return ("MSG_CONFIG_MIXTUREVIDEOINCHANNEL_REQ");}
-        IE_MIXTUREVIDEOIN_CHANNEL    ie_mixture/*ÊÓÆµÊäÈëºÏ³ÉÍ¨µÀĞÅÏ¢*/;
+        IE_MIXTUREVIDEOIN_CHANNEL    ie_mixture/*è§†é¢‘è¾“å…¥åˆæˆé€šé“ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_CONFIG_MIXTUREVIDEOINCHANNEL_REQ> MSG_CONFIG_MIXTUREVIDEOINCHANNEL_REQ_PTR;
 
@@ -7069,7 +7069,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_MIXTUREVIDEOINCHANNEL_RES;
         static const char* type_name() { return ("MSG_CONFIG_MIXTUREVIDEOINCHANNEL_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û: <0Ê§°Ü£¬¸ø³öÊ§°ÜÂë =0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœ: <0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç  =0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_CONFIG_MIXTUREVIDEOINCHANNEL_RES> MSG_CONFIG_MIXTUREVIDEOINCHANNEL_RES_PTR;
 
@@ -7077,7 +7077,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_USERFDCHANNELRIGHT_REQ;
         static const char* type_name() { return ("MSG_QUERY_USERFDCHANNELRIGHT_REQ");}
-        std::vector<IE_CHANNEL_ID> ie_channel_id/*Éè±¸Í¨µÀË÷Òı£¬IEÎª¿Õ±íÊ¾²éÑ¯ËùÓĞÍ¨µÀ*/;
+        std::vector<IE_CHANNEL_ID> ie_channel_id/*è®¾å¤‡é€šé“ç´¢å¼•ï¼ŒIEä¸ºç©ºè¡¨ç¤ºæŸ¥è¯¢æ‰€æœ‰é€šé“*/;
     };
     typedef zce_smartptr<MSG_QUERY_USERFDCHANNELRIGHT_REQ> MSG_QUERY_USERFDCHANNELRIGHT_REQ_PTR;
 
@@ -7086,7 +7086,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_QUERY_USERFDCHANNELRIGHT_RES;
         static const char* type_name() { return ("MSG_QUERY_USERFDCHANNELRIGHT_RES");}
         IE_RESULT    ie_result;
-        std::vector<IE_FDCHANNEL_RIGHT> ie_fdchannel_right/*Éè±¸Í¨µÀÈ¨ÏŞ*/;
+        std::vector<IE_FDCHANNEL_RIGHT> ie_fdchannel_right/*è®¾å¤‡é€šé“æƒé™*/;
     };
     typedef zce_smartptr<MSG_QUERY_USERFDCHANNELRIGHT_RES> MSG_QUERY_USERFDCHANNELRIGHT_RES_PTR;
 
@@ -7094,7 +7094,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_LOCKINFO_REQ;
         static const char* type_name() { return ("MSG_QUERY_LOCKINFO_REQ");}
-        std::vector<IE_CHANNEL_ID> ie_channel_id/*Éè±¸Í¨µÀË÷Òı£¬IEÎª¿Õ±íÊ¾²éÑ¯ËùÓĞÍ¨µÀ*/;
+        std::vector<IE_CHANNEL_ID> ie_channel_id/*è®¾å¤‡é€šé“ç´¢å¼•ï¼ŒIEä¸ºç©ºè¡¨ç¤ºæŸ¥è¯¢æ‰€æœ‰é€šé“*/;
     };
     typedef zce_smartptr<MSG_QUERY_LOCKINFO_REQ> MSG_QUERY_LOCKINFO_REQ_PTR;
 
@@ -7102,8 +7102,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_LOCKINFO_RES;
         static const char* type_name() { return ("MSG_QUERY_LOCKINFO_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
-        std::vector<IE_PTZLOCK_INFO> ie_ptzlock_info/*Éè±¸Ëø¶¨ĞÅÏ¢*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
+        std::vector<IE_PTZLOCK_INFO> ie_ptzlock_info/*è®¾å¤‡é”å®šä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_QUERY_LOCKINFO_RES> MSG_QUERY_LOCKINFO_RES_PTR;
 
@@ -7119,8 +7119,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_ALARMRULE_RES;
         static const char* type_name() { return ("MSG_QUERY_ALARMRULE_RES");}
-        IE_RESULT    ie_result/*²éÑ¯½á¹û*/;
-        std::vector<IE_ALARM_RULE> ie_alarm_rule/*¹æÔò*/;
+        IE_RESULT    ie_result/*æŸ¥è¯¢ç»“æœ*/;
+        std::vector<IE_ALARM_RULE> ie_alarm_rule/*è§„åˆ™*/;
     };
     typedef zce_smartptr<MSG_QUERY_ALARMRULE_RES> MSG_QUERY_ALARMRULE_RES_PTR;
 
@@ -7129,7 +7129,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_ALARMRULE_REQ;
         static const char* type_name() { return ("MSG_CONFIG_ALARMRULE_REQ");}
         IE_UCHAR    action/*'A' Add, 'M' Modify, 'D' Delete*/;
-        IE_ALARM_RULE    ie_alarm_rule/*¹æÔò*/;
+        IE_ALARM_RULE    ie_alarm_rule/*è§„åˆ™*/;
     };
     typedef zce_smartptr<MSG_CONFIG_ALARMRULE_REQ> MSG_CONFIG_ALARMRULE_REQ_PTR;
 
@@ -7137,7 +7137,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_ALARMRULE_RES;
         static const char* type_name() { return ("MSG_CONFIG_ALARMRULE_RES");}
-        IE_RESULT    ie_result/*ÅäÖÃ½á¹û*/;
+        IE_RESULT    ie_result/*é…ç½®ç»“æœ*/;
     };
     typedef zce_smartptr<MSG_CONFIG_ALARMRULE_RES> MSG_CONFIG_ALARMRULE_RES_PTR;
 
@@ -7152,8 +7152,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_GUARD_SET_RES;
         static const char* type_name() { return ("MSG_QUERY_GUARD_SET_RES");}
-        IE_RESULT    ie_result/*²éÑ¯½á¹û*/;
-        std::vector<IE_GUARD_SET> ie_guard_set/*Éè±¸²¼³··À²ÎÊı*/;
+        IE_RESULT    ie_result/*æŸ¥è¯¢ç»“æœ*/;
+        std::vector<IE_GUARD_SET> ie_guard_set/*è®¾å¤‡å¸ƒæ’¤é˜²å‚æ•°*/;
     };
     typedef zce_smartptr<MSG_QUERY_GUARD_SET_RES> MSG_QUERY_GUARD_SET_RES_PTR;
 
@@ -7161,7 +7161,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_GUARD_SET_REQ;
         static const char* type_name() { return ("MSG_CONFIG_GUARD_SET_REQ");}
-        IE_GUARD_SET    ie_guard_set/*Éè±¸²¼³··À²ÎÊı*/;
+        IE_GUARD_SET    ie_guard_set/*è®¾å¤‡å¸ƒæ’¤é˜²å‚æ•°*/;
     };
     typedef zce_smartptr<MSG_CONFIG_GUARD_SET_REQ> MSG_CONFIG_GUARD_SET_REQ_PTR;
 
@@ -7169,7 +7169,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_GUARD_SET_RES;
         static const char* type_name() { return ("MSG_CONFIG_GUARD_SET_RES");}
-        IE_RESULT    ie_result/*ÅäÖÃ½á¹û*/;
+        IE_RESULT    ie_result/*é…ç½®ç»“æœ*/;
     };
     typedef zce_smartptr<MSG_CONFIG_GUARD_SET_RES> MSG_CONFIG_GUARD_SET_RES_PTR;
 
@@ -7184,8 +7184,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_LAST_GUARD_STATUS_RES;
         static const char* type_name() { return ("MSG_QUERY_LAST_GUARD_STATUS_RES");}
-        IE_RESULT    ie_result/*²éÑ¯½á¹û*/;
-        std::vector<IE_LAST_GUARD_STATUS> ie_last_guard_status/*×îºó²¼³··ÀÖ¸Áî*/;
+        IE_RESULT    ie_result/*æŸ¥è¯¢ç»“æœ*/;
+        std::vector<IE_LAST_GUARD_STATUS> ie_last_guard_status/*æœ€åå¸ƒæ’¤é˜²æŒ‡ä»¤*/;
     };
     typedef zce_smartptr<MSG_QUERY_LAST_GUARD_STATUS_RES> MSG_QUERY_LAST_GUARD_STATUS_RES_PTR;
 
@@ -7193,7 +7193,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_LAST_GUARD_STATUS_REQ;
         static const char* type_name() { return ("MSG_CONFIG_LAST_GUARD_STATUS_REQ");}
-        IE_LAST_GUARD_STATUS    ie_last_guard_status/*×îºó²¼³··ÀÖ¸Áî*/;
+        IE_LAST_GUARD_STATUS    ie_last_guard_status/*æœ€åå¸ƒæ’¤é˜²æŒ‡ä»¤*/;
     };
     typedef zce_smartptr<MSG_CONFIG_LAST_GUARD_STATUS_REQ> MSG_CONFIG_LAST_GUARD_STATUS_REQ_PTR;
 
@@ -7201,7 +7201,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_LAST_GUARD_STATUS_RES;
         static const char* type_name() { return ("MSG_CONFIG_LAST_GUARD_STATUS_RES");}
-        IE_RESULT    ie_result/*ÉèÖÃ½á¹û*/;
+        IE_RESULT    ie_result/*è®¾ç½®ç»“æœ*/;
     };
     typedef zce_smartptr<MSG_CONFIG_LAST_GUARD_STATUS_RES> MSG_CONFIG_LAST_GUARD_STATUS_RES_PTR;
 
@@ -7218,8 +7218,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_CENTERALARMHANDLE_RES;
         static const char* type_name() { return ("MSG_QUERY_CENTERALARMHANDLE_RES");}
-        IE_RESULT    ie_result/*ÅäÖÃ½á¹û*/;
-        std::vector<IE_CENTERALARM_HANDLE> ie_alarm_handle/*ÖĞĞÄ´¦¾¯*/;
+        IE_RESULT    ie_result/*é…ç½®ç»“æœ*/;
+        std::vector<IE_CENTERALARM_HANDLE> ie_alarm_handle/*ä¸­å¿ƒå¤„è­¦*/;
     };
     typedef zce_smartptr<MSG_QUERY_CENTERALARMHANDLE_RES> MSG_QUERY_CENTERALARMHANDLE_RES_PTR;
 
@@ -7228,7 +7228,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_CENTERALARMHANDLE_REQ;
         static const char* type_name() { return ("MSG_CONFIG_CENTERALARMHANDLE_REQ");}
         IE_UCHAR    action/*'A' Add, 'M' Modify, 'D' Delete*/;
-        IE_CENTERALARM_HANDLE    ie_alarm_handle/*ÖĞĞÄ´¦¾¯*/;
+        IE_CENTERALARM_HANDLE    ie_alarm_handle/*ä¸­å¿ƒå¤„è­¦*/;
     };
     typedef zce_smartptr<MSG_CONFIG_CENTERALARMHANDLE_REQ> MSG_CONFIG_CENTERALARMHANDLE_REQ_PTR;
 
@@ -7236,7 +7236,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_CENTERALARMHANDLE_RES;
         static const char* type_name() { return ("MSG_CONFIG_CENTERALARMHANDLE_RES");}
-        IE_RESULT    ie_result/*ÅäÖÃ½á¹û*/;
+        IE_RESULT    ie_result/*é…ç½®ç»“æœ*/;
     };
     typedef zce_smartptr<MSG_CONFIG_CENTERALARMHANDLE_RES> MSG_CONFIG_CENTERALARMHANDLE_RES_PTR;
 
@@ -7245,7 +7245,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_FDALARMHANDLE_REQ;
         static const char* type_name() { return ("MSG_CONFIG_FDALARMHANDLE_REQ");}
         IE_UCHAR    action/*'A' Add, 'M' Modify, 'D' Delete*/;
-        IE_FDALARM_HANDLE    ie_fdalarm_handle/*´¦¾¯*/;
+        IE_FDALARM_HANDLE    ie_fdalarm_handle/*å¤„è­¦*/;
     };
     typedef zce_smartptr<MSG_CONFIG_FDALARMHANDLE_REQ> MSG_CONFIG_FDALARMHANDLE_REQ_PTR;
 
@@ -7253,7 +7253,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_FDALARMHANDLE_RES;
         static const char* type_name() { return ("MSG_CONFIG_FDALARMHANDLE_RES");}
-        IE_RESULT    ie_result/*ÅäÖÃ½á¹û*/;
+        IE_RESULT    ie_result/*é…ç½®ç»“æœ*/;
     };
     typedef zce_smartptr<MSG_CONFIG_FDALARMHANDLE_RES> MSG_CONFIG_FDALARMHANDLE_RES_PTR;
 
@@ -7269,7 +7269,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_SET_ALARMRULE_TIMESPAN_RES;
         static const char* type_name() { return ("MSG_SET_ALARMRULE_TIMESPAN_RES");}
-        IE_RESULT    ie_result/*ÅäÖÃ½á¹û*/;
+        IE_RESULT    ie_result/*é…ç½®ç»“æœ*/;
     };
     typedef zce_smartptr<MSG_SET_ALARMRULE_TIMESPAN_RES> MSG_SET_ALARMRULE_TIMESPAN_RES_PTR;
 
@@ -7277,7 +7277,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_MANUAL_ALARM_REQ;
         static const char* type_name() { return ("MSG_MANUAL_ALARM_REQ");}
-        IE_ALARM_EVENT    ie_alarm_event/*¸æ¾¯ÊÂ¼ş*/;
+        IE_ALARM_EVENT    ie_alarm_event/*å‘Šè­¦äº‹ä»¶*/;
     };
     typedef zce_smartptr<MSG_MANUAL_ALARM_REQ> MSG_MANUAL_ALARM_REQ_PTR;
 
@@ -7285,7 +7285,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_MANUAL_ALARM_RES;
         static const char* type_name() { return ("MSG_MANUAL_ALARM_RES");}
-        IE_RESULT    ie_result/*ÊÖ¶¯¸æ¾¯½á¹û*/;
+        IE_RESULT    ie_result/*æ‰‹åŠ¨å‘Šè­¦ç»“æœ*/;
     };
     typedef zce_smartptr<MSG_MANUAL_ALARM_RES> MSG_MANUAL_ALARM_RES_PTR;
 
@@ -7293,7 +7293,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_DISABLE_ALARM_REQ;
         static const char* type_name() { return ("MSG_DISABLE_ALARM_REQ");}
-        std::vector<IE_UCHAR> ie_enable/*ÊÇ·ñ½ÓÊÕ¸æ¾¯£¬1, ÖØĞÂ¿ªÊ¼½ÓÊÜ£¬0£¬È¡Ïû£¬Èç¹û²»Ìî£¬Àí½âÎªÈ¡Ïû¸æ¾¯*/;
+        std::vector<IE_UCHAR> ie_enable/*æ˜¯å¦æ¥æ”¶å‘Šè­¦ï¼Œ1, é‡æ–°å¼€å§‹æ¥å—ï¼Œ0ï¼Œå–æ¶ˆï¼Œå¦‚æœä¸å¡«ï¼Œç†è§£ä¸ºå–æ¶ˆå‘Šè­¦*/;
     };
     typedef zce_smartptr<MSG_DISABLE_ALARM_REQ> MSG_DISABLE_ALARM_REQ_PTR;
 
@@ -7301,7 +7301,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_DISABLE_ALARM_RES;
         static const char* type_name() { return ("MSG_DISABLE_ALARM_RES");}
-        IE_RESULT    ie_result/*ÉèÖÃ½á¹û*/;
+        IE_RESULT    ie_result/*è®¾ç½®ç»“æœ*/;
     };
     typedef zce_smartptr<MSG_DISABLE_ALARM_RES> MSG_DISABLE_ALARM_RES_PTR;
 
@@ -7309,7 +7309,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CANCEL_ALARM_REQ;
         static const char* type_name() { return ("MSG_CANCEL_ALARM_REQ");}
-        IE_ALARM_EVENT    ie_alarm_event/*¸æ¾¯ÊÂ¼ş*/;
+        IE_ALARM_EVENT    ie_alarm_event/*å‘Šè­¦äº‹ä»¶*/;
     };
     typedef zce_smartptr<MSG_CANCEL_ALARM_REQ> MSG_CANCEL_ALARM_REQ_PTR;
 
@@ -7317,7 +7317,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CANCEL_ALARM_RES;
         static const char* type_name() { return ("MSG_CANCEL_ALARM_RES");}
-        IE_RESULT    ie_result/*Ïú¾¯½á¹û*/;
+        IE_RESULT    ie_result/*é”€è­¦ç»“æœ*/;
     };
     typedef zce_smartptr<MSG_CANCEL_ALARM_RES> MSG_CANCEL_ALARM_RES_PTR;
 
@@ -7325,12 +7325,12 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_ALARM_NOTIFY;
         static const char* type_name() { return ("MSG_ALARM_NOTIFY");}
-        IE_ALARM_CONTENT_HEADER    alarm_content_header/*¸æ¾¯»ù±¾ÄÚÈİ*/;
-        std::vector<IE_ALARM_CONTENT_TEXT> alarm_content_text/*ÎÄ±¾ÄÚÈİ*/;
-        std::vector<IE_ALARM_CONTENT_PICTURE> alarm_content_picture/*Í¼Æ¬¸æ¾¯ÄÚÈİ*/;
-        std::vector<IE_ALARM_CONTENT_PICTURE_WITH_RECT_PARAMETER> alarm_content_picture_with_rect_parameter/*Í¼Æ¬¸æ¾¯ÄÚÈİ, ´øÓĞ¸ĞĞËÈ¤ÇøÓò³µÁ¾+³µÅÆ¾ØĞÎ*/;
-        std::vector<IE_UA_ID> ie_ua_id/*Ö¸¶¨½ÓÊÕÉè±¸¸æ¾¯µÄÓÃ»§ID*/;
-        std::vector<IE_TIME> ie_alarm_time/*¸æ¾¯Ê±¼ä*/;
+        IE_ALARM_CONTENT_HEADER    alarm_content_header/*å‘Šè­¦åŸºæœ¬å†…å®¹*/;
+        std::vector<IE_ALARM_CONTENT_TEXT> alarm_content_text/*æ–‡æœ¬å†…å®¹*/;
+        std::vector<IE_ALARM_CONTENT_PICTURE> alarm_content_picture/*å›¾ç‰‡å‘Šè­¦å†…å®¹*/;
+        std::vector<IE_ALARM_CONTENT_PICTURE_WITH_RECT_PARAMETER> alarm_content_picture_with_rect_parameter/*å›¾ç‰‡å‘Šè­¦å†…å®¹, å¸¦æœ‰æ„Ÿå…´è¶£åŒºåŸŸè½¦è¾†+è½¦ç‰ŒçŸ©å½¢*/;
+        std::vector<IE_UA_ID> ie_ua_id/*æŒ‡å®šæ¥æ”¶è®¾å¤‡å‘Šè­¦çš„ç”¨æˆ·ID*/;
+        std::vector<IE_TIME> ie_alarm_time/*å‘Šè­¦æ—¶é—´*/;
     };
     typedef zce_smartptr<MSG_ALARM_NOTIFY> MSG_ALARM_NOTIFY_PTR;
 
@@ -7338,12 +7338,12 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_ALARM_NOTIFY_UA;
         static const char* type_name() { return ("MSG_ALARM_NOTIFY_UA");}
-        IE_ALARM_CONTENT_HEADER    ie_alarm_content_header/*¸æ¾¯»ù±¾ÄÚÈİ*/;
-        IE_CHAR16    ie_alarm_guid/*¸æ¾¯GUID£¬UAÍ¨¹ı´ËGUIDÏò·şÎñÆ÷²éÑ¯¾ßÌå¸æ¾¯ĞÅÏ¢*/;
-        std::vector<IE_ALARM_CONTENT_TEXT_UA> ie_alarm_content_text/*¸æ¾¯Ïà¹ØÎÄ±¾ĞÅÏ¢*/;
-        std::vector<IE_ULONG> ie_alarm_flag/*¸æ¾¯±êÖ¾£º1:´æÔÚ¸æ¾¯Í¼Æ¬*/;
-        std::vector<IE_TIME> ie_alarm_time/*¸æ¾¯Ê±¼ä*/;
-        std::vector<IE_astring> ie_storage_area_id/*¸æ¾¯Í¼Æ¬´æ´¢µÄAreaId*/;
+        IE_ALARM_CONTENT_HEADER    ie_alarm_content_header/*å‘Šè­¦åŸºæœ¬å†…å®¹*/;
+        IE_CHAR16    ie_alarm_guid/*å‘Šè­¦GUIDï¼ŒUAé€šè¿‡æ­¤GUIDå‘æœåŠ¡å™¨æŸ¥è¯¢å…·ä½“å‘Šè­¦ä¿¡æ¯*/;
+        std::vector<IE_ALARM_CONTENT_TEXT_UA> ie_alarm_content_text/*å‘Šè­¦ç›¸å…³æ–‡æœ¬ä¿¡æ¯*/;
+        std::vector<IE_ULONG> ie_alarm_flag/*å‘Šè­¦æ ‡å¿—ï¼š1:å­˜åœ¨å‘Šè­¦å›¾ç‰‡*/;
+        std::vector<IE_TIME> ie_alarm_time/*å‘Šè­¦æ—¶é—´*/;
+        std::vector<IE_astring> ie_storage_area_id/*å‘Šè­¦å›¾ç‰‡å­˜å‚¨çš„AreaId*/;
     };
     typedef zce_smartptr<MSG_ALARM_NOTIFY_UA> MSG_ALARM_NOTIFY_UA_PTR;
 
@@ -7351,9 +7351,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_ALARM_NOTIFY_FD;
         static const char* type_name() { return ("MSG_ALARM_NOTIFY_FD");}
-        IE_ALARM_CONTENT_HEADER    ie_alarm_content_header/*¸æ¾¯»ù±¾ÄÚÈİ*/;
-        IE_CHAR16    ie_alarm_guid/*¸æ¾¯GUID£¬FDÍ¨¹ı´ËGUIDÏò·şÎñÆ÷²éÑ¯¾ßÌå¸æ¾¯ĞÅÏ¢*/;
-        std::vector<IE_ALARM_CONTENT_TEXT_FD> ie_alarm_content_text/*¸æ¾¯Ïà¹ØÎÄ±¾ĞÅÏ¢*/;
+        IE_ALARM_CONTENT_HEADER    ie_alarm_content_header/*å‘Šè­¦åŸºæœ¬å†…å®¹*/;
+        IE_CHAR16    ie_alarm_guid/*å‘Šè­¦GUIDï¼ŒFDé€šè¿‡æ­¤GUIDå‘æœåŠ¡å™¨æŸ¥è¯¢å…·ä½“å‘Šè­¦ä¿¡æ¯*/;
+        std::vector<IE_ALARM_CONTENT_TEXT_FD> ie_alarm_content_text/*å‘Šè­¦ç›¸å…³æ–‡æœ¬ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_ALARM_NOTIFY_FD> MSG_ALARM_NOTIFY_FD_PTR;
 
@@ -7379,8 +7379,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CMS_SET_PARAMETER_VALUES_REQ;
         static const char* type_name() { return ("MSG_CMS_SET_PARAMETER_VALUES_REQ");}
-        std::vector<IE_NAME_VALUE> ie_params/*¿ÉÓĞ¶àÏî*/;
-        IE_astring254    ie_key/*Î¨Ò»±êÊ¶¸Ã´ËĞŞ¸ÄµÄÖµ£¬¿ÉÎª¿Õ´®*/;
+        std::vector<IE_NAME_VALUE> ie_params/*å¯æœ‰å¤šé¡¹*/;
+        IE_astring254    ie_key/*å”¯ä¸€æ ‡è¯†è¯¥æ­¤ä¿®æ”¹çš„å€¼ï¼Œå¯ä¸ºç©ºä¸²*/;
     };
     typedef zce_smartptr<MSG_CMS_SET_PARAMETER_VALUES_REQ> MSG_CMS_SET_PARAMETER_VALUES_REQ_PTR;
 
@@ -7396,7 +7396,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CMS_GET_PARAMETER_VALUES_REQ;
         static const char* type_name() { return ("MSG_CMS_GET_PARAMETER_VALUES_REQ");}
-        IE_astring254    ie_names/*½ÚµãÃû³Æ£¬¿ÉÎª¿Õ´®£¬¿Õ´®·µ»ØËùÓĞ½Úµã*/;
+        IE_astring254    ie_names/*èŠ‚ç‚¹åç§°ï¼Œå¯ä¸ºç©ºä¸²ï¼Œç©ºä¸²è¿”å›æ‰€æœ‰èŠ‚ç‚¹*/;
     };
     typedef zce_smartptr<MSG_CMS_GET_PARAMETER_VALUES_REQ> MSG_CMS_GET_PARAMETER_VALUES_REQ_PTR;
 
@@ -7405,7 +7405,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_CMS_GET_PARAMETER_VALUES_RES;
         static const char* type_name() { return ("MSG_CMS_GET_PARAMETER_VALUES_RES");}
         IE_RESULT    ie_result;
-        std::vector<IE_NAME_VALUE> ie_param_values/*¿ÉÓĞ¶àÏî£¬¶ÔÓ¦²éÑ¯µÄ½ÚµãÃû³Æ¡¢Öµ¶Ô*/;
+        std::vector<IE_NAME_VALUE> ie_param_values/*å¯æœ‰å¤šé¡¹ï¼Œå¯¹åº”æŸ¥è¯¢çš„èŠ‚ç‚¹åç§°ã€å€¼å¯¹*/;
     };
     typedef zce_smartptr<MSG_CMS_GET_PARAMETER_VALUES_RES> MSG_CMS_GET_PARAMETER_VALUES_RES_PTR;
 
@@ -7413,8 +7413,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CMS_GET_PARAMETER_INFOS_REQ;
         static const char* type_name() { return ("MSG_CMS_GET_PARAMETER_INFOS_REQ");}
-        IE_astring254    ie_names/*½ÚµãÃû³Æ£¬¿ÉÎª¿Õ´®£¬¿Õ´®·µ»ØËùÓĞ½Úµã*/;
-        IE_UCHAR    ie_nextlevel/*ÊÇ·ñÕ¹¿ª×Ó½Úµã*/;
+        IE_astring254    ie_names/*èŠ‚ç‚¹åç§°ï¼Œå¯ä¸ºç©ºä¸²ï¼Œç©ºä¸²è¿”å›æ‰€æœ‰èŠ‚ç‚¹*/;
+        IE_UCHAR    ie_nextlevel/*æ˜¯å¦å±•å¼€å­èŠ‚ç‚¹*/;
     };
     typedef zce_smartptr<MSG_CMS_GET_PARAMETER_INFOS_REQ> MSG_CMS_GET_PARAMETER_INFOS_REQ_PTR;
 
@@ -7423,7 +7423,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_CMS_GET_PARAMETER_INFOS_RES;
         static const char* type_name() { return ("MSG_CMS_GET_PARAMETER_INFOS_RES");}
         IE_RESULT    ie_result;
-        std::vector<IE_FD_PARAMETER_INFO> ie_param_infos/*¿ÉÓĞ¶àÏî£¬¶ÔÓ¦²éÑ¯µÄ½ÚµãµÄĞÅÏ¢*/;
+        std::vector<IE_FD_PARAMETER_INFO> ie_param_infos/*å¯æœ‰å¤šé¡¹ï¼Œå¯¹åº”æŸ¥è¯¢çš„èŠ‚ç‚¹çš„ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_CMS_GET_PARAMETER_INFOS_RES> MSG_CMS_GET_PARAMETER_INFOS_RES_PTR;
 
@@ -7431,7 +7431,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CMS_SET_PARAMETER_ATTRIBUTES_REQ;
         static const char* type_name() { return ("MSG_CMS_SET_PARAMETER_ATTRIBUTES_REQ");}
-        std::vector<IE_FD_PARAMTER_ATTRIBUTE> ie_param_infos/*¿ÉÓĞ¶àÏî*/;
+        std::vector<IE_FD_PARAMTER_ATTRIBUTE> ie_param_infos/*å¯æœ‰å¤šé¡¹*/;
     };
     typedef zce_smartptr<MSG_CMS_SET_PARAMETER_ATTRIBUTES_REQ> MSG_CMS_SET_PARAMETER_ATTRIBUTES_REQ_PTR;
 
@@ -7447,7 +7447,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CMS_GET_PARAMETER_ATTRIBUTES_REQ;
         static const char* type_name() { return ("MSG_CMS_GET_PARAMETER_ATTRIBUTES_REQ");}
-        IE_astring254    ie_names/*½ÚµãÃû³Æ£¬¿ÉÎª¿Õ´®£¬¿Õ´®·µ»ØËùÓĞ½Úµã*/;
+        IE_astring254    ie_names/*èŠ‚ç‚¹åç§°ï¼Œå¯ä¸ºç©ºä¸²ï¼Œç©ºä¸²è¿”å›æ‰€æœ‰èŠ‚ç‚¹*/;
     };
     typedef zce_smartptr<MSG_CMS_GET_PARAMETER_ATTRIBUTES_REQ> MSG_CMS_GET_PARAMETER_ATTRIBUTES_REQ_PTR;
 
@@ -7464,7 +7464,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_FDLOG_REQ;
         static const char* type_name() { return ("MSG_QUERY_FDLOG_REQ");}
-        IE_TIME_SECTOR    ie_time_sector/*Ê±¼äÇø¼ä*/;
+        IE_TIME_SECTOR    ie_time_sector/*æ—¶é—´åŒºé—´*/;
     };
     typedef zce_smartptr<MSG_QUERY_FDLOG_REQ> MSG_QUERY_FDLOG_REQ_PTR;
 
@@ -7473,7 +7473,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_QUERY_FDLOG_RES;
         static const char* type_name() { return ("MSG_QUERY_FDLOG_RES");}
         IE_RESULT    ie_result;
-        IE_UCHAR    ie_zip/*Ñ¹Ëõ·½Ê½£¬0:ÎŞÑ¹Ëõ£¬1:bzip2Ñ¹Ëõ*/;
+        IE_UCHAR    ie_zip/*å‹ç¼©æ–¹å¼ï¼Œ0:æ— å‹ç¼©ï¼Œ1:bzip2å‹ç¼©*/;
         std::vector<IE_FD_LOG> ie_log;
     };
     typedef zce_smartptr<MSG_QUERY_FDLOG_RES> MSG_QUERY_FDLOG_RES_PTR;
@@ -7515,7 +7515,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_QUERY_RECORD_PLAN_REQ;
         static const char* type_name() { return ("MSG_QUERY_RECORD_PLAN_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_UCHAR    ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ*/;
+        IE_UCHAR    ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ*/;
     };
     typedef zce_smartptr<MSG_QUERY_RECORD_PLAN_REQ> MSG_QUERY_RECORD_PLAN_REQ_PTR;
 
@@ -7523,8 +7523,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_QUERY_RECORD_PLAN_RES;
         static const char* type_name() { return ("MSG_QUERY_RECORD_PLAN_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦£¬±ØĞëÌîºóĞø×Ö¶Î*/;
-        std::vector<IE_RECORD_PLAN> ie_record_plan/*Â¼Ïñ¼Æ»®Ê±¼ä±í£¬¿ÉÄÜÓĞ¶à¸ö*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸï¼Œå¿…é¡»å¡«åç»­å­—æ®µ*/;
+        std::vector<IE_RECORD_PLAN> ie_record_plan/*å½•åƒè®¡åˆ’æ—¶é—´è¡¨ï¼Œå¯èƒ½æœ‰å¤šä¸ª*/;
     };
     typedef zce_smartptr<MSG_QUERY_RECORD_PLAN_RES> MSG_QUERY_RECORD_PLAN_RES_PTR;
 
@@ -7533,9 +7533,9 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_RECORD_PLAN_REQ;
         static const char* type_name() { return ("MSG_CONFIG_RECORD_PLAN_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_UCHAR    ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ*/;
-        IE_UCHAR    ie_op_type/*²Ù×÷ÀàĞÍ£º1£ºĞŞ¸Ä£»2£ºÌí¼Ó£»4£ºÉ¾³ı*/;
-        std::vector<IE_RECORD_PLAN> ie_record_plan/*Â¼Ïñ¼Æ»®Ê±¼ä±í£¬¿ÉÄÜÓĞ¶à¸ö*/;
+        IE_UCHAR    ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ*/;
+        IE_UCHAR    ie_op_type/*æ“ä½œç±»å‹ï¼š1ï¼šä¿®æ”¹ï¼›2ï¼šæ·»åŠ ï¼›4ï¼šåˆ é™¤*/;
+        std::vector<IE_RECORD_PLAN> ie_record_plan/*å½•åƒè®¡åˆ’æ—¶é—´è¡¨ï¼Œå¯èƒ½æœ‰å¤šä¸ª*/;
     };
     typedef zce_smartptr<MSG_CONFIG_RECORD_PLAN_REQ> MSG_CONFIG_RECORD_PLAN_REQ_PTR;
 
@@ -7543,7 +7543,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CONFIG_RECORD_PLAN_RES;
         static const char* type_name() { return ("MSG_CONFIG_RECORD_PLAN_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_CONFIG_RECORD_PLAN_RES> MSG_CONFIG_RECORD_PLAN_RES_PTR;
 
@@ -7552,7 +7552,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_RECORD_PLAN_REQ;
         static const char* type_name() { return ("MSG_RECORD_PLAN_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        std::vector<IE_RECORD_PLAN> ie_record_plan/*Â¼Ïñ¼Æ»®Ê±¼ä±í£¬¿ÉÄÜÓĞ¶à¸ö*/;
+        std::vector<IE_RECORD_PLAN> ie_record_plan/*å½•åƒè®¡åˆ’æ—¶é—´è¡¨ï¼Œå¯èƒ½æœ‰å¤šä¸ª*/;
     };
     typedef zce_smartptr<MSG_RECORD_PLAN_REQ> MSG_RECORD_PLAN_REQ_PTR;
 
@@ -7560,7 +7560,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_RECORD_PLAN_RES;
         static const char* type_name() { return ("MSG_RECORD_PLAN_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_RECORD_PLAN_RES> MSG_RECORD_PLAN_RES_PTR;
 
@@ -7624,9 +7624,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_SIMPLE_LIST_REQ;
         static const char* type_name() { return ("MSG_FD_SIMPLE_LIST_REQ");}
-        std::vector<IE_UCHAR> ie_getchannel/*ÒªÈ¡µÄÍ¨µÀÀàĞÍ,²»ÌîµÄ»°Ä¬ÈÏ·µ»ØÊÓÆµÊäÈëÍ¨µÀ, Èô0·µ»ØËùÓĞÍ¨µÀ, 1ÎªÊÓÆµÊäÈëÍ¨µÀ...*/;
-        std::vector<IE_UA_ID> ie_ua_id/*ÌîÁËµÄ»°±íÃ÷È¡ÆäËûÕÊºÅµÄÉè±¸ÁĞ±í£¬Ö»ÓĞ³¬¼¶¹ÜÀíÔ±¿ÉÓÃ,Ö÷ÒªÓÃÓÚpdaµÈÓ¦ÓÃ*/;
-        std::vector<IE_UCHAR> ie_version/*Èô2·µ»ØIE_FD_SIMPLE_V2ÁĞ±í£»Îª¿Õ»òÕßÆäËûÖµ·µ»ØIE_FD_SIMPLEÁĞ±í*/;
+        std::vector<IE_UCHAR> ie_getchannel/*è¦å–çš„é€šé“ç±»å‹,ä¸å¡«çš„è¯é»˜è®¤è¿”å›è§†é¢‘è¾“å…¥é€šé“, è‹¥0è¿”å›æ‰€æœ‰é€šé“, 1ä¸ºè§†é¢‘è¾“å…¥é€šé“...*/;
+        std::vector<IE_UA_ID> ie_ua_id/*å¡«äº†çš„è¯è¡¨æ˜å–å…¶ä»–å¸å·çš„è®¾å¤‡åˆ—è¡¨ï¼Œåªæœ‰è¶…çº§ç®¡ç†å‘˜å¯ç”¨,ä¸»è¦ç”¨äºpdaç­‰åº”ç”¨*/;
+        std::vector<IE_UCHAR> ie_version/*è‹¥2è¿”å›IE_FD_SIMPLE_V2åˆ—è¡¨ï¼›ä¸ºç©ºæˆ–è€…å…¶ä»–å€¼è¿”å›IE_FD_SIMPLEåˆ—è¡¨*/;
     };
     typedef zce_smartptr<MSG_FD_SIMPLE_LIST_REQ> MSG_FD_SIMPLE_LIST_REQ_PTR;
 
@@ -7635,8 +7635,8 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_FD_SIMPLE_LIST_RES;
         static const char* type_name() { return ("MSG_FD_SIMPLE_LIST_RES");}
         IE_RESULT    ie_result;
-        std::vector<IE_FD_SIMPLE> ie_fd_simple/*0µ½¶à¸öÉè±¸*/;
-        std::vector<IE_FD_SIMPLE_V2> ie_fd_simple_v2/*0µ½¶à¸öÉè±¸*/;
+        std::vector<IE_FD_SIMPLE> ie_fd_simple/*0åˆ°å¤šä¸ªè®¾å¤‡*/;
+        std::vector<IE_FD_SIMPLE_V2> ie_fd_simple_v2/*0åˆ°å¤šä¸ªè®¾å¤‡*/;
     };
     typedef zce_smartptr<MSG_FD_SIMPLE_LIST_RES> MSG_FD_SIMPLE_LIST_RES_PTR;
 
@@ -7645,8 +7645,8 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_UA_MEDIAAUTH_REQ;
         static const char* type_name() { return ("MSG_UA_MEDIAAUTH_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_ULONG    ie_auth_type/*¼øÈ¨ÀàĞÍ, 0x01¶Á,0x02Ğ´,0x04¿Ø,0x08ÊÚÈ¨,0x10Åä,0x20fdµÇÂ¼,0x40ÉèÃÜÂë*/;
-        std::vector<IE_UA_ID> ie_ua_id/*ÌîÁËµÄ»°±íÃ÷ÅĞ¶Ï¸Ãua_idµÄÈ¨ÏŞ*/;
+        IE_ULONG    ie_auth_type/*é‰´æƒç±»å‹, 0x01è¯»,0x02å†™,0x04æ§,0x08æˆæƒ,0x10é…,0x20fdç™»å½•,0x40è®¾å¯†ç */;
+        std::vector<IE_UA_ID> ie_ua_id/*å¡«äº†çš„è¯è¡¨æ˜åˆ¤æ–­è¯¥ua_idçš„æƒé™*/;
     };
     typedef zce_smartptr<MSG_UA_MEDIAAUTH_REQ> MSG_UA_MEDIAAUTH_REQ_PTR;
 
@@ -7662,7 +7662,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_CHECK_UPDATE_REQ;
         static const char* type_name() { return ("MSG_CHECK_UPDATE_REQ");}
-        IE_SOFT_VERSION    ie_soft_version/*Èí¼ş°æ±¾*/;
+        IE_SOFT_VERSION    ie_soft_version/*è½¯ä»¶ç‰ˆæœ¬*/;
     };
     typedef zce_smartptr<MSG_CHECK_UPDATE_REQ> MSG_CHECK_UPDATE_REQ_PTR;
 
@@ -7671,7 +7671,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_CHECK_UPDATE_RES;
         static const char* type_name() { return ("MSG_CHECK_UPDATE_RES");}
         IE_RESULT    ie_result;
-        std::vector<IE_astring64> ie_url/*Èí¼şÉı¼¶URL*/;
+        std::vector<IE_astring64> ie_url/*è½¯ä»¶å‡çº§URL*/;
     };
     typedef zce_smartptr<MSG_CHECK_UPDATE_RES> MSG_CHECK_UPDATE_RES_PTR;
 
@@ -7679,8 +7679,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UAS_PARALLEL_REGIST_REQ;
         static const char* type_name() { return ("MSG_UAS_PARALLEL_REGIST_REQ");}
-        IE_UAS_INFO    ie_uas_info/*UAS ĞÅÏ¢*/;
-        IE_CHAR16    ie_guid/*16×Ö½ÚµÄGUID,UAS±¾´ÎÔËĞĞµÄGUID*/;
+        IE_UAS_INFO    ie_uas_info/*UAS ä¿¡æ¯*/;
+        IE_CHAR16    ie_guid/*16å­—èŠ‚çš„GUID,UASæœ¬æ¬¡è¿è¡Œçš„GUID*/;
     };
     typedef zce_smartptr<MSG_UAS_PARALLEL_REGIST_REQ> MSG_UAS_PARALLEL_REGIST_REQ_PTR;
 
@@ -7689,7 +7689,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_UAS_PARALLEL_REGIST_RES;
         static const char* type_name() { return ("MSG_UAS_PARALLEL_REGIST_RES");}
         IE_RESULT    ie_result;
-        std::vector<IE_CHAR16> ie_guid/*16×Ö½ÚµÄGUID,UAS±¾´ÎÔËĞĞµÄGUID*/;
+        std::vector<IE_CHAR16> ie_guid/*16å­—èŠ‚çš„GUID,UASæœ¬æ¬¡è¿è¡Œçš„GUID*/;
     };
     typedef zce_smartptr<MSG_UAS_PARALLEL_REGIST_RES> MSG_UAS_PARALLEL_REGIST_RES_PTR;
 
@@ -7729,9 +7729,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UAS_PARALLEL_QUERY_CUSTOMER_FDCHANNELPRIV_REQ;
         static const char* type_name() { return ("MSG_UAS_PARALLEL_QUERY_CUSTOMER_FDCHANNELPRIV_REQ");}
-        std::vector<IE_GRANTED_CUSTOMER_INFO> ie_granted_customer_info/*ÊÚÈ¨¿Í»§£¬Èç¹ûÎª¿Õ±íÊ¾²éÑ¯Éè±¸Í¨µÀĞÅÏ¢*/;
-        std::vector<IE_FD_ID> ie_fd_id/*Éè±¸ID£¬ie_granted_customer_infoÎª¿ÕÊ±±ØĞëÌîĞ´*/;
-        std::vector<IE_CHANNEL_ID> ie_channel_id/*Í¨µÀID*/;
+        std::vector<IE_GRANTED_CUSTOMER_INFO> ie_granted_customer_info/*æˆæƒå®¢æˆ·ï¼Œå¦‚æœä¸ºç©ºè¡¨ç¤ºæŸ¥è¯¢è®¾å¤‡é€šé“ä¿¡æ¯*/;
+        std::vector<IE_FD_ID> ie_fd_id/*è®¾å¤‡IDï¼Œie_granted_customer_infoä¸ºç©ºæ—¶å¿…é¡»å¡«å†™*/;
+        std::vector<IE_CHANNEL_ID> ie_channel_id/*é€šé“ID*/;
     };
     typedef zce_smartptr<MSG_UAS_PARALLEL_QUERY_CUSTOMER_FDCHANNELPRIV_REQ> MSG_UAS_PARALLEL_QUERY_CUSTOMER_FDCHANNELPRIV_REQ_PTR;
 
@@ -7748,12 +7748,12 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UAS_PARALLEL_CUSTOMER_FDCHANNELPRIV_CHANEGED_NOTIFY;
         static const char* type_name() { return ("MSG_UAS_PARALLEL_CUSTOMER_FDCHANNELPRIV_CHANEGED_NOTIFY");}
-        IE_ULONG    ie_notify_type/*BYTE 0: Í¨ÖªÀàĞÍ; BYTE 1: Action*/;
-        std::vector<IE_GRANTED_CUSTOMER_INFO> ie_granted_customer_info/*ÊÚÈ¨±»ÊÚÈ¨¿Í»§ID*/;
-        std::vector<IE_FD_ID> ie_fd_id/*Éè±¸ID*/;
-        std::vector<IE_CHANNEL_ID> ie_channel_id/*Í¨µÀID*/;
-        std::vector<IE_ULONG> ie_privilege/*È¨ÏŞ*/;
-        std::vector<IE_astring254> ie_astring_ex/*Ô¤ÁôÀ©Õ¹ĞÅÏ¢*/;
+        IE_ULONG    ie_notify_type/*BYTE 0: é€šçŸ¥ç±»å‹; BYTE 1: Action*/;
+        std::vector<IE_GRANTED_CUSTOMER_INFO> ie_granted_customer_info/*æˆæƒè¢«æˆæƒå®¢æˆ·ID*/;
+        std::vector<IE_FD_ID> ie_fd_id/*è®¾å¤‡ID*/;
+        std::vector<IE_CHANNEL_ID> ie_channel_id/*é€šé“ID*/;
+        std::vector<IE_ULONG> ie_privilege/*æƒé™*/;
+        std::vector<IE_astring254> ie_astring_ex/*é¢„ç•™æ‰©å±•ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_UAS_PARALLEL_CUSTOMER_FDCHANNELPRIV_CHANEGED_NOTIFY> MSG_UAS_PARALLEL_CUSTOMER_FDCHANNELPRIV_CHANEGED_NOTIFY_PTR;
 
@@ -7761,10 +7761,10 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_CONTROL_RECORD_PLAYBACK_REQ;
         static const char* type_name() { return ("MSG_UA_CONTROL_RECORD_PLAYBACK_REQ");}
-        IE_UCHAR    ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ*/;
+        IE_UCHAR    ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ*/;
         IE_CHANNEL_ID    ie_channel_id;
-        IE_CTRL_CMD    ie_cmd/*»Ø·Å¿ØÖÆÃüÁî*/;
-        std::vector<IE_CHAR16> ie_guid/*16×Ö½ÚµÄguid,±êÊ¶¸Ã»Ø·ÅID*/;
+        IE_CTRL_CMD    ie_cmd/*å›æ”¾æ§åˆ¶å‘½ä»¤*/;
+        std::vector<IE_CHAR16> ie_guid/*16å­—èŠ‚çš„guid,æ ‡è¯†è¯¥å›æ”¾ID*/;
     };
     typedef zce_smartptr<MSG_UA_CONTROL_RECORD_PLAYBACK_REQ> MSG_UA_CONTROL_RECORD_PLAYBACK_REQ_PTR;
 
@@ -7772,8 +7772,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UAS_PARALLEL_SET_CUSTOMER_FDCHANNELPRIV_REQ;
         static const char* type_name() { return ("MSG_UAS_PARALLEL_SET_CUSTOMER_FDCHANNELPRIV_REQ");}
-        std::vector<IE_GRANTED_CUSTOMER_INFO> ie_granted_customer_info/*ÊÚÈ¨¿Í»§£¬Ä¿Ç°×î¶àÖ»Ö§³ÖÒ»¶Ô*/;
-        std::vector<IE_FDCHANNELPRIV_INFO> ie_fdchannel_priv_info/*ÊÚÈ¨Éè±¸ĞÅÏ¢*/;
+        std::vector<IE_GRANTED_CUSTOMER_INFO> ie_granted_customer_info/*æˆæƒå®¢æˆ·ï¼Œç›®å‰æœ€å¤šåªæ”¯æŒä¸€å¯¹*/;
+        std::vector<IE_FDCHANNELPRIV_INFO> ie_fdchannel_priv_info/*æˆæƒè®¾å¤‡ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_UAS_PARALLEL_SET_CUSTOMER_FDCHANNELPRIV_REQ> MSG_UAS_PARALLEL_SET_CUSTOMER_FDCHANNELPRIV_REQ_PTR;
 
@@ -7789,7 +7789,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_CONTROL_RECORD_PLAYBACK_RES;
         static const char* type_name() { return ("MSG_UA_CONTROL_RECORD_PLAYBACK_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦£¬±ØĞëÌîºóĞø×Ö¶Î*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸï¼Œå¿…é¡»å¡«åç»­å­—æ®µ*/;
     };
     typedef zce_smartptr<MSG_UA_CONTROL_RECORD_PLAYBACK_RES> MSG_UA_CONTROL_RECORD_PLAYBACK_RES_PTR;
 
@@ -7797,10 +7797,10 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_CONTROL_RECORD_DOWNLOAD_REQ;
         static const char* type_name() { return ("MSG_UA_CONTROL_RECORD_DOWNLOAD_REQ");}
-        IE_UCHAR    ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ*/;
+        IE_UCHAR    ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ*/;
         IE_CHANNEL_ID    ie_channel_id;
-        IE_CTRL_CMD    ie_cmd/*ÏÂÔØ¿ØÖÆÃüÁî*/;
-        std::vector<IE_CHAR16> ie_guid/*16×Ö½ÚµÄguid,±êÊ¶¸Ã»Ø·ÅID*/;
+        IE_CTRL_CMD    ie_cmd/*ä¸‹è½½æ§åˆ¶å‘½ä»¤*/;
+        std::vector<IE_CHAR16> ie_guid/*16å­—èŠ‚çš„guid,æ ‡è¯†è¯¥å›æ”¾ID*/;
     };
     typedef zce_smartptr<MSG_UA_CONTROL_RECORD_DOWNLOAD_REQ> MSG_UA_CONTROL_RECORD_DOWNLOAD_REQ_PTR;
 
@@ -7808,7 +7808,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_CONTROL_RECORD_DOWNLOAD_RES;
         static const char* type_name() { return ("MSG_UA_CONTROL_RECORD_DOWNLOAD_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦£¬±ØĞëÌîºóĞø×Ö¶Î*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸï¼Œå¿…é¡»å¡«åç»­å­—æ®µ*/;
     };
     typedef zce_smartptr<MSG_UA_CONTROL_RECORD_DOWNLOAD_RES> MSG_UA_CONTROL_RECORD_DOWNLOAD_RES_PTR;
 
@@ -7816,9 +7816,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_LOCKRECORD_REQ;
         static const char* type_name() { return ("MSG_UA_LOCKRECORD_REQ");}
-        IE_UCHAR    ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ*/;
+        IE_UCHAR    ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ*/;
         IE_CHANNEL_ID    ie_channel_id;
-        std::vector<IE_TIME_FILE_V2> ie_time_file_v2/*Ëø¶¨²ÎÊıV2°æ±¾*/;
+        std::vector<IE_TIME_FILE_V2> ie_time_file_v2/*é”å®šå‚æ•°V2ç‰ˆæœ¬*/;
     };
     typedef zce_smartptr<MSG_UA_LOCKRECORD_REQ> MSG_UA_LOCKRECORD_REQ_PTR;
 
@@ -7835,7 +7835,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_UA_BATLOCKRECORD_REQ;
         static const char* type_name() { return ("MSG_UA_BATLOCKRECORD_REQ");}
         IE_TIME_SECTOR    ie_time_sector;
-        IE_TIME    ie_time/*Ëø¶¨Ê±¼ä*/;
+        IE_TIME    ie_time/*é”å®šæ—¶é—´*/;
         std::vector<IE_FD_CHANNEL_ID> ie_fd_channel_id;
     };
     typedef zce_smartptr<MSG_UA_BATLOCKRECORD_REQ> MSG_UA_BATLOCKRECORD_REQ_PTR;
@@ -7873,8 +7873,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_GPS_REQ;
         static const char* type_name() { return ("MSG_GPS_REQ");}
-        IE_ULONG    ie_enable/*0: ½ûÓÃ; 1: ÆôÓÃ*/;
-        IE_ULONG    ie_interval/*Ê±¼ä¼ä¸ô£¬ÃëÊı*/;
+        IE_ULONG    ie_enable/*0: ç¦ç”¨; 1: å¯ç”¨*/;
+        IE_ULONG    ie_interval/*æ—¶é—´é—´éš”ï¼Œç§’æ•°*/;
     };
     typedef zce_smartptr<MSG_GPS_REQ> MSG_GPS_REQ_PTR;
 
@@ -7939,8 +7939,8 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_REQUEST_URL_REQ;
         static const char* type_name() { return ("MSG_REQUEST_URL_REQ");}
         IE_astring    ie_url/*url*/;
-        IE_astring    ie_ip/*´úÀí·şÎñÆ÷ip*/;
-        IE_USHORT    ie_port/*´úÀí·şÎñÆ÷¶Ë¿Ú*/;
+        IE_astring    ie_ip/*ä»£ç†æœåŠ¡å™¨ip*/;
+        IE_USHORT    ie_port/*ä»£ç†æœåŠ¡å™¨ç«¯å£*/;
     };
     typedef zce_smartptr<MSG_REQUEST_URL_REQ> MSG_REQUEST_URL_REQ_PTR;
 
@@ -7958,7 +7958,7 @@ namespace gep
         static const char* type_name() { return ("MSG_INVITE_THIRD_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
         IE_UCHAR    ie_uchar/*0=invite, 1=bye, 2=ack*/;
-        std::vector<IE_astring> ie_astring/*ÖÁÉÙ3¸öastring, ·Ö±ğÊÇcallid, subject, sdp*/;
+        std::vector<IE_astring> ie_astring/*è‡³å°‘3ä¸ªastring, åˆ†åˆ«æ˜¯callid, subject, sdp*/;
     };
     typedef zce_smartptr<MSG_INVITE_THIRD_REQ> MSG_INVITE_THIRD_REQ_PTR;
 
@@ -7967,7 +7967,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_INVITE_THIRD_RES;
         static const char* type_name() { return ("MSG_INVITE_THIRD_RES");}
         IE_RESULT    ie_result;
-        std::vector<IE_astring> ie_astring/*ÖÁÉÙ3¸öastring, ·Ö±ğÊÇÓ¦´ğ»ØÀ´µÄcallid, to tag, sdp*/;
+        std::vector<IE_astring> ie_astring/*è‡³å°‘3ä¸ªastring, åˆ†åˆ«æ˜¯åº”ç­”å›æ¥çš„callid, to tag, sdp*/;
     };
     typedef zce_smartptr<MSG_INVITE_THIRD_RES> MSG_INVITE_THIRD_RES_PTR;
 
@@ -7975,7 +7975,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_GAB_CMD_REQ;
         static const char* type_name() { return ("MSG_GAB_CMD_REQ");}
-        std::vector<IE_astring> ie_astring/*2astring,·Ö±ğÊÇcmd, Í¨µÀid£¨Èç¹ûÓĞµÄ»°¾ÍÌîÍ¨µÀid,Ã»ÓĞÌî¿Õ£©*/;
+        std::vector<IE_astring> ie_astring/*2astring,åˆ†åˆ«æ˜¯cmd, é€šé“idï¼ˆå¦‚æœæœ‰çš„è¯å°±å¡«é€šé“id,æ²¡æœ‰å¡«ç©ºï¼‰*/;
     };
     typedef zce_smartptr<MSG_GAB_CMD_REQ> MSG_GAB_CMD_REQ_PTR;
 
@@ -8007,12 +8007,12 @@ namespace gep
         }
 
         zce_byte    qos;
-        zce_byte    payload/*±àÂë¸ñÊ½H.264/MPEG4/G.711/G.7231µÈ*/;
+        zce_byte    payload/*ç¼–ç æ ¼å¼H.264/MPEG4/G.711/G.7231ç­‰*/;
         zce_uint16    width;
         zce_uint16    height;
-        zce_uint16    frame_interval/*¹Ø¼üÖ¡¼ä¸ô*/;
-        zce_uint32    max_bitrate/*±àÂë±ÈÌØÂÊ,µ¥Î»kbps*/;
-        zce_byte    frame_rate/*ÊÓÆµÖ¡ÂÊ1¡«25, 0x81±íÊ¾È«Ö¡ÂÊ,0x82±íÊ¾1/2Ö¡ÂÊ,0x83±íÊ¾1/3Ö¡ÂÊµÈ*/;
+        zce_uint16    frame_interval/*å…³é”®å¸§é—´éš”*/;
+        zce_uint32    max_bitrate/*ç¼–ç æ¯”ç‰¹ç‡,å•ä½kbps*/;
+        zce_byte    frame_rate/*è§†é¢‘å¸§ç‡1ï½25, 0x81è¡¨ç¤ºå…¨å¸§ç‡,0x82è¡¨ç¤º1/2å¸§ç‡,0x83è¡¨ç¤º1/3å¸§ç‡ç­‰*/;
         zce_byte    bitrate_type;
         zce_byte    video_type;
         zce_byte    audio_bind;
@@ -8038,12 +8038,12 @@ namespace gep
 
         zce_astring id;
         zce_byte    qos;
-        zce_byte    payload/*±àÂë¸ñÊ½H.264/MPEG4/G.711/G.7231µÈ*/;
+        zce_byte    payload/*ç¼–ç æ ¼å¼H.264/MPEG4/G.711/G.7231ç­‰*/;
         zce_uint16    width;
         zce_uint16    height;
-        zce_uint16    frame_interval/*¹Ø¼üÖ¡¼ä¸ô*/;
-        zce_uint32    max_bitrate/*±àÂë±ÈÌØÂÊ,µ¥Î»kbps*/;
-        zce_byte    frame_rate/*ÊÓÆµÖ¡ÂÊ1¡«25, 0x81±íÊ¾È«Ö¡ÂÊ,0x82±íÊ¾1/2Ö¡ÂÊ,0x83±íÊ¾1/3Ö¡ÂÊµÈ*/;
+        zce_uint16    frame_interval/*å…³é”®å¸§é—´éš”*/;
+        zce_uint32    max_bitrate/*ç¼–ç æ¯”ç‰¹ç‡,å•ä½kbps*/;
+        zce_byte    frame_rate/*è§†é¢‘å¸§ç‡1ï½25, 0x81è¡¨ç¤ºå…¨å¸§ç‡,0x82è¡¨ç¤º1/2å¸§ç‡,0x83è¡¨ç¤º1/3å¸§ç‡ç­‰*/;
         zce_byte    bitrate_type;
         zce_byte    video_type;
         zce_byte    audio_bind;
@@ -8072,10 +8072,10 @@ namespace gep
         {
         }
 
-        zce_byte    brightness/*ÁÁ¶È*/;
-        zce_byte    hue/*É«¶È*/;
-        zce_byte    saturation/*±¥ºÍ¶È*/;
-        zce_byte    contrast/*¶Ô±È¶È*/;
+        zce_byte    brightness/*äº®åº¦*/;
+        zce_byte    hue/*è‰²åº¦*/;
+        zce_byte    saturation/*é¥±å’Œåº¦*/;
+        zce_byte    contrast/*å¯¹æ¯”åº¦*/;
     };
     struct FDSDK_VIDEO_IN_SUBTITLE
     {
@@ -8134,7 +8134,7 @@ namespace gep
         {
         }
 
-        zce_astring id/*ĞòºÅ£¬´Ó0¿ªÊ¼*/;
+        zce_astring id/*åºå·ï¼Œä»0å¼€å§‹*/;
         std::vector<zce_uint32> bitmap;
     };
     struct FDSDK_VIDEO_IN_MOTION_RECT
@@ -8222,7 +8222,7 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
     };
     struct FDSDK_VIDEO_OUT_MAIN
     {
@@ -8369,10 +8369,10 @@ namespace gep
 
         CHANNEL_ID    channel_id;
         IP_ADDRESS    addr;
-        std::vector<zce_byte> guid/*16×Ö½ÚµÄguid,¼¤»îID*/;
-        zce_byte    action/*±êÖ¾: 0x00 ¼à¿Ø; 0x01 Â¼Ïñ; */;
-        zce_uint32    start_time/*¿ªÊ¼Ê±¼ä*/;
-        zce_uint32    packet_num/*Êı¾İ°üÊı*/;
+        std::vector<zce_byte> guid/*16å­—èŠ‚çš„guid,æ¿€æ´»ID*/;
+        zce_byte    action/*æ ‡å¿—: 0x00 ç›‘æ§; 0x01 å½•åƒ; */;
+        zce_uint32    start_time/*å¼€å§‹æ—¶é—´*/;
+        zce_uint32    packet_num/*æ•°æ®åŒ…æ•°*/;
     };
     struct IE_FDSDK_NVIEW_LOGIN_INFO
     {
@@ -8383,8 +8383,8 @@ namespace gep
         {
         }
 
-        zce_byte    login/*ÊÇ·ñµÇÂ¼Æ½Ì¨£º0:Î´µÇÂ¼£»1:ÒÑµÇÂ¼*/;
-        zce_astring addr/*Æ½Ì¨µØÖ·*/;
+        zce_byte    login/*æ˜¯å¦ç™»å½•å¹³å°ï¼š0:æœªç™»å½•ï¼›1:å·²ç™»å½•*/;
+        zce_astring addr/*å¹³å°åœ°å€*/;
     };
     struct IE_FDCFG_INFO
     {
@@ -8467,7 +8467,7 @@ namespace gep
 
         zce_byte    enable;
         zce_astring ssid;
-        zce_uint16    authen_mode/*¼ÓÃÜÀàĞÍ£¬EWifiAuthenType*/;
+        zce_uint16    authen_mode/*åŠ å¯†ç±»å‹ï¼ŒEWifiAuthenType*/;
         zce_astring password;
     };
     struct IE_FDCFG_NETWORK_3G
@@ -8482,7 +8482,7 @@ namespace gep
         }
 
         zce_byte    enable;
-        std::vector<SELECT_ITEM> active_mode/*¼¤»îÀàĞÍ*/;
+        std::vector<SELECT_ITEM> active_mode/*æ¿€æ´»ç±»å‹*/;
         zce_uint16    hold_time;
         zce_astring tele_number;
         zce_uint16    reserve;
@@ -8511,8 +8511,8 @@ namespace gep
         zce_byte    time_sync;
         zce_byte    net_ptl;
         zce_byte    media_ptl;
-        zce_byte    flag1/*bit0: 0·ÇÆ½»¬·¢°ü, 1Æ½»¬·¢°ü*/;
-        zce_byte    flag2/*bit0: ±£Áô£¬ÓÀÔ¶ÉèÎª1; bit[2~4]:Æ½Ì¨Ğ­ÒéÀàĞÍ0£ºgep, 1:gab;*/;
+        zce_byte    flag1/*bit0: 0éå¹³æ»‘å‘åŒ…, 1å¹³æ»‘å‘åŒ…*/;
+        zce_byte    flag2/*bit0: ä¿ç•™ï¼Œæ°¸è¿œè®¾ä¸º1; bit[2~4]:å¹³å°åè®®ç±»å‹0ï¼šgep, 1:gab;*/;
     };
     struct IE_FDCFG_NVIEW_MANAGER
     {
@@ -8586,7 +8586,7 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
         zce_byte    qos;
         zce_byte    payload;
     };
@@ -8601,7 +8601,7 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
         zce_byte    qos;
         zce_byte    payload;
     };
@@ -8614,7 +8614,7 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
         std::vector<FDSDK_VIDEO_IN_MAIN> inmain;
         std::vector<FDSDK_VIDEO_IN_SUB> sub;
         std::vector<FDSDK_VIDEO_IN_PTZ> ptz;
@@ -8635,7 +8635,7 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
         zce_byte    enable;
         zce_uint16    row_num;
         zce_uint16    col_num;
@@ -8654,7 +8654,7 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
         zce_byte    enable;
         zce_uint16    sensitivity;
         zce_uint16    row_num;
@@ -8671,7 +8671,7 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
         std::vector<FDSDK_VIDEO_IN_MOTION_RECT> rect;
     };
     struct IE_FDCFG_VIDEO_IN_CAR
@@ -8689,7 +8689,7 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
         zce_byte    enable;
         zce_byte    show_coil;
         zce_uint16    top;
@@ -8708,7 +8708,7 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
         FDSDK_FACE_DETECT    face;
     };
     struct IE_FDCFG_VIDEO_IN_CUSTOM_SCAN
@@ -8722,8 +8722,8 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
-        zce_uint16    cmd/*0£ºÍ£Ö¹Â¼ÖÆ£¬1£º¿ªÊ¼Â¼ÖÆ£¬ 2£ºµ÷ÓÃÉ¨Ãè*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
+        zce_uint16    cmd/*0ï¼šåœæ­¢å½•åˆ¶ï¼Œ1ï¼šå¼€å§‹å½•åˆ¶ï¼Œ 2ï¼šè°ƒç”¨æ‰«æ*/;
         std::vector<zce_uint16> scan_id;
     };
     struct IE_FDCFG_VIDEO_IN_MIXTURE
@@ -8736,7 +8736,7 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
         zce_byte    enable;
         std::vector<FDSDK_VIDEO_IN_MIXTURE_CHANNEL> channel;
     };
@@ -8749,7 +8749,7 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
         FDSDK_VIDEO_OUT_MAIN    outmain;
     };
     struct IE_FDCFG_ALARM_IN
@@ -8764,7 +8764,7 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
         zce_astring type;
         zce_astring address;
         zce_byte    cancel_mode;
@@ -8783,7 +8783,7 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
         zce_astring type;
         zce_byte    cancel_mode;
         zce_byte    always_open;
@@ -8926,17 +8926,17 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
-        zce_byte    flight_ctrl/*ÉÁ¹âÄ£Ê½£¬ 0£º×Ô¶¯£»1£ºÇ¿ÖÆÉÁ¹â£»2£º²»ÉÁ¹â£»0xff£º²»Ö§³ÖÉÁ¹âµÆ*/;
-        zce_byte    capture_mod/*×¥ÅÄÄ£Ê½£º½öµç×Ó¾¯²ìÓĞĞ§*/;
-        std::vector<zce_byte> reserved/*	[1][0]:ºìµÆÏàÎ»£¨Öµ·¶Î§£º0~359£©£¬×î¸ßÎ»: 0£ºÎŞĞ§£¬1£ºÓĞĞ§
-        [3][2]:ÆµÉÁµÆÂö³å¿í¶È£¬×î¸ßÎ»: 0£ºÎŞĞ§£¬1£ºÓĞĞ§
-        [5][4]:ÉÁ¹âµÆµÄÂö³å¿í¶È£¬×î¸ßÎ»: 0£ºÎŞĞ§£¬1£ºÓĞĞ§
-        [6]£º±¶ÆµÏµÊı£¬×î¸ßÎ»: 0£ºÎŞĞ§£¬1£ºÓĞĞ§
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
+        zce_byte    flight_ctrl/*é—ªå…‰æ¨¡å¼ï¼Œ 0ï¼šè‡ªåŠ¨ï¼›1ï¼šå¼ºåˆ¶é—ªå…‰ï¼›2ï¼šä¸é—ªå…‰ï¼›0xffï¼šä¸æ”¯æŒé—ªå…‰ç¯*/;
+        zce_byte    capture_mod/*æŠ“æ‹æ¨¡å¼ï¼šä»…ç”µå­è­¦å¯Ÿæœ‰æ•ˆ*/;
+        std::vector<zce_byte> reserved/*	[1][0]:çº¢ç¯ç›¸ä½ï¼ˆå€¼èŒƒå›´ï¼š0~359ï¼‰ï¼Œæœ€é«˜ä½: 0ï¼šæ— æ•ˆï¼Œ1ï¼šæœ‰æ•ˆ
+        [3][2]:é¢‘é—ªç¯è„‰å†²å®½åº¦ï¼Œæœ€é«˜ä½: 0ï¼šæ— æ•ˆï¼Œ1ï¼šæœ‰æ•ˆ
+        [5][4]:é—ªå…‰ç¯çš„è„‰å†²å®½åº¦ï¼Œæœ€é«˜ä½: 0ï¼šæ— æ•ˆï¼Œ1ï¼šæœ‰æ•ˆ
+        [6]ï¼šå€é¢‘ç³»æ•°ï¼Œæœ€é«˜ä½: 0ï¼šæ— æ•ˆï¼Œ1ï¼šæœ‰æ•ˆ
         */;
-        zce_byte    osd_type/* ÔİÊ±²»ÓÃ£¬±£Áô*/;
+        zce_byte    osd_type/* æš‚æ—¶ä¸ç”¨ï¼Œä¿ç•™*/;
         zce_astring osd_text;
-        std::vector<FDSDK_CAPTURE_VEHICLE> vehicle/*³µµÀĞÅÏ¢*/;
+        std::vector<FDSDK_CAPTURE_VEHICLE> vehicle/*è½¦é“ä¿¡æ¯*/;
     };
     struct IE_FDCFG_VIDEO_IN_CAPTURE_V2
     {
@@ -8957,20 +8957,20 @@ namespace gep
         {
         }
 
-        zce_byte    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
-        zce_byte    encode_video/*×¥ÅÄÖ¡ÊÇ·ñ±àÂëµ½ÊÓÆµÂëÁ÷ÖĞ*/;
-        zce_uint16    detect_type/*¼ì²âÀàĞÍ 1:ÊÓÆµ¼ì²â£»2:485¿Ú³µ¼ìÆ÷; 4£ºIO¿Ú³µ¼ìÆ÷; 8£ºÀ×´ï¼ì²â*/;
-        zce_byte    fill_light_ctrl/*²¹¹âÄ£Ê½£¬ 0£º×Ô¶¯£»1£ºÇ¿ÖÆÉÁ¹â£»2£º²»ÉÁ¹â£»0xff£º²»Ö§³Ö²¹¹âµÆ*/;
-        zce_byte    flashlight_ctrl/*ÉÁ¹âÄ£Ê½£¬ 0£º×Ô¶¯£»1£ºÇ¿ÖÆÉÁ¹â£»2£º²»ÉÁ¹â£»0xff£º²»Ö§³ÖÉÁ¹âµÆ*/;
-        zce_byte    pic_count/*Î¥ÕÂ×¥ÅÄÍ¼Æ¬Êı*/;
-        zce_byte    lane_count/*×Ü³µµÀÊı*/;
-        zce_byte    firstlane_no/*ÆğÊ¼³µµÀºÅ*/;
-        zce_byte    laneno_dir/*³µµÀ±àºÅ·½Ïò£¬0£º´Ó×óÖÁÓÒ,1£º´ÓÓÒÖÁ×ó*/;
-        zce_byte    change_to_video_detect/*Òì³£Ê±×Ô¶¯ÇĞ»»ÖÁÊÓÆµ¼ì²âÄ£Ê½£¬0£º²»ÇĞ»»,1£ºÇĞ»»*/;
+        zce_byte    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
+        zce_byte    encode_video/*æŠ“æ‹å¸§æ˜¯å¦ç¼–ç åˆ°è§†é¢‘ç æµä¸­*/;
+        zce_uint16    detect_type/*æ£€æµ‹ç±»å‹ 1:è§†é¢‘æ£€æµ‹ï¼›2:485å£è½¦æ£€å™¨; 4ï¼šIOå£è½¦æ£€å™¨; 8ï¼šé›·è¾¾æ£€æµ‹*/;
+        zce_byte    fill_light_ctrl/*è¡¥å…‰æ¨¡å¼ï¼Œ 0ï¼šè‡ªåŠ¨ï¼›1ï¼šå¼ºåˆ¶é—ªå…‰ï¼›2ï¼šä¸é—ªå…‰ï¼›0xffï¼šä¸æ”¯æŒè¡¥å…‰ç¯*/;
+        zce_byte    flashlight_ctrl/*é—ªå…‰æ¨¡å¼ï¼Œ 0ï¼šè‡ªåŠ¨ï¼›1ï¼šå¼ºåˆ¶é—ªå…‰ï¼›2ï¼šä¸é—ªå…‰ï¼›0xffï¼šä¸æ”¯æŒé—ªå…‰ç¯*/;
+        zce_byte    pic_count/*è¿ç« æŠ“æ‹å›¾ç‰‡æ•°*/;
+        zce_byte    lane_count/*æ€»è½¦é“æ•°*/;
+        zce_byte    firstlane_no/*èµ·å§‹è½¦é“å·*/;
+        zce_byte    laneno_dir/*è½¦é“ç¼–å·æ–¹å‘ï¼Œ0ï¼šä»å·¦è‡³å³,1ï¼šä»å³è‡³å·¦*/;
+        zce_byte    change_to_video_detect/*å¼‚å¸¸æ—¶è‡ªåŠ¨åˆ‡æ¢è‡³è§†é¢‘æ£€æµ‹æ¨¡å¼ï¼Œ0ï¼šä¸åˆ‡æ¢,1ï¼šåˆ‡æ¢*/;
         std::vector<zce_byte> reserved2;
-        std::vector<FDSDK_CAPTURE_LANES_INFO> lanes_video/*³µµÀĞÅÏ¢:ÊÓÆµ¼ì²â*/;
-        std::vector<FDSDK_PHYSICAL_COIL_V2> lanes_physical/*³µµÀĞÅÏ¢:µØ¸ĞÏßÈ¦*/;
-        std::vector<FDSDK_CAPTURE_LANES_RADAR> lanes_radar/*³µµÀĞÅÏ¢:À×´ï´¥·¢*/;
+        std::vector<FDSDK_CAPTURE_LANES_INFO> lanes_video/*è½¦é“ä¿¡æ¯:è§†é¢‘æ£€æµ‹*/;
+        std::vector<FDSDK_PHYSICAL_COIL_V2> lanes_physical/*è½¦é“ä¿¡æ¯:åœ°æ„Ÿçº¿åœˆ*/;
+        std::vector<FDSDK_CAPTURE_LANES_RADAR> lanes_radar/*è½¦é“ä¿¡æ¯:é›·è¾¾è§¦å‘*/;
     };
     struct IE_FDCFG_IO_LIGHT
     {
@@ -8989,14 +8989,14 @@ namespace gep
         {
         }
 
-        zce_byte    id/*io¿ÚºÅ, ´Ó1¿ªÊ¼*/;
-        zce_byte    enable/*0:ÎŞĞ§£¬1:ÓĞĞ§*/;
-        zce_byte    level/*0:µÍµçÆ½´¥·¢ 1:¸ßµçÆ½´¥·¢*/;
+        zce_byte    id/*ioå£å·, ä»1å¼€å§‹*/;
+        zce_byte    enable/*0:æ— æ•ˆï¼Œ1:æœ‰æ•ˆ*/;
+        zce_byte    level/*0:ä½ç”µå¹³è§¦å‘ 1:é«˜ç”µå¹³è§¦å‘*/;
         std::vector<zce_byte> reserved1;
-        zce_uint16    output_time_filllight/*²¹¹âµÆÊä³öÊ±¼ä£¬µ¥Î»£ºÎ¢Ãë£¬×î¸ßÎ»: 0:²»ÆôÓÃ£¬1:ÆôÓÃ*/;
-        zce_uint16    output_time_flashlight/*ÉÁ¹âµÆÊä³öÊ±¼ä£¬µ¥Î»£ºÎ¢Ãë,×î¸ßÎ»: 0:²»ÆôÓÃ£¬1:ÆôÓÃ*/;
-        zce_int16    output_inadvance_time/*Êä³öÌáÇ°Ê±¼ä*/;
-        zce_byte    frequencymult/*±¶ÆµÏµÊı*/;
+        zce_uint16    output_time_filllight/*è¡¥å…‰ç¯è¾“å‡ºæ—¶é—´ï¼Œå•ä½ï¼šå¾®ç§’ï¼Œæœ€é«˜ä½: 0:ä¸å¯ç”¨ï¼Œ1:å¯ç”¨*/;
+        zce_uint16    output_time_flashlight/*é—ªå…‰ç¯è¾“å‡ºæ—¶é—´ï¼Œå•ä½ï¼šå¾®ç§’,æœ€é«˜ä½: 0:ä¸å¯ç”¨ï¼Œ1:å¯ç”¨*/;
+        zce_int16    output_inadvance_time/*è¾“å‡ºæå‰æ—¶é—´*/;
+        zce_byte    frequencymult/*å€é¢‘ç³»æ•°*/;
         std::vector<zce_byte> reserved2;
     };
     struct IE_FDCFG_VIDEO_IN_PERIMETER_DETECT
@@ -9016,20 +9016,20 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
-        zce_byte    enable/*ÖÜ½ç¼ì²âÊ¹ÄÜ*/;
-        zce_byte    dect_dir/*¼ì²â·½Ïò£º1£ºÕıĞĞ£¬2£ºÄæĞĞ£¬3£ºË«Ïò; */;
-        zce_byte    jump_rate/*ÊÓÆµÍ¼ÏñµÄ¼ä¸ôÖ¡Êı*/;
-        zce_byte    line_show/*ÔÚÊÓÆµÉÏÏÔÊ¾ÏßÈ¦*/;
-        zce_byte    move_show/*ÔÚÊÓÆµÉÏÏÔÊ¾ÒÆ¶¯¿ò*/;
-        zce_byte    reserverd1/* bit0:ÔÚÊÓÆµÉÏÏÔÊ¾²âÊÔ´°¿Ú 1£ºÏÔÊ¾,0£º²»ÏÔÊ¾£»
-        bit1:Ò¹ÍíÄ£Ê½ 1:¿ªÆô; 0:²»¿ªÆô */;
-        zce_uint16    min_blob/*¼ì²âÎïÌåµÄ×îĞ¡ÏñËØ*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
+        zce_byte    enable/*å‘¨ç•Œæ£€æµ‹ä½¿èƒ½*/;
+        zce_byte    dect_dir/*æ£€æµ‹æ–¹å‘ï¼š1ï¼šæ­£è¡Œï¼Œ2ï¼šé€†è¡Œï¼Œ3ï¼šåŒå‘; */;
+        zce_byte    jump_rate/*è§†é¢‘å›¾åƒçš„é—´éš”å¸§æ•°*/;
+        zce_byte    line_show/*åœ¨è§†é¢‘ä¸Šæ˜¾ç¤ºçº¿åœˆ*/;
+        zce_byte    move_show/*åœ¨è§†é¢‘ä¸Šæ˜¾ç¤ºç§»åŠ¨æ¡†*/;
+        zce_byte    reserverd1/* bit0:åœ¨è§†é¢‘ä¸Šæ˜¾ç¤ºæµ‹è¯•çª—å£ 1ï¼šæ˜¾ç¤º,0ï¼šä¸æ˜¾ç¤ºï¼›
+        bit1:å¤œæ™šæ¨¡å¼ 1:å¼€å¯; 0:ä¸å¼€å¯ */;
+        zce_uint16    min_blob/*æ£€æµ‹ç‰©ä½“çš„æœ€å°åƒç´ */;
         std::vector<zce_uint16> reserverd2;
-        std::vector<GENERAL_RECT> detect_rect/*¼ì²âÇøÓò*/;
+        std::vector<GENERAL_RECT> detect_rect/*æ£€æµ‹åŒºåŸŸ*/;
         std::vector<GENERAL_LINE> line;
-        std::vector<GENERAL_RECT> rect/*¾ØĞÎ*/;
-        std::vector<GENERAL_POINT> point/*×é³É¶à±ßĞÎµÄµãÕó*/;
+        std::vector<GENERAL_RECT> rect/*çŸ©å½¢*/;
+        std::vector<GENERAL_POINT> point/*ç»„æˆå¤šè¾¹å½¢çš„ç‚¹é˜µ*/;
     };
     struct IE_FDCFG_OSD_FORMAT
     {
@@ -9049,16 +9049,16 @@ namespace gep
         {
         }
 
-        zce_uint32    color/*×ÖÌåÑÕÉ« yuv*/;
-        zce_uint32    bg_color/*±³¾°É«yuv*/;
-        zce_byte    osd_fill_type/*0±íÊ¾ Êı×ÖÓÃ0²¹Æë.1±íÊ¾ÓÃ¿Õ¸ñ²¹Æë*/;
-        zce_byte    osd_size/*×ÖÌå´óĞ¡.24 32 48 64*/;
-        zce_byte    osd_type/*0±íÊ¾µş¼ÓÔÚÍ¼Æ¬ÄÚ.1±íÊ¾¸½¼ÓÔÚÉÏ·½ 2±íÊ¾¸½¼ÓÔÚÏÂ·½..ÆäËû´ı¶¨*/;
-        zce_byte    osd_linespace/*ĞĞ¼ä¾à Ä¬ÈÏ0 //ÏÈ²»ÏÔÊ¾ÔÚ½çÃæÉÏ*/;
-        zce_byte    type/*osdÀàĞÍ 0:×¥ÅÄÖ¡OSD£¬1£ººÏ³ÉÍ¼OSD*/;
+        zce_uint32    color/*å­—ä½“é¢œè‰² yuv*/;
+        zce_uint32    bg_color/*èƒŒæ™¯è‰²yuv*/;
+        zce_byte    osd_fill_type/*0è¡¨ç¤º æ•°å­—ç”¨0è¡¥é½.1è¡¨ç¤ºç”¨ç©ºæ ¼è¡¥é½*/;
+        zce_byte    osd_size/*å­—ä½“å¤§å°.24 32 48 64*/;
+        zce_byte    osd_type/*0è¡¨ç¤ºå åŠ åœ¨å›¾ç‰‡å†….1è¡¨ç¤ºé™„åŠ åœ¨ä¸Šæ–¹ 2è¡¨ç¤ºé™„åŠ åœ¨ä¸‹æ–¹..å…¶ä»–å¾…å®š*/;
+        zce_byte    osd_linespace/*è¡Œé—´è· é»˜è®¤0 //å…ˆä¸æ˜¾ç¤ºåœ¨ç•Œé¢ä¸Š*/;
+        zce_byte    type/*osdç±»å‹ 0:æŠ“æ‹å¸§OSDï¼Œ1ï¼šåˆæˆå›¾OSD*/;
         std::vector<zce_byte> reserved;
-        zce_uint16    osd_x/*ÆğÊ¼x Å¼¶ÔÆë 32*/;
-        zce_uint16    osd_y/*ÆğÊ¼Y Å¼¶ÔÆë 32*/;
+        zce_uint16    osd_x/*èµ·å§‹x å¶å¯¹é½ 32*/;
+        zce_uint16    osd_y/*èµ·å§‹Y å¶å¯¹é½ 32*/;
         std::vector<OSDSUB_TYPE> osd_sub;
     };
     struct IE_FDCFG_VIDEO_IN_CAMERA_CONTROL
@@ -9070,7 +9070,7 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
         std::vector<FDSDK_CAMERA_CONTROL_ITEM> camera_ctrl_item;
     };
     struct IE_FDCFG_VIDEO_IN_CAMERA_CONTROL2
@@ -9082,7 +9082,7 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
         std::vector<SELECT_ITEM> camera_ctrl_item2;
         std::vector<FDSDK_CAMERA_CONTROL_ITEM3> camera_ctrl_item3;
     };
@@ -9095,7 +9095,7 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
         std::vector<astring254_WRAPPER> text;
         std::vector<VALUE_LIST> value_list;
     };
@@ -9108,7 +9108,7 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
         std::vector<GENERAL_INFO> camera_ctrl_info;
     };
     struct IE_FDCFG_VIDEO_IN_COLOR_CALCULATE
@@ -9122,7 +9122,7 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
         GENERAL_RECT    rect;
         zce_byte    enable;
         std::vector<zce_byte> reserve;
@@ -9140,8 +9140,8 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_FDSDK_LOGIN_RES;
         static const char* type_name() { return ("MSG_FDSDK_LOGIN_RES");}
         IE_RESULT    ie_result;
-        std::vector<IE_ULONG> ie_privilege/*È¨ÏŞ*/;
-        std::vector<IE_TIME> ie_heart_interval/*ĞÄÌø¼ä¸ôÊ±¼ä*/;
+        std::vector<IE_ULONG> ie_privilege/*æƒé™*/;
+        std::vector<IE_TIME> ie_heart_interval/*å¿ƒè·³é—´éš”æ—¶é—´*/;
     };
     typedef zce_smartptr<MSG_FDSDK_LOGIN_RES> MSG_FDSDK_LOGIN_RES_PTR;
 
@@ -9455,8 +9455,8 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_FDSDK_GET_VIDEO_IN_CAPTURE_RES;
         static const char* type_name() { return ("MSG_FDSDK_GET_VIDEO_IN_CAPTURE_RES");}
         IE_RESULT    ie_result;
-        std::vector<IE_FDCFG_VIDEO_IN_CAPTURE> ie_capture/*Ö§³ÖµØ¸ĞÏßÈ¦¡¢À×´ï¡¢ĞéÄâÏßÈ¦£¨Ö»Ö§³ÖGT2013£©£¬*/;
-        std::vector<IE_FDCFG_VIDEO_IN_CAPTURE_V2> ie_capture_v2/*Ö§³ÖĞÂ°æĞéÄâÏßÈ¦*/;
+        std::vector<IE_FDCFG_VIDEO_IN_CAPTURE> ie_capture/*æ”¯æŒåœ°æ„Ÿçº¿åœˆã€é›·è¾¾ã€è™šæ‹Ÿçº¿åœˆï¼ˆåªæ”¯æŒGT2013ï¼‰ï¼Œ*/;
+        std::vector<IE_FDCFG_VIDEO_IN_CAPTURE_V2> ie_capture_v2/*æ”¯æŒæ–°ç‰ˆè™šæ‹Ÿçº¿åœˆ*/;
     };
     typedef zce_smartptr<MSG_FDSDK_GET_VIDEO_IN_CAPTURE_RES> MSG_FDSDK_GET_VIDEO_IN_CAPTURE_RES_PTR;
 
@@ -9698,9 +9698,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FDSDK_GET_RECORD_PLAN_RES;
         static const char* type_name() { return ("MSG_FDSDK_GET_RECORD_PLAN_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û<0£¬Ê§°Ü£¬¸ø³öÊ§°ÜÂë>=0£º±íÊ¾×Ü¸öÊı*/;
-        std::vector<IE_USHORT> ie_store_mode/*Â¼Ïñ²ßÂÔ£º0xfffa:Âú¾ÍÉ¾£»0xfffb:ÂúÍ£; ÆäËû£º±£´æÌìÊı*/;
-        std::vector<IE_TIME_DETAIL_LIST> ie_list/*²Ù×÷Ê§°ÜÎŞ´ËÓò£¬³É¹¦ÌîĞ´Â¼ÏñÊ±¼ä±í£¬¿ÉÄÜÓĞ¶à¸ö£¬ÊÓ¾ßÌåÇé¿ö*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœ<0ï¼Œå¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç >=0ï¼šè¡¨ç¤ºæ€»ä¸ªæ•°*/;
+        std::vector<IE_USHORT> ie_store_mode/*å½•åƒç­–ç•¥ï¼š0xfffa:æ»¡å°±åˆ ï¼›0xfffb:æ»¡åœ; å…¶ä»–ï¼šä¿å­˜å¤©æ•°*/;
+        std::vector<IE_TIME_DETAIL_LIST> ie_list/*æ“ä½œå¤±è´¥æ— æ­¤åŸŸï¼ŒæˆåŠŸå¡«å†™å½•åƒæ—¶é—´è¡¨ï¼Œå¯èƒ½æœ‰å¤šä¸ªï¼Œè§†å…·ä½“æƒ…å†µ*/;
     };
     typedef zce_smartptr<MSG_FDSDK_GET_RECORD_PLAN_RES> MSG_FDSDK_GET_RECORD_PLAN_RES_PTR;
 
@@ -9990,7 +9990,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FDSDK_RESTORE_CONFIG_REQ;
         static const char* type_name() { return ("MSG_FDSDK_RESTORE_CONFIG_REQ");}
-        IE_ULONG    ie_which/*0: ³ö³§ÅäÖÃ; 1: ÓÅ»¯ÅäÖÃ*/;
+        IE_ULONG    ie_which/*0: å‡ºå‚é…ç½®; 1: ä¼˜åŒ–é…ç½®*/;
     };
     typedef zce_smartptr<MSG_FDSDK_RESTORE_CONFIG_REQ> MSG_FDSDK_RESTORE_CONFIG_REQ_PTR;
 
@@ -10007,7 +10007,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_FDSDK_CAPTURE_REQ;
         static const char* type_name() { return ("MSG_FDSDK_CAPTURE_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_USHORT    ie_nRoadId/*³µµÀºÅ, 0¿ªÊ¼*/;
+        IE_USHORT    ie_nRoadId/*è½¦é“å·, 0å¼€å§‹*/;
     };
     typedef zce_smartptr<MSG_FDSDK_CAPTURE_REQ> MSG_FDSDK_CAPTURE_REQ_PTR;
 
@@ -10016,10 +10016,10 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_FDSDK_CAPTURE_RES;
         static const char* type_name() { return ("MSG_FDSDK_CAPTURE_RES");}
         IE_RESULT    ie_result;
-        IE_ALARM_CONTENT_HEADER    alarm_content_header/*¸æ¾¯»ù±¾ÄÚÈİ*/;
-        std::vector<IE_ALARM_CONTENT_TEXT> alarm_content_text/*ÎÄ±¾ÄÚÈİ*/;
-        std::vector<IE_ALARM_CONTENT_PICTURE> alarm_content_picture/*Í¼Æ¬¸æ¾¯ÄÚÈİ*/;
-        std::vector<IE_ALARM_CONTENT_PICTURE_WITH_RECT_PARAMETER> alarm_content_picture_with_rect_parameter/*Í¼Æ¬¸æ¾¯ÄÚÈİ, ´øÓĞ¸ĞĞËÈ¤ÇøÓò³µÁ¾+³µÅÆ¾ØĞÎ*/;
+        IE_ALARM_CONTENT_HEADER    alarm_content_header/*å‘Šè­¦åŸºæœ¬å†…å®¹*/;
+        std::vector<IE_ALARM_CONTENT_TEXT> alarm_content_text/*æ–‡æœ¬å†…å®¹*/;
+        std::vector<IE_ALARM_CONTENT_PICTURE> alarm_content_picture/*å›¾ç‰‡å‘Šè­¦å†…å®¹*/;
+        std::vector<IE_ALARM_CONTENT_PICTURE_WITH_RECT_PARAMETER> alarm_content_picture_with_rect_parameter/*å›¾ç‰‡å‘Šè­¦å†…å®¹, å¸¦æœ‰æ„Ÿå…´è¶£åŒºåŸŸè½¦è¾†+è½¦ç‰ŒçŸ©å½¢*/;
     };
     typedef zce_smartptr<MSG_FDSDK_CAPTURE_RES> MSG_FDSDK_CAPTURE_RES_PTR;
 
@@ -10189,8 +10189,8 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_FDSDK_SET_RECORD_PLAN_REQ;
         static const char* type_name() { return ("MSG_FDSDK_SET_RECORD_PLAN_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        std::vector<IE_USHORT> ie_store_mode/*Â¼Ïñ²ßÂÔ£º0xfffa:Âú¾ÍÉ¾£»0xfffb:ÂúÍ£; ÆäËû£º±£´æÌìÊı*/;
-        std::vector<IE_TIME_DETAIL_LIST> ie_list/*Â¼ÏñÊ±¼ä±í£¬¿ÉÄÜÓĞ¶à¸ö£¬ÊÓ¾ßÌåÇé¿ö*/;
+        std::vector<IE_USHORT> ie_store_mode/*å½•åƒç­–ç•¥ï¼š0xfffa:æ»¡å°±åˆ ï¼›0xfffb:æ»¡åœ; å…¶ä»–ï¼šä¿å­˜å¤©æ•°*/;
+        std::vector<IE_TIME_DETAIL_LIST> ie_list/*å½•åƒæ—¶é—´è¡¨ï¼Œå¯èƒ½æœ‰å¤šä¸ªï¼Œè§†å…·ä½“æƒ…å†µ*/;
         std::vector<IE_UCHAR> ie_qos;
     };
     typedef zce_smartptr<MSG_FDSDK_SET_RECORD_PLAN_REQ> MSG_FDSDK_SET_RECORD_PLAN_REQ_PTR;
@@ -10199,7 +10199,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FDSDK_SET_RECORD_PLAN_RES;
         static const char* type_name() { return ("MSG_FDSDK_SET_RECORD_PLAN_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_FDSDK_SET_RECORD_PLAN_RES> MSG_FDSDK_SET_RECORD_PLAN_RES_PTR;
 
@@ -10215,7 +10215,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FDSDK_QUERY_CRUISE_RES;
         static const char* type_name() { return ("MSG_FDSDK_QUERY_CRUISE_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
         std::vector<IE_CRUISE> ie_cruise;
     };
     typedef zce_smartptr<MSG_FDSDK_QUERY_CRUISE_RES> MSG_FDSDK_QUERY_CRUISE_RES_PTR;
@@ -10233,7 +10233,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FDSDK_SET_CRUISE_RES;
         static const char* type_name() { return ("MSG_FDSDK_SET_CRUISE_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_FDSDK_SET_CRUISE_RES> MSG_FDSDK_SET_CRUISE_RES_PTR;
 
@@ -10242,7 +10242,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_FDSDK_START_CRUISE_REQ;
         static const char* type_name() { return ("MSG_FDSDK_START_CRUISE_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_USHORT    ie_cruise_id/*Ñ²º½¼ÇÂ¼id, 0¿ªÊ¼*/;
+        IE_USHORT    ie_cruise_id/*å·¡èˆªè®°å½•id, 0å¼€å§‹*/;
     };
     typedef zce_smartptr<MSG_FDSDK_START_CRUISE_REQ> MSG_FDSDK_START_CRUISE_REQ_PTR;
 
@@ -10250,7 +10250,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FDSDK_START_CRUISE_RES;
         static const char* type_name() { return ("MSG_FDSDK_START_CRUISE_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_FDSDK_START_CRUISE_RES> MSG_FDSDK_START_CRUISE_RES_PTR;
 
@@ -10259,7 +10259,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_FDSDK_STOP_CRUISE_REQ;
         static const char* type_name() { return ("MSG_FDSDK_STOP_CRUISE_REQ");}
         IE_CHANNEL_ID    ie_channel_id;
-        IE_USHORT    ie_cruise_id/*Ñ²º½¼ÇÂ¼id, 0¿ªÊ¼*/;
+        IE_USHORT    ie_cruise_id/*å·¡èˆªè®°å½•id, 0å¼€å§‹*/;
     };
     typedef zce_smartptr<MSG_FDSDK_STOP_CRUISE_REQ> MSG_FDSDK_STOP_CRUISE_REQ_PTR;
 
@@ -10267,7 +10267,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FDSDK_STOP_CRUISE_RES;
         static const char* type_name() { return ("MSG_FDSDK_STOP_CRUISE_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_FDSDK_STOP_CRUISE_RES> MSG_FDSDK_STOP_CRUISE_RES_PTR;
 
@@ -10283,7 +10283,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FDSDK_QUERY_WATCH_RES;
         static const char* type_name() { return ("MSG_FDSDK_QUERY_WATCH_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
         std::vector<IE_WATCH> ie_watch;
     };
     typedef zce_smartptr<MSG_FDSDK_QUERY_WATCH_RES> MSG_FDSDK_QUERY_WATCH_RES_PTR;
@@ -10301,7 +10301,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FDSDK_SET_WATCH_RES;
         static const char* type_name() { return ("MSG_FDSDK_SET_WATCH_RES");}
-        IE_RESULT    ie_result/*²Ù×÷½á¹û£º<0Ê§°Ü£¬¸ø³öÊ§°ÜÂë£»=0³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç»“æœï¼š<0å¤±è´¥ï¼Œç»™å‡ºå¤±è´¥ç ï¼›=0æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_FDSDK_SET_WATCH_RES> MSG_FDSDK_SET_WATCH_RES_PTR;
 
@@ -10471,7 +10471,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FDCFG_CAMERA_PRESET_INFO;
         static const char* type_name() { return ("MSG_FDCFG_CAMERA_PRESET_INFO");}
-        std::vector<IE_CAMERA_PRESET_CONFIG> ie_preset/*Ô¤ÖÃµãĞÅÏ¢*/;
+        std::vector<IE_CAMERA_PRESET_CONFIG> ie_preset/*é¢„ç½®ç‚¹ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_FDCFG_CAMERA_PRESET_INFO> MSG_FDCFG_CAMERA_PRESET_INFO_PTR;
 
@@ -10562,9 +10562,9 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_FDCFG_RECORD_TIME;
         static const char* type_name() { return ("MSG_FDCFG_RECORD_TIME");}
         IE_CHANNEL_ID    ie_channel_id;
-        std::vector<IE_UCHAR> ie_type/*´æ´¢ÀàĞÍ: 0Ç°¶Ë; 1ÖĞĞÄ; ²»Ìî¸ÃIEÄ¬ÈÏÎª0*/;
-        std::vector<IE_USHORT> ie_store_mode/*Â¼Ïñ²ßÂÔ£º0xfffa:Âú¾ÍÉ¾£»0xfffb:ÂúÍ£; ÆäËû£º±£´æÌìÊı*/;
-        std::vector<IE_TIME_DETAIL_LIST> ie_list/*Â¼ÏñÊ±¼ä±í£¬¿ÉÄÜÓĞ¶à¸ö£¬ÊÓ¾ßÌåÇé¿ö*/;
+        std::vector<IE_UCHAR> ie_type/*å­˜å‚¨ç±»å‹: 0å‰ç«¯; 1ä¸­å¿ƒ; ä¸å¡«è¯¥IEé»˜è®¤ä¸º0*/;
+        std::vector<IE_USHORT> ie_store_mode/*å½•åƒç­–ç•¥ï¼š0xfffa:æ»¡å°±åˆ ï¼›0xfffb:æ»¡åœ; å…¶ä»–ï¼šä¿å­˜å¤©æ•°*/;
+        std::vector<IE_TIME_DETAIL_LIST> ie_list/*å½•åƒæ—¶é—´è¡¨ï¼Œå¯èƒ½æœ‰å¤šä¸ªï¼Œè§†å…·ä½“æƒ…å†µ*/;
         std::vector<IE_UCHAR> ie_qos;
     };
     typedef zce_smartptr<MSG_FDCFG_RECORD_TIME> MSG_FDCFG_RECORD_TIME_PTR;
@@ -10607,9 +10607,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_WRITE_LOG_REQ;
         static const char* type_name() { return ("MSG_UA_WRITE_LOG_REQ");}
-        IE_astring64    ie_action/*¶¯×÷*/;
-        IE_astring64    ie_object/*Ä¿±ê*/;
-        IE_astring254    ie_detai/*ÏêÇé*/;
+        IE_astring64    ie_action/*åŠ¨ä½œ*/;
+        IE_astring64    ie_object/*ç›®æ ‡*/;
+        IE_astring254    ie_detai/*è¯¦æƒ…*/;
     };
     typedef zce_smartptr<MSG_UA_WRITE_LOG_REQ> MSG_UA_WRITE_LOG_REQ_PTR;
 
@@ -10625,9 +10625,9 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_ACTION_REQ;
         static const char* type_name() { return ("MSG_FD_ACTION_REQ");}
-        IE_UCHAR    ie_uchar/*²Ù×÷ÀàĞÍ£¬0=Ôö¼ÓÉè±¸£¬1=É¾³ıÉè±¸(==Í£ÓÃÉè±¸£¬²»ÊÇÕæÕıµÄÉ¾³ı)£¬2=ĞŞ¸ÄÖ±Á¬Êı£¬3=ĞŞ¸ÄÍ¨µÀÃû×Ö£¬4=ĞŞ¸ÄÍ¨µÀ×´Ì¬£¬5=ĞŞ¸ÄÍ¨µÀÀàĞÍ£¬6=ĞŞ¸ÄÍ¨µÀflag£¬7=ĞŞ¸ÄÍ¨µÀÂ¼Ïñ±£´æÊ±¼ä£¨Ãë£©£¬8=²éÑ¯ËùÓĞÉè±¸ËùÓĞÍ¨µÀ£¬9=Éè±¸Ç¿ÖÆÏÂÏß£¬10=ĞŞ¸ÄÉè±¸×´Ì¬£¬11=ĞŞ¸ÄÉè±¸³ıfdidÒÔÍâµÄÓò£¬12=ĞŞ¸ÄÍ¨µÀ³ıfdidºÍchannelnoÒÔÍâµÄÓò£¬13=ĞŞ¸ÄÉè±¸IP, 14=ĞŞ¸Äonvif²ÎÊı*/;
-        std::vector<IE_FD_ACTION> ie_fd_action/*Éè±¸*/;
-        std::vector<IE_CHANNEL_ACTION> ie_channel_action/*Í¨µÀ*/;
+        IE_UCHAR    ie_uchar/*æ“ä½œç±»å‹ï¼Œ0=å¢åŠ è®¾å¤‡ï¼Œ1=åˆ é™¤è®¾å¤‡(==åœç”¨è®¾å¤‡ï¼Œä¸æ˜¯çœŸæ­£çš„åˆ é™¤)ï¼Œ2=ä¿®æ”¹ç›´è¿æ•°ï¼Œ3=ä¿®æ”¹é€šé“åå­—ï¼Œ4=ä¿®æ”¹é€šé“çŠ¶æ€ï¼Œ5=ä¿®æ”¹é€šé“ç±»å‹ï¼Œ6=ä¿®æ”¹é€šé“flagï¼Œ7=ä¿®æ”¹é€šé“å½•åƒä¿å­˜æ—¶é—´ï¼ˆç§’ï¼‰ï¼Œ8=æŸ¥è¯¢æ‰€æœ‰è®¾å¤‡æ‰€æœ‰é€šé“ï¼Œ9=è®¾å¤‡å¼ºåˆ¶ä¸‹çº¿ï¼Œ10=ä¿®æ”¹è®¾å¤‡çŠ¶æ€ï¼Œ11=ä¿®æ”¹è®¾å¤‡é™¤fdidä»¥å¤–çš„åŸŸï¼Œ12=ä¿®æ”¹é€šé“é™¤fdidå’Œchannelnoä»¥å¤–çš„åŸŸï¼Œ13=ä¿®æ”¹è®¾å¤‡IP, 14=ä¿®æ”¹onvifå‚æ•°*/;
+        std::vector<IE_FD_ACTION> ie_fd_action/*è®¾å¤‡*/;
+        std::vector<IE_CHANNEL_ACTION> ie_channel_action/*é€šé“*/;
         std::vector<IE_FD_ACTION_V2> ie_fd_action_v2;
     };
     typedef zce_smartptr<MSG_FD_ACTION_REQ> MSG_FD_ACTION_REQ_PTR;
@@ -10637,8 +10637,8 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_FD_ACTION_RES;
         static const char* type_name() { return ("MSG_FD_ACTION_RES");}
         IE_RESULT    ie_result;
-        std::vector<IE_FD_ACTION> ie_fd_action/*Éè±¸*/;
-        std::vector<IE_CHANNEL_ACTION> ie_channel_action/*Í¨µÀ*/;
+        std::vector<IE_FD_ACTION> ie_fd_action/*è®¾å¤‡*/;
+        std::vector<IE_CHANNEL_ACTION> ie_channel_action/*é€šé“*/;
         std::vector<IE_FD_ACTION_V2> ie_fd_action_v2;
         std::vector<IE_FD_ACTION_V3> ie_fd_action_v3;
     };
@@ -10648,8 +10648,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_UA_ACTION_REQ;
         static const char* type_name() { return ("MSG_UA_ACTION_REQ");}
-        IE_UCHAR    ie_uchar/*²Ù×÷ÀàĞÍ£¬0=²éÑ¯ËùÓĞÓÃ»§£¬1=±£Áô£¬2=ĞŞ¸ÄÃèÊö*/;
-        std::vector<IE_UA_ACTION> ie_ua_action/*ÓÃ»§*/;
+        IE_UCHAR    ie_uchar/*æ“ä½œç±»å‹ï¼Œ0=æŸ¥è¯¢æ‰€æœ‰ç”¨æˆ·ï¼Œ1=ä¿ç•™ï¼Œ2=ä¿®æ”¹æè¿°*/;
+        std::vector<IE_UA_ACTION> ie_ua_action/*ç”¨æˆ·*/;
     };
     typedef zce_smartptr<MSG_UA_ACTION_REQ> MSG_UA_ACTION_REQ_PTR;
 
@@ -10658,7 +10658,7 @@ namespace gep
         const static unsigned short MSG_TYPE = E_MSG_UA_ACTION_RES;
         static const char* type_name() { return ("MSG_UA_ACTION_RES");}
         IE_RESULT    ie_result;
-        std::vector<IE_UA_ACTION> ie_ua_action/*ÓÃ»§*/;
+        std::vector<IE_UA_ACTION> ie_ua_action/*ç”¨æˆ·*/;
     };
     typedef zce_smartptr<MSG_UA_ACTION_RES> MSG_UA_ACTION_RES_PTR;
 
@@ -10666,21 +10666,21 @@ namespace gep
     {
         const static unsigned short IE_TYPE = E_IE_AUTOFIND;
         IE_AUTOFIND() { };
-        zce_astring szId/*ĞòÁĞºÅ, ÒÔ"onvif"´òÍ·±íÊ¾ONVIFÉè±¸£¬·ñÔò¾ÍÊÇ¹«Ë¾Ë½ÓĞĞ­Òé·¢ÏÖµÄÉè±¸*/;
-        zce_astring szType/*GE DVR DVSµÈ*/;
-        zce_astring szDevName/*Éè±¸Ãû³Æ*/;
-        zce_astring szDevVer/*°æ±¾ĞÅÏ¢*/;
-        zce_astring szMac/*MACµØÖ·*/;
-        zce_astring szIp/*IPµØÖ·*/;
-        zce_astring szPort/*¶Ë¿Ú*/;
-        zce_astring szNetmask/*ÑÚÂë*/;
-        zce_astring szGateway/*Íø¹Ø*/;
+        zce_astring szId/*åºåˆ—å·, ä»¥"onvif"æ‰“å¤´è¡¨ç¤ºONVIFè®¾å¤‡ï¼Œå¦åˆ™å°±æ˜¯å…¬å¸ç§æœ‰åè®®å‘ç°çš„è®¾å¤‡*/;
+        zce_astring szType/*GE DVR DVSç­‰*/;
+        zce_astring szDevName/*è®¾å¤‡åç§°*/;
+        zce_astring szDevVer/*ç‰ˆæœ¬ä¿¡æ¯*/;
+        zce_astring szMac/*MACåœ°å€*/;
+        zce_astring szIp/*IPåœ°å€*/;
+        zce_astring szPort/*ç«¯å£*/;
+        zce_astring szNetmask/*æ©ç */;
+        zce_astring szGateway/*ç½‘å…³*/;
     };
     struct MSG_FD_AUTOFIND_REQ : public zce_smartptr_mtbase
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_AUTOFIND_REQ;
         static const char* type_name() { return ("MSG_FD_AUTOFIND_REQ");}
-        IE_UCHAR    ie_uchar/*0=²éÑ¯*/;
+        IE_UCHAR    ie_uchar/*0=æŸ¥è¯¢*/;
     };
     typedef zce_smartptr<MSG_FD_AUTOFIND_REQ> MSG_FD_AUTOFIND_REQ_PTR;
 
@@ -10688,8 +10688,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_AUTOFIND_RES;
         static const char* type_name() { return ("MSG_FD_AUTOFIND_RES");}
-        IE_RESULT    ie_result/*>=0 ³É¹¦ */;
-        std::vector<IE_AUTOFIND> ie_autofind/*²Ù×÷½á¹û*/;
+        IE_RESULT    ie_result/*>=0 æˆåŠŸ */;
+        std::vector<IE_AUTOFIND> ie_autofind/*æ“ä½œç»“æœ*/;
     };
     typedef zce_smartptr<MSG_FD_AUTOFIND_RES> MSG_FD_AUTOFIND_RES_PTR;
 
@@ -10706,20 +10706,20 @@ namespace gep
         {
         }
 
-        zce_byte    is_valid/*ÊÇ·ñÒÑÅäÖÃ 0±íÊ¾ÎŞĞ§..1±íÊ¾ÓĞĞ§*/;
-        zce_byte    res/*×Ö½Ú¶ÔÆë*/;
-        zce_uint16    channel_number/*Êı¾İÔ´µÄÍ¨µÀºÅ.(4Â·DVR.¾ÍÊÇ1-4).²»ÊÇ±¾ÉíµÄÍ¨µÀºÅ*/;
-        zce_uint16    protocol/*Ğ­Òé..0±íÊ¾GEP..1.±íÊ¾ONVIF*/;
-        zce_uint16    login_port/*¶Ë¿ÚºÅ..ÍøÂç×Ö½ÚĞò*/;
-        zce_astring login_ip/*×Ö·û´®..¿ÉÒÔÊÇ192.168.1.1ÕâÑùµÄµã·ÖÊ½,Ò²¿ÉÒÔÊÇwww.test.testÕâÑùµÄÓòÃû.»òÕßIPV6(»¹²»Ö§³Ö)*/;
-        zce_astring login_user/*µÇÂ¼µÄÓÃ»§Ãû*/;
-        zce_astring login_pwd/*µÇÂ¼ÃÜÂë*/;
+        zce_byte    is_valid/*æ˜¯å¦å·²é…ç½® 0è¡¨ç¤ºæ— æ•ˆ..1è¡¨ç¤ºæœ‰æ•ˆ*/;
+        zce_byte    res/*å­—èŠ‚å¯¹é½*/;
+        zce_uint16    channel_number/*æ•°æ®æºçš„é€šé“å·.(4è·¯DVR.å°±æ˜¯1-4).ä¸æ˜¯æœ¬èº«çš„é€šé“å·*/;
+        zce_uint16    protocol/*åè®®..0è¡¨ç¤ºGEP..1.è¡¨ç¤ºONVIF*/;
+        zce_uint16    login_port/*ç«¯å£å·..ç½‘ç»œå­—èŠ‚åº*/;
+        zce_astring login_ip/*å­—ç¬¦ä¸²..å¯ä»¥æ˜¯192.168.1.1è¿™æ ·çš„ç‚¹åˆ†å¼,ä¹Ÿå¯ä»¥æ˜¯www.test.testè¿™æ ·çš„åŸŸå.æˆ–è€…IPV6(è¿˜ä¸æ”¯æŒ)*/;
+        zce_astring login_user/*ç™»å½•çš„ç”¨æˆ·å*/;
+        zce_astring login_pwd/*ç™»å½•å¯†ç */;
     };
     struct MSG_FD_GETCHANNEL_REQ : public zce_smartptr_mtbase
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_GETCHANNEL_REQ;
         static const char* type_name() { return ("MSG_FD_GETCHANNEL_REQ");}
-        IE_UCHAR    ie_uchar/*Í¨µÀºÅ ´Ó1¿ªÊ¼*/;
+        IE_UCHAR    ie_uchar/*é€šé“å· ä»1å¼€å§‹*/;
     };
     typedef zce_smartptr<MSG_FD_GETCHANNEL_REQ> MSG_FD_GETCHANNEL_REQ_PTR;
 
@@ -10727,8 +10727,8 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_GETCHANNEL_RES;
         static const char* type_name() { return ("MSG_FD_GETCHANNEL_RES");}
-        IE_RESULT    ie_result/*²Ù×÷ÀàĞÍ£¬>=0 ³É¹¦ */;
-        IE_UCHAR    ie_channel/*Í¨µÀºÅ ´Ó1¿ªÊ¼*/;
+        IE_RESULT    ie_result/*æ“ä½œç±»å‹ï¼Œ>=0 æˆåŠŸ */;
+        IE_UCHAR    ie_channel/*é€šé“å· ä»1å¼€å§‹*/;
         IE_FDCHANNEL_INFO    ie_channelinfo;
     };
     typedef zce_smartptr<MSG_FD_GETCHANNEL_RES> MSG_FD_GETCHANNEL_RES_PTR;
@@ -10737,7 +10737,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_SETCHANNEL_REQ;
         static const char* type_name() { return ("MSG_FD_SETCHANNEL_REQ");}
-        IE_UCHAR    ie_channel/*Í¨µÀºÅ ´Ó1¿ªÊ¼*/;
+        IE_UCHAR    ie_channel/*é€šé“å· ä»1å¼€å§‹*/;
         IE_FDCHANNEL_INFO    ie_channelinfo;
     };
     typedef zce_smartptr<MSG_FD_SETCHANNEL_REQ> MSG_FD_SETCHANNEL_REQ_PTR;
@@ -10746,7 +10746,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_SETCHANNEL_RES;
         static const char* type_name() { return ("MSG_FD_SETCHANNEL_RES");}
-        IE_RESULT    ie_result/*²Ù×÷ÀàĞÍ£¬>=0 ³É¹¦ */;
+        IE_RESULT    ie_result/*æ“ä½œç±»å‹ï¼Œ>=0 æˆåŠŸ */;
     };
     typedef zce_smartptr<MSG_FD_SETCHANNEL_RES> MSG_FD_SETCHANNEL_RES_PTR;
 
@@ -10760,10 +10760,10 @@ namespace gep
         {
         }
 
-        zce_astring name/*Ó²ÅÌÃû³Æ*/;
-        zce_uint64    total_size/*Ó²ÅÌ´óĞ¡£¨MB£©*/;
-        zce_uint64    unuse_size/*¿ÉÓÃ´óĞ¡£¨MB£©*/;
-        zce_uint32    status/*Ó²ÅÌ×´Ì¬ 0:±íÊ¾¹¤×÷Õı³£ 1:±íÊ¾Î´¸ñÊ½»¯,2:¸ñÊ½»¯ÖĞ,3:±íÊ¾Ê¹ÓÃÖĞ*/;
+        zce_astring name/*ç¡¬ç›˜åç§°*/;
+        zce_uint64    total_size/*ç¡¬ç›˜å¤§å°ï¼ˆMBï¼‰*/;
+        zce_uint64    unuse_size/*å¯ç”¨å¤§å°ï¼ˆMBï¼‰*/;
+        zce_uint32    status/*ç¡¬ç›˜çŠ¶æ€ 0:è¡¨ç¤ºå·¥ä½œæ­£å¸¸ 1:è¡¨ç¤ºæœªæ ¼å¼åŒ–,2:æ ¼å¼åŒ–ä¸­,3:è¡¨ç¤ºä½¿ç”¨ä¸­*/;
     };
     struct REMOVABLE_STORAGE
     {
@@ -10778,18 +10778,18 @@ namespace gep
         }
 
         std::vector<HDDDETAIL_INFO> storages;
-        zce_uint32    picture_storage_percent/*0-100 Í¼Æ¬ÈİÁ¿Õ¼±È*/;
-        zce_uint32    reserve_storage_percent/*Éè±¸Ô¤Áô°Ù·Ö±È..Ô¤Áô¿Õ¼ä´óĞ¡..*/;
-        zce_astring priority_storage_name/*ÓÅÏÈÊ¹ÓÃÄÇ¸öÉè±¸µÄ±àºÅ*/;
-        zce_uint32    record_enable/*ÊÇ·ñÆôÓÃÂ¼Ïñ*/;
-        zce_uint32    record_full_policy/*Â¼ÏñÂúÉ¾²ßÂÔ*/;
-        zce_uint32    picture_full_policy/*Í¼Æ¬ÂúÉ¾²ßÂÊ*/;
+        zce_uint32    picture_storage_percent/*0-100 å›¾ç‰‡å®¹é‡å æ¯”*/;
+        zce_uint32    reserve_storage_percent/*è®¾å¤‡é¢„ç•™ç™¾åˆ†æ¯”..é¢„ç•™ç©ºé—´å¤§å°..*/;
+        zce_astring priority_storage_name/*ä¼˜å…ˆä½¿ç”¨é‚£ä¸ªè®¾å¤‡çš„ç¼–å·*/;
+        zce_uint32    record_enable/*æ˜¯å¦å¯ç”¨å½•åƒ*/;
+        zce_uint32    record_full_policy/*å½•åƒæ»¡åˆ ç­–ç•¥*/;
+        zce_uint32    picture_full_policy/*å›¾ç‰‡æ»¡åˆ ç­–ç‡*/;
     };
     struct IE_HDDDETAIL_INFO
     {
         const static unsigned short IE_TYPE = E_IE_HDDDETAIL_INFO;
         IE_HDDDETAIL_INFO() { };
-        HDDDETAIL_INFO    hddinfo/*Ó²ÅÌ¾ßÌåĞÅÏ¢*/;
+        HDDDETAIL_INFO    hddinfo/*ç¡¬ç›˜å…·ä½“ä¿¡æ¯*/;
     };
     struct IE_HDDINFO
     {
@@ -10800,20 +10800,20 @@ namespace gep
         {
         }
 
-        zce_uint32    hdd_num/*Ó²ÅÌÊıÄ¿*/;
-        std::vector<HDDDETAIL_INFO> hddinfo/*Ó²ÅÌ¾ßÌåĞÅÏ¢*/;
+        zce_uint32    hdd_num/*ç¡¬ç›˜æ•°ç›®*/;
+        std::vector<HDDDETAIL_INFO> hddinfo/*ç¡¬ç›˜å…·ä½“ä¿¡æ¯*/;
     };
     struct IE_REMOVABLE_STORAGE
     {
         const static unsigned short IE_TYPE = E_IE_REMOVABLE_STORAGE;
         IE_REMOVABLE_STORAGE() { };
-        REMOVABLE_STORAGE    storgeinfo/*¿ÉÒÆ¶¯´æ´¢ĞÅÏ¢*/;
+        REMOVABLE_STORAGE    storgeinfo/*å¯ç§»åŠ¨å­˜å‚¨ä¿¡æ¯*/;
     };
     struct MSG_FDCFG_REMOVABLE_STORAGE : public zce_smartptr_mtbase
     {
         const static unsigned short MSG_TYPE = E_MSG_FDCFG_REMOVABLE_STORAGE;
         static const char* type_name() { return ("MSG_FDCFG_REMOVABLE_STORAGE");}
-        IE_REMOVABLE_STORAGE    ie_removable_storage/*¿ÉÒÆ¶¯´æ´¢ĞÅÏ¢*/;
+        IE_REMOVABLE_STORAGE    ie_removable_storage/*å¯ç§»åŠ¨å­˜å‚¨ä¿¡æ¯*/;
     };
     typedef zce_smartptr<MSG_FDCFG_REMOVABLE_STORAGE> MSG_FDCFG_REMOVABLE_STORAGE_PTR;
 
@@ -10821,7 +10821,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_GETHDDINFO_REQ;
         static const char* type_name() { return ("MSG_FD_GETHDDINFO_REQ");}
-        IE_UCHAR    ie_uchar/*0 »ñÈ¡*/;
+        IE_UCHAR    ie_uchar/*0 è·å–*/;
     };
     typedef zce_smartptr<MSG_FD_GETHDDINFO_REQ> MSG_FD_GETHDDINFO_REQ_PTR;
 
@@ -10829,7 +10829,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_GETHDDINFO_RES;
         static const char* type_name() { return ("MSG_FD_GETHDDINFO_RES");}
-        IE_RESULT    ie_result/*²Ù×÷ÀàĞÍ£¬0=³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç±»å‹ï¼Œ0=æˆåŠŸ*/;
         IE_HDDINFO    ie_hddinfo;
         std::vector<IE_REMOVABLE_STORAGE> ie_removable_storage;
     };
@@ -10847,7 +10847,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_SETHDDINFO_RES;
         static const char* type_name() { return ("MSG_FD_SETHDDINFO_RES");}
-        IE_RESULT    ie_result/*²Ù×÷ÀàĞÍ£¬0=³É¹¦*/;
+        IE_RESULT    ie_result/*æ“ä½œç±»å‹ï¼Œ0=æˆåŠŸ*/;
     };
     typedef zce_smartptr<MSG_FD_SETHDDINFO_RES> MSG_FD_SETHDDINFO_RES_PTR;
 
@@ -10863,7 +10863,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_FORMATHDD_RES;
         static const char* type_name() { return ("MSG_FD_FORMATHDD_RES");}
-        IE_RESULT    ie_result/*>=0±íÊ¾³É¹¦ <0±íÊ¾Ê§°Ü*/;
+        IE_RESULT    ie_result/*>=0è¡¨ç¤ºæˆåŠŸ <0è¡¨ç¤ºå¤±è´¥*/;
         IE_astring254    ie_hddname;
     };
     typedef zce_smartptr<MSG_FD_FORMATHDD_RES> MSG_FD_FORMATHDD_RES_PTR;
@@ -10880,7 +10880,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_GETFORMATHDDSTATUS_RES;
         static const char* type_name() { return ("MSG_FD_GETFORMATHDDSTATUS_RES");}
-        IE_RESULT    ie_result/*100±íÊ¾³É¹¦ 0-100±íÊ¾½ø¶È <0±íÊ¾Ê§°Ü*/;
+        IE_RESULT    ie_result/*100è¡¨ç¤ºæˆåŠŸ 0-100è¡¨ç¤ºè¿›åº¦ <0è¡¨ç¤ºå¤±è´¥*/;
         IE_astring254    ie_hddname;
     };
     typedef zce_smartptr<MSG_FD_GETFORMATHDDSTATUS_RES> MSG_FD_GETFORMATHDDSTATUS_RES_PTR;
@@ -10894,7 +10894,7 @@ namespace gep
         {
         }
 
-        zce_uint16    id/*Í¨µÀºÅ£¬´Ó1¿ªÊ¼*/;
+        zce_uint16    id/*é€šé“å·ï¼Œä»1å¼€å§‹*/;
         IE_FDCHANNEL_INFO    channel;
     };
     struct MSG_FDCFG_FD_CHANNEL : public zce_smartptr_mtbase
@@ -10930,7 +10930,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_GET_INTELLIGENT_ALGORITHMS_CFG_RES;
         static const char* type_name() { return ("MSG_FD_GET_INTELLIGENT_ALGORITHMS_CFG_RES");}
-        IE_RESULT    ie_result/*>=0±íÊ¾³É¹¦ <0±íÊ¾Ê§°Ü*/;
+        IE_RESULT    ie_result/*>=0è¡¨ç¤ºæˆåŠŸ <0è¡¨ç¤ºå¤±è´¥*/;
         IE_INTELLIGENT_ALGORITHMS_CFG    ie_algorithms_cfg;
     };
     typedef zce_smartptr<MSG_FD_GET_INTELLIGENT_ALGORITHMS_CFG_RES> MSG_FD_GET_INTELLIGENT_ALGORITHMS_CFG_RES_PTR;
@@ -10947,7 +10947,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_SET_INTELLIGENT_ALGORITHMS_CFG_RES;
         static const char* type_name() { return ("MSG_FD_SET_INTELLIGENT_ALGORITHMS_CFG_RES");}
-        IE_RESULT    ie_result/*>=0±íÊ¾³É¹¦ <0±íÊ¾Ê§°Ü*/;
+        IE_RESULT    ie_result/*>=0è¡¨ç¤ºæˆåŠŸ <0è¡¨ç¤ºå¤±è´¥*/;
     };
     typedef zce_smartptr<MSG_FD_SET_INTELLIGENT_ALGORITHMS_CFG_RES> MSG_FD_SET_INTELLIGENT_ALGORITHMS_CFG_RES_PTR;
 
@@ -10961,7 +10961,7 @@ namespace gep
         }
 
         PICTURE_MERGE_TYPE    type;
-        std::vector<zce_byte> ability/*ºÏ³ÉÄÜÁ¦¼¯*/;
+        std::vector<zce_byte> ability/*åˆæˆèƒ½åŠ›é›†*/;
     };
     struct MSG_FDCFG_PICTURE_MERGE_TYPE : public zce_smartptr_mtbase
     {
@@ -10982,7 +10982,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_GET_PICTURE_MERGE_TYPE_RES;
         static const char* type_name() { return ("MSG_FD_GET_PICTURE_MERGE_TYPE_RES");}
-        IE_RESULT    ie_result/*>=0±íÊ¾³É¹¦ <0±íÊ¾Ê§°Ü*/;
+        IE_RESULT    ie_result/*>=0è¡¨ç¤ºæˆåŠŸ <0è¡¨ç¤ºå¤±è´¥*/;
         IE_PICTURE_MERGE_TYPE    ie_picture_merge;
     };
     typedef zce_smartptr<MSG_FD_GET_PICTURE_MERGE_TYPE_RES> MSG_FD_GET_PICTURE_MERGE_TYPE_RES_PTR;
@@ -10999,7 +10999,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_SET_PICTURE_MERGE_TYPE_RES;
         static const char* type_name() { return ("MSG_FD_SET_PICTURE_MERGE_TYPE_RES");}
-        IE_RESULT    ie_result/*>=0±íÊ¾³É¹¦ <0±íÊ¾Ê§°Ü*/;
+        IE_RESULT    ie_result/*>=0è¡¨ç¤ºæˆåŠŸ <0è¡¨ç¤ºå¤±è´¥*/;
     };
     typedef zce_smartptr<MSG_FD_SET_PICTURE_MERGE_TYPE_RES> MSG_FD_SET_PICTURE_MERGE_TYPE_RES_PTR;
 
@@ -11029,7 +11029,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_GET_CONFIG_PARAM_RES;
         static const char* type_name() { return ("MSG_FD_GET_CONFIG_PARAM_RES");}
-        IE_RESULT    ie_result/*>=0±íÊ¾³É¹¦ <0±íÊ¾Ê§°Ü*/;
+        IE_RESULT    ie_result/*>=0è¡¨ç¤ºæˆåŠŸ <0è¡¨ç¤ºå¤±è´¥*/;
         IE_CONFIG_PARAM    ie_config_param;
     };
     typedef zce_smartptr<MSG_FD_GET_CONFIG_PARAM_RES> MSG_FD_GET_CONFIG_PARAM_RES_PTR;
@@ -11046,7 +11046,7 @@ namespace gep
     {
         const static unsigned short MSG_TYPE = E_MSG_FD_SET_CONFIG_PARAM_RES;
         static const char* type_name() { return ("MSG_FD_SET_CONFIG_PARAM_RES");}
-        IE_RESULT    ie_result/*>=0±íÊ¾³É¹¦ <0±íÊ¾Ê§°Ü*/;
+        IE_RESULT    ie_result/*>=0è¡¨ç¤ºæˆåŠŸ <0è¡¨ç¤ºå¤±è´¥*/;
     };
     typedef zce_smartptr<MSG_FD_SET_CONFIG_PARAM_RES> MSG_FD_SET_CONFIG_PARAM_RES_PTR;
 

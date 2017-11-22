@@ -13,8 +13,8 @@
 #   define NOMINMAX
 #   if defined(_DEBUG) && !defined(_UNICODE)
 #        //include <vld.h>
-#        define ZCE_ZDB_MYSQL 1
-#        define ZCE_ZDB_PGSQL 0
+#        define ZCE_ZDB_MYSQL 0
+#        define ZCE_ZDB_PGSQL 1
 #   endif
 #   include <winsock2.h>
 #   include <ws2tcpip.h>
@@ -68,7 +68,8 @@
 #       define HASNOT_UUID 1
 #       define ZCE_API __attribute__ ((visibility ("default")))
 #   else
-#       define ZCE_ZDB_MYSQL 1
+#       define ZCE_ZDB_MYSQL 0
+#       define ZCE_ZDB_PGSQL 1
 #   endif
 #endif
 
@@ -128,4 +129,5 @@ enum ERV_ZCE_ERROR
 
     ZDB_ERROR_SQLITE_COMMON = 0x81010000, //以下错误代码对应SQLITE自身的错误代码
     ZDB_ERROR_MYSQL_COMMON = 0x81020000, //以下错误代码对应MYSQL自身的错误代码
+    ZDB_ERROR_PGSQL_COMMON = 0x81030000, //以下错误代码对应PGSQL自身的错误代码
 };

@@ -258,6 +258,10 @@ public:
     : val_(val) {
     };
 
+    zce_smartptr_wrapper(T&& val)
+        : val_(val) {
+    };
+
     const T& get() const {
         return val_;
     }

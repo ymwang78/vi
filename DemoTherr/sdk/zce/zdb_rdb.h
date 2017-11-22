@@ -88,7 +88,7 @@ public:
     virtual zdb_stmt& operator << (short v) = 0;
     virtual zdb_stmt& operator << (unsigned char v) = 0;
     virtual zdb_stmt& operator << (const std::string& v) = 0;
-    virtual zdb_stmt& operator << (const struct timespec_t& v) = 0;
+    virtual zdb_stmt& operator << (const struct timespec& v) = 0;
     virtual zdb_stmt& operator << (const none&) = 0; 
     virtual zdb_stmt& operator << (const none_ignoreidx&) = 0;
 
@@ -97,7 +97,7 @@ public:
     virtual zdb_stmt& operator >> (short& v) = 0;
     virtual zdb_stmt& operator >> (unsigned char& v) = 0;
     virtual zdb_stmt& operator >> (std::string& v) = 0;
-    virtual zdb_stmt& operator >> (struct timespec_t& v) = 0;
+    virtual zdb_stmt& operator >> (struct timespec& v) = 0;
     virtual zdb_stmt& operator >> (none&) = 0;
     virtual zdb_stmt& operator >> (none_ignoreidx&) = 0;
 
@@ -126,11 +126,12 @@ public:
         return operator >> ((unsigned char&)v);
     }
 
+    //<0, error; = 0, sucess, no more row; >0 has more row
     int operator << (const _endl_t&) {
         return go();
     }
 
-    //<0, error; = 0, sucess, nomore row; >0 has more row
+    //<0, error; = 0, sucess, no more row; >0 has more row
     int operator >> (const _endl_t&) {
         return end_row();
     }

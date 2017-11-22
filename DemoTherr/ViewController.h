@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+- (void)messageCallback:(int)msgtype errorCode:(int)errorcode context:(void*)ctx;
+
+- (void)eventCallback:(int)evttype context:(void*)ctx;
 
 @end
 

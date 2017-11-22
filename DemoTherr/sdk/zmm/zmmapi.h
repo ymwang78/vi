@@ -1,7 +1,13 @@
 #pragma once
 
 #ifdef WIN32
-#   define ZMM_API
+#   if defined ZMM_EXPORTS
+#       define ZMM_API __declspec(dllexport)
+#   elif defined ZMM_IMPORTS
+#       define ZMM_API __declspec(dllimport)
+#   else
+#       define ZMM_API
+#   endif
 #else
 #   define ZMM_API __attribute__ ((visibility ("default")))
 #endif

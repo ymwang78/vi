@@ -33,6 +33,16 @@ namespace zce
         return ss.str();
     }
 
+    template<typename T>
+    inline std::string to_string(const std::vector<T>& arr)
+    {
+        std::ostringstream stream;
+        for (unsigned i = 0; i < arr.size(); ++i) {
+            stream << arr[i] << ",";
+        }
+        return stream.str();
+    }
+
     template<>
     inline std::string to_string<const std::string&>(const std::string& str)
     {

@@ -59,6 +59,12 @@ inline std::string zdb_mongo_getfiled(const mongo::BSONObj& p, const char* field
     return p.getStringField(field);
 }
 
+namespace Json {
+    class Value;
+}
+
+void zdb_bson_to_json(Json::Value& jarray, mongo::BSONObj& args);
+
 namespace zdp {
     struct _zbson_dummy {
     };

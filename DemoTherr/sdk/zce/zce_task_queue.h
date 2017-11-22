@@ -20,7 +20,11 @@ class zce_schedule;
 
 class ZCE_API zce_task_queue : public zce_task
 {
+    ZCE_OBJECT_DECLARE;
+
     zce_smartptr<zce_schedule> schedule_ptr_;
+
+    zce_atomic_long inque_;
 
     zce_smartptr<zce_task_queue> proxy_ptr_;
 
@@ -28,11 +32,13 @@ class ZCE_API zce_task_queue : public zce_task
 
     zce_mutex task_lock_;
 
+    unsigned cont_proc_;
+
     bool paused_;
 
 public:
 
-    zce_task_queue(const zce_smartptr<zce_schedule>& schedule_ptr);
+    zce_task_queue(const zce_smartptr<zce_schedule>& schedule_ptr, unsigned contproc = 10, const char* name = 0);
 
     int enqueue(const zce_smartptr<zce_task>& req);
 

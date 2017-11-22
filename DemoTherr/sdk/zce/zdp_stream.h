@@ -149,6 +149,32 @@ namespace zdp
     }
 
     template<typename T>
+    int zdp_serialize_ie(zce_dblock& dblock_ptr, const T& msg, zce_byte rev, int preserv = 0) {
+        int ret = 0;
+        int bodylen = zdp_body_length(msg, rev);
+        bodylen += zdp_ie_head_len(bodylen, rev);
+        ZCE_MBACQUIRE(dblock_ptr, preserv + bodylen);
+        if (dblock_ptr.space() == 0)
+            return ZCE_ERROR_MALLOC;
+
+        if (preserv)
+            dblock_ptr.preserv(preserv);
+        ret += preserv;
+
+        if (bodylen) {
+            int len = zdp_pack(msg, dblock_ptr.wr_ptr(), (int)dblock_ptr.space(), rev);
+            ZCE_ASSERT(bodylen == len);
+            if (len < 0)
+                return len;
+            if (bodylen != len)
+                return ZCE_ERROR_SYNTAX;
+            ret += len;
+        }
+        dblock_ptr.wr_ptr(ret);
+        return ret;
+    }
+
+    template<typename T>
     int zdp_serialize(zce_dblock& dblock_ptr, zce_uint32 seq, const T& msg, zce_byte rev,
         ERV_ZCE_COMPRESS cps = ZCE_COMPRESS_NONE, int preserv = 0
 #ifdef ZDP_GEP

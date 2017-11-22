@@ -19,6 +19,7 @@
     typedef DWORD       threadid_t;
     typedef HANDLE      handle_t;
     typedef int         socklen_t;
+    typedef struct timespec timespec_t;
 #else
     typedef pthread_t   threadid_t;
     typedef int         handle_t;

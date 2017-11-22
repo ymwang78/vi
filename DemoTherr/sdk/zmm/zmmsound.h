@@ -6,11 +6,11 @@
 extern "C" {
 #endif /* __cplusplus */
 
-void* ZMM_API zmm_sound_init();
+    ZMM_API void* zmm_sound_init();
 
-int ZMM_API zmm_sound_put(void* handle, void* fmt, unsigned char* buf, unsigned len, unsigned timestamp);
+    ZMM_API int zmm_sound_put(void* handle, void* fmt, unsigned char* buf, unsigned len, unsigned timestamp);
 
-void ZMM_API zmm_sound_fini(void* handle);
+    ZMM_API void zmm_sound_fini(void* handle);
 
 #ifdef __cplusplus
 }

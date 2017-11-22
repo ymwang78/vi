@@ -99,7 +99,7 @@ std::vector<unsigned char> ZCE_API zce_from_hex(const std::string& in);
 
 std::string ZCE_API zce_md5sum(const char* fname);
 
-std::string ZCE_API zce_md5_encode(const char* input, size_t inputlen, unsigned char binout[16]);
+std::string ZCE_API zce_md5_encode(const char* input, size_t inputlen, unsigned char binout[16], bool upper = false);
 
 std::string ZCE_API zce_string_format(unsigned length, const char* format, ...);
 
@@ -128,6 +128,16 @@ template<typename T>
 inline T zce_abs(const T& iValue)
 {
     return iValue > 0 ? iValue : -iValue;
+}
+
+template<typename T>
+inline T zce_sum(const std::vector<T>& iVec)
+{
+    T v = 0;
+    for (auto iter = iVec.begin(); iter != iVec.end(); ++iter) {
+        v += *iter;
+    }
+    return v;
 }
 
 #ifdef _WIN32

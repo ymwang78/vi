@@ -87,6 +87,7 @@ public:
 
 class ZCE_API zce_socket : public zce_istream
 {
+    ZCE_OBJECT_DECLARE;
 protected:
 
     class zce_socket_close : public zce_task

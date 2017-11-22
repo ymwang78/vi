@@ -5,45 +5,50 @@
 #include <zmm/zmmdec.h>
 
 #ifdef __cplusplus
-extern "C" {
+    extern "C" {
 #endif	// __cplusplus
 
-#define NOTIFY_TYPE_RUN                     0
+    enum ERV_MSG_TYPE {
+        MSG_TYPE_LOGIN,
+        MSG_TYPE_LOGOUT,
+        MSG_TYPE_START_MONITOR,
+        MSG_TYPE_STOP_MONITOR,
+        MSG_TYPE_PTZ_CONTROL,
+        MSG_TYPE_QUERY_RECORD,
+        MSG_TYPE_START_PLAYBACK,
+        MSG_TYPE_STOP_PLAYBACK,
+        MSG_TYPE_CTRL_PLAYBACK,
+        MSG_TYPE_DOWNLOAD_RECORD,
+        MSG_TYPE_START_AUDIO,    //启动语音对讲消息;
+        MSG_TYPE_STOP_AUDIO,      //停止语音对讲消息;
+        MSG_TYPE_CHANNEL_LIST,    //获取通道列表通知;
+        MSG_TYPE_QUERY_GROUP,
+        MSG_TYPE_QUERY_PRESET,
+        MSG_TYPE_PRESET_CONTROL,
+        MSG_TYPE_PRESET_GOTO,
+        MSG_TYPE_FD_LIST,
+        MSG_TYPE_FD_CHANNELLIST,
+        MSG_TYPE_UA_RECORDSTART,
+        MSG_TYPE_UA_RECORDSTOP,
+        MSG_TYPE_CONFIG_RECORD_PLAN,
+        MSG_TYPE_QUERY_RECORD_PLAN,
+        MSG_TYPE_QUERY_PRESETSCHEDULE,
+        MSG_TYPE_SET_PRESETSCHEDULE,
+        MSG_TYPE_QUERY_FDSTATUS,
+        MSG_TYPE_MODIFY_PASSWORD,
+        MSG_TYPE_MODIFY_FDNAME,
+        MSG_TYPE_MODIFY_CHANNELNAME,
+        MSG_TYPE_DOWNLOAD_RCVIDEO,
+        MSG_TYPE_FD_SET_VIDEO,
+        MSG_TYPE_FD_GET_VIDEO,
+    };
 
-#define MSG_TYPE_LOGIN						1
-#define MSG_TYPE_LOGOUT						2
-#define MSG_TYPE_START_MONITOR				3
-#define MSG_TYPE_STOP_MONITOR				4
-#define MSG_TYPE_PTZ_CONTROL				5
-#define MSG_TYPE_QUERY_RECORD				6
-#define MSG_TYPE_START_PLAYBACK				7
-#define MSG_TYPE_STOP_PLAYBACK				8
-#define MSG_TYPE_CTRL_PLAYBACK				9
-#define MSG_TYPE_DOWNLOAD_RECORD			10
-#define MSG_TYPE_START_AUDIO				11 //���������Խ���Ϣ;
-#define MSG_TYPE_STOP_AUDIO					12 //ֹͣ�����Խ���Ϣ;
-#define MSG_TYPE_CHANNEL_LIST               13 //��ȡͨ���б�֪ͨ;
-#define MSG_TYPE_QUERY_GROUP                14
-#define MSG_TYPE_QUERY_PRESET				15
-#define MSG_TYPE_PRESET_CONTROL				16
-#define	MSG_TYPE_PRESET_GOTO				17
-#define MSG_TYPE_FD_LIST					18
-#define MSG_TYPE_FD_CHANNELLIST				19
-#define MSG_TYPE_UA_RECORDSTART				20
-#define MSG_TYPE_UA_RECORDSTOP				21
-#define MSG_TYPE_CONFIG_RECORD_PLAN			22
-#define MSG_TYPE_QUERY_RECORD_PLAN			23
-#define MSG_TYPE_QUERY_PRESETSCHEDULE		24
-#define MSG_TYPE_SET_PRESETSCHEDULE			25
-#define MSG_TYPE_QUERY_FDSTATUS				26
-#define MSG_TYPE_MODIFY_PASSWORD			27
-#define MSG_TYPE_MODIFY_FDNAME				28
-#define MSG_TYPE_MODIFY_CHANNELNAME			29
-
-#define NOTIFY_TYPE_ALARM					100
-#define NOTIFY_TYPE_FD_ONLINE				101
-#define NOTIFY_TYPE_DOWNLOAD_URL			102
-
+    enum ERV_EVENT_TYPE {
+        EVENT_TYPE_RUN,
+        EVENT_TYPE_ALARM = 100,
+        EVENT_TYPE_FDONLINE,
+        EVENT_TYPE_DOWNLOADURL,
+    };
 
     enum ERV_NET_TYPE {
         NET_TYPE_AUTO,
@@ -53,65 +58,67 @@ extern "C" {
 
     enum ERV_PLAYBACK_CTRL_ACTION
     {
-        PLAYBACK_CTRL_ACTION_FastForward = 0x01,//���
-        PLAYBACK_CTRL_ACTION_FastBackward = 0x02,//����
-        PLAYBACK_CTRL_ACTION_Pause = 0x03,//��ͣ 
-        PLAYBACK_CTRL_ACTION_Stop = 0x04,//ֹͣ 
-        PLAYBACK_CTRL_ACTION_Continue = 0x05,//�����ط� 
-        PLAYBACK_CTRL_ACTION_DragPlay = 0x06,//�ط��϶�
-        PLAYBACK_CTRL_ACTION_SlowForward = 0x07,//���� 
-        PLAYBACK_CTRL_ACTION_SlowBackward = 0x08,//����
-        PLAYBACK_CTRL_ACTION_FramePlay = 0x09,//��֡��
-        PLAYBACK_CTRL_ACTION_Forward = 0x0a,//�Ե�ǰ������ǰ��
-        PLAYBACK_CTRL_ACTION_Backward = 0x0b,//�Ե�ǰ��������
+        PLAYBACK_CTRL_ACTION_FastForward = 0x01,//快进
+        PLAYBACK_CTRL_ACTION_FastBackward = 0x02,//快退
+        PLAYBACK_CTRL_ACTION_Pause = 0x03,//暂停 
+        PLAYBACK_CTRL_ACTION_Stop = 0x04,//停止 
+        PLAYBACK_CTRL_ACTION_Continue = 0x05,//继续回放 
+        PLAYBACK_CTRL_ACTION_DragPlay = 0x06,//回放拖动
+        PLAYBACK_CTRL_ACTION_SlowForward = 0x07,//慢进 
+        PLAYBACK_CTRL_ACTION_SlowBackward = 0x08,//慢退
+        PLAYBACK_CTRL_ACTION_FramePlay = 0x09,//单帧放
+        PLAYBACK_CTRL_ACTION_Forward = 0x0a,//以当前倍率向前放
+        PLAYBACK_CTRL_ACTION_Backward = 0x0b,//以当前倍率向后放
+		PLAYBACK_CTRL_ACTION_PlayIFrame = 0x0c,//在指定倍数只播I帧 (SSU 倍数*100)
+		PLAYBACK_CTRL_ACTION_PauseAt = 0x0d,//在指定时间暂停
     };
 
     enum ERV_CAMERA_CONTROL_ACTION
     {
-        CAMERA_CONTROL_ACTION_UP = 0x00000001 /*����ת*/,
-        CAMERA_CONTROL_ACTION_LEFT = 0x00000002 /*����ת*/,
-        CAMERA_CONTROL_ACTION_ROTATE = 0x00000003 /*��ת*/,
-        CAMERA_CONTROL_ACTION_RIGHT = 0x00000004 /*����ת*/,
-        CAMERA_CONTROL_ACTION_DOWN = 0x00000005 /*����ת*/,
-        CAMERA_CONTROL_ACTION_FAR = 0x00000006 /*��ͷ��Զ*/,
-        CAMERA_CONTROL_ACTION_FOCUSNEAR = 0x00000007 /*�۽�*/,
-        CAMERA_CONTROL_ACTION_AUTO = 0x00000008 /*�Զ�*/,
-        CAMERA_CONTROL_ACTION_FOCUSFAR = 0x00000009 /*ɢ��*/,
-        CAMERA_CONTROL_ACTION_NEAR = 0x0000000a /*��ͷ����*/,
-        CAMERA_CONTROL_ACTION_DIAPHRAGM_LARGE = 0x0000000b /*��Ȧ���󣨱�����*/,
-        CAMERA_CONTROL_ACTION_DIAPHRAGM_SMALL = 0x0000000c /*��Ȧ��С���䰵��*/,
-        CAMERA_CONTROL_ACTION_STOP = 0x0000000d /*ֹͣ����*/,
-        CAMERA_CONTROL_ACTION_SPEAKER_ON = 0x0000000e /*������*/,
-        CAMERA_CONTROL_ACTION_LIGHT_ON = 0x0000000f /*�򿪵ƹ�*/,
-        CAMERA_CONTROL_ACTION_HOTDOG = 0x00000010 /*�ȹ�ɨ��*/,
-        CAMERA_CONTROL_ACTION_SPEAKER_OFF = 0x00000011 /*�ر�����*/,
-        CAMERA_CONTROL_ACTION_LIGHT_OFF = 0x00000012 /*�رյƹ�*/,
-        CAMERA_CONTROL_ACTION_PRESET_GOTO = 0x00000013 /*�л���Ԥ�õ�*/,
-        CAMERA_CONTROL_ACTION_PRESET_SET = 0x00000014 /*����Ԥ�õ�*/,
-        CAMERA_CONTROL_ACTION_PRESET_DEL = 0x00000015 /*ɾ��Ԥ�õ�*/,
-        CAMERA_CONTROL_ACTION_CAMERA_RESET = 0x00000016 /*�������λ*/,
-        CAMERA_CONTROL_ACTION_WIPER_ON = 0x00000017 /*����ˢ*/,
-        CAMERA_CONTROL_ACTION_WIPER_OFF = 0x00000018 /*�ر���ˢ*/,
-        CAMERA_CONTROL_ACTION_AUTOCRUISE = 0x0000001d /*�Զ�Ѳ��*/,
-        CAMERA_CONTROL_ACTION_PRESET_CLEAR = 0x0000001e /*�������Ԥ�õ�*/,
-        CAMERA_CONTROL_ACTION_STARTTRACKING = 0x0000001f /*��������*/,
-        CAMERA_CONTROL_ACTION_STOPTRACKING = 0x00000020 /*ֹͣ����*/,
-        CAMERA_CONTROL_ACTION_LEFTUP = 0x00000021 /*����ת*/,
-        CAMERA_CONTROL_ACTION_RIGHTUP = 0x00000022 /*����ת*/,
-        CAMERA_CONTROL_ACTION_LEFTDOWN = 0x00000023 /*����ת*/,
-        CAMERA_CONTROL_ACTION_RIGHTDOWN = 0x00000024 /*����ת*/,
-        CAMERA_CONTROL_ACTION_CAMERAACTIVE = 0x00000028 /*���������*/,
-        CAMERA_CONTROL_ACTION_SETPANSPEED = 0x00000029 /*��������ת���ٶ�*/,
-        CAMERA_CONTROL_ACTION_SETTILTSPEED = 0x00000030 /*��������ת���ٶ�*/,
-        CAMERA_CONTROL_ACTION_SETZOOMSPEED = 0x00000031 /*���ù�Ȧ�ٶ�*/,
-        CAMERA_CONTROL_ACTION_SETFOCUSSPEED = 0x00000032 /*���þ۽�/ɢ���ٶ�*/,
-        CAMERA_CONTROL_ACTION_SPEEDSETTINGGET = 0x00000033 /*��ȡ������ٶ�����*/,
-        CAMERA_CONTROL_ACTION_MATRIXSWITCH = 0x00000040 /*�����л�*/,
-        CAMERA_CONTROL_ACTION_BRIGHTNESS = 0x00000050 /*����*/,
-        CAMERA_CONTROL_ACTION_CONTRAST = 0x00000051 /*�Աȶ�*/,
-        CAMERA_CONTROL_ACTION_SATURATION = 0x00000052 /*���Ͷ�*/,
-        CAMERA_CONTROL_ACTION_HUE = 0x00000053 /*ɫ��*/,
-		CAMERA_CONTROL_ACTION_PTZ_LOCK = 0x000000FF /*PTZ����*/,
+        CAMERA_CONTROL_ACTION_UP = 0x00000001 /*向上转*/,
+        CAMERA_CONTROL_ACTION_LEFT = 0x00000002 /*向左转*/,
+        CAMERA_CONTROL_ACTION_ROTATE = 0x00000003 /*旋转*/,
+        CAMERA_CONTROL_ACTION_RIGHT = 0x00000004 /*向右转*/,
+        CAMERA_CONTROL_ACTION_DOWN = 0x00000005 /*向下转*/,
+        CAMERA_CONTROL_ACTION_FAR = 0x00000006 /*镜头拉远*/,
+        CAMERA_CONTROL_ACTION_FOCUSNEAR = 0x00000007 /*聚焦*/,
+        CAMERA_CONTROL_ACTION_AUTO = 0x00000008 /*自动*/,
+        CAMERA_CONTROL_ACTION_FOCUSFAR = 0x00000009 /*散焦*/,
+        CAMERA_CONTROL_ACTION_NEAR = 0x0000000a /*镜头拉近*/,
+        CAMERA_CONTROL_ACTION_DIAPHRAGM_LARGE = 0x0000000b /*光圈增大（变亮）*/,
+        CAMERA_CONTROL_ACTION_DIAPHRAGM_SMALL = 0x0000000c /*光圈减小（变暗）*/,
+        CAMERA_CONTROL_ACTION_STOP = 0x0000000d /*停止动作*/,
+        CAMERA_CONTROL_ACTION_SPEAKER_ON = 0x0000000e /*打开喇叭*/,
+        CAMERA_CONTROL_ACTION_LIGHT_ON = 0x0000000f /*打开灯光*/,
+        CAMERA_CONTROL_ACTION_HOTDOG = 0x00000010 /*热狗扫描*/,
+        CAMERA_CONTROL_ACTION_SPEAKER_OFF = 0x00000011 /*关闭喇叭*/,
+        CAMERA_CONTROL_ACTION_LIGHT_OFF = 0x00000012 /*关闭灯光*/,
+        CAMERA_CONTROL_ACTION_PRESET_GOTO = 0x00000013 /*切换到预置点*/,
+        CAMERA_CONTROL_ACTION_PRESET_SET = 0x00000014 /*设置预置点*/,
+        CAMERA_CONTROL_ACTION_PRESET_DEL = 0x00000015 /*删除预置点*/,
+        CAMERA_CONTROL_ACTION_CAMERA_RESET = 0x00000016 /*摄像机复位*/,
+        CAMERA_CONTROL_ACTION_WIPER_ON = 0x00000017 /*打开雨刷*/,
+        CAMERA_CONTROL_ACTION_WIPER_OFF = 0x00000018 /*关闭雨刷*/,
+        CAMERA_CONTROL_ACTION_AUTOCRUISE = 0x0000001d /*自动巡航*/,
+        CAMERA_CONTROL_ACTION_PRESET_CLEAR = 0x0000001e /*清除所有预置点*/,
+        CAMERA_CONTROL_ACTION_STARTTRACKING = 0x0000001f /*启动跟踪*/,
+        CAMERA_CONTROL_ACTION_STOPTRACKING = 0x00000020 /*停止跟踪*/,
+        CAMERA_CONTROL_ACTION_LEFTUP = 0x00000021 /*左上转*/,
+        CAMERA_CONTROL_ACTION_RIGHTUP = 0x00000022 /*右上转*/,
+        CAMERA_CONTROL_ACTION_LEFTDOWN = 0x00000023 /*左下转*/,
+        CAMERA_CONTROL_ACTION_RIGHTDOWN = 0x00000024 /*右下转*/,
+        CAMERA_CONTROL_ACTION_CAMERAACTIVE = 0x00000028 /*摄像机激活*/,
+        CAMERA_CONTROL_ACTION_SETPANSPEED = 0x00000029 /*设置左右转动速度*/,
+        CAMERA_CONTROL_ACTION_SETTILTSPEED = 0x00000030 /*设置上下转动速度*/,
+        CAMERA_CONTROL_ACTION_SETZOOMSPEED = 0x00000031 /*设置光圈速度*/,
+        CAMERA_CONTROL_ACTION_SETFOCUSSPEED = 0x00000032 /*设置聚焦/散焦速度*/,
+        CAMERA_CONTROL_ACTION_SPEEDSETTINGGET = 0x00000033 /*获取摄像机速度设置*/,
+        CAMERA_CONTROL_ACTION_MATRIXSWITCH = 0x00000040 /*矩阵切换*/,
+        CAMERA_CONTROL_ACTION_BRIGHTNESS = 0x00000050 /*亮度*/,
+        CAMERA_CONTROL_ACTION_CONTRAST = 0x00000051 /*对比度*/,
+        CAMERA_CONTROL_ACTION_SATURATION = 0x00000052 /*饱和度*/,
+        CAMERA_CONTROL_ACTION_HUE = 0x00000053 /*色度*/,
+		CAMERA_CONTROL_ACTION_PTZ_LOCK = 0x000000FF /*PTZ锁定*/,
     };
 
     enum ERV_ZDSDK_ERRORCODE
@@ -150,19 +157,19 @@ extern "C" {
         ZDSDK_ERROR_COMMON_DOWNLOAD_NOT_IN_PROCESS = 0x80010013,
         ZDSDK_ERROR_COMMON_PLAYBACK_IN_PROCESS = 0x80010014,
         ZDSDK_ERROR_COMMON_PLAYBACK_NOT_IN_PROCESS = 0x80010015,
-        ZDSDK_ERROR_COMMON_USER_CANCELED = 0x80010016 /*�����ѱ��û�ȡ�������緢��STOP*/,
-        ZDSDK_ERROR_COMMON_NOTSUPPORT = 0x80010017 /*���ܲ�֧��*/,
+        ZDSDK_ERROR_COMMON_USER_CANCELED = 0x80010016 /*操作已被用户取消，例如发送STOP*/,
+        ZDSDK_ERROR_COMMON_NOTSUPPORT = 0x80010017 /*功能不支持*/,
         ZDSDK_ERROR_COMMON_RECORD_TIME = 0x80010018,
         ZDSDK_ERROR_COMMON_REACH_MAX = 0x80010019,
-        ZDSDK_ERROR_COMMON_CSS_NOSPACE = 0x8001001a /*���Ĵ洢���ϵ��ܿռ�Ϊ0*/,
+        ZDSDK_ERROR_COMMON_CSS_NOSPACE = 0x8001001a /*中心存储器上的总空间为0*/,
         ZDSDK_ERROR_COMMON_MSS_INVALID_PARAM = 0x8001001b,
         ZDSDK_ERROR_COMMON_REACH_CUSTOMERMAX = 0x8001001c,
-        ZDSDK_ERROR_COMMON_TIME = 0x8001001d /*ʱ�������ץ�ġ�¼�����Ҫָ��ʱ���ָ���У�ʱ����Ч*/,
-        ZDSDK_ERROR_COMMON_LOCKED = 0x8001001e /*�豸����ס������̨���������У���̨�������û���ס*/,
-        ZDSDK_ERROR_COMMON_REMOTE_DOMAIN_OFFLINE = 0x8001001f /*���������δ����*/,
-        ZDSDK_ERROR_COMMON_VERSION_TOOLD = 0x80010020 /*�汾̫��*/,
-        ZDSDK_ERROR_COMMON_BUSY = 0x80010021 /*̫æ*/,
-        ZDSDK_ERROR_COMMON_NOTENOUGH = 0x80010021 /*̫С*/,
+        ZDSDK_ERROR_COMMON_TIME = 0x8001001d /*时间错误，在抓拍、录像等需要指定时间的指令中，时间无效*/,
+        ZDSDK_ERROR_COMMON_LOCKED = 0x8001001e /*设备被锁住，在云台控制命令中，云台被其他用户锁住*/,
+        ZDSDK_ERROR_COMMON_REMOTE_DOMAIN_OFFLINE = 0x8001001f /*跨域服务器未在线*/,
+        ZDSDK_ERROR_COMMON_VERSION_TOOLD = 0x80010020 /*版本太旧*/,
+        ZDSDK_ERROR_COMMON_BUSY = 0x80010021 /*太忙*/,
+        ZDSDK_ERROR_COMMON_NOTENOUGH = 0x80010021 /*太小*/,
 
         ZDSDK_ERROR_UA_BASE = 0x80020000,
         ZDSDK_ERROR_UA_NOTEXIST = 0x80020001,
@@ -177,89 +184,89 @@ extern "C" {
         ZDSDK_ERROR_UA_CLIENTCANCELED = 0x8002000a,
         ZDSDK_ERROR_FD_BASE = 0x80030000,
         ZDSDK_ERROR_AAA_BASE = 0x80040000,
-        ZDSDK_ERROR_AAA_UNKNOWN = 0x80040001 /*δ֪ԭ�����*/,
-        ZDSDK_ERROR_AAA_INVALIDPACKET = 0x80040002 /*Radius�����Ϸ�*/,
-        ZDSDK_ERROR_AAA_MISSATTRIBUTE = 0x80040003 /*Radius��ȱ�ٱ�Ҫ������*/,
-        ZDSDK_ERROR_AAA_INTERNAL = 0x80040004 /*AAA�����������ڲ�����*/,
-        ZDSDK_ERROR_AAA_DBMS = 0x80040005 /*AAA�������������ݿ�ʧ��*/,
-        ZDSDK_ERROR_AAA_STOPPED = 0x80040006 /*AAA������ֹͣ����*/,
-        ZDSDK_ERROR_AAA_PASSWORD = 0x80040007 /*�������*/,
-        ZDSDK_ERROR_AAA_BADUSERID = 0x80040008 /*�û�ID������*/,
-        ZDSDK_ERROR_AAA_BADDEVID = 0x80040009 /*�豸ID������*/,
-        ZDSDK_ERROR_AAA_BADCHANNEL = 0x8004000a /*�豸ͨ���Ų�����*/,
-        ZDSDK_ERROR_AAA_FORBIDDEN = 0x8004000b /*û��Ȩ��ִ��������Ĳ���*/,
-        ZDSDK_ERROR_AAA_NOMONEY = 0x8004000c /*���ò���*/,
-        ZDSDK_ERROR_AAA_NODISK = 0x8004000d /*��������*/,
-        ZDSDK_ERROR_AAA_CUSTOMERSTATUS = 0x8004000e /*�ͻ�״̬������*/,
-        ZDSDK_ERROR_AAA_USERSTATUS = 0x8004000f /*�û�״̬������*/,
-        ZDSDK_ERROR_AAA_USERIPDENIED = 0x80040010 /*�û�IP��ַ�ܾ�*/,
-        ZDSDK_ERROR_AAA_SMSCODEFAIL = 0x80040011 /*���ŵ�¼��������*/,
-        ZDSDK_ERROR_AAA_SMSBAD = 0x80040012 /*������֤�����*/,
-        ZDSDK_ERROR_AAA_SMSSENDFAILED = 0x80040013 /*������֤�뷢��ʧ��*/,
+        ZDSDK_ERROR_AAA_UNKNOWN = 0x80040001 /*未知原因错误*/,
+        ZDSDK_ERROR_AAA_INVALIDPACKET = 0x80040002 /*Radius包不合法*/,
+        ZDSDK_ERROR_AAA_MISSATTRIBUTE = 0x80040003 /*Radius包缺少必要的属性*/,
+        ZDSDK_ERROR_AAA_INTERNAL = 0x80040004 /*AAA服务器发生内部错误*/,
+        ZDSDK_ERROR_AAA_DBMS = 0x80040005 /*AAA服务器操作数据库失败*/,
+        ZDSDK_ERROR_AAA_STOPPED = 0x80040006 /*AAA服务器停止服务*/,
+        ZDSDK_ERROR_AAA_PASSWORD = 0x80040007 /*密码错误*/,
+        ZDSDK_ERROR_AAA_BADUSERID = 0x80040008 /*用户ID不存在*/,
+        ZDSDK_ERROR_AAA_BADDEVID = 0x80040009 /*设备ID不存在*/,
+        ZDSDK_ERROR_AAA_BADCHANNEL = 0x8004000a /*设备通道号不存在*/,
+        ZDSDK_ERROR_AAA_FORBIDDEN = 0x8004000b /*没有权限执行所请求的操作*/,
+        ZDSDK_ERROR_AAA_NOMONEY = 0x8004000c /*费用不足*/,
+        ZDSDK_ERROR_AAA_NODISK = 0x8004000d /*磁盘配额不足*/,
+        ZDSDK_ERROR_AAA_CUSTOMERSTATUS = 0x8004000e /*客户状态不正常*/,
+        ZDSDK_ERROR_AAA_USERSTATUS = 0x8004000f /*用户状态不正常*/,
+        ZDSDK_ERROR_AAA_USERIPDENIED = 0x80040010 /*用户IP地址拒绝*/,
+        ZDSDK_ERROR_AAA_SMSCODEFAIL = 0x80040011 /*短信登录次数超出*/,
+        ZDSDK_ERROR_AAA_SMSBAD = 0x80040012 /*短信验证码错误*/,
+        ZDSDK_ERROR_AAA_SMSSENDFAILED = 0x80040013 /*短信验证码发送失败*/,
         ZDSDK_ERROR_MSS_BASE = 0x80050000,
-        ZDSDK_ERROR_MSS_FAIL = 0x80050001 /*:-1         ʧ��*/,
-        ZDSDK_ERROR_MSS_INVALID_ID = 0x80050002 /*:-2         �Ƿ�ID*/,
-        ZDSDK_ERROR_MSS_INVALID_HANDLE = 0x80050003 /*:-3         �Ƿ����*/,
-        ZDSDK_ERROR_MSS_INVALID_PARAM = 0x80050004 /*:-4         �Ƿ�����*/,
-        ZDSDK_ERROR_MSS_NULLPTR = 0x80050005 /*:-5         ָ��ΪNULL*/,
-        ZDSDK_ERROR_MSS_REPEAT = 0x80050006 /*:-6         �ظ�����*/,
-        ZDSDK_ERROR_MSS_TIMEOUT = 0x80050007 /*:-7         ��ʱ*/,
-        ZDSDK_ERROR_MSS_OUTOF_MEMORY = 0x80050008 /*:-8         �ڴ治��*/,
-        ZDSDK_ERROR_MSS_OUTOF_RANGE = 0x80050009 /*:-9         ������Χ*/,
-        ZDSDK_ERROR_MSS_FULL = 0x8005000a /*:-10        ��������*/,
-        ZDSDK_ERROR_MSS_UNEXPECTED = 0x8005000b /*:-11        δ֪�쳣*/,
-        ZDSDK_ERROR_MSS_PRIVILEGE_LIMIT = 0x8005000c /*:-12        Ȩ������*/,
-        ZDSDK_ERROR_MSS_BUSY = 0x80050100 /*MSS����æ*/,
-        ZDSDK_ERROR_MSS_SCHEDULE_FD = 0x80050101 /*MSS����FDʧ��*/,
-        ZDSDK_ERROR_MSS_SCHEDULE_RTMDS = 0x80050102 /*MSS����RTMDSʧ��*/,
-        ZDSDK_ERROR_MSS_SCHEDULE_SMS = 0x80050103 /*MSS����SMSʧ��*/,
-        ZDSDK_ERROR_MSS_SCHEDULE_FTS = 0x80050104 /*MSS����FTSʧ��*/,
-        ZDSDK_ERROR_MSS_SCHEDULE_CSS = 0x80050105 /*MSS����CSSʧ��*/,
-        ZDSDK_ERROR_MSS_SCHEDULE_CANCELLED = 0x80050106 /*MSS���ȱ�ȡ��*/,
-        ZDSDK_ERROR_MSS_FD_OFFLINE = 0x80050200 /*FDδ����, ����VPN��*/,
-        ZDSDK_ERROR_MSS_FD_CHANNEL_INVALID = 0x80050201 /*FDδ����*/,
-        ZDSDK_ERROR_MSS_FD_BUSY = 0x80050202 /*FDæ*/,
-        ZDSDK_ERROR_MSS_FD_NO_RIGHT = 0x80050203 /*FD����δ����Ȩ*/,
-        ZDSDK_ERROR_MSS_FD_FAILTURE = 0x80050204 /*FD����ʧ��*/,
-        ZDSDK_ERROR_MSS_FD_RETURN_ERROR = 0x80050205 /*FD���ش���*/,
-        ZDSDK_ERROR_MSS_FD_PACKAGE_ERROR = 0x80050206 /*FD�������*/,
-        ZDSDK_ERROR_MSS_FDMS_OFFLINE = 0x80050300 /*FDMS����δ���� 0x300*/,
-        ZDSDK_ERROR_MSS_FDMS_TIMEOUT = 0x80050301 /*FDMS������Ӧ��ʱ*/,
-        ZDSDK_ERROR_MSS_FDMS_FAILTURE = 0x80050302 /*FDMS������Ӧʧ��*/,
-        ZDSDK_ERROR_MSS_RTMDS_OFFLINE = 0x80050400 /*RTMDS����δ���� 0x400*/,
-        ZDSDK_ERROR_MSS_RTMDS_TIMEOUT = 0x80050401 /*RTMDS������Ӧ��ʱ*/,
-        ZDSDK_ERROR_MSS_RTMDS_FAILTURE = 0x80050402 /*RTMDS������Ӧʧ��*/,
-        ZDSDK_ERROR_MSS_SMS_OFFLINE = 0x80050500 /*SMS����δ����  0x500*/,
-        ZDSDK_ERROR_MSS_SMS_TIMEOUT = 0x80050501 /*SMS������Ӧ��ʱ*/,
-        ZDSDK_ERROR_MSS_SMS_FAILTURE = 0x80050502 /*SMS������Ӧʧ��*/,
-        ZDSDK_ERROR_MSS_SMS_NO_FILE = 0x80050503 /*SMS������Ӧ�ļ�������*/,
-        ZDSDK_ERROR_MSS_FTS_OFFLINE = 0x80050600 /*FTS����δ���� 0x600*/,
-        ZDSDK_ERROR_MSS_FTS_TIMEOUT = 0x80050601 /*FTS������Ӧ��ʱ*/,
-        ZDSDK_ERROR_MSS_FTS_FAILTURE = 0x80050602 /*FTS������Ӧʧ��*/,
-        ZDSDK_ERROR_MSS_FTS_NO_FILE = 0x80050603 /*FTS������Ӧ�ļ�������*/,
-        ZDSDK_ERROR_MSS_CSS_OFFLINE = 0x80050700 /*CSS����δ���� 0x700*/,
-        ZDSDK_ERROR_MSS_CSS_TIMEOUT = 0x80050701 /*CSS������Ӧ��ʱ*/,
-        ZDSDK_ERROR_MSS_CSS_FAILTURE = 0x80050702 /*CSS������Ӧʧ��*/,
-        ZDSDK_ERROR_MSS_CSS_NO_FILE = 0x80050703 /*CSS������Ӧ�ļ�������*/,
-        ZDSDK_ERROR_MSS_CSS_RECORDING = 0x80050704 /*CSS������Ӧ����¼��*/,
-        ZDSDK_ERROR_MSS_CSS_BUSY = 0x80050705 /*CSS������Ӧæ*/,
-        ZDSDK_ERROR_MSS_CSS_DISK_FULL = 0x80050706 /*CSS������Ӧ��������*/,
-        ZDSDK_ERROR_MSS_CSS_DISK_QUOTA = 0x80050707 /*CSS������Ӧ�����޶�*/,
-        ZDSDK_ERROR_MSS_CSS_RECORD_STOP = 0x80050708 /*CSS���񱨸�¼��ֹͣ*/,
-        ZDSDK_ERROR_MSS_CSS_RECORD_EXPIRE = 0x80050709 /*CSS���񱨸�¼��ʱ�䵽��*/,
-        ZDSDK_ERROR_MSS_CSS_RECORD_QUOTA = 0x8005070a /*CSS���񱨸�¼������޶���*/,
-        ZDSDK_ERROR_MSS_CSS_RECORD_NETWORKIO = 0x8005070b /*CSS���񱨸�¼������IO����*/,
-        ZDSDK_ERROR_MSS_CSS_RECORD_FILEIO = 0x8005070c /*CSS���񱨸�¼���ļ�IO����*/,
-        ZDSDK_ERROR_MSS_CSS_RECORD_STOPBYCMS = 0x8005070d /*CSS���񱨸�¼��ϵͳ����Աֹͣ*/,
-        ZDSDK_ERROR_MSS_CSS_RECORD_NOPACKET = 0x8005070e /*CSS���񱨸�¼����һ�������ڽ��յ������ݰ�̫��*/,
-        ZDSDK_ERROR_MSS_CSS_RECORD_NOFRAME = 0x8005070f /*CSS���񱨸�¼����һ�������ڽ��յ������ݰ�����ɵ�֡��Ϊ0*/,
+        ZDSDK_ERROR_MSS_FAIL = 0x80050001 /*:-1         失败*/,
+        ZDSDK_ERROR_MSS_INVALID_ID = 0x80050002 /*:-2         非法ID*/,
+        ZDSDK_ERROR_MSS_INVALID_HANDLE = 0x80050003 /*:-3         非法句柄*/,
+        ZDSDK_ERROR_MSS_INVALID_PARAM = 0x80050004 /*:-4         非法参数*/,
+        ZDSDK_ERROR_MSS_NULLPTR = 0x80050005 /*:-5         指针为NULL*/,
+        ZDSDK_ERROR_MSS_REPEAT = 0x80050006 /*:-6         重复操作*/,
+        ZDSDK_ERROR_MSS_TIMEOUT = 0x80050007 /*:-7         超时*/,
+        ZDSDK_ERROR_MSS_OUTOF_MEMORY = 0x80050008 /*:-8         内存不足*/,
+        ZDSDK_ERROR_MSS_OUTOF_RANGE = 0x80050009 /*:-9         超出范围*/,
+        ZDSDK_ERROR_MSS_FULL = 0x8005000a /*:-10        缓冲区满*/,
+        ZDSDK_ERROR_MSS_UNEXPECTED = 0x8005000b /*:-11        未知异常*/,
+        ZDSDK_ERROR_MSS_PRIVILEGE_LIMIT = 0x8005000c /*:-12        权限限制*/,
+        ZDSDK_ERROR_MSS_BUSY = 0x80050100 /*MSS服务忙*/,
+        ZDSDK_ERROR_MSS_SCHEDULE_FD = 0x80050101 /*MSS调度FD失败*/,
+        ZDSDK_ERROR_MSS_SCHEDULE_RTMDS = 0x80050102 /*MSS调度RTMDS失败*/,
+        ZDSDK_ERROR_MSS_SCHEDULE_SMS = 0x80050103 /*MSS调度SMS失败*/,
+        ZDSDK_ERROR_MSS_SCHEDULE_FTS = 0x80050104 /*MSS调度FTS失败*/,
+        ZDSDK_ERROR_MSS_SCHEDULE_CSS = 0x80050105 /*MSS调度CSS失败*/,
+        ZDSDK_ERROR_MSS_SCHEDULE_CANCELLED = 0x80050106 /*MSS调度被取消*/,
+        ZDSDK_ERROR_MSS_FD_OFFLINE = 0x80050200 /*FD未在线, 或在VPN内*/,
+        ZDSDK_ERROR_MSS_FD_CHANNEL_INVALID = 0x80050201 /*FD未在线*/,
+        ZDSDK_ERROR_MSS_FD_BUSY = 0x80050202 /*FD忙*/,
+        ZDSDK_ERROR_MSS_FD_NO_RIGHT = 0x80050203 /*FD访问未被授权*/,
+        ZDSDK_ERROR_MSS_FD_FAILTURE = 0x80050204 /*FD操作失败*/,
+        ZDSDK_ERROR_MSS_FD_RETURN_ERROR = 0x80050205 /*FD返回错误*/,
+        ZDSDK_ERROR_MSS_FD_PACKAGE_ERROR = 0x80050206 /*FD打包错误*/,
+        ZDSDK_ERROR_MSS_FDMS_OFFLINE = 0x80050300 /*FDMS服务未在线 0x300*/,
+        ZDSDK_ERROR_MSS_FDMS_TIMEOUT = 0x80050301 /*FDMS服务响应超时*/,
+        ZDSDK_ERROR_MSS_FDMS_FAILTURE = 0x80050302 /*FDMS服务响应失败*/,
+        ZDSDK_ERROR_MSS_RTMDS_OFFLINE = 0x80050400 /*RTMDS服务未在线 0x400*/,
+        ZDSDK_ERROR_MSS_RTMDS_TIMEOUT = 0x80050401 /*RTMDS服务响应超时*/,
+        ZDSDK_ERROR_MSS_RTMDS_FAILTURE = 0x80050402 /*RTMDS服务响应失败*/,
+        ZDSDK_ERROR_MSS_SMS_OFFLINE = 0x80050500 /*SMS服务未在线  0x500*/,
+        ZDSDK_ERROR_MSS_SMS_TIMEOUT = 0x80050501 /*SMS服务响应超时*/,
+        ZDSDK_ERROR_MSS_SMS_FAILTURE = 0x80050502 /*SMS服务响应失败*/,
+        ZDSDK_ERROR_MSS_SMS_NO_FILE = 0x80050503 /*SMS服务响应文件不存在*/,
+        ZDSDK_ERROR_MSS_FTS_OFFLINE = 0x80050600 /*FTS服务未在线 0x600*/,
+        ZDSDK_ERROR_MSS_FTS_TIMEOUT = 0x80050601 /*FTS服务响应超时*/,
+        ZDSDK_ERROR_MSS_FTS_FAILTURE = 0x80050602 /*FTS服务响应失败*/,
+        ZDSDK_ERROR_MSS_FTS_NO_FILE = 0x80050603 /*FTS服务响应文件不存在*/,
+        ZDSDK_ERROR_MSS_CSS_OFFLINE = 0x80050700 /*CSS服务未在线 0x700*/,
+        ZDSDK_ERROR_MSS_CSS_TIMEOUT = 0x80050701 /*CSS服务响应超时*/,
+        ZDSDK_ERROR_MSS_CSS_FAILTURE = 0x80050702 /*CSS服务响应失败*/,
+        ZDSDK_ERROR_MSS_CSS_NO_FILE = 0x80050703 /*CSS服务响应文件不存在*/,
+        ZDSDK_ERROR_MSS_CSS_RECORDING = 0x80050704 /*CSS服务响应正在录像*/,
+        ZDSDK_ERROR_MSS_CSS_BUSY = 0x80050705 /*CSS服务响应忙*/,
+        ZDSDK_ERROR_MSS_CSS_DISK_FULL = 0x80050706 /*CSS服务响应磁盘已满*/,
+        ZDSDK_ERROR_MSS_CSS_DISK_QUOTA = 0x80050707 /*CSS服务响应磁盘限额*/,
+        ZDSDK_ERROR_MSS_CSS_RECORD_STOP = 0x80050708 /*CSS服务报告录像停止*/,
+        ZDSDK_ERROR_MSS_CSS_RECORD_EXPIRE = 0x80050709 /*CSS服务报告录像时间到达*/,
+        ZDSDK_ERROR_MSS_CSS_RECORD_QUOTA = 0x8005070a /*CSS服务报告录像磁盘限额满*/,
+        ZDSDK_ERROR_MSS_CSS_RECORD_NETWORKIO = 0x8005070b /*CSS服务报告录像网络IO错误*/,
+        ZDSDK_ERROR_MSS_CSS_RECORD_FILEIO = 0x8005070c /*CSS服务报告录像文件IO错误*/,
+        ZDSDK_ERROR_MSS_CSS_RECORD_STOPBYCMS = 0x8005070d /*CSS服务报告录像被系统管理员停止*/,
+        ZDSDK_ERROR_MSS_CSS_RECORD_NOPACKET = 0x8005070e /*CSS服务报告录像在一定的秒内接收到的数据包太少*/,
+        ZDSDK_ERROR_MSS_CSS_RECORD_NOFRAME = 0x8005070f /*CSS服务报告录像在一定的秒内接收到的数据包所组成的帧数为0*/,
         ZDSDK_ERROR_MSS_SSU_OFFLINE = 0x80050d00,
         ZDSDK_ERROR_MSS_SSU_TIMEOUT = 0x80050d01,
         ZDSDK_ERROR_MSS_SSU_FAILTURE = 0x80050d02,
-        ZDSDK_ERROR_MSS_SID_MISMATCH = 0x80059000 /*��������sessionid��ƥ��*/,
+        ZDSDK_ERROR_MSS_SID_MISMATCH = 0x80059000 /*返回来的sessionid不匹配*/,
         ZDSDK_ERROR_DBMS_BASE = 0x80060000,
         ZDSDK_ERROR_DBMS_QUERY_FD_DOMAIN = 0x80060001,
-        ZDSDK_ERROR_DBMS_CUSTOM_NOTEXISTS = 0x80060002 /*DBMS��ѯ�ͻ�������*/,
+        ZDSDK_ERROR_DBMS_CUSTOM_NOTEXISTS = 0x80060002 /*DBMS查询客户不存在*/,
         ZDSDK_ERROR_FDMS_BASE = 0x80070000 /*generic error*/,
         ZDSDK_ERROR_FDMS_DBMS = 0x80075000 /*fdms-dbms error*/,
         ZDSDK_ERROR_FDMS_FD_BASE = 0x80077000 /*fd generic error*/,
@@ -282,12 +289,12 @@ extern "C" {
         ZDSDK_ERROR_FDMS_AAA_PARAM = 0x80078001 /*fd login failed because of bad parameter*/,
         ZDSDK_ERROR_FDMS_AAA_AUTH = 0x80078002 /*fd login failed because of bad password*/,
         ZDSDK_ERROR_CMS_BASE = 0x80080000,
-        ZDSDK_ERROR_CMS_NAMEID_INDEX_OVERFLOW = 0x80080001 /*�±���Խ��*/,
-        ZDSDK_ERROR_CMS_ID_NOTEXIST = 0x80080002 /*���󲻴���*/,
-        ZDSDK_ERROR_CMS_TRAP_NOTSETABLE = 0x80080003 /*���󲻿�����*/,
-        ZDSDK_ERROR_CMS_CLASS_NOTEXIST = 0x80080004 /*�಻����*/,
-        ZDSDK_ERROR_CMS_METHOD_NOTEXIST = 0x80080005 /*����������*/,
-        ZDSDK_ERROR_CMS_MEMBER_NOTEXIST = 0x80080006 /*��Ա������*/,
+        ZDSDK_ERROR_CMS_NAMEID_INDEX_OVERFLOW = 0x80080001 /*下标层次越界*/,
+        ZDSDK_ERROR_CMS_ID_NOTEXIST = 0x80080002 /*对象不存在*/,
+        ZDSDK_ERROR_CMS_TRAP_NOTSETABLE = 0x80080003 /*对象不可设置*/,
+        ZDSDK_ERROR_CMS_CLASS_NOTEXIST = 0x80080004 /*类不存在*/,
+        ZDSDK_ERROR_CMS_METHOD_NOTEXIST = 0x80080005 /*方法不存在*/,
+        ZDSDK_ERROR_CMS_MEMBER_NOTEXIST = 0x80080006 /*成员不存在*/,
         ZDSDK_ERROR_PARALLEL_INTERVAL = 0x10000000,
         ZDSDK_ERROR_PARALLEL_BASE = 0x90090000,
         ZDSDK_ERROR_PARALLEL_TIMEOUT = 0x90090001,
@@ -299,44 +306,44 @@ extern "C" {
 
     typedef struct
     {
-        char            channel_name[128]/*ͨ������*/;
+        char            channel_name[128]/*通道名称*/;
         char            unique_id[38];
         char            domain_id[10];
         char            fd_id[22];
-        char            db33_code[19]/*DB33���*/;
-        char            gab_code[21]/*������*/;
-        char            org_code[21]/*�������*/;
-        unsigned char   isonline/*�豸����״̬*/;
+        char            db33_code[19]/*DB33编号*/;
+        char            gab_code[21]/*国标编号*/;
+        char            org_code[21]/*行政编号*/;
+        unsigned char   isonline/*设备在线状态*/;
         unsigned short  channel_type;
         unsigned short  channel_id;
-        unsigned short  factory_code/*���̴��룬�鿴��Ƶ��ʱ��Ͳ����ٲ���ϸ��Ϣ��*/;
-        unsigned int    channel_status/*BIT 1,�Ƿ�ɿأ�2,����ǰ��¼��3����������¼��4����Ƶ, 5����������¼��6������ǰ��¼��7~12,ǰ������(���ɿأ�ǹ����=0,�ɿأ������=1,ץ��ǹ��=2,����=3,ץ�ĸ���=4)*/;
-        unsigned int    longitude/*����*/;
-        unsigned int    latitude/*γ��*/;
-        unsigned int    reserve/*����״̬*/;
+        unsigned short  factory_code/*厂商代码，查看视频的时候就不用再查详细信息了*/;
+        unsigned int    channel_status/*BIT 1,是否可控，2,正在前端录像，3，正在中心录像，4，视频, 5，启用中心录像，6，启用前端录像，7~12,前端类型(不可控（枪机）=0,可控（球机）=1,抓拍枪机=2,高清=3,抓拍高清=4)*/;
+        unsigned int    longitude/*经度*/;
+        unsigned int    latitude/*纬度*/;
+        unsigned int    reserve/*保留状态*/;
     }ZDSDK_CHANNEL_INFO, *PZDSDK_CHANNEL_INFO;
 
     typedef struct
     {
-        unsigned short  group_type; /* ����� */
-        char    group_name[256];    /* ��ʾ����*/
-        char    group_id[32];       /* ���ID��ʶ*/
-        char    parent_id[32];      /* �����ID��ʶ*/
-        char    full_path[256];     /* ȫ·��*/
-        unsigned short  level;    /* ��ʾ����*/
-        int     sort_id;            /* ������������*/
+        unsigned short  group_type; /* 组类别 */
+        char    group_name[256];    /* 显示名称*/
+        char    group_id[32];       /* 组的ID标识*/
+        char    parent_id[32];      /* 父组的ID标识*/
+        char    full_path[256];     /* 全路径*/
+        unsigned short  level;    /* 显示级别*/
+        int     sort_id;            /* 用于组中排序*/
     }ZDSDK_GROUP_INFO, *PZDSDK_GROUP_INFO;
 
     typedef struct
     {
         char	flag;
         char	status;
-        int		begin_time/*��ʼʱ��*/;
-        int		end_time/*����ʱ��*/;
+        int		begin_time/*起始时间*/;
+        int		end_time/*结束时间*/;
         char    qos;
         int		size;
-        char	area[256]/*�洢����*/;
-        char	name[256]/*�ļ���*/;
+        char	area[256]/*存储区域*/;
+        char	name[256]/*文件名*/;
         char    deviceId[20];
         int     channeltype;
 		int     channelno;
@@ -344,32 +351,32 @@ extern "C" {
 
     typedef struct
     {
-        char	dev_channel[38]/*ͨ����ʽ��200000-200000000100011835-0001-0001*/;
+        char	dev_channel[38]/*通道格式：200000-200000000100011835-0001-0001*/;
         char	rule_guid[16]/*Rule's GUID*/;
-        char	major_type/*�澯������*/;
-        char	minor_type/*�澯������*/;
-        char	alarm_level/*�澯���ؼ���(5��10��15��20��25��ֵԽ��Խ����)*/;
-        char	alarm_confidence/*�澯���Ŷ�*/;
-        int		alarm_session_id/*�澯�Ự��ţ�0,������1-0xFFFFFFFF*/;
-        short	alarm_sequence_id/*�澯��ţ�0,����; n��N�θ澯��0xFFFF����*/;
-        char	alarm_guid[16]/*�澯GUID��UAͨ����GUID���������ѯ����澯��Ϣ*/;
-        char	content_type[16]/*�澯����ı�����*/;
-        char	content[256]/*�澯����ı�����*/;
-        int		alarm_flag/*�澯��־��1:���ڸ澯ͼƬ*/;
-        int		alarm_time/*�澯ʱ��*/;
-        char	storage_area_id[128]/*�澯ͼƬ�洢��AreaId*/;
+        char	major_type/*告警主类型*/;
+        char	minor_type/*告警子类型*/;
+        char	alarm_level/*告警严重级别(5、10、15、20、25数值越大越严重)*/;
+        char	alarm_confidence/*告警置信度*/;
+        int		alarm_session_id/*告警会话编号，0,保留，1-0xFFFFFFFF*/;
+        short	alarm_sequence_id/*告警序号，0,保留; n第N次告警，0xFFFF销警*/;
+        char	alarm_guid[16]/*告警GUID，UA通过此GUID向服务器查询具体告警信息*/;
+        char	content_type[16]/*告警相关文本类型*/;
+        char	content[256]/*告警相关文本内容*/;
+        int		alarm_flag/*告警标志：1:存在告警图片*/;
+        int		alarm_time/*告警时间*/;
+        char	storage_area_id[128]/*告警图片存储的AreaId*/;
     }ZDSDK_NOTIFY_ALARM_INFO;
 
     typedef struct
     {
-        char    url[256];	//����URL
-        void*   context;	//��������ʱ��������
+        char    url[256];	//下载URL
+        void*   context;	//请求下载时的上下文
     }ZDSDK_NOTIFY_DOWNLOAD_URL;
 
     typedef struct
     {
-        char	dev_id[20]/*�豸ID��200000000100011835*/;
-        bool	is_online/*����״̬*/;
+        char	dev_id[20]/*设备ID：200000000100011835*/;
+        bool	is_online/*在线状态*/;
     }ZDSDK_NOTIFY_FD_ONLINE;
 
 	typedef struct
@@ -386,23 +393,23 @@ extern "C" {
 	}ZDSDK_PTZLOCK_INFO,*PZDSDK_PTZLOCK_INFO;
 
 	typedef struct {
-		char  id[38]/*�豸���*/;
-		char  domain_id[10]/*�豸��������*/;
-		char  name[255]/*�豸����*/;
+		char  id[38]/*设备编号*/;
+		char  domain_id[10]/*设备所在域编号*/;
+		char  name[255]/*设备名称*/;
         char  gbtid[32];
-		char  factory_name[128]/*�豸������������*/;
-        char  location[256]/*�豸��װλ��*/;
-        char  desc[256]/*�豸����*/;
-		char  fd_state/*'W'����װ��'A' ������'P' ͣ�á�'C'����*/;
-        unsigned char vincount /*��Ƶ����ͨ������*/;
-        unsigned short factory_code /*�豸�������Ҵ���*/;
-        unsigned int type/*�豸����*/;
-		unsigned int software_version/*�豸�汾��*/;		
-		unsigned int longitude/*����*/;
-		unsigned int latitude/*ά��*/;
-		unsigned int last_login/*����¼ʱ��*/;
-		unsigned int last_logout/*���ǳ�ʱ��*/;		
-		int   online_state /*BIT0, �Ƿ�����*/;
+		char  factory_name[128]/*设备所属厂家名称*/;
+        char  location[256]/*设备安装位置*/;
+        char  desc[256]/*设备描述*/;
+		char  fd_state/*'W'待安装、'A' 正常、'P' 停用、'C'销户*/;
+        unsigned char vincount /*视频输入通道个数*/;
+        unsigned short factory_code /*设备所属厂家代码*/;
+        unsigned int type/*设备类型*/;
+		unsigned int software_version/*设备版本号*/;		
+		unsigned int longitude/*经度*/;
+		unsigned int latitude/*维度*/;
+		unsigned int last_login/*最后登录时间*/;
+		unsigned int last_logout/*最后登出时间*/;		
+		int   online_state /*BIT0, 是否在线*/;
 	}ZDSDK_FD_INFO, *PZDSDK_FD_INFO;
 
 	typedef struct
@@ -443,53 +450,59 @@ extern "C" {
 		unsigned short    end_minute;
 	}ZDSDK_PERSET_PLAN,*PZDSDK_PERSET_PLAN;
 
-    //��Ϣ�ص�;
+	typedef struct {
+		char ie_url[256];		/*软件升级URL;*/
+		char ie_web_url[256];	/*WEB服务URL*/
+		char ie_map_url[256];	/*电子地图URL地址*/;
+	}ZDSDK_NEGOTIATEURL_INFO, *PZDSDK_NEGOTIATEURL_INFO;
+
+    //消息回调;
     typedef void(__cdecl *MESSAGE_CALLBACK)(void* identity, int msg_type, int error_code, void* msg_context);
 
-    //֪ͨ�ص�;
+    //通知回调;
     typedef void(__cdecl *NOTIFY_CALLBACK)(void* identity, int notify_type, void* notify_info);
 
-    //¼�����صĻص���identity: SDK��ʼ��ʱ��downlod�����ؾ����percent�����ؽ��ȣ�context���û��þ�;
+    //录像下载的回调，identity: SDK初始化时，downlod：下载句柄；percent：下载进度；context：用户用据;
     typedef void(__cdecl *DOWNLOAD_PROC)(void* downlod, int percent, void *context);
 
 
     //codec type;
-#define MEDIA_CODECTYPE_AUDIO_ENCODE	(0x00000001)	// ��Ƶ����
-#define MEDIA_CODECTYPE_AUDIO_DECODE	(0x00000002)	// ��Ƶ����
-#define MEDIA_CODECTYPE_VIDEO_ENCODE	(0x00000004)	// ��Ƶ����
-#define MEDIA_CODECTYPE_VIDEO_DECODE	(0x00000008)	// ��Ƶ����
+#define MEDIA_CODECTYPE_AUDIO_ENCODE	(0x00000001)	// 音频编码
+#define MEDIA_CODECTYPE_AUDIO_DECODE	(0x00000002)	// 音频解码
+#define MEDIA_CODECTYPE_VIDEO_ENCODE	(0x00000004)	// 视频编码
+#define MEDIA_CODECTYPE_VIDEO_DECODE	(0x00000008)	// 视频解码
 
     //net type;
-#define MEDIA_NETTYPE_UDP				(0x00000001)	// UDP�ͻ���
-#define MEDIA_NETTYPE_TCP				(0x00000002)	// TCP�ͻ���
-#define MEDIA_NETTYPE_BLOCK				(0x00000004)	// ΪTCP�طš������޶�֡�����Ӳ���
-#define MEDIA_NETTYPE_NORMAL			(0x00000000)    //��ͨ����
-#define MEDIA_NETTYPE_3G				(0x00000100)    //��ʾ3G���������磬��Ҫ���ö���ͳ�ƻش��Ȳ��� ��MEDIA_NETTYPE_UDP ���ϴ˺꼴��
-#define MEDIA_NETTYPE_ZB				(0x00010000)    //��ʾ�㽭����RTP
-#define MEDIA_NETTYPE_RTP_DB33			(0x00020000)    //��ʾDB33��RTP
-#define MEDIA_NETTYPE_NODECODE			(0x00100000)    //�������ʾ,���ڽ���¼��
-#define MEDIA_NETTYPE_PLAYBACK			(0x01000000)    //¼��طű�ʶ��������ʵʱ��Ƶ����  
+#define MEDIA_NETTYPE_UDP				(0x00000001)	// UDP客户端
+#define MEDIA_NETTYPE_TCP				(0x00000002)	// TCP客户端
+#define MEDIA_NETTYPE_BLOCK				(0x00000004)	// 为TCP回放、下载无丢帧的连接策略
+#define MEDIA_NETTYPE_NORMAL			(0x00000000)    //普通网络
+#define MEDIA_NETTYPE_3G				(0x00000100)    //表示3G等无线网络，需要启用丢包统计回传等策略 在MEDIA_NETTYPE_UDP 或上此宏即可
+#define MEDIA_NETTYPE_ZB				(0x00010000)    //表示浙江贝的RTP
+#define MEDIA_NETTYPE_RTP_DB33			(0x00020000)    //表示DB33的RTP
+#define MEDIA_NETTYPE_NODECODE			(0x00100000)    //不解码标示,用于仅仅录像
+#define MEDIA_NETTYPE_PLAYBACK			(0x01000000)    //录像回放标识，以区分实时视频请求  
 #define MEDIA_NETTYPE_RTP               (0x00001000)
 #define MEDIA_NETTYPE_NWP               (0x00002000)
 
     //factory type
-#define MEDIA_FACTORYTYPE_ME			0x00010000		//����
-#define MEDIA_FACTORYTYPE_HK			0x00020000		//����
-#define MEDIA_FACTORYTYPE_SH			0x00040000		//�Ϻ�����
-#define MEDIA_FACTORYTYPE_DH			0x00080000		//��
-#define MEDIA_FACTORYTYPE_ZB			0x00100000		//����
-#define MEDIA_FACTORYTYPE_DL			0x00200000		//����
-#define MEDIA_FACTORYTYPE_ST			0x00400000		//����
-#define MEDIA_FACTORYTYPE_FH			0x00800000		//���
-#define MEDIA_FACTORYTYPE_HX			0x01000000		//����
-#define MEDIA_FACTORYTYPE_ZB2			0x02000000		//����
-#define MEDIA_FACTORYTYPE_H3C			0x04000000		//����
-#define MEDIA_FACTORYTYPE_XC			0x08000000		//�Ų�
-#define MEDIA_FACTORYTYPE_XW            0x10000000      //�������ϣ�
-#define MEDIA_FACTORYTYPE_ZV            0x12000000      //�Ͼ���·
-#define MEDIA_FACTORYTYPE_JL            0x20000000      //����
-#define MEDIA_FACTORYTYPE_SR            0x40000000      //����
-#define MEDIA_FACTORYTYPE_DB33V2		0x80000000		//DB33V2���г���
+#define MEDIA_FACTORYTYPE_ME			0x00010000		//南望
+#define MEDIA_FACTORYTYPE_HK			0x00020000		//海康
+#define MEDIA_FACTORYTYPE_SH			0x00040000		//上海测试
+#define MEDIA_FACTORYTYPE_DH			0x00080000		//大华
+#define MEDIA_FACTORYTYPE_ZB			0x00100000		//杭卡
+#define MEDIA_FACTORYTYPE_DL			0x00200000		//大立
+#define MEDIA_FACTORYTYPE_ST			0x00400000		//三立
+#define MEDIA_FACTORYTYPE_FH			0x00800000		//烽火
+#define MEDIA_FACTORYTYPE_HX			0x01000000		//虹信
+#define MEDIA_FACTORYTYPE_ZB2			0x02000000		//杭卡
+#define MEDIA_FACTORYTYPE_H3C			0x04000000		//华三
+#define MEDIA_FACTORYTYPE_XC			0x08000000		//信产
+#define MEDIA_FACTORYTYPE_XW            0x10000000      //南望（老）
+#define MEDIA_FACTORYTYPE_ZV            0x12000000      //南京北路
+#define MEDIA_FACTORYTYPE_JL            0x20000000      //金陵
+#define MEDIA_FACTORYTYPE_SR            0x40000000      //数尔
+#define MEDIA_FACTORYTYPE_DB33V2		0x80000000		//DB33V2所有厂家
 
     //encode type
 #define MEDIA_ENCODETYPE_MPEG4			0x00000001
@@ -512,12 +525,12 @@ extern "C" {
 #define MEDIA_CSTYPE_RGB565				8
 
     //notify event
-#define LOCAL_RECORD_STOP				101	//¼���Զ�ֹ֪ͣͨ
-#define DECODE_FIRST_FRAME				102	//�յ��������һ֡��Ƶ
+#define LOCAL_RECORD_STOP				101	//录像自动停止通知
+#define DECODE_FIRST_FRAME				102	//收到并解码第一帧视频
 #define DISPLAY_END_NOTIFY              103
-#define LOCAL_STREAM_STOP				105	//�յ��Է��Ľ���ͨ�������
-#define LOCAL_STREAM_NULL				106	//����֡�ط�ģʽ�������յ�֪ͨ
-#define LOCAL_FLAG_FRAME				107	//����֡�ط�ģʽ�⵽��ʶ֪֡ͨ
+#define LOCAL_STREAM_STOP				105	//收到对方的结束通道信令包
+#define LOCAL_STREAM_NULL				106	//本地帧回放模式缓冲区空的通知
+#define LOCAL_FLAG_FRAME				107	//本地帧回放模式解到标识帧通知
 
     typedef enum
     {
@@ -554,12 +567,12 @@ extern "C" {
         char	szValue[256];
     }TCfgData, *LPTCfgData;
 
-	/* �汾��Ϣ�ṹ; */
+	/* 版本信息结构; */
     typedef struct
     {
-        unsigned	unMouduleLevel;		// ������ʾ������
-        char		szModuleName[32];	//ģ����
-        unsigned	unVer;				//0xyy.yy.yyyy�汾��
+        unsigned	unMouduleLevel;		// 用来标示树级别
+        char		szModuleName[32];	//模块名
+        unsigned	unVer;				//0xyy.yy.yyyy版本号
         int			nTime;				// compile time_t
         char		szVerInfo[128];
         char		szDescribe[256];
@@ -567,51 +580,51 @@ extern "C" {
 
     typedef struct tagtFrameParam
     {
-        bool			bAgain;				//��������
-        bool			bIsIFrame;			//�Ƿ�ΪI֡
-        unsigned char	byType;				//����:��Ƶ����Ƶ AUDIO_TYPE �� VIDEO_TYPE
-        unsigned char	byFrameRate;		//֡�� fps
-        unsigned int	unCodecType;		//��������v2����(MAKEFOURCC('S', 'V', 'M', '4')) ��ʾ ����mpeg4
-        unsigned short	usWidth;			//ͼ�����
-        unsigned short	usHeight;			//ͼ��߶�
-        unsigned short	usFactoryCode;		//���Ҵ���V2��0x686b��ʾ"hk"
-        unsigned	unTimeStamp;		//32λʱ������λΪms����0��ʼ���ʱ��
-        unsigned	dwFrameSeq;			//֡���кţ�ÿ֡��1
-        unsigned long long	un64Timestamp;	//64λʱ������λΪms����19700101 00:00:00��ʼ���ʱ�䣬��Ҫ���ڻط�ʱ�������Ķ�λ
-        unsigned	unOrgTimeStamp;		//�Ӱ�ͷ��ȡ����δ�޸ĵ�ʱ��
+        bool			bAgain;				//保留变量
+        bool			bIsIFrame;			//是否为I帧
+        unsigned char	byType;				//类型:音频或视频 AUDIO_TYPE 或 VIDEO_TYPE
+        unsigned char	byFrameRate;		//帧率 fps
+        unsigned int	unCodecType;		//编码类型v2，如(MAKEFOURCC('S', 'V', 'M', '4')) 表示 星望mpeg4
+        unsigned short	usWidth;			//图像宽度
+        unsigned short	usHeight;			//图像高度
+        unsigned short	usFactoryCode;		//厂家代码V2，0x686b表示"hk"
+        unsigned	unTimeStamp;		//32位时戳，单位为ms，从0开始相对时间
+        unsigned	dwFrameSeq;			//帧序列号，每帧加1
+        unsigned long long	un64Timestamp;	//64位时戳，单位为ms，从19700101 00:00:00开始相对时间，主要用于回放时进度条的定位
+        unsigned	unOrgTimeStamp;		//从包头里取出的未修改的时戳
     }TFrameParam;
 
-    /* ý������ṹ ;*/
+    /* 媒体参数结构 ;*/
     typedef struct tagTMediaParam
     {
-        bool			bAgain;				//��������
-        unsigned char	byType;				//����:��Ƶ����Ƶ AUDIO_TYPE �� VIDEO_TYPE
-        unsigned char	byEncodeType;		//�������ͣ����ֽڵ���������
-        bool			bIsIFrame;			//�Ƿ�ΪI֡
-        unsigned char	byFrameRate;		//֡�� fps
-        unsigned char	byImageSize;		//ͼ��ֱ���
-        unsigned	unTimeStamp;		//32λʱ������λΪms����0��ʼ���ʱ��
-        unsigned	dwFrameSeq;			//֡���кţ�ÿ֡��1
+        bool			bAgain;				//保留变量
+        unsigned char	byType;				//类型:音频或视频 AUDIO_TYPE 或 VIDEO_TYPE
+        unsigned char	byEncodeType;		//编码类型，单字节的码流类型
+        bool			bIsIFrame;			//是否为I帧
+        unsigned char	byFrameRate;		//帧率 fps
+        unsigned char	byImageSize;		//图像分辨率
+        unsigned	unTimeStamp;		//32位时戳，单位为ms，从0开始相对时间
+        unsigned	dwFrameSeq;			//帧序列号，每帧加1
     }TMediaParam;
 
-    //�¼�֪ͨ�ص���¼����ֹͣ�������һ֡��ɵ��¼��ص���unEventIdΪ��ϢID���μ�notify event��pParam���û��þ�
+    //事件通知回调，录像已停止，解码第一帧完成等事件回调，unEventId为消息ID，参见notify event；pParam：用户用据
     //typedef	int(__cdecl *MEDIA_NOTIFY_PROC)(unsigned unEventId, void* pParam);
 
-    //����ǰ������Ƶ�������ݻص���pBuf��֡���ݣ�nLen�����ݳ��ȣ�pFrameParam����ز�����pParam���û��þ�
-    typedef	int(__cdecl *MEDIA_FRAME_PROC)(unsigned char* pBuf, int nLen, TFrameParam* pFrameParam, void* pParam);
+    //解码前的音视频编码数据回调，pBuf：帧数据；nLen：数据长度；pFrameParam：相关参数；pParam：用户用据
+    typedef	int(*MEDIA_FRAME_PROC)(unsigned char* pBuf, int nLen, TFrameParam* pFrameParam, void* pParam);
 
-    //��������Ƶ���ݻص���pBuf����Ƶ���ݣ�nLen�����ݳ��ȣ�nWidth�����ȣ�nHeight���߶ȣ�
-    //nTime��ʱ���������ͬtime_t��nCSType����ɫ�ռ����� color space type��pParam���û��þ�
+    //解码后的视频数据回调，pBuf：视频数据；nLen：数据长度；nWidth：宽度；nHeight：高度；
+    //nTime：时间戳，定义同time_t；nCSType：颜色空间类型 color space type；pParam：用户用据
 
     //typedef	int(__cdecl *MEDIA_VIDEO_PROC)(unsigned char* pBuf, int nLen, int nWidth, int nHeight, int nTime, int nCSType, void* pParam);
 
-    //��������Ƶ���ݻص���pBuf����Ƶ���ݣ�nLen�����ݳ��ȣ�lpAudioFormat����Ƶ��ʽ����ΪWAVEFORMATEX*ʹ�ã�
-    //unTimeStamp��ʱ�������λms��pParam���û��þ�
+    //解码后的音频数据回调，pBuf：音频数据；nLen：数据长度；lpAudioFormat：音频格式，换为WAVEFORMATEX*使用；
+    //unTimeStamp：时间戳，单位ms；pParam：用户用据
 
     //typedef	int(__cdecl *MEDIA_AUDIO_PROC)(unsigned char* pBuf, int nLen, void* lpAudioFormat, unsigned unTimeStamp, void* pParam);
 
-    //��������Ƶ���ݻص���pBuf���������Ƶ���ݣ�nLen�����ݳ��ȣ�unCodecType����Ƶ��ʽ��unTimeStamp��ʱ�������λms��pParam���û��þ�
-    typedef	int(__cdecl *MEDIA_AUDIO_ENCODE_PROC)(unsigned char* pBuf, int nLen, unsigned unCodecType, unsigned unTimeStamp, void* pParam);
+    //编码后的音频数据回调，pBuf：编码后音频数据；nLen：数据长度；unCodecType：音频格式；unTimeStamp：时间戳，单位ms；pParam：用户用据
+    typedef	int(*MEDIA_AUDIO_ENCODE_PROC)(unsigned char* pBuf, int nLen, unsigned unCodecType, unsigned unTimeStamp, void* pParam);
 
 #ifdef __cplusplus
 #   define ZDSDK_EXTERN_C extern "C"
@@ -647,137 +660,143 @@ extern "C" {
         void* dummy;
     } *zdsdk_download_t;
 
-    //��ʼ��;
+    //初始化;
     ZDSDK_API(int)     ZDSDK_Init();
 
-    //����ʼ��;
+    //反初始化;
     ZDSDK_API(void)     ZDSDK_Fini();
 
-    //=============================��¼=====================================
-    //uas_ip:ƽ̨��ַ��uas_port��ƽ̨�˿ڣ�5555����email���˺ţ�password������
+    //=============================登录=====================================
+    //uas_ip:平台地址；uas_port：平台端口（5555）；email：账号；password：密码
     ZDSDK_API(zdsdk_t)  ZDSDK_Login(MESSAGE_CALLBACK message_cb, NOTIFY_CALLBACK notify_cb, void* identity,
         const char* uas_ip, unsigned short uas_port, const char* email, const char* password);
 
     ZDSDK_API(int)      ZDSDK_Run(zdsdk_t hsdk);
 
-    //�ж�ƽ̨�Ƿ��½;
+    //判断平台是否登陆;
     ZDSDK_API(int)      ZDSDK_IsLogined(zdsdk_t hsdk);
-    //���µ�½ƽ̨;
+    //重新登陆平台;
     ZDSDK_API(int)      ZDSDK_ReLogin(zdsdk_t hsdk);
-    //�ǳ�ƽ̨;
+    //登出平台;
     ZDSDK_API(int)      ZDSDK_Logout(zdsdk_t hsdk);
-	//�޸�����;
+	//获取协商后URL信息;
+	ZDSDK_API(int)		ZDSDK_GetNegotiateUrl(zdsdk_t hsdk, PZDSDK_NEGOTIATEURL_INFO url_info, int nsize);
+	//修改密码;
 	ZDSDK_API(int)		ZDSDK_ModifyPassword(zdsdk_t hsdk, const char* poldpassword, const char* pnewpassword, bool bmd5, void* context);
-	//����͸��ͨ������;
+	//发送透明通道数据;
 	ZDSDK_API(int)		ZDSDK_SendNonStandardData(zdsdk_t hsdk, const char* dev_channel, const char* pData, int nlen, int ntype, int nsubtype, void* context);
-	//�޸��豸��Ϣ;
+	//修改设备信息;
 	ZDSDK_API(int)		ZDSDK_ModifyFdName(zdsdk_t hsdk, PZDSDK_FD_INFO fd_info, void* context);
-	//�޸�ͨ����Ϣ;
+	//修改通道信息;
 	ZDSDK_API(int)		ZDSDK_ModifyChannelName(zdsdk_t hsdk, PZDSDK_CHANNEL_INFO channel_info, void* context);
 
-    //��Ƶ����ص�;
+    //视频解码回调;
     ZDSDK_API(int)      ZDSDK_SetMediaDisplayCallback(zdsdk_t hsdk, MEDIA_VIDEOPLAY_PROC callback_ptr);
     ZDSDK_API(int)      ZDSDK_SetMediaAudioCallback(zdsdk_t hsdk, MEDIA_AUDIOPLAY_PROC callback_ptr);
     ZDSDK_API(int)      ZDSDK_SetMediaEventCallback(zdsdk_t hsdk, MEDIA_EVENT_PROC callback_ptr);
     ZDSDK_API(int)      ZDSDK_SetMediaDataCallback(zdsdk_t hsdk, MEDIA_FRAME_PROC callback_ptr);
+	ZDSDK_API(int)		ZDSDK_SetMediaRawFrameCallback(zdsdk_t hsdk, MEDIA_VIDEORAWFRAME_PROC callback_ptr);
 
-	//��ȡ�豸�б�;
+	//获取设备列表;
 	ZDSDK_API(int)		ZDSDK_GetFDlist(zdsdk_t hsdk, PZDSDK_FD_INFO fd_list_ptr, int nList);
-	//��ѯ�豸״̬;
+	//查询设备状态;
 	ZDSDK_API(int)		ZDSDK_QueryFdStatus(zdsdk_t hsdk);
-	//��ȡ�����豸�б�;
+	//获取在线设备列表;
 	ZDSDK_API(int)		ZDSDK_GetFdOnlineList(zdsdk_t hsdk, PZDSDK_FD_INFO fd_list_ptr, int nList);
-    //��ȡͨ������;
+    //获取通道数量;
     ZDSDK_API(int)      ZDSDK_GetChannelCount(zdsdk_t hsdk);
-    //��ѯ�豸��ͨ���б�;
+    //查询设备组通道列表;
 	ZDSDK_API(int)		ZDSDK_QueryFdChannelList(zdsdk_t hsdk, const char* fd_id, void* context);
-	//��ȡָ���豸��ͨ���б�;
+	//获取指定设备组通道列表;
 	ZDSDK_API(int)		ZDSDK_GetFdChannelList(zdsdk_t hsdk, const char* fd_id, PZDSDK_CHANNEL_INFO channel_list_ptr, int nList);
-	//��ȡͨ���б�;
+	//获取通道列表;
     ZDSDK_API(int)      ZDSDK_GetChannleList(zdsdk_t hsdk, PZDSDK_CHANNEL_INFO channel_list_ptr, int nSize);
     ZDSDK_API(int)      ZDSDK_GetChannleInfo(zdsdk_t hsdk, const char* dev_channel, PZDSDK_CHANNEL_INFO channel_info);
     ZDSDK_API(int)      ZDSDK_GetChannleStatus(zdsdk_t hsdk, const char* dev_channel);
 
-    //��ѯ����Ϣ ����ֵΪFALSE��ʾ��֧�֡�group_type��1��ʾDB33��,2��ʾ������;
+    //查询组信息 返回值为FALSE表示不支持。group_type：1表示DB33组,2表示国标组;
     ZDSDK_API(int)      ZDSDK_QueryGroupInfo(zdsdk_t hsdk, int group_type);
-    //��ȡ���Ϊgroup_id��������顣��group_idΪ��ʱ��ʾ���ڵ㣬��group_list_ptrΪ��ʱ�����ظ�����
+    //获取编号为group_id的组的子组。当group_id为空时表示根节点，当group_list_ptr为空时仅返回个数。
     ZDSDK_API(int)      ZDSDK_GetChildGroup(zdsdk_t hsdk, int group_type, const char* group_id, PZDSDK_GROUP_INFO group_list_ptr);
-    //��ȡ���Ϊgroup_id���������ͨ������group_idΪ��ʱ��ʾ���ڵ㣬��channel_list_ptrΪ��ʱ�����ظ���;
+    //获取编号为group_id的组的所属通道。当group_id为空时表示根节点，当channel_list_ptr为空时仅返回个数;
     ZDSDK_API(int)      ZDSDK_GetGroupChannel(zdsdk_t hsdk, int group_type, const char* group_id, PZDSDK_CHANNEL_INFO channel_list_ptr);
 
-	//��ѯԤ�õ�;
+	//查询预置点;
 	ZDSDK_API(int)		ZDSDK_QueryCameraPreset(zdsdk_t hsdk, const char* dev_channel, void* context);
-	//��ȡԤ�õ��б�;	
+	//获取预置点列表;	
 	ZDSDK_API(int)		ZDSDK_GetCameraPresetList(zdsdk_t hsdk, const char* dev_channel, PZDSDK_PRESET_INFO preset_list_ptr, int nList);
-	//Ԥ�õ�ٿ�;
+	//预置点操控;
 	ZDSDK_API(int)		ZDSDK_ControlCameraPreset(zdsdk_t hsdk, const char* dev_channel, unsigned char action, unsigned char preset_id, const char* presetname, void* context);
-	//��ѯԤ�õ�ƻ��б�; 
+	//查询预置点计划列表; 
 	ZDSDK_API(int)		ZDSDK_QueryPresetSchedule(zdsdk_t hsdk, const char* dev_channel, void* context);
-	//����Ԥ�õ�ƻ��б�;
+	//配置预置点计划列表;
 	ZDSDK_API(int)		ZDSDK_SetPresetSchedule(zdsdk_t hsdk, const char* dev_channel, int nminutes, PZDSDK_PERSET_PLAN perset_plan_vt, int nSize, void* context);
-	//��ȡԤ�õ�ƻ�;
+	//获取预置点计划;
 	ZDSDK_API(int)		ZDSDK_GetPresetSchedule(zdsdk_t hsdk, int *nminutes, PZDSDK_PERSET_PLAN preset_plan_list_ptr, int nSize);
 
-    //=============================��Ƶ=====================================
-    //������Ƶ;
+    //=============================视频=====================================
+    //开启视频;
     ZDSDK_API(int)     ZDSDK_MonitorStart(zdsdk_t hsdk, const char* dev_channel, int net_type, HWND monitor_wnd, void* context);
     ZDSDK_API(int)     ZDSDK_MonitorStop(zdsdk_t hsdk, const char* dev_channel, void* context);
     ZDSDK_API(int)     ZDSDK_ControlCamera(zdsdk_t hsdk, const char* dev_channel, unsigned char action, unsigned char param, PZDSDK_PTZLOCK_INFO lockinfo, void* context);
 
-    //��ȡ����ͳ����Ϣ;
+    //获取码流统计信息;
     ZDSDK_API(int)     ZDSDK_GetStatInfo(zdsdk_t hsdk, const char* dev_channel, PTCH_STAT_INFO stat_info);
     ZDSDK_API(int)     ZDSDK_DecodeOnlyIFrame(zdsdk_t hsdk, const char* dev_channel, bool decode_only_IFrame);
 
-    //����ץ��;
+    //本地抓拍;
     ZDSDK_API(int)     ZDSDK_SnapShot(zdsdk_t hsdk, const char* dev_channel, const char* path_file);
 
-    //����¼��;
+    //本地录象;
     ZDSDK_API(int)     ZDSDK_StartLocalRecord(zdsdk_t hsdk, const char* dev_channel, const char* path_file, long record_time, bool audio_on);
     ZDSDK_API(int)     ZDSDK_StopLocalRecord(zdsdk_t hsdk, const char* dev_channel);
 
-	//ǰ��,����¼��;
+	//获取录像码流统计信息;
+	ZDSDK_API(int)	   ZDSDK_GetRecordStatInfo(zdsdk_t sdk_t, zdsdk_playback_t playback, PTCH_STAT_INFO stat_info);
+
+	//前端,中心录像;
 	ZDSDK_API(int)	   ZDSDK_StartRecord(zdsdk_t hsdk, const char* dev_channel, PZDSDK_RCSTORAGE_CONFIG recodestorage, void* context);
 	ZDSDK_API(int)	   ZDSDK_StopRecord(zdsdk_t hsdk, const char* dev_channel, bool bcenter, void* context);
-	//����¼��ƻ�(uOp:2����,uOp:4ɾ��,uOp:1����);
+	//配置录像计划(uOp:2添加,uOp:4删除,uOp:1更新);
 	ZDSDK_API(int)	   ZDSDK_ConfigRecordPlan(zdsdk_t hsdk, const char* dev_channel, unsigned char uOp, bool bCenter, const PZDSDK_RECORD_PLAN record_plan_vt, int nSize, void* context);
-	//��ѯ¼��ƻ�;
+	//查询录像计划;
 	ZDSDK_API(int)	   ZDSDK_QueryRecordPlan(zdsdk_t hsdk, const char* dev_channel, bool bCenter, void* context);
-	//��ȡ¼��ƻ�;
+	//获取录像计划;
 	ZDSDK_API(int)	   ZDSDK_GetRecordPlan(zdsdk_t hsdk, const char* dev_channel, PZDSDK_RECORD_PLAN plan_list_ptr, int nSize);
 
-    //��������Ƶ;
+    //开启音视频;
     ZDSDK_API(int)     ZDSDK_EnableStream(zdsdk_t hsdk, const char* dev_channel, bool enable);
 
-    //��Ƶ��ǽ;
-    //dev_channel��ͨ����ţ�����200000-200000112233445566-0001-0001����tv_idx:���ӻ��ţ�tv_area_idx�����ӻ�������;
+    //视频上墙;
+    //dev_channel：通道编号（例：200000-200000112233445566-0001-0001）；tv_idx:电视机号；tv_area_idx：电视机分区号;
     ZDSDK_API(int)     ZDSDK_MUA_MonitorStart(zdsdk_t hsdk, const char* dev_channel, int tv_idx, int tv_area_idx);
     ZDSDK_API(int)     ZDSDK_MUA_MonitorStop(zdsdk_t hsdk, int tv_idx, int tv_area_idx);
-    //ptz���ƣ�action�����ƶ����� EM_CAMERA_CONTROL_ACTION;
+    //ptz控制：action：控制动作： EM_CAMERA_CONTROL_ACTION;
     ZDSDK_API(int)     ZDSDK_MUA_ControlCamera(zdsdk_t hsdk, int tv_idx, int tv_area_idx, unsigned char action);
 
-    //=============================¼��=====================================
-    //��ѯ¼��;
+    //=============================录像=====================================
+    //查询录像;
     ZDSDK_API(int)     ZDSDK_QueryRecord(zdsdk_t hsdk, const char* dev_channel, bool center, long start_time, long end_time, void* context);    
     ZDSDK_API(int)     ZDSDK_GetRecordList(zdsdk_t hsdk, PZDSDK_RECORD_INFO record_list_ptr, int cnt);
 
-    //�����ط�;
+    //启动回放;
     ZDSDK_API(zdsdk_playback_t)  ZDSDK_StartPlayback(zdsdk_t hsdk, const PZDSDK_RECORD_INFO ptr_record_info, int net_type, HWND playback_wnd, bool is_center, void* context);
     ZDSDK_API(int)     ZDSDK_StopPlayback(zdsdk_t hsdk, zdsdk_playback_t playback, void* context);
-    ZDSDK_API(int)     ZDSDK_ControlPlayback(zdsdk_t hsdk, zdsdk_playback_t playback, unsigned char action, unsigned char param, void* context);
+    ZDSDK_API(int)     ZDSDK_ControlPlayback(zdsdk_t hsdk, zdsdk_playback_t playback, unsigned char action, int param, void* context);
 
-    //��ȡ����ͳ����Ϣ;
+    //获取码流统计信息;
     ZDSDK_API(int)     ZDSDK_Playback_GetStatInfo(zdsdk_t hsdk, zdsdk_playback_t playback, PTCH_STAT_INFO stat_info);
 
     ZDSDK_API(int)     ZDSDK_Playback_DecodeOnlyIFrame(zdsdk_t hsdk, zdsdk_playback_t playback, bool decode_only_IFrame);
 
-    //����ץ��;
+    //本地抓拍;
     ZDSDK_API(int)     ZDSDK_Playback_SnapShot(zdsdk_t hsdk, zdsdk_playback_t playback, const char* path_file);
 
-    //����¼��;
+    //本地录象;
     ZDSDK_API(int)     ZDSDK_Playback_StartLocalRecord(zdsdk_t hsdk, zdsdk_playback_t playback, const char* path_file, long record_time, bool audio_on);
     ZDSDK_API(int)     ZDSDK_Playback_StopLocalRecord(zdsdk_t hsdk, zdsdk_playback_t playback);
 
-    //��������Ƶ;
+    //开启音视频;
     ZDSDK_API(int)     ZDSDK_Playback_EnableStream(zdsdk_t hsdk, zdsdk_playback_t playback, bool enable);
 
     ZDSDK_API(int)     ZDSDK_QueryDownloadURL(zdsdk_t hsdk, const PZDSDK_RECORD_INFO ptr_record_info, void* context);

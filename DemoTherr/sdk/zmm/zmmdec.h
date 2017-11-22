@@ -4,41 +4,41 @@
 #include "zmmapi.h"
 
 
-/* 统计信息结构 */
+/* 统计信息结构; */
 typedef struct tagTCH_STAT_INFO
 {
-	unsigned int	unSize;						//本结构体长度, sizeof
-	unsigned int	unTimeStamp;				//统计时刻，GetTickCount
-	unsigned int	unTimeDiff;					//统计时长,ms
-	unsigned int	unBitRate;					//比特率B/s
-	unsigned int	unLostRate;					//丢包率，丢包万分比
-	unsigned int	unFrameRate1;				//读取视频帧帧率 fps
-	unsigned int	unFrameRate2;				//解码器回调帧率 fps
+	unsigned int	unSize;				//本结构体长度, sizeof;
+	unsigned int	unTimeStamp;		//统计时刻，GetTickCount;
+	unsigned int	unTimeDiff;			//统计时长,ms;
+	unsigned int	unBitRate;			//比特率B/s;
+	unsigned int	unLostRate;			//丢包率，丢包万分比;
+	unsigned int	unFrameRate1;		//读取视频帧帧率 fps;
+	unsigned int	unFrameRate2;		//解码器回调帧率 fps;
 
-	unsigned short	usWidth;					// 视频宽度
-	unsigned short	usHeight;					// 视频高度
+	unsigned short	usWidth;			// 视频宽度;
+	unsigned short	usHeight;			// 视频高度;
 
-	int		    	nStartTime;					//通道开始时间，time-t
-	int		    	nConnectTime;				//通道连接建立时间，time-t
+	int		    	nStartTime;			//通道开始时间，time-t;
+	int		    	nConnectTime;		//通道连接建立时间，time-t;
 
-	unsigned long long	u64RecvPacket1;			//自通道建立后网络上收到的包数目
-	unsigned long long	u64RecvByte1;			//自通道建立后网络上收到的字节数
-	unsigned long long	u64RecvPacket2;			//自通道建立后协议层收到的有效包数目
-	unsigned long long	u64RecvByte2;			//自通道建立后协议层收到的有效字节数
+	unsigned long long	u64RecvPacket1;	//自通道建立后网络上收到的包数目;
+	unsigned long long	u64RecvByte1;	//自通道建立后网络上收到的字节数;
+	unsigned long long	u64RecvPacket2;	//自通道建立后协议层收到的有效包数目;
+	unsigned long long	u64RecvByte2;	//自通道建立后协议层收到的有效字节数;
 
-	unsigned int		unAudioType;				// 音频编码类型v2
-	unsigned int		unVideoType;				// 视频编码类型v2，如(MAKEFOURCC('S', 'V', 'M', '4')) 表示 星望mpeg4
-	unsigned char		ucAudioType;				// 音频编码类型
-	unsigned char		ucVideoType;				// 视频编码类型
+	unsigned int		unAudioType;	// 音频编码类型v2;
+	unsigned int		unVideoType;	// 视频编码类型v2，如(MAKEFOURCC('S', 'V', 'M', '4')) 表示 星望mpeg4;
+	unsigned char		ucAudioType;	// 音频编码类型;
+	unsigned char		ucVideoType;	// 视频编码类型;
 
-	unsigned short		usRealLocalPort;			//本地使用的真实端口
-	unsigned short		usLocalPort;				//本地绑定的端口
-	unsigned short		usPeerPort;					//对方端口
-	char		szRealLocalAddr[64];			//本地真实地址
-	char		szLocalAddr[64];				//本地绑定地址
-	char		szPeerAddr[64];					//对方地址
+	unsigned short		usRealLocalPort;//本地使用的真实端口;
+	unsigned short		usLocalPort;	//本地绑定的端口;
+	unsigned short		usPeerPort;		//对方端口;
+	char		szRealLocalAddr[64];	//本地真实地址;
+	char		szLocalAddr[64];		//本地绑定地址;
+	char		szPeerAddr[64];			//对方地址;
 
-	char		szScokType[8];					//SOCKET 类型 tcp,udp...
+	char		szScokType[8];			//SOCKET 类型 tcp,udp...;
 
 }TCH_STAT_INFO, *PTCH_STAT_INFO;
 #ifdef WIN32
@@ -128,7 +128,7 @@ ZMM_API int  zmmdec_startstream(zmmdec_handle handle, const char* remote_ip, uns
     
 ZMM_API int  zmmdec_stopstream(zmmdec_handle handle);
 
-ZMM_API int  zmmdec_setstream(zmmdec_handle handle, enum _ZMMDEC_STREAM opt);
+ZMM_API int  zmmdec_setstream(zmmdec_handle handle, _ZMMDEC_STREAM opt);
 
 ZMM_API int  zmmdec_startdecode(zmmdec_handle handle, unsigned char index, unsigned ssrc, HWND hWnd, int playaudio, int fmt);
 
@@ -138,12 +138,6 @@ ZMM_API int  zmmdec_playpause(zmmdec_handle handle, unsigned char index, unsigne
 ZMM_API int  zmmdec_stopdecode(zmmdec_handle handle, unsigned char index);
 
 ZMM_API int  zmmdec_getstatinfo(zmmdec_handle handle, PTCH_STAT_INFO pStatInfo);
-
-ZMM_API int  zmmdec_startlocalrecord(zmmdec_handle handle, const char* path_file, long record_time, bool audio_on);
-
-ZMM_API int  zmmdec_stoplocalrecord(zmmdec_handle handle);
-
-ZMM_API int  zmmdec_snapshot(zmmdec_handle handle, const char* path_file);
 
 ZMM_API int  zmmdec_setaudioplaycallback(zmmdec_handle handle, MEDIA_AUDIOPLAY_PROC cb, void* param);
 

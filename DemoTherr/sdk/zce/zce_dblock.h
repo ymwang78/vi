@@ -50,6 +50,7 @@ class ZCE_API zce_dblock
     size_t rd_pos_;
     size_t wr_pos_;
 
+
 public:
 
     zce_dblock()

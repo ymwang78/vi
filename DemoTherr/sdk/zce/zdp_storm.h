@@ -92,7 +92,7 @@ namespace zdp
 
         int unsubscribe(zce_int64 topic);
 
-        int publish(zce_int64 topic, const zce_byte* data, size_t len);
+        int publish(zce_int64 topic, const zce_byte* data, size_t len, zce_int64 trace);
 
         int publish(const std::vector<zce_int64>& topics, const zce_byte* data, size_t len);
 
@@ -100,14 +100,14 @@ namespace zdp
             zce_int64 uid, zce_int64 flag, const zce_byte* data, zce_uint32 len);
 
         template<typename T, typename TTOPIC>
-        int publish(TTOPIC topic, const T& msg, const zdp_storm_peer& peer = zdp_storm_peer(), int seq = 0);
+        int publish(TTOPIC topic, const T& msg, const zdp_storm_peer& peer = zdp_storm_peer(), int seq = 0, zce_int64 trace = 0);
 
         template<typename T>
         int set(zce_int64 topic, const zce_string& name, zce_int64 oldseq, zce_int64 uid, zce_int64 flag, const T& msg);
     };
 
     template<typename T, typename TTOPIC>
-    int zdp_storm_client::publish(TTOPIC topic, const T& msg, const zdp_storm_peer& peer, int seq) {
+    int zdp_storm_client::publish(TTOPIC topic, const T& msg, const zdp_storm_peer& peer, int seq, zce_int64 trace) {
         zce_dblock dblock_ptr;
         bool preserv = !(peer.to == 0 && peer.from == 0);
         int ret = zdp_serialize(dblock_ptr, seq, msg, 0, default_cps(), preserv ? 16 : 0);
@@ -119,7 +119,7 @@ namespace zdp
             zdp::pack_builtin(dblock_ptr.rd_ptr(), 8, peer.to);
             zdp::pack_builtin(dblock_ptr.rd_ptr() + 8, 8, peer.from);
         }
-        return publish(topic, dblock_ptr.rd_ptr(), dblock_ptr.length());
+        return publish(topic, dblock_ptr.rd_ptr(), dblock_ptr.length(), trace);
     }
 
     template<typename T>
