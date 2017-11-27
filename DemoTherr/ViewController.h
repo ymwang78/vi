@@ -14,5 +14,6 @@
 
 - (void)eventCallback:(int)evttype context:(void*)ctx;
 
+- (void)mediaCallback;
 @end
 
