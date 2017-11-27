@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C80A6C61FAC4D5800764087 /* liblibavm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C80A6CB1FAC4D5800764087 /* liblibavm.a */; };
+		6C80A6C71FAC4D5800764087 /* liblibn2fc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C80A6CC1FAC4D5800764087 /* liblibn2fc.a */; };
+		6C80A6C81FAC4D5800764087 /* libsdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C80A6CD1FAC4D5800764087 /* libsdk.a */; };
+		6C80A6C91FAC4D5800764087 /* libzce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C80A6CE1FAC4D5800764087 /* libzce.a */; };
+		6C80A6CA1FAC4D5800764087 /* libzmm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C80A6CF1FAC4D5800764087 /* libzmm.a */; };
 		E053319A1F55421600B503E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E05331991F55421600B503E8 /* main.m */; };
 		E053319D1F55421600B503E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E053319C1F55421600B503E8 /* AppDelegate.m */; };
 		E05331A01F55421600B503E8 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E053319F1F55421600B503E8 /* ViewController.mm */; };
@@ -26,10 +31,6 @@
 		E053325F1F5543FD00B503E8 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E05332431F5543FD00B503E8 /* libswresample.a */; };
 		E05332601F5543FD00B503E8 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E05332441F5543FD00B503E8 /* libswscale.a */; };
 		E05332621F5543FD00B503E8 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E05332461F5543FD00B503E8 /* libx264.a */; };
-		E05332C11F55464100B503E8 /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E05332BE1F55464100B503E8 /* libuv.a */; };
-		E05332C21F55464100B503E8 /* libzce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E05332BF1F55464100B503E8 /* libzce.a */; };
-		E05332C31F55464100B503E8 /* libzmm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E05332C01F55464100B503E8 /* libzmm.a */; };
-		E07AEB1F1F5E82BD002FD2D3 /* libzdsdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB1E1F5E82BD002FD2D3 /* libzdsdk.a */; };
 		E07AEB211F5E84C7002FD2D3 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB201F5E84C7002FD2D3 /* VideoToolbox.framework */; };
 		E07AEB231F5E8687002FD2D3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB221F5E8687002FD2D3 /* libz.tbd */; };
 		E07AEB251F5E8697002FD2D3 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB241F5E8697002FD2D3 /* libbz2.tbd */; };
@@ -41,10 +42,14 @@
 		E0B3C4EB1F569FAF00F4E680 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0B3C4EA1F569FAF00F4E680 /* OpenAL.framework */; };
 		E0B3C4ED1F569FB700F4E680 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0B3C4EC1F569FB700F4E680 /* OpenGLES.framework */; };
 		E0B3C4F11F56A61A00F4E680 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E0B3C4F01F56A61A00F4E680 /* libsqlite3.0.tbd */; };
-		E0B3C4F31F56A74C00F4E680 /* liblibavm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0B3C4F21F56A74C00F4E680 /* liblibavm.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C80A6CB1FAC4D5800764087 /* liblibavm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblibavm.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C80A6CC1FAC4D5800764087 /* liblibn2fc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblibn2fc.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C80A6CD1FAC4D5800764087 /* libsdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libsdk.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C80A6CE1FAC4D5800764087 /* libzce.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libzce.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C80A6CF1FAC4D5800764087 /* libzmm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libzmm.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05331951F55421600B503E8 /* DemoTherr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoTherr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05331991F55421600B503E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E053319B1F55421600B503E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -176,6 +181,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C80A6C61FAC4D5800764087 /* liblibavm.a in Frameworks */,
+				6C80A6C71FAC4D5800764087 /* liblibn2fc.a in Frameworks */,
+				6C80A6C81FAC4D5800764087 /* libsdk.a in Frameworks */,
+				6C80A6C91FAC4D5800764087 /* libzce.a in Frameworks */,
+				6C80A6CA1FAC4D5800764087 /* libzmm.a in Frameworks */,
 				E07AEB271F5E86A6002FD2D3 /* libiconv.tbd in Frameworks */,
 				E07AEB251F5E8697002FD2D3 /* libbz2.tbd in Frameworks */,
 				E07AEB231F5E8687002FD2D3 /* libz.tbd in Frameworks */,
@@ -185,11 +195,8 @@
 				E0B3C4EB1F569FAF00F4E680 /* OpenAL.framework in Frameworks */,
 				E0B3C4E91F569FA400F4E680 /* AVFoundation.framework in Frameworks */,
 				E0B3C4E71F569F8F00F4E680 /* AudioToolbox.framework in Frameworks */,
-				E05332C21F55464100B503E8 /* libzce.a in Frameworks */,
 				E053325B1F5543FD00B503E8 /* libfdk-aac.a in Frameworks */,
-				E07AEB1F1F5E82BD002FD2D3 /* libzdsdk.a in Frameworks */,
 				E053325F1F5543FD00B503E8 /* libswresample.a in Frameworks */,
-				E05332C11F55464100B503E8 /* libuv.a in Frameworks */,
 				E05332591F5543FD00B503E8 /* libavutil.a in Frameworks */,
 				E053325E1F5543FD00B503E8 /* libssl.a in Frameworks */,
 				E05332601F5543FD00B503E8 /* libswscale.a in Frameworks */,
@@ -199,8 +206,6 @@
 				E05332621F5543FD00B503E8 /* libx264.a in Frameworks */,
 				E05332581F5543FD00B503E8 /* libavformat.a in Frameworks */,
 				E05332571F5543FD00B503E8 /* libavfilter.a in Frameworks */,
-				E0B3C4F31F56A74C00F4E680 /* liblibavm.a in Frameworks */,
-				E05332C31F55464100B503E8 /* libzmm.a in Frameworks */,
 				E053325A1F5543FD00B503E8 /* libcrypto.a in Frameworks */,
 				E05332561F5543FD00B503E8 /* libavdevice.a in Frameworks */,
 			);
@@ -429,6 +434,11 @@
 		E0B3C4E51F569F8F00F4E680 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C80A6CB1FAC4D5800764087 /* liblibavm.a */,
+				6C80A6CC1FAC4D5800764087 /* liblibn2fc.a */,
+				6C80A6CD1FAC4D5800764087 /* libsdk.a */,
+				6C80A6CE1FAC4D5800764087 /* libzce.a */,
+				6C80A6CF1FAC4D5800764087 /* libzmm.a */,
 				E07AEB261F5E86A6002FD2D3 /* libiconv.tbd */,
 				E07AEB241F5E8697002FD2D3 /* libbz2.tbd */,
 				E07AEB221F5E8687002FD2D3 /* libz.tbd */,
@@ -474,7 +484,7 @@
 				TargetAttributes = {
 					E05331941F55421600B503E8 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = JD83UQQ8B8;
+						DevelopmentTeam = 6D66K5AFU4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -647,7 +657,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JD83UQQ8B8;
+				DEVELOPMENT_TEAM = 6D66K5AFU4;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/DemoTherr/sdk";
 				INFOPLIST_FILE = DemoTherr/Info.plist;
@@ -664,7 +674,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dyc.DemoTherr;
+				PRODUCT_BUNDLE_IDENTIFIER = com.piupiu.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -673,7 +683,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JD83UQQ8B8;
+				DEVELOPMENT_TEAM = 6D66K5AFU4;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/DemoTherr/sdk";
 				INFOPLIST_FILE = DemoTherr/Info.plist;
@@ -690,7 +700,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dyc.DemoTherr;
+				PRODUCT_BUNDLE_IDENTIFIER = com.piupiu.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
